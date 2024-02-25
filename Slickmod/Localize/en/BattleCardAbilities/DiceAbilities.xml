@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- COURIERS 1 -->
+ <BattleCardAbility ID="DiceCardAbility_SlickMod_1Bind1Bleed">
+	<Desc>[On Hit] Inflict 1 Bind and 1 Bleed next Scene</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="DiceCardAbility_SlickMod_IfCycle1Feeble">
+	<Desc>[On Hit] If user has Cycle, inflict 1 Feeble next Scene</Desc>
+ </BattleCardAbility>
+ 
+</BattleCardAbilityDescRoot>

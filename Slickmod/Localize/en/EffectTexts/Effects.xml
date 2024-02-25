@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <effectTextList>
+  
+	<BattleEffectText ID="SlickMod_FlowState">
+		<Name>Flow State</Name>
+		<Desc>Increase minimum and maximum roll value of all dice by +1.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_Cycle">
+		<Name>Cycle</Name>
+		<Desc>Upon using a page, discard 1 random page, then draw 1 page, then lose 1 Cycle.</Desc>
+	</BattleEffectText>
+
+  </effectTextList>
+</BattleEffectTextRoot>

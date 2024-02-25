@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <bookDescList>
+    <BookDesc BookID="10000001">
+      <BookName />
+      <TextList>
+        <Desc>	I ain't gonna lie to you, slick. Workin' for the Thumb? Not all it's cracked up to be. Workin' directly under *any* Finger's not all that. Pinky's unhinged, Ring's a buncha stuck-up asshats, Middle can't take a damn joke, Index's a buncha wackos, 'n' the Thumb can't take a joke either. You ain't gonna find friends workin' for any of 'em. Yeah, yeah, City ain't no place to be chummy, but ya just can't help it; no man's an island. Not even D.C.. The camaraderie in the Thumb's all based on respect; not a damn thing else. So it ain't real camaraderie. Or, at least, it don't look real to me. Maybe that's just because I ain't some Soldato or Capo's drinkin' buddy, I dunno. Us Couriers, though? We may be special enough to be taken in by the Couriers in the first place, but the reality is... We ain't the best fighters. We ain't even in the top 50%. We ain't shit, and we know it. So we know we gotta stick together, have each others' backs, 'cuz nobody else will. I know that. The Extraordinaires know that. Even big man D.C. knows it.</Desc>
+      </TextList>
+    </BookDesc>
+    <BookDesc BookID="10000002">
+      <BookName />
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+    <BookDesc BookID="10000003">
+      <BookName />
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+  </bookDescList>
+</BookDescRoot>

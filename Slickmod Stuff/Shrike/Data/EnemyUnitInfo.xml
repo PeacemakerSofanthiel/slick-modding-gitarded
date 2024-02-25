@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EnemyUnitClassRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Enemy ID="1">
+    <Name>Shrike</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>173</MinHeight>
+    <MaxHeight>173</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>1</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="2">1</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+</EnemyUnitClassRoot>

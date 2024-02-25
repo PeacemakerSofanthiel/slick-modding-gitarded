@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StageXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Stage id="1">
+    <Name>The Couriers (I)</Name>
+    <Wave>
+      <Unit>1</Unit>
+      <Unit>1</Unit>
+      <Unit>1</Unit>
+      <Unit>1</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+  <Stage id="2">
+    <Name>Snow Coyote Office</Name>
+    <Wave>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>3</Unit>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+</StageXmlRoot>

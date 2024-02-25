@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files (x86)\Steam\steamapps\workshop\content\1256670\3017810301\Assemblies\The Aftermath Collection.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D872B04-39A4-49DA-969B-23190A340E0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>The Aftermath Collection</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>The_Aftermath_Collection</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>lib\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="CustomMapUtility">
+      <HintPath>lib\CustomMapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.AssetBundleModule" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BattleUnitBuf_Aftermath_Spore.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_NoCombat.cs" />
+    <Compile Include="BattleUnitBuf_AftermathBurnProtection.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_InnerFlame.cs" />
+    <Compile Include="BattleUnitBuf_DelayedLight2.cs" />
+    <Compile Include="BattleUnitBuf_OnClashLoseInflictBurn.cs" />
+    <Compile Include="BattleUnitBuf_MetalGearRisingFromTheAshes.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_EvanShield.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_Thunderstruck.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_StoredChems.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_ChemRebound.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_Overcharge.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_Based.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_CitrusAuraEgo.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_PrimeTimeOfYourLime.cs" />
+    <Compile Include="BattleUnitBuf_Aftermath_PrimeTimeOfYourLimeOneScen.cs" />
+    <Compile Include="BehaviourAction_AftermathPipebomb.cs" />
+    <Compile Include="BehaviourAction_AftermathRagingStormHope.cs" />
+    <Compile Include="BehaviourAction_AftermathDaveDawnAction.cs" />
+    <Compile Include="BehaviourAction_AftermathLevigationDawnAction.cs" />
+    <Compile Include="FarAreaEffect_Aftermath_EventHorizon.cs" />
+    <Compile Include="BehaviourAction_Aftermath_EventHorizon.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_DoNotUse.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_UseAtMore4Venom.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_UseAt5Venom.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_GoCrazy.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_HelpingHand.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_Camaraderie.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_OnwardPriorityShitass.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_ColorChunFunnies.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_ColorChunEnormous.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_ColorChunLighttheFlames.cs" />
+    <Compile Include="DiceCardPriority_OpheliaPleaseOnlyUseAt8SpeedOrHig.cs" />
+    <Compile Include="DiceCardPriority_OnlyUseWithHomeRun.cs" />
+    <Compile Include="DiceCardPriority_Aftermath_HyperGuardDontFuckingUs.cs" />
+    <Compile Include="PassiveAbility_Aftermath_DecisiveSwordmanship.cs" />
+    <Compile Include="PassiveAbility_Aftermath_IronFist.cs" />
+    <Compile Include="PassiveAbility_Aftermath_23Butcher.cs" />
+    <Compile Include="PassiveAbility_Aftermath_NoCombat.cs" />
+    <Compile Include="PassiveAbility_Aftermath_BladeThesis.cs" />
+    <Compile Include="PassiveAbility_Aftermath_ShroomLegacy.cs" />
+    <Compile Include="PassiveAbility_Aftermath_ShroomDraw.cs" />
+    <Compile Include="PassiveAbility_Aftermath_DiplomatComp.cs" />
+    <Compile Include="PassiveAbility_Aftermath_DiplomatExpert.cs" />
+    <Compile Include="PassiveAbility_Aftermath_TorchGain.cs" />
+    <Compile Include="PassiveAbility_Aftermath_FamilyFirstS.cs" />
+    <Compile Include="PassiveAbility_Aftermath_FamilyFirstB.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Aftermathstarvation.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Aftermathstarvation2.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Aftermathdragonfist.cs" />
+    <Compile Include="PassiveAbility_Aftermath_AftermathFireUp.cs" />
+    <Compile Include="PassiveAbility_Aftermath_AftermathTogetherWeCan.cs" />
+    <Compile Include="PassiveAbility_Aftermath_AftermathSurvivalInstinct.cs" />
+    <Compile Include="PassiveAbility_Aftermath_AftermathScorchBody.cs" />
+    <Compile Include="PassiveAbility_Aftermath_AftermathFireMind.cs" />
+    <Compile Include="PassiveAbility_Aftermath_AftermathBurnSpirit.cs" />
+    <Compile Include="PassiveAbility_Aftermath_AftermathVerDragon.cs" />
+    <Compile Include="PassiveAbility_Aftermath_AftermathFighterBeyond.cs" />
+    <Compile Include="PassiveAbility_Aftermath_SuperLockedPotential.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Evan1.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Evan2.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Evan5.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Ophe_1.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Ophe_2.cs" />
+    <Compile Include="PassiveAbility_Aftermath_SpeedPrescript.cs" />
+    <Compile Include="PassiveAbility_Aftermath_GuidedAssault.cs" />
+    <Compile Include="PassiveAbility_Aftermath_NorincoDesperation.cs" />
+    <Compile Include="PassiveAbility_Aftermath_NorincoSuperIdol.cs" />
+    <Compile Include="PassiveAbility_Aftermath_StoredGoods.cs" />
+    <Compile Include="PassiveAbility_Aftermath_RunningInThe90s.cs" />
+    <Compile Include="PassiveAbility_Aftermath_OverdriveShift.cs" />
+    <Compile Include="PassiveAbility_Aftermath_OverdriveShiftBoss.cs" />
+    <Compile Include="PassiveAbility_Aftermath_MeAndTheBoys.cs" />
+    <Compile Include="PassiveAbility_Aftermath_FairPlayEL2.cs" />
+    <Compile Include="PassiveAbility_Aftermath_DMO_MobiusBattleSuit.cs" />
+    <Compile Include="PassiveAbility_Aftermath_DMO_CaduceusAugmentation.cs" />
+    <Compile Include="PassiveAbility_Aftermath_DMO_CaduceusProcedure.cs" />
+    <Compile Include="PassiveAbility_Aftermath_DMO_ShockTherapy.cs" />
+    <Compile Include="PassiveAbility_Aftermath_DMO_ImpulseField.cs" />
+    <Compile Include="PassiveAbility_Aftermath_DMO_QuantumGenerator.cs" />
+    <Compile Include="PassiveAbility_Aftermath_ShimmeringDeezNutsInYoMou.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Enemy_AcidicSpill.cs" />
+    <Compile Include="PassiveAbility_Aftermath_AcidicSpill.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Enemy_RapidNeutralization.cs" />
+    <Compile Include="PassiveAbility_Aftermath_RapidNeutralizationProtoc.cs" />
+    <Compile Include="PassiveAbility_Aftermath_Enemy_CausticPlating.cs" />
+    <Compile Include="PassiveAbility_Aftermath_CausticPlating.cs" />
+    <Compile Include="PassiveAbility_Aftermath_TheLimeLime.cs" />
+    <Compile Include="PassiveAbility_Aftermath_YouveDoneFuckedUp.cs" />
+    <Compile Include="DiceCardAbility_AftermathAdd3PowerNextDie.cs" />
+    <Compile Include="DiceCardAbility_AftermathAdd3PowerLastDie.cs" />
+    <Compile Include="DiceCardAbility_AftermathReduceDmgNatRoll.cs" />
+    <Compile Include="DiceCardAbility_AftermathSpore1.cs" />
+    <Compile Include="DiceCardAbility_AftermathSpore2.cs" />
+    <Compile Include="DiceCardAbility_AftermathClashLoseGainNegEmotCoin.cs" />
+    <Compile Include="DiceCardAbility_AftermathClashLoseDraw1Page.cs" />
+    <Compile Include="DiceCardAbility_AftermathTriggerTargetBurn.cs" />
+    <Compile Include="DiceCardAbility_AftermathGiveFunnyPage.cs" />
+    <Compile Include="DiceCardAbility_AftermathFunnyPage.cs" />
+    <Compile Include="DiceCardAbility_AftermathAddVenomOnHit.cs" />
+    <Compile Include="DiceCardAbility_AftermathBladeThesisFirst.cs" />
+    <Compile Include="DiceCardAbility_AftermathBladeThesisLast.cs" />
+    <Compile Include="DiceCardAbility_AftermathRandomize2.cs" />
+    <Compile Include="DiceCardAbility_AftermathQuestion2Slash.cs" />
+    <Compile Include="DiceCardAbility_AftermathBoom.cs" />
+    <Compile Include="DiceCardAbility_AftermathClashLoseBurn2Both.cs" />
+    <Compile Include="DiceCardAbility_AftermathMutuallyAssuredIgnitionHu.cs" />
+    <Compile Include="DiceCardAbility_AftermathBottleUpDie.cs" />
+    <Compile Include="DiceCardAbility_AftermathLetItOutDie.cs" />
+    <Compile Include="DiceCardAbility_AftermathFlamingBurdenFirst.cs" />
+    <Compile Include="DiceCardAbility_AftermathTriggerTargetAndSelfBurn.cs" />
+    <Compile Include="DiceCardAbility_AftermathInflict2BurnEmotion.cs" />
+    <Compile Include="DiceCardAbility_ColorChunZeroBurn6.cs" />
+    <Compile Include="DiceCardAbility_ColorChunZeroBurn7.cs" />
+    <Compile Include="DiceCardAbility_ColorChunZeroBurn9.cs" />
+    <Compile Include="DiceCardAbility_ColorChunEconomyOne.cs" />
+    <Compile Include="DiceCardAbility_ColorChunEconomyTwo.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_TwoHasteBind.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_FourHasteFragile.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_SixHasteErode.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_hasterepeat3.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_EvanHit.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_EvanSpecialDie.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_RollZero.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Spend2HasteFor1Erosion.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_SubmissionWillLastDice.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_OpheliaPUNCHHIMUNTILHEEX.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_LevigationSecondDie.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_NorincoShank.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_ExhaustRandomOnClashLose.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_RemoveDieOnClashLose.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Take1DmgClashWin.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_ExhaustSelfOnClashLose.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_DmgAtkHalfStagger.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Thunderstruck1atk.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Thunderstruck2atk.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_StoredChems1atk.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_StoredChems1pwBoost3Next.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Purge1Hasteplose.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Purge2Hasteplose.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Overcharge2Para.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_winenergy1.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_para1Overcharge.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_wincharge3.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_SpendChargeRecycle.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_RemoveIfNoCharge.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_aceCardPara.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_lanceCardRecycle.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_powerDown2.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Erosion1AtkBoth.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Erosion2AtkBoth.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Inflict2BasedClashLose.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_StealBasedFromTarget.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Gain1StaggerProtectionOn.cs" />
+    <Compile Include="1DiceCardAbility_Aftermath_Gain1StaggerProtectionOn.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_MinMaxAgainstErosion.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Inflict1Decay3Atk.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_Inflict1Decay2Clash.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_AcidRainFirst.cs" />
+    <Compile Include="DiceCardAbility_Aftermath_AcidRainSecond.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathEnergy2Delayed.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathStackFunnyPage.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathLiamFlexible.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathTamoraDemoralize.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathFreshMeat.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathDanielDiscipline.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathReduceDmgNatRollApply.cs" />
+    <Compile Include="1DiceCardSelfAbility_AftermathReduceDmgNatRollApply.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermathenergy3draw1.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathDiscardAllVenomAddDic.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathVenomParalysis.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathVenomDisarm.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathVenomBind.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathVenomEX.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathSoberUp.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathOverdose.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathInjectOne.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathExtract.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathSynth.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathBladeThesis.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathBenitoCommand.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathSlowAmulet.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathEqualizerAmulet.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermathdraw3pages.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathOrderRetreat.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathBenitoIntimidate.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathHiddenWeapon.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathSharpStrikes.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathTorch.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathHelpingHand.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathCamaraderie.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathRestUpBenitoPoggers.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathBottleUp.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathLetItOut.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathHaste2EmotionPlus.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathHoldingThatLine.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathEnergy3.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathAdrenalineFueledAssau.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathEmotionCrashItDoGoDow.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathLiuOnward.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathMutuallyAssuredIgniti.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathYijunOnlyPageKeyword.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathYijunRSHopeKeyword.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathKeywordForBrokenFlow.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathRiseFromTheAshesYijun.cs" />
+    <Compile Include="DiceCardSelfAbility_AftermathBruceRepentance.cs" />
+    <Compile Include="DiceCardSelfAbility_ColorChunOnlyPageKeyword.cs" />
+    <Compile Include="DiceCardSelfAbility_ColorChunStaggerBurn.cs" />
+    <Compile Include="DiceCardSelfAbility_ColorChunLightTheFlames.cs" />
+    <Compile Include="DiceCardSelfAbility_ColorChunFunnyPage.cs" />
+    <Compile Include="DiceCardSelfAbility_ColorChunOnslaught.cs" />
+    <Compile Include="DiceCardSelfAbility_ColorChunEnormous.cs" />
+    <Compile Include="DiceCardSelfAbility_ColorChunInnerFlames.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_DrawandSingletonHast.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_LightandSingletonHas.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_RestoreLightByHaste.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_OvertakeOphelia.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_CircumscriptionOphel.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_EviscerateOphelia.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_LevigationOphelia.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_SingletonHaste.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_SingletonLightRestor.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_opheliaCard.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_OpheHasteOnPlay.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_EvanPrescript1.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_EvanPrescript2.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_EvanPrescript3.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_EvanPrescript4.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Evan1.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Evan2.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Evan3.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Evan4.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Evan5.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Evan6.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Evan7.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Evan8.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Evan9.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_EvanSpecial.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_EvanGuard.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_ElisThePrescriptComm.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_ExhaustIfNoDice.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_NoDmgStaggerSelf.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_ChemHomeRun.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_ChemRebound.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_ChemErazer.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_ChemBreeze.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Spend1ChemDraw1.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Spend3ChemDraw2.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_DiscardLowestCostChe.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_DiscardHighestCostCh.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_CannotUse6Speed.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_OnlyUse6Speed.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_OnlyUse7Speed.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_OnlyUse8Speed.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_OnlyUse9Speed.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_warpCharge4Draw1.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_DMOenergy1.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_EnergizedShieldPrep.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_power1costOvercharge.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_charge2friend.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Instant4ChargeEnemy.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Instant4Charge.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_aceCard.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_lanceCard.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_SpendChargeHP.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_PrimeTimeOfYourLimeP.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Target3Enemies.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Gain1PowerAgainstBas.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_Draw3PagesAnd2Erosio.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_RigobertoBasedOnWhat.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_RigobertoIntellectua.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_RigobertoSublimeStri.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_InflictAdditionalEro.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_THEBALLAD.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_OnlyUsableAt3Erosion.cs" />
+    <Compile Include="DiceCardSelfAbility_Aftermath_OnlyUsableAt5Erosion.cs" />
+    <Compile Include="AftermathCollectionInitializer.cs" />
+    <Compile Include="AftermathCollectionPatches.cs" />
+    <Compile Include="BreadBoysMapManager.cs" />
+    <Compile Include="CBLOneMapManager.cs" />
+    <Compile Include="CBLOnePointTwoManager.cs" />
+    <Compile Include="UnitModel.cs" />
+    <Compile Include="UnitUtil.cs" />
+    <Compile Include="AftermathUtilityExtensions.cs" />
+    <Compile Include="VenomCardModel.cs" />
+    <Compile Include="ChemsCardModel.cs" />
+    <Compile Include="UnusedAbility.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

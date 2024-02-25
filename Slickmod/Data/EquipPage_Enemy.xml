@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Book ID="1">
+    <Name>A Courier's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>77</HP>
+      <DeadLine>0</DeadLine>
+      <Break>47</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>5</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Vulnerable</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Endure</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Endure</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive Pid="@origin">10001</Passive>
+      <Passive>1</Passive>
+      <Passive>2</Passive>
+      <Passive>3</Passive>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>Yun</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>5</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>true</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+  <Book ID="2">
+    <Name>A Snow Coyote Fixer's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>103</HP>
+      <DeadLine>0</DeadLine>
+      <Break>47</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>4</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Vulnerable</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive>4</Passive>
+      <Passive>6</Passive>
+      <Passive>7</Passive>
+      <Passive>8</Passive>
+    </EquipEffect>
+    <Rarity>Uncommon</Rarity>
+    <CharacterSkin>IndexUnit</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>5</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>true</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+  <Book ID="3">
+    <Name>Alexander Turner's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>123</HP>
+      <DeadLine>0</DeadLine>
+      <Break>52</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>5</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Endure</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Vulnerable</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive Pid="@origin">10001</Passive>
+      <Passive>6</Passive>
+      <Passive>7</Passive>
+      <Passive>9</Passive>
+      <Passive>10</Passive>
+      <Passive>8</Passive>
+      <Passive>11</Passive>
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin>Liwei</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>5</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Hybrid</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>true</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+  <Book ID="4">
+    <Name>A Snow Coyote Fixer's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>103</HP>
+      <DeadLine>0</DeadLine>
+      <Break>47</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>4</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Vulnerable</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive>6</Passive>
+      <Passive>7</Passive>
+      <Passive>8</Passive>
+      <Passive>11</Passive>
+    </EquipEffect>
+    <Rarity>Uncommon</Rarity>
+    <CharacterSkin>IndexUnit</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>5</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>true</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+</BookXmlRoot>

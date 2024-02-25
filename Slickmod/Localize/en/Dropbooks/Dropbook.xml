@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<CharactersNameRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- NORINCO WORKSHOP -->
+  <Name ID="10101">Book of Cassandra</Name>
+  <Name ID="10102">Book of Norinco Workshop</Name>
+
+
+</CharactersNameRoot>

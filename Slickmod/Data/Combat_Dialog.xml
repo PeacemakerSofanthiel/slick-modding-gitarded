@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Character ID="1">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Fightin' ain't our usual gig... What's goin' on?</BattleDialog>
+      <BattleDialog ID="1">Why York sent us here's beyond me, but he says it's orders from big man D.C., so...</BattleDialog>
+      <BattleDialog ID="2">Gotta have each others' backs. Like we always do.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Well, shit... I can't believe we lived!</BattleDialog>
+      <BattleDialog ID="1">Hahah, easy! Totally wasn't worried there, not even for a sec, nope!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Shit-!</BattleDialog>
+      <BattleDialog ID="1">Dammit-!</BattleDialog>
+      <BattleDialog ID="2">No way-</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">That ain't good...</BattleDialog>
+      <BattleDialog ID="1">Dammit! He owed me fifty! Now how am I gonna get it back!</BattleDialog>
+      <BattleDialog ID="2">Well, shit.</BattleDialog>
+      <BattleDialog ID="3">How'd they catch us?!</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">Gotcha!</BattleDialog>
+      <BattleDialog ID="1">Too slow!</BattleDialog>
+      <BattleDialog ID="2">Hah!</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="2">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="3">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="4">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+</BattleDialogRoot>

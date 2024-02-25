@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NaPreviewXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <PreviewCardPair>
+		<Origin Pid="" Card="401003"/> <!--漂亮的线-->
+		<Target Pid="" Card="401007"/> <!--精美面料-->
+  </PreviewCardPair>
+  <PreviewCardPair>
+		<Origin Pid="" Card="511001"/> <!--短兵相接-->
+		<Target Pid="" Card="511005"/> <!--起势动作-->
+  </PreviewCardPair>
+  <PreviewCardPair>
+		<Origin Pid="" Card="512003"/> <!--舍吾皮肉-->
+		<Target Pid="" Card="512006"/> <!--断汝筋骨-->
+  </PreviewCardPair>
+  <PreviewCardPair>
+		<Origin Pid="" Card="601008"/> <!--燎原之势-->
+		<Target Pid="" Card="601014"/> <!--燎原烈火-->
+  </PreviewCardPair>
+  <PreviewCardPair>
+		<Origin Pid="" Card="605008"/> <!--剑刃解放-I / Unlock - I-->
+		<Target Pid="" Card="605009"/> <!--剑刃解放-II / Unlock - II-->
+  </PreviewCardPair>
+  <PreviewCardPair>
+		<Origin Pid="" Card="605009"/> <!--剑刃解放-II-->
+		<Target Pid="" Card="605010"/> <!--剑刃解放-III-->
+  </PreviewCardPair>
+  <PreviewCardPair>
+		<Origin Pid="" Card="608017"/> <!--极端狂化-->
+		<Target Pid="" Card="608001"/> <!--狂暴血刃-->
+  </PreviewCardPair>
+  <PreviewCardPair>
+		<Origin Pid="" Card="616006"/> <!--预备动作-->
+		<Target Pid="" Card="616007"/> <!--一点突破-->
+  </PreviewCardPair>
+  <PreviewCardPair>
+		<Origin Pid="" Card="705011"/> <!--Cresendo-->
+		<Target Pid="" Card="705012"/> <!--落幕终曲-->
+  </PreviewCardPair>
+  <PreviewCardPair>
+		<Origin Pid="" Card="705021"/> <!--绝望之炎-->
+		<Target Pid="" Card="705022"/> <!--焦灼死灰-->
+  </PreviewCardPair>
+  
+  
+  <PreviewCardPair>
+		<Origin Pid="calmmagma.theaftermathcollection" Card="50102"/> <!-- Flexible Stance -->
+		<Target Pid="calmmagma.theaftermathcollection" Card="50105"/> <!-- Justice: Duty -->
+  </PreviewCardPair>
+  
+  <PreviewCardPair>
+		<Origin Pid="calmmagma.theaftermathcollection" Card="60125"/> <!-- Hidden Weapon -->
+		<Target Pid="calmmagma.theaftermathcollection" Card="60126"/> <!-- Sharp-Suited Strikes -->
+  </PreviewCardPair>
+  
+  <PreviewCardPair>
+		<Origin Pid="calmmagma.theaftermathcollection" Card="60202"/> <!-- Bottle It Up -->
+		<Target Pid="calmmagma.theaftermathcollection" Card="60203"/> <!-- Let It All Out -->
+  </PreviewCardPair>
+
+  <PreviewCardPair>
+		<Origin Pid="calmmagma.theaftermathcollection" Card="60308"/> <!-- Prescript Loophole -->
+		<Target Pid="" Card="605010"/> <!-- Unlock - III -->
+  </PreviewCardPair>
+  
+  <PreviewCardPair>
+		<Origin Pid="calmmagma.theaftermathcollection" Card="103"/> <!-- Light The Flames -->
+		<Target Pid="calmmagma.theaftermathcollection" Card="101"/> <!-- Burning Blitz -->
+  </PreviewCardPair>
+  
+</NaPreviewXmlRoot>

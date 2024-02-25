@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StageXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Stage id="1">
+    <Name>The Armed Blade</Name>
+    <MapInfo>Shrike</MapInfo>
+    <Wave>
+      <Unit>1</Unit>
+      <Formation>1</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>3</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>6</Chapter>
+    <Invitation Combine="BookRecipe">
+      <Book Pid="@origin">243004</Book>
+      <Book Pid="@origin">250020</Book>
+      <Book Pid="@origin">250006</Book>
+      <Value>6</Value>
+      <Num>1</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+</StageXmlRoot>

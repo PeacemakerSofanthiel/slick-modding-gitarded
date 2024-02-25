@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KeywordUtil</name>
+    </assembly>
+    <members>
+        <member name="T:KeywordUtil.KeywordUtils">
+            <summary>
+            The static container and version wrapper for methods for working with keyword enums.
+            </summary>
+        </member>
+        <member name="M:KeywordUtil.KeywordUtils.RegisterKeywordBuf``1">
+            <summary>
+            Registers a <see cref="T:BattleUnitBuf"/> subclass in the AddKeywordBuf system.
+            It will be associated with the <see cref="T:KeywordBuf"/> that is returned by the <see cref="P:BattleUnitBuf.bufType"/> of an instance created by the parameterless constructor of the given class.
+            </summary>
+            <typeparam name="TBuf">The <see cref="T:BattleUnitBuf"/> subclass to be registered in the AddKeywordBuf system.</typeparam>
+        </member>
+        <member name="M:KeywordUtil.KeywordUtils.TryGetRegisteredBufType(KeywordBuf,System.Type@)">
+            <summary>
+            Checks if a given <see cref="T:KeywordBuf"/> value has been registered for addition in the AddKeywordBuf system.
+            Note: this only checks for registrations via KeywordUtil - not for associations coded in vanilla by default, and not for possible patch-additions done independently of KeywordUtil!
+            It will be associated with the <see cref="T:KeywordBuf"/> that is returned by the <see cref="P:BattleUnitBuf.bufType"/> of an instance created by the parameterless constructor of the given class.
+            </summary>
+            <param name="keyword">The <see cref="T:KeywordBuf"/> value to check for being registered.</param>
+            <returns><see langword="true"/> if <paramref name="keyword"/> has been registered via KeywordUtil, and <see langword="false"/> otherwise.</returns>
+            <param name="type">When the method returns <see langword="true"/>, contains the <see cref="T:BattleUnitBuf"/> subclass associated with <paramref name="keyword"/>; contains <see langword="null"/> otherwise.</param>
+        </member>
+    </members>
+</doc>

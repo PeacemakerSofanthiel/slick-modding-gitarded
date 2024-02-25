@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- COURIERS 1 -->
+  <PassiveDesc ID="1">
+    <Name>Pony Express</Name>
+    <Desc>At the end of the Scene, if all allies are alive, gain 1 Haste and 1 Cycle next Scene; if all other allies are dead, inflict 2 Bind on self instead. This passive ability is only active if the Act started with one or more other allies.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="2">
+    <Name>Special Delivery!</Name>
+    <Desc>While the character has Cycle, Blunt and Defensive dice gain +1 Power.
+</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="3">
+    <Name>Same-Day Delivery</Name>
+    <Desc>If 3 or fewer pages are in-hand at the end of the Scene, gain 1 Haste and Cycle next Scene.
+</Desc>
+  </PassiveDesc>
+
+</PassiveDescRoot>

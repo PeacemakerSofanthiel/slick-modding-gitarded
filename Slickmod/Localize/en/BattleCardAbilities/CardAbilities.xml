@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- COURIERS 1 -->
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Courier_DiscardUseLight1">
+	<Desc>Restore 1 Light upon discarding this page\n[On Use] Restore 1 Light</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Courier_LuckySlipPage">
+	<Desc>[On Use] Gain 1 Haste next Scene; Gain 1 Cycle next Scene; If Speed is higher than the target's, all dice on this page gain +2 minimum roll value</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Courier_Cycle3Draw1">
+	<Desc>[On Use] Gain 3 Cycle; Draw 1 page</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_FuckOff">
+	<Desc>Draw 1 page upon discarding this page\n[On Use] If user has Cycle, all dice on this page gain +1 Power</Desc>
+ </BattleCardAbility>
+  
+</BattleCardAbilityDescRoot>
