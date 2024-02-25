@@ -78,7 +78,7 @@
     <Script>SlickMod_ArcticDrift</Script>
     <Name>Arctic Drift</Name>
     <Desc>Offensive dice on the first Combat Page the character uses each Scene gain an additional effect:
- ‘[On Hit] Inflict 2 Bind to each other next Scene’</Desc>
+ ‘[On Hit] Inflict 1 Bind to each other next Scene’</Desc>
   </Passive>
   <Passive ID="7">
     <Negative>false</Negative>

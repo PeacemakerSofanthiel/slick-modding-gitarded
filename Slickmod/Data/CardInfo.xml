@@ -276,7 +276,7 @@
     <Script>drawAndEnergy</Script>
     <ScriptDesc />
     <BehaviourList>
-      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="" Script="SlickMod_3Rupture" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" MotionDefault="N" EffectRes="" Script="SlickMod_3Rupture" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>5</Chapter>
     <SpecialEffect />
@@ -295,11 +295,11 @@
     <TextId>-1</TextId>
     <Artwork>FullStop8.png</Artwork>
     <Rarity>Unique</Rarity>
-    <Spec Range="Near" Cost="4" Affection="One" EmotionLimit="0" />
+    <Spec Range="Far" Cost="4" Affection="One" EmotionLimit="0" />
     <Script>SlickMod_TurnerExclusive</Script>
     <ScriptDesc />
     <BehaviourList>
-      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="" Script="SlickMod_TurnerFuckening" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Penetrate" Motion="F" MotionDefault="N" EffectRes="" Script="SlickMod_TurnerFuckening" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>5</Chapter>
     <SpecialEffect />

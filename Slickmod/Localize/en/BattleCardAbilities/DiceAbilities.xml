@@ -2,6 +2,7 @@
 <BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 <!-- COURIERS 1 -->
+
  <BattleCardAbility ID="DiceCardAbility_SlickMod_1Bind1Bleed">
 	<Desc>[On Hit] Inflict 1 Bind and 1 Bleed next Scene</Desc>
  </BattleCardAbility>
@@ -9,5 +10,45 @@
  <BattleCardAbility ID="DiceCardAbility_SlickMod_IfCycle1Feeble">
 	<Desc>[On Hit] If user has Cycle, inflict 1 Feeble next Scene</Desc>
  </BattleCardAbility>
+
+<!-- SNOW COYOTES -->
+
+<BattleCardAbility ID="DiceCardAbility_SlickMod_Mutual2Bind">
+	<Desc>[On Hit] Inflict 2 Bind to each other next Scene</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="DiceCardAbility_SlickMod_Mutual1Bind">
+	<Desc>[On Hit] Inflict 1 Bind to each other next Scene</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="DiceCardAbility_SlickMod_1Rupture">
+	<Desc>[On Hit] Inflict 1 Rupture</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="DiceCardAbility_SlickMod_powerUp1targetBind">
+	<Desc>+1 Power if opponent has Bind</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="DiceCardAbility_SlickMod_2Rupture1Bind2SelfBind">
+	<Desc>[On Hit] Inflict 2 Rupture; Inflict 1 Bind next Scene; Inflict 2 Bind to self next Scene</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="DiceCardAbility_SlickMod_3Rupture">
+	<Desc>[On Hit] Inflict 3 Rupture</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="DiceCardAbility_SlickMod_TurnerFuckening">
+	<Desc>[On Hit] Inflict 3 Rupture</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="DiceCardAbility_SlickMod_Placeholder">
+	<Desc></Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="DiceCardAbility_SlickMod_Placeholder">
+	<Desc></Desc>
+</BattleCardAbility>
+
+
  
 </BattleCardAbilityDescRoot>

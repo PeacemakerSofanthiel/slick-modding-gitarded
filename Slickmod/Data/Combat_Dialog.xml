@@ -29,24 +29,79 @@
     </Type>
   </Character>
   <Character ID="2">
-    <Type ID="START_BATTLE" />
-    <Type ID="BATTLE_VICTORY" />
-    <Type ID="DEATH" />
-    <Type ID="COLLEAGUE_DEATH" />
-    <Type ID="KILLS_OPPONENT" />
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Anyone else hot in here, or is it just me?</BattleDialog>
+      <BattleDialog ID="2">Not exactly my idea of a vacation, but it's better than the cold.</BattleDialog>
+      <BattleDialog ID="3">Hey. You there. Gotta die. Commander's orders. Nothin' personal.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">That could've gone better.</BattleDialog>
+      <BattleDialog ID="2">That could've gone worse.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Not like this-</BattleDialog>
+      <BattleDialog ID="2">Shit-</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Oh, no... Anyway...</BattleDialog>
+      <BattleDialog ID="2">Alas, poor... Whatever their name was. I knew 'em... I guess.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">That was too easy.</BattleDialog>
+      <BattleDialog ID="2">Try the fuck again, bitch. Try the fuck again.</BattleDialog>
+    </Type>
   </Character>
   <Character ID="3">
-    <Type ID="START_BATTLE" />
-    <Type ID="BATTLE_VICTORY" />
-    <Type ID="DEATH" />
-    <Type ID="COLLEAGUE_DEATH" />
-    <Type ID="KILLS_OPPONENT" />
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Focus.</BattleDialog>
+      <BattleDialog ID="1">Enough chit-chat! Prepare to engage!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Hmph.</BattleDialog>
+      <BattleDialog ID="1">This is acceptable.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Dammit-! Tell my wife and kids that I don't have a wife or kids-</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">I said focus, dammit!</BattleDialog>
+      <BattleDialog ID="1">Negligible losses...</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">On to the next one!</BattleDialog>
+    </Type>
   </Character>
   <Character ID="4">
-    <Type ID="START_BATTLE" />
-    <Type ID="BATTLE_VICTORY" />
-    <Type ID="DEATH" />
-    <Type ID="COLLEAGUE_DEATH" />
-    <Type ID="KILLS_OPPONENT" />
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Anyone else hot in here, or is it just me?</BattleDialog>
+      <BattleDialog ID="2">Not exactly my idea of a vacation, but it's better than the cold.</BattleDialog>
+      <BattleDialog ID="3">Hey. You there. Gotta die. Commander's orders. Nothin' personal.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">That could've gone better.</BattleDialog>
+      <BattleDialog ID="2">That could've gone worse.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Not like this-Not like this-</BattleDialog>
+      <BattleDialog ID="2">Shit-</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Oh, no... Anyway...Oh, no... Anyway...</BattleDialog>
+      <BattleDialog ID="2">Alas, poor... Whatever their name was. I knew 'em... I guess.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">That was too easy.</BattleDialog>
+      <BattleDialog ID="2">Try the fuck again, bitch. Try the fuck again.</BattleDialog>
+    </Type>
   </Character>
 </BattleDialogRoot>

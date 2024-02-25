@@ -47,7 +47,7 @@ namespace SlickRuinaMod
 
     #region - SNOW COYOTE OFFICE -
 
-    // Snow Balling
+    // Mutual 2 Bind
     // [On Hit] Inflict 2 Bind to target and self next Scene
     public class DiceCardAbility_SlickMod_Mutual2Bind : DiceCardAbilityBase
     {
@@ -63,7 +63,7 @@ namespace SlickRuinaMod
     }
 
     // Mutual 1 Bind
-    // [On Hit] Inflict 2 Bind to target and self next Scene
+    // [On Hit] Inflict 1 Bind to target and self next Scene
     public class DiceCardAbility_SlickMod_Mutual1Bind : DiceCardAbilityBase
     {
         public static string Desc = "[On Hit] Inflict 1 Bind to each other next Scene";

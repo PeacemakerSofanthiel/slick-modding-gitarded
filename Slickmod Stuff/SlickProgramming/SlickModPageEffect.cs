@@ -68,10 +68,10 @@ namespace SlickRuinaMod
     }
 
     // Take It To Go: Page Effect
-    // [On Use] Gain 3 Cycle; Draw 1 page
+    // [On Use] Gain 3 Cycle next Scene; Draw 1 page
     public class DiceCardSelfAbility_SlickMod_Courier_Cycle3Draw1 : DiceCardSelfAbilityBase
     {
-        public static string Desc = "[On Use] Gain 3 Cycle; Draw 1 page";
+        public static string Desc = "[On Use] Gain 3 Cycle next Scene; Draw 1 page";
 
         // Keywords
         public override string[] Keywords => new string[2] { "SlickMod_Cycle_Keyword", "DrawCard_Keyword" };
@@ -79,7 +79,7 @@ namespace SlickRuinaMod
         public override void OnUseCard()
         {
             // [On Use] Gain 3 Cycle
-            this.owner.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_Cycle, 3, owner);
+            this.owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Cycle, 3, owner);
             // Draw 1 page
             base.owner.allyCardDetail.DrawCards(1);
         }

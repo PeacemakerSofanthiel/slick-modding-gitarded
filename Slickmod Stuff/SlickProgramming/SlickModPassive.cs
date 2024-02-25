@@ -1,5 +1,6 @@
 ﻿using System;
 using LOR_DiceSystem;
+using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,9 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if ( this.owner.emotionDetail.EmotionLevel > 2 )
-                this.owner.emotionDetail.LevelUp_Forcely(2 - this.owner.emotionDetail.EmotionLevel);
+            int num = Math.Min(2, owner.emotionDetail.EmotionLevel);
+            if (num > 2)
+                this.owner.emotionDetail.LevelUp_Forcely(2 - num);
         }
     }
 
@@ -26,8 +28,9 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if (this.owner.emotionDetail.EmotionLevel > 3)
-                this.owner.emotionDetail.LevelUp_Forcely(3 - this.owner.emotionDetail.EmotionLevel);
+            int num = Math.Min(3, owner.emotionDetail.EmotionLevel);
+            if (num > 3)
+                this.owner.emotionDetail.LevelUp_Forcely(3 - num);
         }
     }
 
@@ -37,8 +40,9 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if (this.owner.emotionDetail.EmotionLevel > 4)
-                this.owner.emotionDetail.LevelUp_Forcely(4 - this.owner.emotionDetail.EmotionLevel);
+            int num = Math.Min(4, owner.emotionDetail.EmotionLevel);
+            if (num > 4)
+                this.owner.emotionDetail.LevelUp_Forcely(4 - num);
         }
     }
 
@@ -48,8 +52,9 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if (this.owner.emotionDetail.EmotionLevel > 5)
-                this.owner.emotionDetail.LevelUp_Forcely(5 - this.owner.emotionDetail.EmotionLevel);
+            int num = Math.Min(5, owner.emotionDetail.EmotionLevel);
+            if (num > 5)
+                this.owner.emotionDetail.LevelUp_Forcely(5 - num);
         }
     }
 
@@ -783,14 +788,25 @@ namespace SlickRuinaMod
 
     // Arctic Drift
     // Offensive dice on the first Combat Page the character uses each Scene gain an additional effect:
-    // ‘[On Hit] Inflict 2 Bind to each other next Scene’
+    // ‘[On Hit] Inflict 1 Bind to each other next Scene’
     public class PassiveAbility_SlickMod_ArcticDrift : PassiveAbilityBase
     {
-        public override void OnUseCard(BattlePlayingCardDataInUnitModel card)
+        private bool isFirstUseCard;
+
+
+        public override void OnRoundStart()
         {
-            foreach (BattleDiceBehavior battleDiceBehavior in card.GetDiceBehaviorList())
+            base.OnRoundStart();
+            isFirstUseCard = false;
+        }
+
+        public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
+        {
+            base.OnUseCard(curCard);
+            if (curCard != null && !isFirstUseCard)
             {
-                battleDiceBehavior.AddAbility(new DiceCardAbility_SlickMod_Mutual2Bind());
+                curCard.ApplyDiceAbility(DiceMatch.AllAttackDice, new DiceCardAbility_SlickMod_Mutual1Bind());
+                isFirstUseCard = true;
             }
         }
     }
