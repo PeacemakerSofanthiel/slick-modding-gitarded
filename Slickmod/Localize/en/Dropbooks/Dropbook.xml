@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
-<CharactersNameRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-  <!-- NORINCO WORKSHOP -->
-  <Name ID="10101">Book of Cassandra</Name>
-  <Name ID="10102">Book of Norinco Workshop</Name>
-
-
+<?xml version="1.0"?>
+<CharactersNameRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name ID="1">Book of a Courier</Name>
+  <Name ID="2">Book of a Snow Coyote Fixer</Name>
+  <Name ID="3">Book of Alex Turner</Name>
 </CharactersNameRoot>

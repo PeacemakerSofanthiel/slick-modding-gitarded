@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-  <!-- COURIERS 1 -->
+<?xml version="1.0"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <PassiveDesc ID="1">
     <Name>Pony Express</Name>
     <Desc>At the end of the Scene, if all allies are alive, gain 1 Haste and 1 Cycle next Scene; if all other allies are dead, inflict 2 Bind on self instead. This passive ability is only active if the Act started with one or more other allies.</Desc>
@@ -13,8 +11,39 @@
   </PassiveDesc>
   <PassiveDesc ID="3">
     <Name>Same-Day Delivery</Name>
-    <Desc>If 3 or fewer pages are in-hand at the end of the Scene, gain 1 Haste and Cycle next Scene.
-</Desc>
+    <Desc>If 3 or fewer pages are in-hand at the end of the Scene, gain 1 Haste and Cycle next Scene.</Desc>
   </PassiveDesc>
-
+  <PassiveDesc ID="4">
+    <Name>Posthaste</Name>
+    <Desc>Gain an additional Speed Die at Emotion Level 2. (Cannot Overlap)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="5">
+    <Name>Posthaste</Name>
+    <Desc>Gain an additional Speed Die at Emotion Level 2.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="6">
+    <Name>Arctic Drift</Name>
+    <Desc>Offensive dice on the first Combat Page the character uses each Scene gain an additional effect:
+ ‘[On Hit] Inflict 1 Bind to each other next Scene’</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="7">
+    <Name>Steady</Name>
+    <Desc>Take 2 less damage and Stagger damage from enemies with higher Speed.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="8">
+    <Name>Vengeance Call</Name>
+    <Desc>If an ally dies, restore 1 Light and gain a Speed die next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9">
+    <Name>Aurora Workshop Firearm</Name>
+    <Desc>Ranged Attack Stagger Damage +2</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="10">
+    <Name>Do I Wanna Know?</Name>
+    <Desc>Choose the Speed dice with the lowest value; the Speed values of the dice become 2.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="11">
+    <Name>Heightened Emotions II</Name>
+    <Desc>Start the reception at Emotion Level 2.</Desc>
+  </PassiveDesc>
 </PassiveDescRoot>

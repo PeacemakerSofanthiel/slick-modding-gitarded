@@ -1,33 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<BookDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0"?>
+<BookDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <bookDescList>
-   <!-- COURIERS 1 -->
-
-  <BookDesc BookID="10000001">
-    <BookName>A Courier's Page</BookName>
-	<TextList>
-	  <Desc>	I ain't gonna lie to you, slick. Workin' for the Thumb? Not all it's cracked up to be. Workin' directly under *any* Finger's not all that. Pinky's unhinged, Ring's a buncha stuck-up asshats, Middle can't take a damn joke, Index's a buncha wackos, 'n' the Thumb can't take a joke either. You ain't gonna find friends workin' for any of 'em. Yeah, yeah, City ain't no place to be chummy, but ya just can't help it; no man's an island. Not even D.C.. The camaraderie in the Thumb's all based on respect; not a damn thing else. So it ain't real camaraderie. Or, at least, it don't look real to me. Maybe that's just because I ain't some Soldato or Capo's drinkin' buddy, I dunno. Us Couriers, though? We may be special enough to be taken in by the Couriers in the first place, but the reality is... We ain't the best fighters. We ain't even in the top 50%. We ain't shit, and we know it. So we know we gotta stick together, have each others' backs, 'cuz nobody else will. I know that. The Extraordinaires know that. Even big man D.C. knows it.
-</Desc>
-     </TextList>
-  </BookDesc>
-
-   <!-- SNOW COYOTES -->
-
-  <BookDesc BookID="10000002">
-    <BookName>A Snow Coyote Fixer's Page</BookName>
-	<TextList>
-	  <Desc>	It's cold, up where we're from. You wouldn't believe how cold District 25 is.
-</Desc>
-     </TextList>
-  </BookDesc>
-
-  <BookDesc BookID="10000003">
-    <BookName>Alexander Turner's Page</BookName>
-	<TextList>
-	  <Desc>	A lot of the time, it pays to just shut up and do your job.
-</Desc>
-     </TextList>
-  </BookDesc>
-	
+    <BookDesc BookID="10000001">
+      <BookName>A Courier's Page</BookName>
+      <TextList>
+        <Desc>	I ain't gonna lie to you, slick. Workin' for the Thumb? Not all it's cracked up to be. Workin' directly under *any* Finger's not all that. Pinky's unhinged, Ring's a buncha stuck-up asshats, Middle can't take a damn joke, Index's a buncha wackos, 'n' the Thumb can't take a joke either. You ain't gonna find friends workin' for any of 'em. Yeah, yeah, City ain't no place to be chummy, but ya just can't help it; no man's an island. Not even D.C.. The camaraderie in the Thumb's all based on respect; not a damn thing else. So it ain't real camaraderie. Or, at least, it don't look real to me. Maybe that's just because I ain't some Soldato or Capo's drinkin' buddy, I dunno. Us Couriers, though? We may be special enough to be taken in by the Couriers in the first place, but the reality is... We ain't the best fighters. We ain't even in the top 50%. We ain't shit, and we know it. So we know we gotta stick together, have each others' backs, 'cuz nobody else will. I know that. The Extraordinaires know that. Even big man D.C. knows it.</Desc>
+      </TextList>
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="10000002">
+      <BookName>A Snow Coyote Fixer's Page</BookName>
+      <TextList>
+        <Desc>	Life in District 25 ain't easy. Most of us joined up with the Snow Coyotes to avoid freezing to death out in the cold, or having the tax collectors find our bodies suspiciously dead. It's probably why Hansen thinks all of us are a bunch of good-for-nothing maggots. Though we're tougher than we look, thanks in part to the fact District 25 is cold all year round. Desperate people tend to make for desperate, lethal fighters. Least, that's what we like to tell ourselves. The whole saying of a cornered animal, and the like.</Desc>
+      </TextList>
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="10000003">
+      <BookName>Alexander Turner's Page</BookName>
+      <TextList>
+        <Desc>	You wanna know why the Snow Coyotes are a joke? Hansen smoked my ass 100 times in training. In a goddamn row. Not to mention the rank and file are a bunch of mostly starved, nearly frozen to death idiots who signed on just to avoid tax collectors. Not like Hansen's ever gonna take us seriously. Least there's Sera... Much as I hate the corpo exec and doing anything in her presence, she's funny when she's drunk, and doesn't know how to keep a lid on it. Childhood friends don't turn out to be good lifelong buddies, I guess. But I'm gonna make this shitshow work, if only to show Hansen that people from District 25 aren't a bunch of nobodies.</Desc>
+      </TextList>
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="1">
+      <BookName>A Courier's Page</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="2">
+      <BookName>A Snow Coyote Fixer's Page</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="3">
+      <BookName>Alexander Turner's Page</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="4">
+      <BookName>A Snow Coyote Fixer's Page</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
   </bookDescList>
 </BookDescRoot>

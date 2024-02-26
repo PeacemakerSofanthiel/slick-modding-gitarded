@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<CharactersNameRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-	<!-- URBAN NIGHTMARE -->
-	<Name ID="1">The Couriers (I)</Name>
-
+<?xml version="1.0"?>
+<CharactersNameRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name ID="1">The Couriers (I)</Name>
+  <Name ID="2">Snow Coyote Office</Name>
 </CharactersNameRoot>

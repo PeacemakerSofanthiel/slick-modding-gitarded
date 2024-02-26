@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<CharactersNameRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-  <!-- Norinco Workshop -->
-  <Name ID="10101">Cassandra</Name>
-  <Name ID="10102">Norinco Workshop Greenhorn</Name>
-
+<?xml version="1.0"?>
+<CharactersNameRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name ID="1">A Courier</Name>
+  <Name ID="2">A Snow Coyote Fixer</Name>
+  <Name ID="3">Alex Turner</Name>
 </CharactersNameRoot>

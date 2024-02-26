@@ -1,10 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <cardDescList>
-  <!-- NORINCO WORKSHOP --> 
-  <BattleCardDesc ID="10101">
-	<LocalizedName>Shanking Gambit</LocalizedName>
-	</BattleCardDesc>
-
+    <BattleCardDesc ID="1">
+      <LocalizedName>Take a Breather</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="2">
+      <LocalizedName>Lucky Slip</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="3">
+      <LocalizedName>Take It To Go</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="4">
+      <LocalizedName>Buzz Off!</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="5">
+      <LocalizedName>Trade Secret</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="6">
+      <LocalizedName>Trudge</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="7">
+      <LocalizedName>Thorough Scavenging</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="8">
+      <LocalizedName>Nail of Barghest</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="9">
+      <LocalizedName>Squall of War</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="10">
+      <LocalizedName>Pack Hunting Tactics</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="11">
+      <LocalizedName>Biting Cold</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="12">
+      <LocalizedName>Tag Prey</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="13">
+      <LocalizedName>Hunting Hour</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="14">
+      <LocalizedName>Pack Hunting Tactics</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="15">
+      <LocalizedName>Third</LocalizedName>
+    </BattleCardDesc>
   </cardDescList>
 </BattleCardDescRoot>
