@@ -295,6 +295,7 @@
     <TextId>-1</TextId>
     <Artwork>FullStop8.png</Artwork>
     <Rarity>Unique</Rarity>
+    <Option>OnlyPage</Option>
     <Spec Range="Far" Cost="4" Affection="One" EmotionLimit="0" />
     <Script>SlickMod_TurnerExclusive</Script>
     <ScriptDesc />
@@ -349,6 +350,153 @@
     <Script />
     <ScriptDesc />
     <BehaviourList />
+    <Chapter>5</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="16">
+    <Name>Devotion to Inferno</Name>
+    <TextId>-1</TextId>
+    <Artwork>Liu1_6.png</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" Affection="One" EmotionLimit="0" />
+    <Script>SlickMod_InfernalOverheat1</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Liu1_Z" Script="energy1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Liu1_Z" Script="energy1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="17">
+    <Name>Scuff Em Out</Name>
+    <TextId>-1</TextId>
+    <Artwork>Puppet4.png</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>SlickMod_InfernalOverheat2</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="Liu1_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="Liu1_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="4" Type="Standby" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="Liu1_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="18">
+    <Name>Phasing Strike</Name>
+    <TextId>-1</TextId>
+    <Artwork>Warp7.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>SlickMod_InfernalOverEAT2Energy3</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Liu1_Z" Script="SlickMod_InfernalOverheat1OnHit" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Liu1_Z" Script="SlickMod_InfernalOverheat1OnHit" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="19">
+    <Name>Heavy Hand</Name>
+    <TextId>-1</TextId>
+    <Artwork>Puppet3.png</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="3" Affection="One" EmotionLimit="0" />
+    <Script>SlickMod_InfernalHeavyHand</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="Liu1_H" Script="SlickMod_InfernalOverheat2Self1OnHit" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="20">
+    <Name>Prisim Blast</Name>
+    <TextId>-1</TextId>
+    <Artwork>Matan_EGO.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>OnlyPage</Option>
+    <Spec Range="Far" Cost="4" Affection="One" EmotionLimit="0" />
+    <Script>SlickMod_InfernalPRISIMBLAAAAAAAST</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="10" Dice="14" Type="Atk" Detail="Penetrate" Motion="F" MotionDefault="N" EffectRes="Philip_Laser" Script="SlickMod_InfernalPRISIMBLAAAAAAAAAAAAAAASTonhit" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="21">
+    <Name>Burning Bladework</Name>
+    <TextId>-1</TextId>
+    <Artwork>Dawn5.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="4" Affection="One" EmotionLimit="0" />
+    <Script>SlickMod_InfernalBurningBladework</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Liu1_J" Script="burn3atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Liu1_J" Script="burn2atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Liu1_J" Script="SlickMod_InfernalOverheat1TargetOnHit" ActionScript="dawnAction" Desc="" />
+    </BehaviourList>
     <Chapter>5</Chapter>
     <SpecialEffect />
     <SkinChange />

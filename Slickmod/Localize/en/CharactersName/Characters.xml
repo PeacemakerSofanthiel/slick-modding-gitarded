@@ -2,5 +2,9 @@
 <CharactersNameRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Name ID="1">A Courier</Name>
   <Name ID="2">A Snow Coyote Fixer</Name>
-  <Name ID="3">Alex Turner</Name>
+  <Name ID="3">Alexander Turner</Name>
+  <Name ID="4">An Inferno Corps Templar</Name>
+  <Name ID="5">An Inferno Corps Underunt</Name>
+  <Name ID="6">An Inferno Corps Templar</Name>
+  <Name ID="7">An Inferno Corps Underrunt</Name>
 </CharactersNameRoot>

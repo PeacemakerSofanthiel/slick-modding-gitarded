@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using static Hat_Method.Hat_KeywordBuf;
 
 namespace SlickRuinaMod
@@ -76,6 +77,49 @@ namespace SlickRuinaMod
             base._owner.allyCardDetail.DrawCards(1);
             this.stack--;
             if (this.stack <= 0) this._owner.bufListDetail.RemoveBuf(this);
+        }
+    }
+
+    public class BattleUnitBuf_SlickMod_InfernalOverheat : BattleUnitBuf
+    {
+        // Get keyword
+        public override string keywordId => "SlickMod_InfernalOverheat";
+
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_InfernalOverheat;
+
+            }
+        }
+
+        // Negative status type
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.Negative;
+            }
+        }
+
+        // Eat speed dice
+        public override int SpeedDiceBreakedAdder()
+        {
+            int num = UnityEngine.Mathf.Clamp(this.stack, 0, (this._owner.speedDiceResult.Count - 1));
+            return num;
+        }
+
+        // Lose 1 stack
+        public override void OnRoundEnd()
+        {
+            base.OnRoundEnd();
+            this.stack--;
+            if(this.stack <= 0)
+            {
+                this.Destroy();
+            }
         }
     }
 }

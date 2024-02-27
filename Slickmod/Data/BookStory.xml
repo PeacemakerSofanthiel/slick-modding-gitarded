@@ -19,5 +19,26 @@
         <Desc>	You wanna know why the Snow Coyotes are a joke? Hansen smoked my ass 100 times in training. In a goddamn row. Not to mention the rank and file are a bunch of mostly starved, nearly frozen to death idiots who signed on just to avoid tax collectors. Not like Hansen's ever gonna take us seriously. Least there's Sera... Much as I hate the corpo exec and doing anything in her presence, she's funny when she's drunk, and doesn't know how to keep a lid on it. Childhood friends don't turn out to be good lifelong buddies, I guess. But I'm gonna make this shitshow work, if only to show Hansen that people from District 25 aren't a bunch of nobodies.</Desc>
       </TextList>
     </BookDesc>
+    <BookDesc BookID="10000004">
+      <BookName>An Inferno Corps Templar's Page</BookName>
+      <TextList>
+        <Desc>	---PROGRAM INITIATED | TRAINING FEEDBACK APPLIED---
+Another day, another reason to hate this body. It has its uses, I suppose, but... These are supposed to be *our* bodies. Instead, we're... Just puppets. At any time, they can just flip a switch, and take the wheel, putting us in the back seat of our own bodies. It's horrifying... The only ones of us with any free will are the Seats, those who've wholly devoted themselves to... Whatever 'Their Grace' means... On second thought, I don't think I'd want to be one of them, either... Rumor has it one of them has been outed as a traitor. Who's to say there aren't more traitors? Who's to say they won't THINK there's more traitors?
+Well, at least we’re heading to this Library place, by decree of Engineer Primus.
+ It can't be that bad-
+---COMBAT SYSTEMS ENGAGED | SUPPRESSING CONSCIOUSNESS---
+</Desc>
+      </TextList>
+    </BookDesc>
+    <BookDesc BookID="10000005">
+      <BookName>An Inferno Corps Underunt's Page</BookName>
+      <TextList>
+        <Desc>	"Situation Report:
+The Proxy was onto us. Found the weapon in progress; but didn’t act. Applied suggestion; Move weapon or raise fortifications…"
+
+	Bah, who am I kidding…That fucker doesn't even care enough to show up. The Templars are soulless hunks of metal, and us “scouts” doing all their dirty work aren’t afforded any thought. Well, it could always be worse. The Seats could get involved... or the fucker himself.
+</Desc>
+      </TextList>
+    </BookDesc>
   </bookDescList>
 </BookDescRoot>

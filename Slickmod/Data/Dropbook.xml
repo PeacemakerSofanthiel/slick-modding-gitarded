@@ -18,11 +18,27 @@
     <DropItem Type="Equip">10000002</DropItem>
   </BookUse>
   <BookUse ID="3">
-    <Name>Book of Alex Turner</Name>
+    <Name>Book Alex Turner</Name>
     <TextId />
     <BookIcon />
     <Chapter>5</Chapter>
     <BookValue>0</BookValue>
     <DropItem Type="Equip">10000003</DropItem>
+  </BookUse>
+  <BookUse ID="4">
+    <Name>Book of an Inferno Corps Templar</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>5</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">10000004</DropItem>
+  </BookUse>
+  <BookUse ID="5">
+    <Name>Book of an Inferno Corps Underunt</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>5</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">10000005</DropItem>
   </BookUse>
 </BookUseXmlRoot>

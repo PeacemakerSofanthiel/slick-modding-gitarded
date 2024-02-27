@@ -65,4 +65,43 @@
     <IsChapterLast>false</IsChapterLast>
     <invitationtype>false</invitationtype>
   </Stage>
+  <Stage id="3">
+    <Name>Inferno Corps (I)</Name>
+    <Wave>
+      <Unit>4</Unit>
+      <Unit>4</Unit>
+      <Unit>5</Unit>
+      <Unit>5</Unit>
+      <Unit>5</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>6</Unit>
+      <Unit>6</Unit>
+      <Unit>6</Unit>
+      <Unit>7</Unit>
+      <Unit>7</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
 </StageXmlRoot>

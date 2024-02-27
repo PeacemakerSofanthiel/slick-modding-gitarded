@@ -49,6 +49,21 @@
 	<Desc></Desc>
 </BattleCardAbility>
 
+<!-- INFERNAL CORPS I -->
 
- 
+<BattleCardAbility ID="SlickMod_InfernalOverhear1OnHit">
+	<Desc>[On Hit] Gain 1 Overheat next Scene</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="SlickMod_InfernalOverheat2Self1OnHit">
+	<Desc>[On Hit] Gain 2 Overheat and Inflict 1 Overheat next Scene</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="SlickMod_InfernalPRISIMBLAAAAAAAAAAAAAAASTonhit">
+	<Desc>[On Hit] Inflict 2 Overheat next Scene</Desc>
+</BattleCardAbility>
+
+<BattleCardAbility ID="SlickMod_InfernalOverheat1TargetOnHit">
+	<Desc>[On Hit] Inflict 1 Overheat next Scene</Desc>
+</BattleCardAbility>
 </BattleCardAbilityDescRoot>

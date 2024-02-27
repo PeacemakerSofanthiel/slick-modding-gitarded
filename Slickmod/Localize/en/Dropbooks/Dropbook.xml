@@ -2,5 +2,7 @@
 <CharactersNameRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Name ID="1">Book of a Courier</Name>
   <Name ID="2">Book of a Snow Coyote Fixer</Name>
-  <Name ID="3">Book of Alex Turner</Name>
+  <Name ID="3">Book Alex Turner</Name>
+  <Name ID="4">Book of an Inferno Corps Templar</Name>
+  <Name ID="5">Book of an Inferno Corps Underunt</Name>
 </CharactersNameRoot>

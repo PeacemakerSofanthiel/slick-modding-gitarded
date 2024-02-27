@@ -12,5 +12,10 @@
 		<Desc>Upon using a page, discard 1 random page, then draw 1 page, then lose 1 Cycle.</Desc>
 	</BattleEffectText>
 
+	<BattleEffectText ID="SlickMod_InfernalOverheat">
+		<Name>Overheat</Name>
+		<Desc>{0} Speed dice become unusable. This character's rightmost Speed die cannot become unusable from this effect. Lose 1 Stack at the end of the Scene.</Desc>
+	</BattleEffectText>
+
   </effectTextList>
 </BattleEffectTextRoot>

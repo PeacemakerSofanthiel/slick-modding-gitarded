@@ -103,4 +103,88 @@
       <BattleDialog ID="2">Try the fuck again, bitch. Try the fuck again.</BattleDialog>
     </Type>
   </Character>
+  <Character ID="5">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">--- CONSCIOUSNESS NULLIFIED | INITIALIZING COMBAT MODE ---</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">--- ALL ENEMIES TERMINATED ---</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">--- CRITICAL SYSTEM FAILURE ---</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">...</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="6">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Let's make this quick. The Engineer wants efficiency.</BattleDialog>
+      <BattleDialog ID="1">Did the Engineer really just send us here to gather combat data...?</BattleDialog>
+      <BattleDialog ID="2">What the hell would the Engineer want with some dusty books...?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Wait, we actually did it?</BattleDialog>
+      <BattleDialog ID="1">We... Lived? YEAH! WOO!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Fucking arm-!</BattleDialog>
+      <BattleDialog ID="1">Dammit, my arm won't-!</BattleDialog>
+      <BattleDialog ID="2">Move, stupid fucking arm-!</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">... Well, it's combat data for the Engineer...</BattleDialog>
+      <BattleDialog ID="1">Dammit, I actually kinda liked working with them... Oh, well.</BattleDialog>
+      <BattleDialog ID="2">At least it wasn't me, haha... It'll be me next, won't it.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">Be cleansed in fire!</BattleDialog>
+      <BattleDialog ID="1">Falter!</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="7">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">--- CONSCIOUSNESS NULLIFIED | INITIALIZING COMBAT MODE ---</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">--- ALL ENEMIES TERMINATED ---</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">--- CRITICAL SYSTEM FAILURE ---</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">...</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="8">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Let's make this quick. The Engineer wants efficiency.</BattleDialog>
+      <BattleDialog ID="1">Did the Engineer really just send us here to gather combat data...?</BattleDialog>
+      <BattleDialog ID="2">What the hell would the Engineer want with some dusty books...?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Wait, we actually did it?</BattleDialog>
+      <BattleDialog ID="1">We... Lived? YEAH! WOO!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Fucking arm-!</BattleDialog>
+      <BattleDialog ID="1">Dammit, my arm won't-!</BattleDialog>
+      <BattleDialog ID="2">Move, stupid fucking arm-!</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">... Well, it's combat data for the Engineer...</BattleDialog>
+      <BattleDialog ID="1">Dammit, I actually kinda liked working with them... Oh, well.</BattleDialog>
+      <BattleDialog ID="2">At least it wasn't me, haha... It'll be me next, won't it.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">Be cleansed in fire!</BattleDialog>
+      <BattleDialog ID="1">Falter!</BattleDialog>
+    </Type>
+  </Character>
 </BattleDialogRoot>

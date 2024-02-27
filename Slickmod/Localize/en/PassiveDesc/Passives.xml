@@ -46,4 +46,24 @@
     <Name>Heightened Emotions II</Name>
     <Desc>Start the reception at Emotion Level 2.</Desc>
   </PassiveDesc>
+  <PassiveDesc ID="12">
+    <Name>Inferno Templar</Name>
+    <Desc>Melee Pierce Dice gain +1 power and deal +2 damage.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="13">
+    <Name>Inferno Corps</Name>
+    <Desc>Pierce Dice Power +1, ranged Pierce dice deal +1 damage.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="14">
+    <Name>Experimental Plate B1</Name>
+    <Desc>When hit, while this character has Overheat, inflict 1 Burn to the attacker</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="15">
+    <Name>Experimental Plate D4</Name>
+    <Desc>While this character has Overheat, gain two Counter dice (Block, 3-6) at combat start.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="16">
+    <Name>Temperamental Weapon</Name>
+    <Desc>While this character has Overheat, inflict 1 Burn upon a successful attack</Desc>
+  </PassiveDesc>
 </PassiveDescRoot>

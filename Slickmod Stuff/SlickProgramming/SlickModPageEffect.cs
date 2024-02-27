@@ -374,4 +374,108 @@ namespace SlickRuinaMod
     }
 
     #endregion
+
+    #region - INFERNAL CORPS I -
+    
+    // [On Use] Inflict 1 Overheat to self next Scene
+    public class DiceCardSelfAbility_SlickMod_InfernalOverheat1 : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Inflict 1 Overheat to self next Scene";
+
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            this.owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_InfernalOverheat, 1, this.owner);
+        }
+    }
+
+    // [On Use] Inflict 2 Overheat to self next Scene
+    public class DiceCardSelfAbility_SlickMod_InfernalOverheat2 : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Inflict 2 Overheat to self next Scene";
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            this.owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_InfernalOverheat, 2, this.owner);
+        }
+    }
+
+    // [On Use] Consume 2 Overheat to restore 3 Light
+    public class DiceCardSelfAbility_SlickMod_InfernalOverEAT2Energy3 : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Consume 2 Overheat to restore 3 Light";
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf Overheat = this.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_InfernalOverheat);
+            if (Overheat != null)
+            {
+                if (Overheat.stack >= 2)
+                {
+                    Overheat.stack -= 2;
+                    this.owner.cardSlotDetail.RecoverPlayPointByCard(3);
+                    if (Overheat.stack <= 0)
+                    {
+                        Overheat.Destroy();
+                    }
+                }
+            }
+        }
+    }
+
+    // Heavy Hand
+    // [On Use] Inflict 3 Bind to self next Scene; Gain 1 Strength this Scene
+    public class DiceCardSelfAbility_SlickMod_InfernalHeavyHand : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Inflict 3 Bind to self next Scene; Gain 1 Strength this Scene";
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            this.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Binding, 3, this.owner);
+            this.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Strength, 1, this.owner);
+        }
+    }
+
+
+    // PRISM BLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAST
+    // [On Use] Prism Blast
+    // Take damage equal to the amount of Overheat on self x5
+    // Exhausts when used
+    public class DiceCardSelfAbility_SlickMod_InfernalPRISIMBLAAAAAAAST : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Take damage equal to the amount of Overheat on self x5\nExhausts when used";
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf Overheat = this.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_InfernalOverheat);
+            if (Overheat != null)
+            {
+                this.owner.TakeDamage(Overheat.stack * 5, DamageType.Buf, this.owner);
+                this.card.card.exhaust = true;
+            }
+        }
+    }
+
+    // Burning Bladework
+    // [On Use] Consume all Overheat and gain 1 Strength and Endurance this Scene for every 2 Overheat consumed; Become Immobilized next Scene
+    public class DiceCardSelfAbility_SlickMod_InfernalBurningBladework : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Consume all Overheat and gain 1 Strength and Endurance this Scene for every 2 Overheat consumed; Become Immobilized next Scene";
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf Overheat = this.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_InfernalOverheat);
+            if (Overheat != null)
+            {
+                int buffs = Overheat.stack / 2;
+                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Strength, buffs, this.owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Endurance, buffs, this.owner);
+                this.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Stun, 1, this.owner);
+                Overheat.Destroy();
+            }
+        }
+    }
+    
+    #endregion
+
 }

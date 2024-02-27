@@ -145,4 +145,69 @@
     <Name>Heightened Emotions II</Name>
     <Desc>Start the reception at Emotion Level 2.</Desc>
   </Passive>
+  <Passive ID="12">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>5</Cost>
+    <Script>SlickMod_InfernalInfernoTemplar</Script>
+    <Name>Inferno Templar</Name>
+    <Desc>Melee Pierce Dice gain +1 power and deal +2 damage.</Desc>
+  </Passive>
+  <Passive ID="13">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_InfernalInfernoCorps</Script>
+    <Name>Inferno Corps</Name>
+    <Desc>Pierce Dice Power +1, ranged Pierce dice deal +1 damage.</Desc>
+  </Passive>
+  <Passive ID="14">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>1</Cost>
+    <Script>SlickMod_InfernalExperimentalPlateB1</Script>
+    <Name>Experimental Plate B1</Name>
+    <Desc>When hit, while this character has Overheat, inflict 1 Burn to the attacker</Desc>
+  </Passive>
+  <Passive ID="15">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_InfernalCounterBlock</Script>
+    <Name>Experimental Plate D4</Name>
+    <Desc>While this character has Overheat, gain two Counter dice (Block, 3-6) at combat start.</Desc>
+  </Passive>
+  <Passive ID="16">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>1</Cost>
+    <Script>SlickMod_InfernalTemperamental</Script>
+    <Name>Temperamental Weapon</Name>
+    <Desc>While this character has Overheat, inflict 1 Burn upon a successful attack</Desc>
+  </Passive>
 </PassiveXmlRoot>

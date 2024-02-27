@@ -46,5 +46,23 @@
     <BattleCardDesc ID="15">
       <LocalizedName>Third</LocalizedName>
     </BattleCardDesc>
+    <BattleCardDesc ID="16">
+      <LocalizedName>Devotion to Inferno</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="17">
+      <LocalizedName>Scuff Em Out</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="18">
+      <LocalizedName>Phasing Strike</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="19">
+      <LocalizedName>Heavy Hand</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="20">
+      <LocalizedName>Prisim Blast</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="21">
+      <LocalizedName>Burning Bladework</LocalizedName>
+    </BattleCardDesc>
   </cardDescList>
 </BattleCardDescRoot>

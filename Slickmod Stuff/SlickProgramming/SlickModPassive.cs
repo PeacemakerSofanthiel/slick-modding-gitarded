@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace SlickRuinaMod
 {
@@ -17,8 +18,11 @@ namespace SlickRuinaMod
         public override void OnWaveStart()
         {
             int num = Math.Min(2, owner.emotionDetail.EmotionLevel);
-            if (num > 2)
+            if (num < 2)
+            {
+                // Raise num to X using LevelUp_Forcely method
                 this.owner.emotionDetail.LevelUp_Forcely(2 - num);
+            }
         }
     }
 
@@ -29,8 +33,11 @@ namespace SlickRuinaMod
         public override void OnWaveStart()
         {
             int num = Math.Min(3, owner.emotionDetail.EmotionLevel);
-            if (num > 3)
+            if (num < 3)
+            {
+                // Raise num to X using LevelUp_Forcely method
                 this.owner.emotionDetail.LevelUp_Forcely(3 - num);
+            }
         }
     }
 
@@ -41,8 +48,11 @@ namespace SlickRuinaMod
         public override void OnWaveStart()
         {
             int num = Math.Min(4, owner.emotionDetail.EmotionLevel);
-            if (num > 4)
+            if (num < 4)
+            {
+                // Raise num to X using LevelUp_Forcely method
                 this.owner.emotionDetail.LevelUp_Forcely(4 - num);
+            }
         }
     }
 
@@ -53,8 +63,11 @@ namespace SlickRuinaMod
         public override void OnWaveStart()
         {
             int num = Math.Min(5, owner.emotionDetail.EmotionLevel);
-            if (num > 5)
+            if (num < 5)
+            {
+                // Raise num to X using LevelUp_Forcely method
                 this.owner.emotionDetail.LevelUp_Forcely(5 - num);
+            }
         }
     }
 
@@ -682,7 +695,7 @@ namespace SlickRuinaMod
     // At the end of each Scene, gain 2 Strength, Endurance and Haste if no other allies are present.
     public class PassiveAbility_SlickMod_LonelyAtTheTop : PassiveAbilityBase
     {
-         public override void OnRoundEnd()
+        public override void OnRoundEnd()
         {
             if (BattleObjectManager.instance.GetAliveList(this.owner.faction).Exists((Predicate<BattleUnitModel>)(x => x != this.owner)))
                 return;
@@ -706,7 +719,7 @@ namespace SlickRuinaMod
     {
         public override void OnRoundEnd()
         {
-            
+
             if (owner.IsDead())
             {
                 return;
@@ -936,6 +949,120 @@ namespace SlickRuinaMod
                 }
                 return (d1.value < d2.value) ? 1 : 0;
             });
+        }
+    }
+    
+    #endregion
+    
+    #region - INFERNAL TEMPLAR 1 -
+    
+    // Inferno Templar
+    // Pierce dice on Melee pages gain +1 Power and deal +2 damage.
+    public class PassiveAbility_SlickMod_InfernalInfernoTemplar : PassiveAbilityBase
+    {
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
+        {
+            base.BeforeRollDice(behavior);
+            if (behavior.card.card.GetSpec().Ranged == CardRange.Near && behavior.Detail == BehaviourDetail.Penetrate)
+            {
+                behavior.ApplyDiceStatBonus(new DiceStatBonus
+                {
+                    power = 1,
+                    dmg = 2
+                });
+            }
+        }
+    }
+
+    // Inferno Corps
+    // Pierce Power +1; Pierce dice on Ranged pages deal +1 damage.
+    public class PassiveAbility_SlickMod_InfernalInfernoCorps : PassiveAbilityBase
+    {
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
+        {
+            base.BeforeRollDice(behavior);
+            if (behavior.Detail == BehaviourDetail.Penetrate)
+            {
+                behavior.ApplyDiceStatBonus(new DiceStatBonus
+                {
+                    power = 1
+                });
+            }
+            if (behavior.card.card.GetSpec().Ranged == CardRange.Far && behavior.Detail == BehaviourDetail.Penetrate)
+            {
+                behavior.ApplyDiceStatBonus(new DiceStatBonus
+                {
+                    dmg = 1
+                });
+            }
+        }
+    }
+
+    // Experimental Plate B1
+    // When hit, while this character has Overheat, inflict 1 Burn to the attacker
+    public class PassiveAbility_SlickMod_InfernalExperimentalPlateB1 : PassiveAbilityBase
+    {
+        
+        public override void OnTakeDamageByAttack(BattleDiceBehavior atkDice, int dmg)
+        {
+            if (base.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_InfernalOverheat) != null)
+            {
+                atkDice.owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Burn, 1, owner);
+            }
+        }
+    }
+
+    // Temperamental Weapon
+    // Upon a successful attack, if this character has Overheat, inflict 1 Burn
+    public class PassiveAbility_SlickMod_InfernalTemperamental : PassiveAbilityBase
+    {
+
+        public override void OnSucceedAttack(BattleDiceBehavior behavior)
+        {
+            if (base.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_InfernalOverheat) != null)
+            {
+                behavior.card.target?.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Burn, 1, owner);
+            }
+        }
+    }
+
+    // Experimental Plate D4
+    // While this character has Overheat, gain two Counter dice (Block, 3-6) at combat start.
+    public class PassiveAbility_SlickMod_InfernalCounterBlock : PassiveAbilityBase
+    {
+        public override void OnStartBattle()
+        {
+            if (base.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_InfernalOverheat) != null)
+            {
+                DiceBehaviour diceBehaviour = new DiceBehaviour
+                {
+                    Min = 3,
+                    Dice = 6,
+                    Type = BehaviourType.Standby,
+                    Detail = BehaviourDetail.Guard,
+                    EffectRes = "Liu1_G"
+                };
+                DiceCardXmlInfo cardInfo = new DiceCardXmlInfo(new LorId(-1))
+                {
+                    Artwork = "Dawn5",
+                    Rarity = Rarity.Special,
+                    DiceBehaviourList = new List<DiceBehaviour>
+                    {
+                        diceBehaviour,
+                        diceBehaviour
+                    },
+                    Chapter = 5,
+                    Priority = 0,
+                    isError = true
+                };
+                BattleDiceBehavior battleDiceBehavior = new BattleDiceBehavior();
+                battleDiceBehavior.behaviourInCard = diceBehaviour.Copy();
+                battleDiceBehavior.SetIndex(0);
+                this.owner.cardSlotDetail.keepCard.AddBehaviours(cardInfo, new List<BattleDiceBehavior>
+                {
+                    battleDiceBehavior
+                });
+            }
         }
     }
 

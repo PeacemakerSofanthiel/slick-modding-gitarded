@@ -179,4 +179,54 @@ namespace SlickRuinaMod
     }
 
     #endregion
+
+    #region -INFERNAL CORPS I-
+
+    // [On Hit] Inflict 1 Overheat to self next Scene
+    public class DiceCardAbility_SlickMod_InfernalOverheat1OnHit : DiceCardAbilityBase
+    {
+        public static string Desc = "[On Hit] Inflict 1 Overheat to self next Scene";
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            this.owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_InfernalOverheat, 1, this.owner);
+        }
+    }
+
+    // [On Hit] Inflict 2 Overheat to self next Scene; Inflict 1 Overheat next Scene
+    public class DiceCardAbility_SlickMod_InfernalOverheat2Self1OnHit : DiceCardAbilityBase
+    {
+        public static string Desc = "[On Hit] Inflict 2 Overheat to self next Scene; Inflict 1 Overheat next Scene";
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            this.owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_InfernalOverheat, 2, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_InfernalOverheat, 1, this.owner);
+        }
+    }
+
+    // PRISIM BLAAAAAAAAAAAAAAAAST
+    // [On Hit] Inflict 2 Overheat next Scene
+    public class DiceCardAbility_SlickMod_InfernalPRISIMBLAAAAAAAAAAAAAAASTonhit : DiceCardAbilityBase
+    {
+        public static string Desc = "[On Hit] Inflict 2 Overheat next Scene";
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_InfernalOverheat, 2, this.owner);
+        }
+    }
+    
+    // [On Hit] Inflict 1 Overheat next Scene
+    public class DiceCardAbility_SlickMod_InfernalOverheat1TargetOnHit : DiceCardAbilityBase
+    {
+        public static string Desc = "[On Hit] Inflict 1 Overheat next Scene";
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_InfernalOverheat, 1, this.owner);
+        }
+    }
+    
+    #endregion
 }
