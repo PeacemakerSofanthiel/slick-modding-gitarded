@@ -460,7 +460,7 @@
     <MaxNum>150</MaxNum>
   </Card>
   <Card ID="20">
-    <Name>Prisim Blast</Name>
+    <Name>Prism Blast</Name>
     <TextId>-1</TextId>
     <Artwork>Matan_EGO.png</Artwork>
     <Rarity>Unique</Rarity>
@@ -469,7 +469,7 @@
     <Script>SlickMod_InfernalPRISIMBLAAAAAAAST</Script>
     <ScriptDesc />
     <BehaviourList>
-      <Behaviour Min="10" Dice="14" Type="Atk" Detail="Penetrate" Motion="F" MotionDefault="N" EffectRes="Philip_Laser" Script="SlickMod_InfernalPRISIMBLAAAAAAAAAAAAAAASTonhit" ActionScript="" Desc="" />
+      <Behaviour Min="10" Dice="14" Type="Atk" Detail="Penetrate" Motion="F" MotionDefault="N" EffectRes="CryingChild_FarAtk" Script="SlickMod_InfernalPRISIMBLAAAAAAAAAAAAAAASTonhit" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>5</Chapter>
     <SpecialEffect />

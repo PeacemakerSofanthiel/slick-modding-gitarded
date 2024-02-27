@@ -17,11 +17,14 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            int num = Math.Min(2, owner.emotionDetail.EmotionLevel);
-            if (num < 2)
+            if (owner.emotionDetail.EmotionLevel == 0)
             {
-                // Raise num to X using LevelUp_Forcely method
-                this.owner.emotionDetail.LevelUp_Forcely(2 - num);
+                this.owner.emotionDetail.LevelUp_Forcely(2);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 1)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(1);
             }
         }
     }
@@ -32,11 +35,19 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            int num = Math.Min(3, owner.emotionDetail.EmotionLevel);
-            if (num < 3)
+            if (owner.emotionDetail.EmotionLevel == 0)
             {
-                // Raise num to X using LevelUp_Forcely method
-                this.owner.emotionDetail.LevelUp_Forcely(3 - num);
+                this.owner.emotionDetail.LevelUp_Forcely(3);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 1)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(2);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 2)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(1);
             }
         }
     }
@@ -47,11 +58,24 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            int num = Math.Min(4, owner.emotionDetail.EmotionLevel);
-            if (num < 4)
+            if (owner.emotionDetail.EmotionLevel == 0)
             {
-                // Raise num to X using LevelUp_Forcely method
-                this.owner.emotionDetail.LevelUp_Forcely(4 - num);
+                this.owner.emotionDetail.LevelUp_Forcely(4);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 1)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(3);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 2)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(2);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 3)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(1);
             }
         }
     }
@@ -62,11 +86,29 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            int num = Math.Min(5, owner.emotionDetail.EmotionLevel);
-            if (num < 5)
+            if (owner.emotionDetail.EmotionLevel == 0)
             {
-                // Raise num to X using LevelUp_Forcely method
-                this.owner.emotionDetail.LevelUp_Forcely(5 - num);
+                this.owner.emotionDetail.LevelUp_Forcely(5);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 1)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(4);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 2)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(3);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 3)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(2);
+            }
+
+            if (owner.emotionDetail.EmotionLevel == 4)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(1);
             }
         }
     }

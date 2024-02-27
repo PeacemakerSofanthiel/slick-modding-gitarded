@@ -48,11 +48,11 @@
   </PassiveDesc>
   <PassiveDesc ID="12">
     <Name>Inferno Templar</Name>
-    <Desc>Melee Pierce Dice gain +1 power and deal +2 damage.</Desc>
+    <Desc>Melee Pierce Dice gain +1 Power and deal +2 damage.</Desc>
   </PassiveDesc>
   <PassiveDesc ID="13">
     <Name>Inferno Corps</Name>
-    <Desc>Pierce Dice Power +1, ranged Pierce dice deal +1 damage.</Desc>
+    <Desc>Pierce Dice Power +1; Ranged Pierce dice deal +1 damage.</Desc>
   </PassiveDesc>
   <PassiveDesc ID="14">
     <Name>Experimental Plate B1</Name>

@@ -156,7 +156,7 @@
     <Cost>5</Cost>
     <Script>SlickMod_InfernalInfernoTemplar</Script>
     <Name>Inferno Templar</Name>
-    <Desc>Melee Pierce Dice gain +1 power and deal +2 damage.</Desc>
+    <Desc>Melee Pierce Dice gain +1 Power and deal +2 damage.</Desc>
   </Passive>
   <Passive ID="13">
     <Negative>false</Negative>
@@ -169,7 +169,7 @@
     <Cost>4</Cost>
     <Script>SlickMod_InfernalInfernoCorps</Script>
     <Name>Inferno Corps</Name>
-    <Desc>Pierce Dice Power +1, ranged Pierce dice deal +1 damage.</Desc>
+    <Desc>Pierce Dice Power +1; Ranged Pierce dice deal +1 damage.</Desc>
   </Passive>
   <Passive ID="14">
     <Negative>false</Negative>
