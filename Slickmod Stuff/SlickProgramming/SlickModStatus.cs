@@ -122,4 +122,24 @@ namespace SlickRuinaMod
             }
         }
     }
+
+    // Samsara
+    // Used to use Speed Break. Gain Samsara equal to the amount of Haste this character has at the start of each Scene. Upon using a Combo Finisher page, gain Samsara equal to that page's original Cost.
+    public class BattleUnitBuf_SlickMod_SparkSamsara : BattleUnitBuf
+    {
+        // Get keyword
+        public override string keywordId => "SlickMod_SparkSamsara";
+
+        // Neutral status; doesn't need anything to override BufPositiveType
+
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_SparkSamsara;
+            }
+        }
+    }
+
 }

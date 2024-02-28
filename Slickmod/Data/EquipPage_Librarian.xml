@@ -97,6 +97,7 @@
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
       <AddedStartDraw>0</AddedStartDraw>
+      <OnlyCard>13</OnlyCard>
       <Passive Pid="@origin">10001</Passive>
       <Passive>6</Passive>
       <Passive>7</Passive>
@@ -137,6 +138,7 @@
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
       <AddedStartDraw>0</AddedStartDraw>
+      <OnlyCard>21</OnlyCard>
       <Passive Pid="@origin">10001</Passive>
       <Passive>12</Passive>
     </EquipEffect>
@@ -173,6 +175,7 @@
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
       <AddedStartDraw>0</AddedStartDraw>
+      <OnlyCard>20</OnlyCard>
       <Passive Pid="@origin">10001</Passive>
       <Passive>13</Passive>
     </EquipEffect>

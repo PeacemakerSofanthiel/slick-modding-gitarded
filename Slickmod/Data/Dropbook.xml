@@ -18,7 +18,7 @@
     <DropItem Type="Equip">10000002</DropItem>
   </BookUse>
   <BookUse ID="3">
-    <Name>Book Alex Turner</Name>
+    <Name>Book of Alexander Turner</Name>
     <TextId />
     <BookIcon />
     <Chapter>5</Chapter>

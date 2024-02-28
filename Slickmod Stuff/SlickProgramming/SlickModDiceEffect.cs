@@ -227,6 +227,13 @@ namespace SlickRuinaMod
             this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_InfernalOverheat, 1, this.owner);
         }
     }
-    
+
     #endregion
+
+    #region - GOLDEN SPARK -
+
+
+
+    #endregion
+
 }

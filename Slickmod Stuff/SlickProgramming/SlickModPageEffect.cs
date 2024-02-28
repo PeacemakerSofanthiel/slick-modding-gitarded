@@ -475,7 +475,109 @@ namespace SlickRuinaMod
             }
         }
     }
-    
+
+    #endregion
+
+    #region - GOLDEN SPARK -
+
+    // Speed Break
+    // Can only be used at 15+ Samsara
+    // [On Use] Spend all Samsara; purge all Bind from self, gain an additional Speed die for the Scene,
+    // and reroll this character's Speed Dice
+    public class DiceCardSelfAbility_SlickMod_SparkSpeedBreak : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "Can only be used at 15+ Samsara\n[On Use] Spend 15 Samsara; purge all Bind from self, gain an additional Speed die for the Scene, and reroll this character's Speed Dice";
+
+        // Unusable unless Samsara >= 15
+        public override bool OnChooseCard(BattleUnitModel owner)
+        {
+            BattleUnitBuf activatedBuf = owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara);
+            if (activatedBuf != null && activatedBuf.stack >= 15)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        // On Use Instant
+        public override void OnUseInstance(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
+        {
+            BattleUnitBuf_SlickMod_SparkSamsara battleUnitBuf_SparkSamsara = base.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara) as BattleUnitBuf_SlickMod_SparkSamsara;
+            if (battleUnitBuf_SparkSamsara != null && battleUnitBuf_SparkSamsara.stack >= 15)
+            {
+                SingletonBehavior<DiceEffectManager>.Instance.CreateBehaviourEffect("Time4", 1f, unit.view, unit.view, 1f);
+                BattleUnitBuf_SlickMod_SparkSamsara battleUnitBuf_SlickSparkSamsara = base.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara) as BattleUnitBuf_SlickMod_SparkSamsara;
+                bool flag = battleUnitBuf_SlickSparkSamsara != null && battleUnitBuf_SlickSparkSamsara.stack >= 15;
+                if (flag)
+                {
+                    // Subtract 15 Samsara
+                    battleUnitBuf_SlickSparkSamsara.stack -= 15;
+                    unit.bufListDetail.RemoveBufAll(KeywordBuf.Binding);
+                    this.owner.bufListDetail.AddBuf(new PassiveAbility_SlickMod_VengeanceCall.BattleUnitBuf_SlickMod_AddedSpeedDie());
+                    this.owner.view.speedDiceSetterUI.DeselectAll();
+                    this.owner.OnRoundStartOnlyUI();
+                    this.owner.RollSpeedDice();
+                    SingletonBehavior<BattleManagerUI>.Instance.ui_unitListInfoSummary.UpdateCharacterProfileAll();
+                }
+            }
+
+        }
+
+        public class BattleUnitBuf_SlickMod_AddedSpeedDie : BattleUnitBuf
+        {
+            public override int SpeedDiceNumAdder()
+            {
+                return 1;
+            }
+
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                this.Destroy();
+            }
+        }
+
+    }
+
+    public class DiceCardSelfAbility_SparkBreakdownUN : DiceCardSelfAbilityBase
+    {
+        public override string[] Keywords => new string[3] { "Energy_Keyword", "Quickness_Keyword", "SlickMod_SparkSamsara" };
+
+        public override void OnUseCard()
+        {
+            base.owner.cardSlotDetail.RecoverPlayPointByCard(1);
+
+            BattleUnitBuf activatedBuf = base.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara);
+            if (activatedBuf != null && activatedBuf.stack >= 5)
+            {
+                base.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Quickness, 1, base.owner);
+            }
+        }
+    }
+
+    public class DiceCardSelfAbility_SparkMirageUN : DiceCardSelfAbilityBase
+    {
+        public override string[] Keywords => new string[3] { "DrawCard_Keyword", "Quickness_Keyword", "SlickMod_SparkSamsara" };
+
+        public override void OnUseCard()
+        {
+
+            base.owner.allyCardDetail.DrawCards(1);
+            base.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Quickness, 1, base.owner);
+
+            BattleUnitBuf activatedBuf = base.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara);
+            if (activatedBuf != null && activatedBuf.stack >= 7)
+            {
+                base.owner.currentDiceAction?.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+                {
+                    power = 1
+                });
+            }
+        }
+    }
+
+
+
     #endregion
 
 }

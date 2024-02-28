@@ -74,7 +74,7 @@
  </BattleCardAbility>
   
  <BattleCardAbility ID="SlickMod_InfernalBurningBladework">
-	<Desc>[On Use] Spend all Overheat, gain 1 Strength and Endurance this Scene for every 2 Overhear spent; Immobilize self next Scene</Desc>
+	<Desc>[On Use] Spend all Overheat, gain 1 Strength and Endurance this Scene for every 2 Overheat spent; Immobilize self next Scene</Desc>
  </BattleCardAbility>
 
 </BattleCardAbilityDescRoot>

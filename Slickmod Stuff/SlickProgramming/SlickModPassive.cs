@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using static UnityEngine.GraphicsBuffer;
 
 namespace SlickRuinaMod
 {
@@ -17,15 +18,16 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if (owner.emotionDetail.EmotionLevel == 0)
+            if ( this.owner.emotionDetail.EmotionLevel == 0 )
             {
                 this.owner.emotionDetail.LevelUp_Forcely(2);
             }
 
-            if (owner.emotionDetail.EmotionLevel == 1)
+            if ( this.owner.emotionDetail.EmotionLevel == 1)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
             }
+            this.owner.emotionDetail.CheckLevelUp();
         }
     }
 
@@ -49,6 +51,7 @@ namespace SlickRuinaMod
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
             }
+            this.owner.emotionDetail.CheckLevelUp();
         }
     }
 
@@ -77,6 +80,7 @@ namespace SlickRuinaMod
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
             }
+            this.owner.emotionDetail.CheckLevelUp();
         }
     }
 
@@ -110,6 +114,7 @@ namespace SlickRuinaMod
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
             }
+            this.owner.emotionDetail.CheckLevelUp();
         }
     }
 
@@ -748,7 +753,19 @@ namespace SlickRuinaMod
         }
     }
 
-
+    // Final Sentinel
+    // At the start of each Scene, gain 3 Protection and Stagger Protection if no other allies are present.
+    public class PassiveAbility_SlickMod_FinalSentinel : PassiveAbilityBase
+    {
+        public override void OnRoundStart()
+        {
+            if (BattleObjectManager.instance.GetAliveList(this.owner.faction).Exists((Predicate<BattleUnitModel>)(x => x != this.owner)))
+                return;
+            this.owner.battleCardResultLog?.SetPassiveAbility((PassiveAbilityBase)this);
+            this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Protection, 3, this.owner);
+            this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.BreakProtection, 3, this.owner);
+        }
+    }
 
     #endregion
 
@@ -1109,4 +1126,35 @@ namespace SlickRuinaMod
     }
 
     #endregion
+
+    #region - GOLDEN SPARK -
+
+    //
+    // Untransferable. "Speed Break" becomes accessible, and can be used by spending Samsara.
+    // At the start of each Scene, gain Samsara equal to the amount of Haste on self. Upon using a Combo Finisher page, gain Samsara equal to its original Cost.
+    public class PassiveAbility_SlickMod_SparkSamsaraGaming : PassiveAbilityBase
+    {
+        // Adds Speed Break to Ego Hand
+        public override void OnWaveStart()
+        {
+            owner.personalEgoDetail.AddCard(new LorId("SlickMod", 22));
+        }
+
+        // Gains Samsara equal to Haste
+        public override void OnRoundStart()
+        {
+            BattleUnitBuf activatedBuf = owner.bufListDetail.GetActivatedBuf(KeywordBuf.Quickness);
+            if (activatedBuf != null)
+            {
+                int stack = activatedBuf.stack;
+                if (stack > 0)
+                {
+                    base.owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SparkSamsara, stack, base.owner);
+                }
+            }
+        }
+    }
+
+    #endregion
+
 }

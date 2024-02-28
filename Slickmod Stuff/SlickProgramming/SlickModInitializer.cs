@@ -28,10 +28,17 @@ namespace SlickRuinaMod
             }
 
             if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_InfernalOverheat", out var newKeyword2) ||
-    EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword2) && EnumExtender.TryAddName("SlickMod_InfernalOverheat", newKeyword2))
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword2) && EnumExtender.TryAddName("SlickMod_InfernalOverheat", newKeyword2))
             {
                 MyKeywordBufs.SlickMod_InfernalOverheat = newKeyword2;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_InfernalOverheat>();
+            }
+
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_SparkSamsara", out var newKeyword3) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword3) && EnumExtender.TryAddName("SlickMod_SparkSamsara", newKeyword2))
+            {
+                MyKeywordBufs.SlickMod_InfernalOverheat = newKeyword3;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_SparkSamsara>();
             }
         }
         //Exclusive Combat Page Patch
@@ -62,5 +69,8 @@ namespace SlickRuinaMod
         public static KeywordBuf SlickMod_Cycle;
         public static KeywordBuf SlickMod_FlowState;
         public static KeywordBuf SlickMod_InfernalOverheat;
+        public static KeywordBuf SlickMod_SparkSamsara;
+        public static KeywordBuf SlickMod_Combo;
+        public static KeywordBuf SlickMod_ComboFinisher;
     }
 }
