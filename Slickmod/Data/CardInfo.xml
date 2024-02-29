@@ -365,7 +365,7 @@
   <Card ID="16">
     <Name>Devotion to Inferno</Name>
     <TextId>-1</TextId>
-    <Artwork>Liu1_6.png</Artwork>
+    <Artwork>Devotion_to_Inferno.png</Artwork>
     <Rarity>Common</Rarity>
     <Spec Range="Near" Cost="1" Affection="One" EmotionLimit="0" />
     <Script>SlickMod_InfernalOverheat1</Script>
@@ -414,7 +414,7 @@
   <Card ID="18">
     <Name>Phasing Strike</Name>
     <TextId>-1</TextId>
-    <Artwork>Warp7.png</Artwork>
+    <Artwork>Phasing_Strike.png</Artwork>
     <Rarity>Rare</Rarity>
     <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
@@ -486,7 +486,7 @@
   <Card ID="21">
     <Name>Burning Bladework</Name>
     <TextId>-1</TextId>
-    <Artwork>Dawn5.png</Artwork>
+    <Artwork>Burning_Bladeworks.png</Artwork>
     <Rarity>Unique</Rarity>
     <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="4" Affection="One" EmotionLimit="0" />
