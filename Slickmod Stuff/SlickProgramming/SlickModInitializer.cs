@@ -8,6 +8,7 @@ using LOR_DiceSystem;
 using Mod;
 using SlickRuinaMod;
 using static Hat_Method.Hat_KeywordBuf;
+using SlickProgramming;
 
 namespace SlickRuinaMod
 {
@@ -37,9 +38,22 @@ namespace SlickRuinaMod
             if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_SparkSamsara", out var newKeyword3) ||
                 EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword3) && EnumExtender.TryAddName("SlickMod_SparkSamsara", newKeyword2))
             {
-                MyKeywordBufs.SlickMod_InfernalOverheat = newKeyword3;
+                MyKeywordBufs.SlickMod_SparkSamsara = newKeyword3;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_SparkSamsara>();
             }
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Orb_Focus", out var a) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out a) && EnumExtender.TryAddName("SlickMod_Orb_Focus", a))
+            {
+                MyKeywordBufs.SlickMod_Orb_Focus = a;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Orb_Focus>();
+            }
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Orb_Malice", out var b) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out b) && EnumExtender.TryAddName("SlickMod_Orb_Malice", b))
+            {
+                MyKeywordBufs.SlickMod_Orb_Focus = b;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Orb_Malice>();
+            }
+
         }
         //Exclusive Combat Page Patch
         public class Patchlist
@@ -72,5 +86,7 @@ namespace SlickRuinaMod
         public static KeywordBuf SlickMod_SparkSamsara;
         public static KeywordBuf SlickMod_Combo;
         public static KeywordBuf SlickMod_ComboFinisher;
+        public static KeywordBuf SlickMod_Orb_Malice;
+        public static KeywordBuf SlickMod_Orb_Focus;
     }
 }
