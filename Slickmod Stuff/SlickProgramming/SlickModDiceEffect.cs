@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Hat_Method;
 using System.Net;
+using UnityEngine;
 
 namespace SlickRuinaMod
 {
@@ -221,9 +222,73 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - GOLDEN SPARK -
+    #region - UN GOLDEN SPARK -
 
+    // Tatsumaki: Dice Effect 1
+    // This die is rolled twice if user has 10+ Samsara
+    public class DiceCardAbility_SparkRepeatSamsara : DiceCardAbilityBase
+    {
+        public static string Desc = "This die is rolled twice if user has 10+ Samsara";
 
+        private int _repeatCount;
+
+        public override void AfterAction()
+        {
+            BattleUnitBuf activatedBuf = owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara);
+            if (activatedBuf != null && activatedBuf.stack >= 10)
+            {
+                if (!base.owner.IsBreakLifeZero() && _repeatCount < 1)
+                {
+                    _repeatCount++;
+                    ActivateBonusAttackDice();
+                }
+            }
+        }
+    }
+
+    // [On Hit] Inflict 2 Rupture
+    public class DiceCardAbility_SlickMod_2Rupture : DiceCardAbilityBase
+    {
+        public static string Desc = "[On Hit] Inflict 2 Rupture";
+
+        public override string[] Keywords => new string[1] { "Hat_Rupture_Keyword" };
+
+        public override void OnSucceedAttack()
+        {
+            base.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, 2, base.owner);
+        }
+    }
+
+    // [On Hit] Inflict 5 Rupture
+    public class DiceCardAbility_SlickMod_5Rupture : DiceCardAbilityBase
+    {
+        public static string Desc = "[On Hit] Inflict 5 Rupture";
+
+        public override string[] Keywords => new string[1] { "Hat_Rupture_Keyword" };
+
+        public override void OnSucceedAttack()
+        {
+            base.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, 5, base.owner);
+        }
+    }
+
+    // Sakanagi: Dice Effect 1
+    // 
+    public class DiceCardAbility_SlickMod_SamsaraRupture : DiceCardAbilityBase
+    {
+        public static string Desc = "[On Hit] Inflict Rupture equal to Samsara on self (max. 10)";
+
+        public override string[] Keywords => new string[1] { "Hat_Rupture_Keyword" };
+
+        public override void OnSucceedAttack()
+        {
+            BattleUnitBuf_SlickMod_SparkSamsara battleUnitBuf_slickSparkSamsaraSakanagiGaming = this.card.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara) as BattleUnitBuf_SlickMod_SparkSamsara;
+            if (battleUnitBuf_slickSparkSamsaraSakanagiGaming != null && battleUnitBuf_slickSparkSamsaraSakanagiGaming.stack >= 1)
+            {
+                this.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, Mathf.Min(battleUnitBuf_slickSparkSamsaraSakanagiGaming.stack, 10), this.owner);
+            }
+        }
+    }
 
     #endregion
 
@@ -232,6 +297,8 @@ namespace SlickRuinaMod
     // [On Clash Lose] Deal 2 Stagger damage to target
     public class DiceCardAbility_SlickMod_BackstreetShieldShards : DiceCardAbilityBase
     {
+        public static string Desc = "[On Clash Lose] Deal 2 Stagger damage";
+
         public override void OnLoseParrying()
         {
             base.OnLoseParrying();
@@ -242,6 +309,8 @@ namespace SlickRuinaMod
     // [On Clash Win] Inflict 1 Burn to each other
     public class DiceCardAbility_SlickMod_BackstreetCWBurnEachother1 : DiceCardAbilityBase
     {
+        public static string Desc = "[On Clash Win] Inflict 1 Burn to each other";
+
         public override string[] Keywords => new string[1] { "Burn_Keyword" };
 
         public override void OnWinParrying()
@@ -255,6 +324,8 @@ namespace SlickRuinaMod
     // [On Clash Lose] Inflict 1 Burn to each other
     public class DiceCardAbility_SlickMod_BackstreetCLBurnEachother1 : DiceCardAbilityBase
     {
+        public static string Desc = "[On Clash Lose] Inflict 1 Burn to each other";
+
         public override string[] Keywords => new string[1] { "Burn_Keyword" };
 
         public override void OnLoseParrying()
@@ -268,6 +339,8 @@ namespace SlickRuinaMod
     // [On Clash Lose] Destroy opponent's next die
     public class DiceCardAbility_SlickMod_BackstreetCLWheels : DiceCardAbilityBase
     {
+        public static string Desc = "[On Clash Lose] Destroy opponent's next die";
+
         public override void OnLoseParrying()
         {
             base.OnLoseParrying();
@@ -278,6 +351,8 @@ namespace SlickRuinaMod
     // [On Hit] Inflict 5 Burn; Inflict 10 Burn to self
     public class DiceCardAbility_SlickMod_BackstreetBigBurn : DiceCardAbilityBase
     {
+        public static string Desc = "[On Hit] Inflict 5 Burn; Inflict 10 Burn to self";
+
         public override string[] Keywords => new string[1] { "Burn_Keyword" };
 
         public override void OnSucceedAttack(BattleUnitModel target)
@@ -295,6 +370,8 @@ namespace SlickRuinaMod
     // [On Clash Lose] Inflict 3 Burn to each other
     public class DiceCardAbility_SlickMod_MidnightCLBurnEachother1 : DiceCardAbilityBase
     {
+        public static string Desc = "[On Clash Lose] Inflict 3 Burn to each other";
+
         public override string[] Keywords => new string[1] { "Burn_Keyword" };
 
         public override void OnLoseParrying()
@@ -308,6 +385,8 @@ namespace SlickRuinaMod
     // [On Hit] Inflict 2 Burn to all characters
     public class DiceCardAbility_SlickMod_MidnightBurnEveryone2 : DiceCardAbilityBase
     {
+        public static string Desc = "[On Hit] Inflict 2 Burn to all characters";
+
         public override string[] Keywords => new string[1] { "Burn_Keyword" };
 
         public override void OnSucceedAttack()
@@ -323,6 +402,8 @@ namespace SlickRuinaMod
     // [Clash Win] Last die gains +2 Power
     public class DiceCardAbility_SlickMod_MidnightCWLastPow2 : DiceCardAbilityBase
     {
+        public static string Desc = "[On Clash Win] Last die gains +2 Power";
+
         public override void OnWinParrying()
         {
             base.OnWinParrying();
@@ -336,6 +417,8 @@ namespace SlickRuinaMod
     // [Clash Win] Next die gains +4 Power
     public class DiceCardAbility_SlickMod_MidnightCWNextPow4 : DiceCardAbilityBase
     {
+        public static string Desc = "[On Clash Win] Next die gains +4 Power";
+
         public override void OnWinParrying()
         {
             base.OnWinParrying();
@@ -349,6 +432,8 @@ namespace SlickRuinaMod
     // [Clash Win] Inflict 2 Fragile this Scene and next Scene
     public class DiceCardAbility_SlickMod_MidnightVulnerableNowLater : DiceCardAbilityBase
     {
+        public static string Desc = "[On Clash Win] Inflict 2 Fragile this Scene and next Scene";
+
         public override string[] Keywords => new string[1] { "Vulnerable_Keyword" };
 
         public override void OnWinParrying()
@@ -362,6 +447,8 @@ namespace SlickRuinaMod
     // [On Hit] Inflict 20 Burn to each other; Inflict 4 Burn to all other characters
     public class DiceCardAbility_SlickMod_MidnightBurnEverything : DiceCardAbilityBase
     {
+        public static string Desc = "[On Hit] Inflict 20 Burn to each other and inflict 4 Burn to all characters";
+
         public override string[] Keywords => new string[1] { "Burn_Keyword" };
 
         public override void OnSucceedAttack(BattleUnitModel target)
@@ -383,6 +470,8 @@ namespace SlickRuinaMod
     // [On Hit] Deal Stagger damage to self equal to the roll's value
     public class DiceCardAbility_SlickMod_SelfStagger : DiceCardAbilityBase
     {
+        public static string Desc = "[On Hit] Deal Stagger damage to self equal to the roll's value";
+
         public override void OnSucceedAttack()
         {
             base.OnSucceedAttack();

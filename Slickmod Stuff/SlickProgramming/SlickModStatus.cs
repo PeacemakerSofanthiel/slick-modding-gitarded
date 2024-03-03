@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using static Hat_Method.Hat_KeywordBuf;
 using HyperCard;
+using static UnityEngine.GraphicsBuffer;
 
 namespace SlickRuinaMod
 {
@@ -16,11 +17,11 @@ namespace SlickRuinaMod
     #region - NORMAL STATUSES -
 
     // Flow State
-    // Increase minimum and maximum roll value of all dice by +1. | Outdated, will rewrite with KeywordUtil systems Eventually:tm:
+    // Increase minimum and maximum roll value of all dice by +1.
     public class BattleUnitBuf_SlickMod_FlowState : BattleUnitBuf
     {
         // Get keyword
-        public override string keywordId => "SlickMod_FlowState_Keyword";
+        public override string keywordId => "SlickMod_FlowState";
 
         // Thing
         public override KeywordBuf bufType
@@ -50,6 +51,38 @@ namespace SlickRuinaMod
             base.OnRoundEnd();
             this.Destroy();
         }
+
+        #region Stuff that handles Index aura
+        private GameObject aura;
+
+        public override void Init(BattleUnitModel owner)
+        {
+            base.Init(owner);
+            aura = SingletonBehavior<DiceEffectManager>.Instance.CreateNewFXCreatureEffect("Prefabs/Battle/SpecialEffect/IndexRelease_Aura", 1f, owner.view, owner.view)?.gameObject;
+        }
+
+        public override void OnDie()
+        {
+            base.OnDie();
+            Destroy();
+        }
+
+        public override void Destroy()
+        {
+            base.Destroy();
+            DestroyAura();
+        }
+
+        public void DestroyAura()
+        {
+            if (aura != null)
+            {
+                UnityEngine.Object.Destroy(aura);
+                aura = null;
+            }
+        }
+        #endregion
+
     }
 
     // Damage Down
@@ -170,6 +203,8 @@ namespace SlickRuinaMod
         }
     }
 
+    // Speed Break
+    // Moving faster than visible motion.
     public class BattleUnitBuf_SlickMod_SparkSpeedBreak : BattleUnitBuf
     {
         // Get keyword
@@ -286,11 +321,20 @@ namespace SlickRuinaMod
     {
         public override void OnRoundStart()
         {
-            this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 69)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+            bool flag = this._owner.faction > Faction.Enemy;
+            if (!flag)
+            {
+                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 69)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+            }
+            else
+            {
+                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 69));
+            }
         }
 
         public override void OnRoundEnd()
         {
+            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 69));
             Destroy();
         }
     }
@@ -324,11 +368,20 @@ namespace SlickRuinaMod
     {
         public override void OnRoundStart()
         {
-            this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 69)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+            bool flag = this._owner.faction > Faction.Enemy;
+            if (!flag)
+            {
+                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 69)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+            }
+            else
+            {
+                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 69));
+            }
         }
 
         public override void OnRoundEnd()
         {
+            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 69));
             Destroy();
         }
     }

@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using static UnityEngine.GraphicsBuffer;
+using Hat_Method;
+using static DiceCardSelfAbility_smallBirdEgo;
 
 namespace SlickRuinaMod
 {
@@ -361,7 +363,6 @@ namespace SlickRuinaMod
             }
         }
 
-        // Token: 0x04000031 RID: 49
         private int count = 0;
     }
 
@@ -581,7 +582,7 @@ namespace SlickRuinaMod
         {
             if (IsDefenseDice(behavior.Detail))
             {
-                owner.battleCardResultLog?.SetPassiveAbility(this);
+                this.owner.battleCardResultLog?.SetPassiveAbility(this);
                 behavior.ApplyDiceStatBonus(new DiceStatBonus
                 {
                     power = 2
@@ -598,6 +599,7 @@ namespace SlickRuinaMod
         {
             if (behavior.Type == (BehaviourType)2)
             {
+                this.owner.battleCardResultLog?.SetPassiveAbility(this);
                 behavior.ApplyDiceStatBonus(new DiceStatBonus
                 {
                     power = 1
@@ -614,6 +616,7 @@ namespace SlickRuinaMod
         {
             if (behavior.Type == (BehaviourType)2)
             {
+                this.owner.battleCardResultLog?.SetPassiveAbility(this);
                 behavior.ApplyDiceStatBonus(new DiceStatBonus
                 {
                     power = 2
@@ -841,6 +844,7 @@ namespace SlickRuinaMod
             base.BeforeRollDice(behavior);
             if (CheckCondition() && IsDefenseDice(behavior.Detail))
             {
+                this.owner.battleCardResultLog?.SetPassiveAbility(this);
                 behavior?.ApplyDiceStatBonus(new DiceStatBonus
                 {
                     power = 1
@@ -848,7 +852,7 @@ namespace SlickRuinaMod
             }
             if (CheckCondition() && behavior.Detail == BehaviourDetail.Hit)
             {
-                owner.battleCardResultLog?.SetPassiveAbility(this);
+                this.owner.battleCardResultLog?.SetPassiveAbility(this);
                 behavior.ApplyDiceStatBonus(new DiceStatBonus
                 {
                     power = 1
@@ -907,6 +911,7 @@ namespace SlickRuinaMod
             base.OnUseCard(curCard);
             if (curCard != null && !isFirstUseCard)
             {
+                this.owner.battleCardResultLog?.SetPassiveAbility(this);
                 curCard.ApplyDiceAbility(DiceMatch.AllAttackDice, new DiceCardAbility_SlickMod_Mutual1Bind());
                 isFirstUseCard = true;
             }
@@ -970,7 +975,7 @@ namespace SlickRuinaMod
         {
             if (behavior.card.card.GetSpec().Ranged == CardRange.Far)
             {
-                owner.battleCardResultLog?.SetPassiveAbility(this);
+                this.owner.battleCardResultLog?.SetPassiveAbility(this);
                 behavior.ApplyDiceStatBonus(new DiceStatBonus
                 {
                     breakDmg = 2
@@ -1144,9 +1149,9 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - GOLDEN SPARK -
+    #region - UN GOLDEN SPARK -
 
-    //
+    // Beginnings of Samsara
     // Untransferable. "Speed Break" becomes accessible, and can be used by spending Samsara.
     // At the start of each Scene, gain Samsara equal to the amount of Haste on self. Upon using a Combo Finisher page, gain Samsara equal to its original Cost.
     public class PassiveAbility_SlickMod_SparkSamsaraGaming : PassiveAbilityBase
@@ -1170,6 +1175,298 @@ namespace SlickRuinaMod
                 }
             }
         }
+
+        public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
+        {
+            base.OnUseCard(curCard);
+            if (CheckCondition(curCard))
+            {
+                curCard.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+                {
+                    power = 1
+                });
+            }
+        }
+
+        #region - Combo Finisher keyword check -
+        private bool CheckCondition(BattlePlayingCardDataInUnitModel card)
+        {
+            if (card == null)
+                return false;
+            DiceCardXmlInfo xmlData = card.card.XmlData;
+            if (xmlData == null)
+                return false;
+            if (xmlData.Keywords.Contains("SlickMod_ComboFinisher"))
+                return true;
+            List<string> abilityKeywords = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords(xmlData);
+            for (int index = 0; index < abilityKeywords.Count; ++index)
+            {
+                if (abilityKeywords[index] == "SlickMod_ComboFinisher")
+                    return true;
+            }
+            foreach (DiceBehaviour behaviour in card.card.GetBehaviourList())
+            {
+                List<string> keywordsByScript = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords_byScript(behaviour.Script);
+                for (int index = 0; index < keywordsByScript.Count; ++index)
+                {
+                    if (keywordsByScript[index] == "SlickMod_ComboFinisher")
+                        return true;
+                }
+            }
+            return false;
+        }
+        #endregion
+
+    }
+
+    // lol
+    // lmao
+    public class PassiveAbility_SlickMod_ComboFinisherPower : PassiveAbilityBase
+    {
+        public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
+        {
+            base.OnUseCard(curCard);
+            if (!this.CheckCondition(curCard))
+                return;
+            this.owner.battleCardResultLog?.SetPassiveAbility((PassiveAbilityBase)this);
+            curCard.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus()
+            {
+                power = 1
+            });
+        }
+
+        #region - Combo Finisher keyword check -
+        private bool CheckCondition(BattlePlayingCardDataInUnitModel card)
+        {
+            if (card == null)
+                return false;
+            DiceCardXmlInfo xmlData = card.card.XmlData;
+            if (xmlData == null)
+                return false;
+            if (xmlData.Keywords.Contains("SlickMod_ComboFinisher"))
+                return true;
+            List<string> abilityKeywords = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords(xmlData);
+            for (int index = 0; index < abilityKeywords.Count; ++index)
+            {
+                if (abilityKeywords[index] == "SlickMod_ComboFinisher")
+                    return true;
+            }
+            foreach (DiceBehaviour behaviour in card.card.GetBehaviourList())
+            {
+                List<string> keywordsByScript = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords_byScript(behaviour.Script);
+                for (int index = 0; index < keywordsByScript.Count; ++index)
+                {
+                    if (keywordsByScript[index] == "SlickMod_ComboFinisher")
+                        return true;
+                }
+            }
+            return false;
+        }
+        #endregion
+    }
+
+    // Combo Master
+    // Reduce the Cost of Combo Finisher pages by 1.
+    public class PassiveAbility_SlickMod_ComboFinisherMastery : PassiveAbilityBase
+    {
+        public class BattleDiceCardBuf_CFMasteryCostDown : BattleDiceCardBuf
+        {
+            public override int GetCost(int oldCost)
+            {
+                return oldCost - 1;
+            }
+
+            public override void OnUseCard(BattleUnitModel owner)
+            {
+                Destroy();
+            }
+        }
+
+        // I;m stuff
+
+        #region - Combo Finisher keyword check -
+        private bool CheckCondition(BattlePlayingCardDataInUnitModel card)
+        {
+            if (card == null)
+                return false;
+            DiceCardXmlInfo xmlData = card.card.XmlData;
+            if (xmlData == null)
+                return false;
+            if (xmlData.Keywords.Contains("SlickMod_ComboFinisher"))
+                return true;
+            List<string> abilityKeywords = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords(xmlData);
+            for (int index = 0; index < abilityKeywords.Count; ++index)
+            {
+                if (abilityKeywords[index] == "SlickMod_ComboFinisher")
+                    return true;
+            }
+            foreach (DiceBehaviour behaviour in card.card.GetBehaviourList())
+            {
+                List<string> keywordsByScript = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords_byScript(behaviour.Script);
+                for (int index = 0; index < keywordsByScript.Count; ++index)
+                {
+                    if (keywordsByScript[index] == "SlickMod_ComboFinisher")
+                        return true;
+                }
+            }
+            return false;
+        }
+        #endregion
+    }
+
+    // Step Over the River
+    // Upon a successful evade, gain 1 Poise.
+    public class PassiveAbility_SlickMod_OverTheRiver : PassiveAbilityBase
+    {
+        public override void OnWinParrying(BattleDiceBehavior behavior)
+        {
+            if (behavior.Detail == BehaviourDetail.Evasion)
+            {
+                owner.ShowPassiveTypo(this);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(Hat_KeywordBuf.KeywordBufs.Poise, 1, owner);
+            }
+        }
+    }
+
+    // Former Shi Fixer
+    // All dice gain +1 Power if an ally died this Act.
+    public class PassiveAbility_SlickMod_FormerShiFixer : PassiveAbilityBase
+    {
+        private int _stack;
+
+        public override void OnWaveStart()
+        {
+            _stack = 0;
+        }
+
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
+        {
+            if (_stack > 0)
+            {
+                this.owner.battleCardResultLog?.SetPassiveAbility((PassiveAbilityBase)this);
+                behavior.ApplyDiceStatBonus(new DiceStatBonus()
+                {
+                    power = 1
+                });
+            }
+        }
+
+        public override void OnDieOtherUnit(BattleUnitModel unit)
+        {
+            if (unit.faction == owner.faction && _stack < 1)
+            {
+                _stack++;
+            }
+        }
+    }
+
+    // Enemy Spark Passive
+    // Goes gamer mode upon taking lethal damage
+    public class PassiveAbility_SlickMod_SparkUnwavering : PassiveAbilityBase
+    {
+        public bool IsActivated
+        {
+            get
+            {
+                return this._activated;
+            }
+        }
+
+        public override bool isHide
+        {
+            get
+            {
+                return this._activated;
+            }
+        }
+
+        public override void OnWaveStart()
+        {
+            this._activated = false;
+        }
+
+        public override void OnRoundEndTheLast_ignoreDead()
+        {
+            base.OnRoundEndTheLast_ignoreDead();
+        }
+
+        public override bool BeforeTakeDamage(BattleUnitModel attacker, int dmg)
+        {
+            bool activated = this._activated;
+            bool result;
+            if (activated)
+            {
+                result = false;
+            }
+            else
+            {
+                bool flag = this.owner.hp <= (float)dmg;
+                if (flag)
+                {
+                    this._activated = true;
+                    this.owner.bufListDetail.AddBuf(new PassiveAbility_SlickMod_SparkUnwavering.UnwaverBuf());
+                    this.owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_OppSpeedBreak());
+
+                }
+                result = false;
+            }
+            return result;
+        }
+
+        private bool _activated;
+
+        public class UnwaverBuf : BattleUnitBuf
+        {
+            public UnwaverBuf()
+            {
+                this.stack = 69;
+            }
+
+            public override int GetDamageReductionAll()
+            {
+                return this.stack;
+            }
+
+            public override void OnRoundEndTheLast()
+            {
+                bool flag = this._owner.breakDetail.IsBreakLifeZero();
+                if (flag)
+                {
+                    this._owner.RecoverBreakLife(this._owner.MaxBreakLife, false);
+                    this._owner.breakDetail.nextTurnBreak = false;
+                }
+                this._owner.breakDetail.RecoverBreak(this._owner.breakDetail.GetDefaultBreakGauge());
+                this._owner.breakDetail.breakLife = this._owner.breakDetail.breakGauge;
+                this.Destroy();
+            }
+        }
+
+        #region - Funny enemy version of Speed Break -
+        public class BattleUnitBuf_OppSpeedBreak : BattleUnitBuf
+        {
+            // Get keyword
+            public override string keywordId => "SlickMod_SparkSpeedBreak";
+
+            // Neutral status; doesn't need anything to override BufPositiveType
+
+            // Thing
+            public override KeywordBuf bufType
+            {
+                get
+                {
+                    return MyKeywordBufs.SlickMod_SparkSpeedBreak;
+                }
+            }
+            public override void OnRoundStart()
+            {
+                this._owner.cardSlotDetail.RecoverPlayPoint(this._owner.cardSlotDetail.GetMaxPlayPoint());
+                this._owner.bufListDetail.RemoveBufAll(KeywordBuf.Binding);
+                this._owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddedSpeedDie());
+                this._owner.RollSpeedDice();
+                SingletonBehavior<BattleManagerUI>.Instance.ui_unitListInfoSummary.UpdateCharacterProfileAll();
+            }
+        }
+        #endregion
     }
 
     #endregion
@@ -1475,6 +1772,55 @@ namespace SlickRuinaMod
     public class PassiveAbility_SlickMod_GamerCycle : PassiveAbilityBase
     {
         // :geguh:
+    }
+
+    #endregion
+
+    #region - GRADE 1 FIXER MAO -
+
+    // Newjack Workshop
+    // Dice Power +1. At the start of each Scene, randomize the types of all dice on all pages in the deck. (including Counter dice)
+    public class PassiveAbility_SlickMod_NewjackImprov : PassiveAbilityBase
+    {
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            foreach (BattleDiceCardModel amongus in this.owner.allyCardDetail.GetAllDeck())
+            {
+                if (amongus != null)
+                {
+                    amongus.CopySelf();
+                    foreach (DiceBehaviour sussy in amongus.GetBehaviourList())
+                    {
+                        if (sussy != null)
+                        {
+                            switch (sussy.Type)
+                            {
+                                case BehaviourType.Atk:
+                                    sussy.Detail = RandomUtil.SelectOne(new List<BehaviourDetail> { BehaviourDetail.Slash, BehaviourDetail.Penetrate, BehaviourDetail.Hit });
+                                    break;
+                                case BehaviourType.Def:
+                                    sussy.Detail = RandomUtil.SelectOne(new List<BehaviourDetail> { BehaviourDetail.Guard, BehaviourDetail.Evasion });
+                                    break;
+                                case BehaviourType.Standby:
+                                    sussy.Detail = RandomUtil.SelectOne(new List<BehaviourDetail> { BehaviourDetail.Slash, BehaviourDetail.Penetrate, BehaviourDetail.Hit, BehaviourDetail.Guard, BehaviourDetail.Evasion });
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
+        {
+            this.owner.battleCardResultLog?.SetPassiveAbility((PassiveAbilityBase)this);
+            behavior.ApplyDiceStatBonus(new DiceStatBonus()
+            {
+                power = 1
+            });
+        }
+
     }
 
     #endregion
