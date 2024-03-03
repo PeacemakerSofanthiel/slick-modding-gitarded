@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmodinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|d:\\library of ruina\\slick modding\\slickmod stuff\\slickprogramming\\orbstomanipulate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\orbstomanipulate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:orbstomanipulate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,8 +46,7 @@
               "RelativeToolTip": "orbstomanipulate.cs",
               "ViewState": "AQIAAEcAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T04:10:14.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-03T04:10:14.925Z"
             },
             {
               "$type": "Document",
@@ -57,7 +56,7 @@
               "RelativeDocumentMoniker": "SlickModPageEffect.cs",
               "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModPageEffect.cs",
               "RelativeToolTip": "SlickModPageEffect.cs",
-              "ViewState": "AQIAAFUCAAAAAAAAAAAmwF4CAAAlAAAA",
+              "ViewState": "AQIAANcBAAAAAAAAAAAowOYBAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-27T22:42:22.031Z",
               "EditorCaption": ""
@@ -72,8 +71,7 @@
               "RelativeToolTip": "SlickModDiceEffect.cs",
               "ViewState": "AQIAAGsBAAAAAAAAAAAAwIgBAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T03:17:07.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-27T03:17:07.273Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "SlickModStatus.cs",
               "ViewState": "AQIAAFIAAAAAAAAAAAAjwFAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T03:15:24.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-27T03:15:24.273Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "SlickModPassive.cs",
               "ViewState": "AQIAAI4FAAAAAAAAAAA4wMoFAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T01:24:20.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-27T01:24:20.523Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "SlickModInitializer.cs",
               "ViewState": "AQIAAFMAAAAAAAAAAAAYwGkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T02:08:12.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-03T02:08:12.131Z"
             }
           ]
         }

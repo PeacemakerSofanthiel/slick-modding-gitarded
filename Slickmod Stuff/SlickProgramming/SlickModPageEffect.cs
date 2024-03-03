@@ -485,7 +485,6 @@ namespace SlickRuinaMod
             BattleUnitBuf_SlickMod_SparkSamsara battleUnitBuf_SparkSamsara = base.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara) as BattleUnitBuf_SlickMod_SparkSamsara;
             if (battleUnitBuf_SparkSamsara != null && battleUnitBuf_SparkSamsara.stack >= 15)
             {
-                SingletonBehavior<DiceEffectManager>.Instance.CreateBehaviourEffect("Time4", 1f, unit.view, unit.view, 1f);
                 BattleUnitBuf_SlickMod_SparkSamsara battleUnitBuf_SlickSparkSamsara = base.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara) as BattleUnitBuf_SlickMod_SparkSamsara;
                 bool flag = battleUnitBuf_SlickSparkSamsara != null && battleUnitBuf_SlickSparkSamsara.stack >= 15;
                 if (flag)
