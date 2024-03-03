@@ -84,6 +84,7 @@ namespace SlickRuinaMod
         public static KeywordBuf SlickMod_FlowState;
         public static KeywordBuf SlickMod_InfernalOverheat;
         public static KeywordBuf SlickMod_SparkSamsara;
+        public static KeywordBuf SlickMod_SparkSpeedBreak;
         public static KeywordBuf SlickMod_Combo;
         public static KeywordBuf SlickMod_ComboFinisher;
         public static KeywordBuf SlickMod_Orb_Malice;

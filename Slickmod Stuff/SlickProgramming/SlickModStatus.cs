@@ -8,9 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using static Hat_Method.Hat_KeywordBuf;
+using HyperCard;
 
 namespace SlickRuinaMod
 {
+
+    #region - NORMAL STATUSES -
+
     // Flow State
     // Increase minimum and maximum roll value of all dice by +1. | Outdated, will rewrite with KeywordUtil systems Eventually:tm:
     public class BattleUnitBuf_SlickMod_FlowState : BattleUnitBuf
@@ -141,5 +145,151 @@ namespace SlickRuinaMod
             }
         }
     }
+
+    public class BattleUnitBuf_SlickMod_SparkSpeedBreak : BattleUnitBuf
+    {
+        // Get keyword
+        public override string keywordId => "SlickMod_SparkSpeedBreak";
+
+        // Neutral status; doesn't need anything to override BufPositiveType
+
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_SparkSpeedBreak;
+            }
+        }
+        public override void OnRoundEnd()
+        {
+            Destroy();
+        }
+    }
+
+    #endregion
+
+    #region - COMBO STUFF -
+
+    // Sakanagi set
+    public class BattleUnitBuf_SakanagiComboPieceA : BattleUnitBuf
+    {
+        public override void OnRoundEnd()
+        {
+            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_SakanagiComboPieceB>())
+            {
+                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_SakanagiComboFinisher());
+            }
+            Destroy();
+        }
+    }
+
+    public class BattleUnitBuf_SakanagiComboPieceB : BattleUnitBuf
+    {
+        public override void OnRoundEnd()
+        {
+            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_SakanagiComboPieceA>())
+            {
+                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_SakanagiComboFinisher());
+            }
+            Destroy();
+        }
+    }
+
+    public class BattleUnitBuf_SakanagiComboFinisher : BattleUnitBuf
+    {
+        public override void OnRoundStart()
+        {
+            this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 69)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+        }
+
+        public override void OnRoundEnd()
+        {
+            Destroy();
+        }
+    }
+
+    // Tempest set
+    public class BattleUnitBuf_TempestComboPieceA : BattleUnitBuf
+    {
+        public override void OnRoundEnd()
+        {
+            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_TempestComboPieceB>())
+            {
+                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_TempestComboFinisher());
+            }
+            Destroy();
+        }
+    }
+
+    public class BattleUnitBuf_TempestComboPieceB : BattleUnitBuf
+    {
+        public override void OnRoundEnd()
+        {
+            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_TempestComboPieceA>())
+            {
+                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_TempestComboFinisher());
+            }
+            Destroy();
+        }
+    }
+
+    public class BattleUnitBuf_TempestComboFinisher : BattleUnitBuf
+    {
+        public override void OnRoundStart()
+        {
+            this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 69)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+        }
+
+        public override void OnRoundEnd()
+        {
+            Destroy();
+        }
+    }
+
+    #endregion
+
+    #region - ETC -
+
+    public class BattleUnitBuf_SlickMod_AddedSpeedDie : BattleUnitBuf
+    {
+        public override int SpeedDiceNumAdder()
+        {
+            return 1;
+        }
+
+        public override void OnRoundEnd()
+        {
+            base.OnRoundEnd();
+            this.Destroy();
+        }
+    }
+
+    // Page Buff to make card exhaust at end of Scene whether used or not
+    public class BattleDiceCardBuf_SlickModTemp : BattleDiceCardBuf
+    {
+        public override void OnRoundStart()
+        {
+            _card.temporary = true;
+        }
+    }
+
+    public class BattleUnitBuf_UsingTatsumaki : BattleUnitBuf
+    {
+        public override void OnRoundEnd()
+        {
+            Destroy();
+        }
+    }
+
+    public class BattleUnitBuf_UsingKaryuken : BattleUnitBuf
+    {
+        public override void OnRoundEnd()
+        {
+            Destroy();
+        }
+    }
+
+    #endregion
 
 }

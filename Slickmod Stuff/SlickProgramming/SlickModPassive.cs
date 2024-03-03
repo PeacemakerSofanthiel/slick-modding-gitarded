@@ -913,7 +913,7 @@ namespace SlickRuinaMod
         {
             if (this.hasdied)
             {
-                this.owner.bufListDetail.AddBuf(new PassiveAbility_SlickMod_VengeanceCall.BattleUnitBuf_SlickMod_AddedSpeedDie());
+                this.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddedSpeedDie());
                 this.owner.cardSlotDetail.RecoverPlayPoint(1);
             }
             base.OnRoundStart();
@@ -930,19 +930,6 @@ namespace SlickRuinaMod
 
         private bool hasdied;
 
-        public class BattleUnitBuf_SlickMod_AddedSpeedDie : BattleUnitBuf
-        {
-            public override int SpeedDiceNumAdder()
-            {
-                return 1;
-            }
-
-            public override void OnRoundEnd()
-            {
-                base.OnRoundEnd();
-                this.Destroy();
-            }
-        }
     }
 
     // Aurora Workshop Firearm

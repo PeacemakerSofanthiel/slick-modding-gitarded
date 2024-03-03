@@ -22,7 +22,7 @@
 		<Desc>Used in order to use Speed Break. Can be gained by gaining Haste and by using Combo Finisher Combat Pages.</Desc>
 	</BattleEffectText>
 
-	<BattleEffectText ID="SlickMod_SpeedBreak">
+	<BattleEffectText ID="SlickMod_SparkSpeedBreak">
 		<Name>Speed Break</Name>
 		<Desc>Moving faster than visible motion.</Desc>
 	</BattleEffectText>
@@ -39,11 +39,6 @@
 
 	<BattleEffectText ID="SlickMod_Orb_Darkness_Orb">
 		<Name>Darkness Orb</Name>
-		<Desc>At the start of the Scene, gain 3 Malice. If this Orb is Evoked, deal (6 + Malice) damage to the enemy with the lowest HP.</Desc>
-	</BattleEffectText>
-
-	<BattleEffectText ID="SlickMod_Orb_Darkness_Orb">
-		<Name>Darkness Orb</Name>
 		<Desc>At the start of the Scene, gain 3 Malice. If this Orb is Evoked, deal 6 damage to the enemy with the lowest HP.</Desc>
 	</BattleEffectText>
 
@@ -54,12 +49,12 @@
 
 	<BattleEffectText ID="SlickMod_Orb_Focus">
 		<Name>Focus</Name>
-		<Desc>Lightning Orbs deal +{0} damage. Frost Orbs gain +{0} Shield. Gain +{0} Malice from Darkness Orbs, and deal +{0} damage with Darkness Orbs.</Desc>
+		<Desc>Lightning Orbs deal +{0} additional damage. Frost Orbs gain +{0} additional Shield. Gain +{0} additional Malice from Darkness Orbs, and deal +{0} additional damage with Darkness Orbs.</Desc>
 	</BattleEffectText>
 
 	<BattleEffectText ID="SlickMod_Orb_Malice">
 		<Name>Malice</Name>
-		<Desc>When Evoking a Darkness Orb, it deals {0} additional damage. After Evoking a Darkness Orb, lose all Malice.</Desc>
+		<Desc>When Evoking a Darkness Orb, it deals +{0} additional damage. After Evoking a Darkness Orb, lose all Malice.</Desc>
 	</BattleEffectText>
 
 	<BattleEffectText ID="SlickMod_Orb_Lockon">

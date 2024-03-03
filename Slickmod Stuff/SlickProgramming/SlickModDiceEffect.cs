@@ -149,15 +149,6 @@ namespace SlickRuinaMod
 
         public override string[] Keywords => new string[2] { "Hat_Rupture_Keyword", "Energy_Keyword" };
 
-        // Page Buff to make card temporary
-        public class BattleDiceCardBuf_SlickModTemp : BattleDiceCardBuf
-        {
-            public override void OnRoundStart()
-            {
-                _card.temporary = true;
-            }
-        }
-
         public override void OnSucceedAttack()
         {
             // Inflict 3 Rupture; Restore 2 Light

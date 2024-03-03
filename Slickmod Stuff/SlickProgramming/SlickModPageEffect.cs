@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Policy;
 using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_PackHuntingTactics;
+using static DiceCardSelfAbility_unitePower;
+using Hat_Method;
 
 namespace SlickRuinaMod
 {
@@ -513,30 +515,15 @@ namespace SlickRuinaMod
                     // Subtract 15 Samsara
                     battleUnitBuf_SlickSparkSamsara.stack -= 15;
                     unit.bufListDetail.RemoveBufAll(KeywordBuf.Binding);
-                    this.owner.bufListDetail.AddBuf(new PassiveAbility_SlickMod_VengeanceCall.BattleUnitBuf_SlickMod_AddedSpeedDie());
+                    this.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddedSpeedDie());
+                    this.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_SparkSpeedBreak());
                     this.owner.view.speedDiceSetterUI.DeselectAll();
                     this.owner.OnRoundStartOnlyUI();
                     this.owner.RollSpeedDice();
                     SingletonBehavior<BattleManagerUI>.Instance.ui_unitListInfoSummary.UpdateCharacterProfileAll();
                 }
             }
-
         }
-
-        public class BattleUnitBuf_SlickMod_AddedSpeedDie : BattleUnitBuf
-        {
-            public override int SpeedDiceNumAdder()
-            {
-                return 1;
-            }
-
-            public override void OnRoundEnd()
-            {
-                base.OnRoundEnd();
-                this.Destroy();
-            }
-        }
-
     }
 
     public class DiceCardSelfAbility_SparkBreakdownUN : DiceCardSelfAbilityBase
@@ -573,6 +560,88 @@ namespace SlickRuinaMod
                     power = 1
                 });
             }
+        }
+    }
+
+    public class DiceCardSelfAbility_TatsumakiUN : DiceCardSelfAbilityBase
+    {
+        public override string[] Keywords => new string[2] { "SlickMod_Combo", "Hat_Poise_Keyword" };
+
+        public override void OnStartBattle()
+        {
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_UsingTatsumaki());
+        }
+
+        public override void OnUseCard()
+        {
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_SakanagiComboPieceA());
+
+            if (base.owner.bufListDetail.HasBuf<BattleUnitBuf_UsingKaryuken>())
+            {
+                this.owner.bufListDetail.AddKeywordBufByCard(Hat_KeywordBuf.KeywordBufs.Poise, 3, owner);
+            }
+        }
+    }
+
+    public class DiceCardSelfAbility_KaryukenUN : DiceCardSelfAbilityBase
+    {
+        public override string[] Keywords => new string[2] { "SlickMod_Combo", "Energy_Keyword" };
+
+        public override void OnStartBattle()
+        {
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_UsingKaryuken());
+        }
+
+        public override void OnUseCard()
+        {
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_SakanagiComboPieceB());
+
+            if (base.owner.bufListDetail.HasBuf<BattleUnitBuf_UsingTatsumaki>())
+            {
+                base.owner.cardSlotDetail.RecoverPlayPointByCard(1);
+            }
+        }
+    }
+
+    public class DiceCardSelfAbility_SakanagiUN : DiceCardSelfAbilityBase
+    {
+        public override string[] Keywords => new string[2] { "SlickMod_ComboFinisher", "Hat_Poise_Keyword" };
+
+        public override void OnUseCard()
+        {
+            this.owner.bufListDetail.AddKeywordBufByCard(Hat_KeywordBuf.KeywordBufs.Poise, 5, owner);
+        }
+    }
+
+    public class DiceCardSelfAbility_WindStepUN : DiceCardSelfAbilityBase
+    {
+        public override string[] Keywords => new string[2] { "SlickMod_Combo", "Quickness_Keyword" };
+
+        public override void OnUseCard()
+        {
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_TempestComboPieceA());
+            base.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Quickness, 2, base.owner);
+        }
+    }
+
+    public class DiceCardSelfAbility_SpiralStrikeUN : DiceCardSelfAbilityBase
+    {
+        public override string[] Keywords => new string[2] { "SlickMod_Combo", "Hat_Poise_Keyword" };
+
+        public override void OnUseCard()
+        {
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_TempestComboPieceA());
+            this.owner.bufListDetail.AddKeywordBufByCard(Hat_KeywordBuf.KeywordBufs.Poise, 5, owner);
+        }
+    }
+
+    public class DiceCardSelfAbility_TempestUN : DiceCardSelfAbilityBase
+    {
+        public override string[] Keywords => new string[3] { "SlickMod_ComboFinisher", "bstart_Keyword", "Strength_Keyword" };
+
+        public override void OnStartBattle()
+        {
+            card.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Strength, 1, base.owner);
         }
     }
 
