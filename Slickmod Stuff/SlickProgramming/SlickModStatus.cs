@@ -59,8 +59,22 @@ namespace SlickRuinaMod
     // Upon using a page, discard 1 random page, then draw 1 page, then lose 1 Cycle.
     public class BattleUnitBuf_SlickMod_Cycle : BattleUnitBuf
     {
+
         // Get keyword
-        public override string keywordId => "SlickMod_Cycle";
+        public override string keywordId
+        {
+            get
+            {
+                if (this._owner != null && this._owner.passiveDetail.HasPassive<PassiveAbility_SlickMod_GamerCycle>())
+                {
+                    return "SlickMod_GamerCycle";
+                }
+                else
+                {
+                    return "SlickMod_Cycle";
+                }
+            }
+        }
 
         // Neutral status; doesn't need anything to override BufPositiveType
         
@@ -75,10 +89,20 @@ namespace SlickRuinaMod
         }
 
         // Upon using a page, discard 1 random page, then draw 1 page, then lose 1 Cycle.
+        // Upon using a page, discard 2 random pages, then draw 2 pages, then lose 1 Cycle.
         public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
         {
-            base._owner.allyCardDetail.DisCardACardRandom();
-            base._owner.allyCardDetail.DrawCards(1);
+            if (this._owner != null && this._owner.passiveDetail.HasPassive<PassiveAbility_SlickMod_GamerCycle>())
+            {
+                base._owner.allyCardDetail.DisCardACardRandom();
+                base._owner.allyCardDetail.DisCardACardRandom();
+                base._owner.allyCardDetail.DrawCards(2);
+            }
+            else
+            {
+                base._owner.allyCardDetail.DisCardACardRandom();
+                base._owner.allyCardDetail.DrawCards(1);
+            }
             this.stack--;
             if (this.stack <= 0) this._owner.bufListDetail.RemoveBuf(this);
         }
@@ -167,6 +191,68 @@ namespace SlickRuinaMod
         }
     }
 
+    // Geared up
+    // ‘Handling real power!’, deal +1 damage and stagger damage with attacks and enables use of a strong page. Lost at the end of the Scene.
+    public class BattleUnitBuf_SlickMod_GearedUp : BattleUnitBuf
+    {
+        // Get keyword
+        public override string keywordId => "SlickMod_GearedUp";
+
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_GearedUp;
+            }
+        }
+
+        public override void OnSuccessAttack(BattleDiceBehavior behavior)
+        {
+            base.OnSuccessAttack(behavior);
+            behavior.ApplyDiceStatBonus(new DiceStatBonus
+            {
+                dmg = 1,
+                breakDmg = 1
+            });
+        }
+
+        public override void OnRoundEnd()
+        {
+            base.OnRoundEnd();
+            Destroy();
+        }
+    }
+    
+    // Dangerous
+    // ‘They intend to kill.’, Dice Power +1 and enables use of an extremely powerful page. Lost at the end of the Scene.
+    public class BattleUnitBuf_SlickMod_Dangerous : BattleUnitBuf
+    {
+        // Get keyword
+        public override string keywordId => "SlickMod_Dangerous";
+
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_Dangerous;
+            }
+        }
+
+        public override void OnRollDice(BattleDiceBehavior behavior)
+        {
+            base.OnRollDice(behavior);
+            behavior.ApplyDiceStatBonus(new DiceStatBonus
+            {
+                power = 1
+            });
+        }
+        public override void OnRoundEnd()
+        {
+            base.OnRoundEnd();
+            Destroy();
+        }
+    }
+
     #endregion
 
     #region - COMBO STUFF -
@@ -250,6 +336,30 @@ namespace SlickRuinaMod
     #endregion
 
     #region - ETC -
+
+    public class BattleUnitBuf_SlickMod_AddBackAfterX : BattleUnitBuf
+    {
+        public int _count;
+
+        public LorId _cardId = LorId.None;
+
+        // Notes card ID and turn count
+        public BattleUnitBuf_SlickMod_AddBackAfterX(LorId cardId, int turnCount)
+        {
+            _cardId = cardId;
+            _count = turnCount;
+        }
+
+        public override void OnRoundStart()
+        {
+            _count--;
+            if (_count <= 0)
+            {
+                _owner.allyCardDetail.AddNewCard(_cardId);
+                Destroy();
+            }
+        }
+    }
 
     public class BattleUnitBuf_SlickMod_AddedSpeedDie : BattleUnitBuf
     {

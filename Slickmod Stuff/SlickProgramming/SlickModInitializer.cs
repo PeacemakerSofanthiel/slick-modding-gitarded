@@ -41,6 +41,19 @@ namespace SlickRuinaMod
                 MyKeywordBufs.SlickMod_SparkSamsara = newKeyword3;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_SparkSamsara>();
             }
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_GearedUp", out var newKeyword4) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword4) && EnumExtender.TryAddName("SlickMod_GearedUp", newKeyword4))
+            {
+                MyKeywordBufs.SlickMod_GearedUp = newKeyword4;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_GearedUp>();
+            }
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Dangerous", out var newKeyword5) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword5) && EnumExtender.TryAddName("SlickMod_Dangerous", newKeyword5))
+            {
+                MyKeywordBufs.SlickMod_Dangerous = newKeyword5;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Dangerous>();
+            }
+
             if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Orb_Focus", out var a) ||
                 EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out a) && EnumExtender.TryAddName("SlickMod_Orb_Focus", a))
             {
@@ -87,6 +100,8 @@ namespace SlickRuinaMod
         public static KeywordBuf SlickMod_SparkSpeedBreak;
         public static KeywordBuf SlickMod_Combo;
         public static KeywordBuf SlickMod_ComboFinisher;
+        public static KeywordBuf SlickMod_GearedUp;
+        public static KeywordBuf SlickMod_Dangerous;
         public static KeywordBuf SlickMod_Orb_Malice;
         public static KeywordBuf SlickMod_Orb_Focus;
     }

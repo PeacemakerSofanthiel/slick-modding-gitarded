@@ -8,6 +8,7 @@ using System.Security.Policy;
 using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_PackHuntingTactics;
 using static DiceCardSelfAbility_unitePower;
 using Hat_Method;
+using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_BarghestNail;
 
 namespace SlickRuinaMod
 {
@@ -173,34 +174,11 @@ namespace SlickRuinaMod
         // Keywords
         public override string[] Keywords => new string[2] { "Strength_Keyword", "Vulnerable_Keyword" };
 
-        public class BattleUnitBuf_SlickMod_AddBackAfter4 : BattleUnitBuf
-        {
-            public int _count;
-
-            public LorId _cardId = LorId.None;
-
-            // Notes card ID and turn count
-            public BattleUnitBuf_SlickMod_AddBackAfter4(LorId cardId, int turnCount)
-            {
-                _cardId = cardId;
-                _count = turnCount;
-            }
-
-            public override void OnRoundStart()
-            {
-                _count--;
-                if (_count <= 0)
-                {
-                    _owner.allyCardDetail.AddNewCard(_cardId);
-                    Destroy();
-                }
-            }
-        }
         // Card is exhausted and a new copy is added after 4 Scenes
         public void ExhaustAndReturn()
         {
             card.card.exhaust = true;
-            base.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddBackAfter4(card.card.GetID(), 4));
+            base.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddBackAfterX(card.card.GetID(), 4));
         }
 
         // [Combat Start] Gain 1 Strength and 3 Fragile this Scene
@@ -578,7 +556,7 @@ namespace SlickRuinaMod
 
             if (base.owner.bufListDetail.HasBuf<BattleUnitBuf_UsingKaryuken>())
             {
-                this.owner.bufListDetail.AddKeywordBufByCard(Hat_KeywordBuf.KeywordBufs.Poise, 3, owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Poise, 3, owner);
             }
         }
     }
@@ -609,7 +587,7 @@ namespace SlickRuinaMod
 
         public override void OnUseCard()
         {
-            this.owner.bufListDetail.AddKeywordBufByCard(Hat_KeywordBuf.KeywordBufs.Poise, 5, owner);
+            this.owner.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Poise, 5, owner);
         }
     }
 
@@ -626,16 +604,20 @@ namespace SlickRuinaMod
 
     public class DiceCardSelfAbility_SpiralStrikeUN : DiceCardSelfAbilityBase
     {
-        public override string[] Keywords => new string[2] { "SlickMod_Combo", "Hat_Poise_Keyword" };
+        // TO DO: Cap Poise gain at 5
+        public override string[] Keywords => new string[3] { "SlickMod_Combo", "Hat_Poise_Keyword", "SlickMod_Samsara" };
 
         public override void OnUseCard()
         {
-            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_TempestComboPieceA());
-            this.owner.bufListDetail.AddKeywordBufByCard(Hat_KeywordBuf.KeywordBufs.Poise, 5, owner);
+            BattleUnitBuf_SlickMod_SparkSamsara battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag = this.card.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara) as BattleUnitBuf_SlickMod_SparkSamsara;
+            if (battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag != null && battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag.stack >= 3)
+            {
+                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Poise, battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag.stack / 3, this.owner);
+            }
         }
     }
 
-    public class DiceCardSelfAbility_TempestUN : DiceCardSelfAbilityBase
+        public class DiceCardSelfAbility_TempestUN : DiceCardSelfAbilityBase
     {
         public override string[] Keywords => new string[3] { "SlickMod_ComboFinisher", "bstart_Keyword", "Strength_Keyword" };
 
@@ -645,7 +627,339 @@ namespace SlickRuinaMod
         }
     }
 
+    #endregion
 
+    #region - BACKSTREET SLUGGERS -
+
+    // Rats with Bats
+    // [On Use] Next Scene gain 1 Damage Up for each ally using 'Rats with Bats' this Scene (including self)
+    public class DiceCardSelfAbility_SlickMod_BackstreetRatsBats : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Next Scene gain 1 Damage Up for each ally using 'Rats with Bats' this Scene (including self)";
+
+        public override void OnStartBattle()
+        {
+            base.OnStartBattle();
+            owner.bufListDetail.AddBufWithoutDuplication(new SlickWereTheRatsBuf());
+        }
+
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            int count = 0;
+            foreach (BattleUnitModel ally in BattleObjectManager.instance.GetAliveList(owner.faction))
+            {
+                BattleUnitBuf battleUnitBuf = ally.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is SlickWereTheRatsBuf && !x.IsDestroyed());
+                if (battleUnitBuf != null)
+                {
+                    count++;
+                }
+            }
+            if (count > 0)
+            {
+                owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.DmgUp, count, owner);
+            }
+        }
+
+        public class SlickWereTheRatsBuf : BattleUnitBuf
+        {
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                Destroy();
+            }
+        }
+    }
+
+    // Head Crushing
+    // [Combat Start] Deal +1 damage with blunt attacks this scene
+    public class DiceCardSelfAbility_SlickMod_BackstreetHeadCrushing : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[Combat Start] Deal +1 damage with blunt attacks this scene";
+
+        public override string[] Keywords => new string[1] { "bstart_Keyword" };
+
+        public override void OnStartBattle()
+        {
+            base.OnStartBattle();
+            owner.bufListDetail.AddBuf(new SlickBluntDmg1thisRoundBuf());
+        }
+
+        public class SlickBluntDmg1thisRoundBuf : BattleUnitBuf
+        {
+            public override void OnSuccessAttack(BattleDiceBehavior behavior)
+            {
+                base.OnSuccessAttack(behavior);
+                if (behavior.Detail == BehaviourDetail.Hit)
+                {
+                    behavior.ApplyDiceStatBonus(new DiceStatBonus
+                    {
+                        dmg = 1
+                    });
+                }
+            }
+
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                Destroy();
+            }
+        }
+    }
+
+    // Rib Cracking
+    // If the attack was one-sided, all Offensive dice on this page gain '[On Hit] Inflict 1 Fragile next Scene'
+    public class DiceCardSelfAbility_SlickMod_BackstreetRibCracking : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "If the attack was one-sided, all Offensive dice on this page gain '[On Hit] Inflict 1 Fragile next Scene'";
+
+        public override string[] Keywords => new string[1] { "Vulnerable_Keyword" };
+
+        public override void OnStartOneSideAction()
+        {
+            base.OnStartOneSideAction();
+            card.ApplyDiceAbility(DiceMatch.AllAttackDice, new DiceCardAbility_vulnerable1atk());
+        }
+    }
+
+    // Handling Real Power
+    // This page is exhausted on use and returns to hand after 3 Scenes
+    // [On Use] Gain 'Geared Up' next scene
+    public class DiceCardSelfAbility_SlickMod_BackstreetHandlingPower : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "This page is exhausted on use and returns to hand after 3 Scenes\r\n [On Use] Gain 'Geared Up' next scene";
+
+        // Card is exhausted and a new copy is added after 3 Scenes
+        public void ExhaustAndReturn()
+        {
+            card.card.exhaust = true;
+            base.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddBackAfterX(card.card.GetID(), 3));
+        }
+
+        public override void OnUseCard()
+        {
+            owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_GearedUp, 1, owner);
+        }
+    }
+
+    // BlazingBoneBreaker
+    // Only usable when 'Geared Up'
+    // [On Use] Lose 'Geared Up' status; all dice played this Scene gain '[On Hit] Inflict 5 Burn to each other'
+    public class DiceCardSelfAbility_SlickMod_BackstreetBoneBreaker : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "Only usable when 'Geared Up'\r\n [On Use] Lose 'Geared Up' status; all dice played this Scene gain '[On Hit] Inflict 5 Burn to each other'";
+
+        public override string[] Keywords => new string[1] { "Burn_Keyword" };
+
+        public override bool OnChooseCard(BattleUnitModel owner)
+        {
+            if (owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_GearedUp) == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public override void OnUseCard()
+        {
+            owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_GearedUp).Destroy();
+            owner.bufListDetail.AddBuf(new SlickBurnEachother5Buf());
+            base.OnUseCard();
+        }
+
+        public class SlickBurnEachother5Buf : BattleUnitBuf
+        {
+            public override void OnSuccessAttack(BattleDiceBehavior behavior)
+            {
+                base.OnSuccessAttack(behavior);
+                _owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 5, _owner);
+                behavior.card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 5, _owner);
+            }
+
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                Destroy();
+            }
+        }
+    }
+
+    #endregion
+
+    #region - MIDNIGHT OFFICE -
+
+    // Midnight Hunt
+    // [On Use] Next Scene gain 1 Haste and Endurance for each ally using 'Midnight Hunt' this Scene (including self)
+    public class DiceCardSelfAbility_SlickMod_MidnightHunt : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Next Scene gain 1 Haste and Endurance for each ally using 'Midnight Hunt' this Scene (including self)";
+
+        public override string[] Keywords => new string[2] { "Quickness_Keyword", "Endurance_Keyword" };
+
+        public override void OnStartBattle()
+        {
+            base.OnStartBattle();
+            owner.bufListDetail.AddBufWithoutDuplication(new SlickWeStalkAtNight());
+        }
+
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            int count = 0;
+            foreach (BattleUnitModel ally in BattleObjectManager.instance.GetAliveList(owner.faction))
+            {
+                BattleUnitBuf battleUnitBuf = ally.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is SlickWeStalkAtNight && !x.IsDestroyed());
+                if (battleUnitBuf != null)
+                {
+                    count++;
+                }
+            }
+            if (count > 0)
+            {
+                owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Quickness, count, owner);
+                owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Endurance, count, owner);
+            }
+        }
+
+        public class SlickWeStalkAtNight : BattleUnitBuf
+        {
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                Destroy();
+            }
+        }
+    }
+
+    // Javelin Throw
+    // This page is exhausted on use and returns to hand after 2 Scenes
+    public class DiceCardSelfAbility_SlickMod_MidnightJavelin : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "This page is exhausted on use and returns to hand after 2 Scenes";
+
+        // Card is exhausted and a new copy is added after 2 Scenes
+        public void ExhaustAndReturn()
+        {
+            card.card.exhaust = true;
+            base.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddBackAfterX(card.card.GetID(), 2));
+        }
+    }
+
+    // Penta Hit
+    // Can only be used at Emotion Level 2 and above
+    // [On Use] Recover 10 stagger resist; all Offensive dice on this page gain '[On Hit] Deal Stagger damage to self equal to the roll's value'
+    public class DiceCardSelfAbility_SlickMod_MidnightPenta : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "Can only be used at Emotion Level 2 and above\r\n [On Use] Recover 10 stagger resist; all Offensive dice on this page gain '[On Hit] Deal Stagger damage to self equal to the roll's value'";
+
+        public override bool OnChooseCard(BattleUnitModel owner)
+        {
+            if (owner.emotionDetail.EmotionLevel >= 2)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            card.ApplyDiceAbility(DiceMatch.AllAttackDice, new DiceCardAbility_SlickMod_SelfStagger());
+        }
+    }
+
+    // Ignite Bat
+    // [On Use] Restore 3 light; draw 1 page; all dice played this Scene gain '[On hit] Inflict 1 Burn'
+    public class DiceCardSelfAbility_SlickMod_MidnightIgnite : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Restore 3 light; draw 1 page; all dice played this Scene gain '[On hit] Inflict 1 Burn'";
+
+        public override string[] Keywords => new string[3] { "Energy_Keyword", "DrawCard_Keyword", "Burn_Keyword" };
+
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            owner.cardSlotDetail.RecoverPlayPointByCard(3);
+            owner.allyCardDetail.DrawCards(1);
+            owner.bufListDetail.AddBuf(new SlickBurn1Buf());
+        }
+        public class SlickBurn1Buf : BattleUnitBuf
+        {
+            public override void OnSuccessAttack(BattleDiceBehavior behavior)
+            {
+                base.OnSuccessAttack(behavior);
+                behavior.card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 1, _owner);
+            }
+
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                Destroy();
+            }
+        }
+    }
+
+    // Unshakeable Anger
+    // This page is exhausted on use and returns to hand after 5 Scenes
+    // [On Use] Gain 'Dangerous' next scene
+    public class DiceCardSelfAbility_SlickMod_MidnightAnger : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "This page is exhausted on use and returns to hand after 5 Scenes\r\n [On Use] Gain 'Dangerous' next scene";
+
+        // Card is exhausted and a new copy is added after 5 Scenes
+        public void ExhaustAndReturn()
+        {
+            card.card.exhaust = true;
+            base.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddBackAfterX(card.card.GetID(), 5));
+        }
+
+        public override void OnUseCard()
+        {
+            this.owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Dangerous, 1, owner);
+        }
+    }
+
+    // Furious Flaming Rampage
+    // Only usable when 'Dangerous'
+    // [On Use] Lose 'Dangerous' status; all dice played this Scene gain '[Clash Win] Inflict 5 Burn to each other'
+    public class DiceCardSelfAbility_SlickMod_MidnightRampage : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "Only usable when 'Dangerous'\r\n [On Use] Lose 'Dangerous' status; all dice played this Scene gain '[Clash Win] Inflict 5 Burn to each other'";
+
+        public override string[] Keywords => new string[1] { "Burn_Keyword" };
+
+        public override bool OnChooseCard(BattleUnitModel owner)
+        {
+            if (owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_Dangerous) == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public override void OnUseCard()
+        {
+            owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_Dangerous).Destroy();
+            owner.bufListDetail.AddBuf(new SlickBurnEachother5CWBuf());
+            base.OnUseCard();
+        }
+
+        public class SlickBurnEachother5CWBuf : BattleUnitBuf
+        {
+            public override void OnWinParrying(BattleDiceBehavior behavior)
+            {
+                base.OnWinParrying(behavior);
+                _owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 5, _owner);
+                behavior.card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 5, _owner);
+            }
+
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                Destroy();
+            }
+        }
+    }
 
     #endregion
 

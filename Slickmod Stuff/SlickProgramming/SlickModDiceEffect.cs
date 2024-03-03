@@ -227,4 +227,169 @@ namespace SlickRuinaMod
 
     #endregion
 
+    #region - BACKSTREET SLUGGERS
+
+    // [On Clash Lose] Deal 2 Stagger damage to target
+    public class DiceCardAbility_SlickMod_BackstreetShieldShards : DiceCardAbilityBase
+    {
+        public override void OnLoseParrying()
+        {
+            base.OnLoseParrying();
+            card.target?.TakeBreakDamage(2, DamageType.Card_Ability, owner);
+        }
+    }
+
+    // [On Clash Win] Inflict 1 Burn to each other
+    public class DiceCardAbility_SlickMod_BackstreetCWBurnEachother1 : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Burn_Keyword" };
+
+        public override void OnWinParrying()
+        {
+            base.OnWinParrying();
+            owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 1, owner);
+            card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 1, owner);
+        }
+    }
+
+    // [On Clash Lose] Inflict 1 Burn to each other
+    public class DiceCardAbility_SlickMod_BackstreetCLBurnEachother1 : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Burn_Keyword" };
+
+        public override void OnLoseParrying()
+        {
+            base.OnLoseParrying();
+            owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 1, owner);
+            card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 1, owner);
+        }
+    }
+
+    // [On Clash Lose] Destroy opponent's next die
+    public class DiceCardAbility_SlickMod_BackstreetCLWheels : DiceCardAbilityBase
+    {
+        public override void OnLoseParrying()
+        {
+            base.OnLoseParrying();
+            card?.target?.currentDiceAction?.DestroyDice(DiceMatch.NextDice);
+        }
+    }
+
+    // [On Hit] Inflict 5 Burn; Inflict 10 Burn to self
+    public class DiceCardAbility_SlickMod_BackstreetBigBurn : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Burn_Keyword" };
+
+        public override void OnSucceedAttack(BattleUnitModel target)
+        {
+            base.OnSucceedAttack(target);
+            owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 5, owner);
+            target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 10, owner);
+        }
+    }
+
+    #endregion
+
+    #region - MIDNIGHT OFFICE
+
+    // [On Clash Lose] Inflict 3 Burn to each other
+    public class DiceCardAbility_SlickMod_MidnightCLBurnEachother1 : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Burn_Keyword" };
+
+        public override void OnLoseParrying()
+        {
+            base.OnLoseParrying();
+            owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 3, owner);
+            card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 3, owner);
+        }
+    }
+
+    // [On Hit] Inflict 2 Burn to all characters
+    public class DiceCardAbility_SlickMod_MidnightBurnEveryone2 : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Burn_Keyword" };
+
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList())
+            {
+                alive.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 2, owner);
+            }
+        }
+    }
+
+    // [Clash Win] Last die gains +2 Power
+    public class DiceCardAbility_SlickMod_MidnightCWLastPow2 : DiceCardAbilityBase
+    {
+        public override void OnWinParrying()
+        {
+            base.OnWinParrying();
+            card?.ApplyDiceStatBonus(DiceMatch.LastDice, new DiceStatBonus
+            {
+                power = 2
+            });
+        }
+    }
+
+    // [Clash Win] Next die gains +4 Power
+    public class DiceCardAbility_SlickMod_MidnightCWNextPow4 : DiceCardAbilityBase
+    {
+        public override void OnWinParrying()
+        {
+            base.OnWinParrying();
+            card?.ApplyDiceStatBonus(DiceMatch.NextDice, new DiceStatBonus
+            {
+                power = 4
+            });
+        }
+    }
+
+    // [Clash Win] Inflict 2 Fragile this Scene and next Scene
+    public class DiceCardAbility_SlickMod_MidnightVulnerableNowLater : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Vulnerable_Keyword" };
+
+        public override void OnWinParrying()
+        {
+            base.OnWinParrying();
+            card.target?.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.Vulnerable, 2, owner);
+            card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Vulnerable, 2, owner);
+        }
+    }
+
+    // [On Hit] Inflict 20 Burn to each other; Inflict 4 Burn to all other characters
+    public class DiceCardAbility_SlickMod_MidnightBurnEverything : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Burn_Keyword" };
+
+        public override void OnSucceedAttack(BattleUnitModel target)
+        {
+            base.OnSucceedAttack(target);
+            owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 20, owner);
+            target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 20, owner);
+            List<BattleUnitModel> aliveList = BattleObjectManager.instance.GetAliveList();
+            aliveList.Remove(owner);
+            aliveList.Remove(target);
+            foreach (BattleUnitModel alive in aliveList)
+            {
+                alive.bufListDetail.AddKeywordBufByCard(KeywordBuf.Burn, 4, owner);
+            }
+        }
+    }
+
+    // Currently just added to dice from an on use effect
+    // [On Hit] Deal Stagger damage to self equal to the roll's value
+    public class DiceCardAbility_SlickMod_SelfStagger : DiceCardAbilityBase
+    {
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            owner.breakDetail.TakeBreakDamage(behavior.DiceResultValue, DamageType.Card_Ability);
+        }
+    }
+
+    #endregion
+
 }

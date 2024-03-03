@@ -182,6 +182,36 @@ namespace SlickRuinaMod
         }
     }
 
+    // Delayed Speed I
+    // Speed Dice Slot +1. Gain an additional Speed die on the third Scene. (Cannot Overlap)
+    public class PassiveAbility_SlickMod_DelayedSpeed1 : PassiveAbilityBase
+    {
+        public override int SpeedDiceNumAdder()
+        {
+            int num = 1;
+            if (Singleton<StageController>.Instance.RoundTurn >= 3)
+            {
+                num++;
+            }
+            return num;
+        }
+    }
+
+    // Delayed Speed II
+    // Speed Dice Slot +2. Gain an additional Speed die on the third Scene. (Cannot Overlap)
+    public class PassiveAbility_SlickMod_DelayedSpeed2 : PassiveAbilityBase
+    {
+        public override int SpeedDiceNumAdder()
+        {
+            int num = 2;
+            if (Singleton<StageController>.Instance.RoundTurn >= 3)
+            {
+                num++;
+            }
+            return num;
+        }
+    }
+
     // Flow State (Player Ver. 1)
     // Upon winning 3 or more clashes in a Scene, enter the Flow State next Scene.
     // When hit, reduce incoming damage and Stagger damage by 2-3, then leave the Flow State.
@@ -1140,6 +1170,311 @@ namespace SlickRuinaMod
                 }
             }
         }
+    }
+
+    #endregion
+
+    #region - BACKSTREET SLUGGERS -
+
+    // Rat Breaker
+    // Blunt Stagger Damage +1. Blunt Damage +1 against staggered enemies.
+    public class PassiveAbility_SlickMod_BackstreetBlunt : PassiveAbilityBase
+    {
+        public override void BeforeGiveDamage(BattleDiceBehavior behavior)
+        {
+            base.BeforeGiveDamage(behavior);
+            if (behavior.Detail == BehaviourDetail.Hit)
+            {
+                owner.battleCardResultLog?.SetPassiveAbility(this);
+                behavior.ApplyDiceStatBonus(new DiceStatBonus
+                {
+                    breakDmg = 1
+                });
+                BattleUnitModel target = behavior.card?.target;
+                if (target != null && target.IsBreakLifeZero())
+                {
+                    behavior.ApplyDiceStatBonus(new DiceStatBonus
+                    {
+                        dmg = 1
+                    });
+                }
+            }
+        }
+    }
+
+    // Cautious
+    // At the start of the Act, gain 2 Protection
+    public class PassiveAbility_SlickMod_BackstreetProt : PassiveAbilityBase
+    {
+        public override void OnWaveStart()
+        {
+            base.OnWaveStart();
+            owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Protection, 2, owner);
+        }
+    }
+
+    // Violent
+    // At the start of the Act, gain 1 Damage Up
+    public class PassiveAbility_SlickMod_BackstreetDmgUp : PassiveAbilityBase
+    {
+        public override void OnWaveStart()
+        {
+            base.OnWaveStart();
+            owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.DmgUp, 1, owner);
+        }
+    }
+
+    // Striking Upward
+    // Deal +2 Damage and Stagger Damage to enemies with a higher keypage rarity
+    public class PassiveAbility_SlickMod_BackstreetPunchUp : PassiveAbilityBase
+    {
+        public override void BeforeGiveDamage(BattleDiceBehavior behavior)
+        {
+            base.BeforeGiveDamage(behavior);
+            BattleUnitModel target = behavior.card?.target;
+            if (target != null && (int)target.Book.Rarity > (int)owner.Book.Rarity)
+            {
+                owner.battleCardResultLog?.SetPassiveAbility(this);
+                behavior.ApplyDiceStatBonus(new DiceStatBonus
+                {
+                    dmg = 2,
+                    breakDmg = 2
+                });
+            }
+        }
+    }
+
+    // Blazing Bat
+    // Upon a successful Blunt attack, inflict 1 burn. At the start of each Scene, gain 2 burn.
+    public class PassiveAbility_SlickMod_BackstreetBlazing : PassiveAbilityBase
+    {
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Burn, 2, owner);
+        }
+
+        public override void OnSucceedAttack(BattleDiceBehavior behavior)
+        {
+            base.OnSucceedAttack(behavior);
+            if (behavior.Detail == BehaviourDetail.Hit)
+            {
+                owner.battleCardResultLog?.SetPassiveAbility(this);
+                behavior.card.target?.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Burn, 1, owner);
+            }
+        }
+    }
+
+    // Rampaging Flames
+    // At the start of each Scene, inflict 1 burn to all characters, including self. Every 3 scenes, increase the burn inflicted by 1 (max 15).
+    public class PassiveAbility_SlickMod_BackstreetFlames : PassiveAbilityBase
+    {
+        private int burnStack;
+        private int counter;
+        public override void OnWaveStart()
+        {
+            base.OnWaveStart();
+            burnStack = 1;
+            counter = 0;
+        }
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            if (burnStack < 15)
+            {
+                counter++;
+                if (counter >= 3)
+                {
+                    counter = 0;
+                    burnStack++;
+                }
+            }
+            foreach (BattleUnitModel alive in BattleObjectManager.instance.GetAliveList())
+            {
+                alive.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Burn, burnStack, owner);
+            }
+        }
+    }
+    #endregion
+
+    #region - MIDNIGHT OFFICE -
+
+    // Midnight Arrival
+    // Starting with the fifth Scene, gain 1 Protection, Stagger Protection, Haste, and Damage Up each Scene
+    public class PassiveAbility_SlickMod_MidnightArrival : PassiveAbilityBase
+    {
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            if (Singleton<StageController>.Instance.RoundTurn >= 5)
+            {
+                owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Protection, 1, owner);
+                owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.BreakProtection, 1, owner);
+                owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Quickness, 1, owner);
+                owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.DmgUp, 1, owner);
+            }
+        }
+    }
+
+    // Calm
+    // At the start of the Act, gain 1 Endurance
+    public class PassiveAbility_SlickMod_MidnightCalm : PassiveAbilityBase
+    {
+        public override void OnWaveStart()
+        {
+            base.OnWaveStart();
+            owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Endurance, 1, owner);
+        }
+    }
+
+    // Courageous
+    // At the start of the Act, gain 1 Strength
+    public class PassiveAbility_SlickMod_MidnightCourageous : PassiveAbilityBase
+    {
+        public override void OnWaveStart()
+        {
+            base.OnWaveStart();
+            owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Strength, 1, owner);
+        }
+    }
+
+    // Rekindled Anger
+    // Every third successful attack inflicts 2 burn
+    public class PassiveAbility_SlickMod_MidnightRekindled : PassiveAbilityBase
+    {
+        private int counter = 0;
+        public override void OnSucceedAttack(BattleDiceBehavior behavior)
+        {
+            base.OnSucceedAttack(behavior);
+            counter++;
+            if (counter == 3 && behavior.card.target != null)
+            {
+                behavior.card.target.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Burn, 2, owner);
+                counter = 0;
+            }
+        }
+    }
+
+    // Ignited Bat
+    // Inflict 1 Burn on hit. At the start of each Scene, gain 5 burn.
+    public class PassiveAbility_SlickMod_MidnightIgnited : PassiveAbilityBase
+    {
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Burn, 5, owner);
+        }
+
+        public override void OnSucceedAttack(BattleDiceBehavior behavior)
+        {
+            base.OnSucceedAttack(behavior);
+            owner.battleCardResultLog?.SetPassiveAbility(this);
+            behavior.card.target?.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Burn, 1, owner);
+        }
+    }
+
+    // Smoldering Insanity
+    // Dice gain +1 Power for every 20 stacks of Burn on self (max 3). If Burn on self reaches 70...
+    public class PassiveAbility_SlickMod_MidnightSmoldering : PassiveAbilityBase
+    {
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
+        {
+            base.BeforeRollDice(behavior);
+            int num = Math.Min(owner.bufListDetail.GetKewordBufStack(KeywordBuf.Burn) / 20, 3);
+            if (num > 0)
+            {
+                owner.battleCardResultLog?.SetPassiveAbility(this);
+                behavior.ApplyDiceStatBonus(new DiceStatBonus
+                {
+                    power = num
+                });
+            }
+        }
+        public override void OnRoundEnd()
+        {
+            base.OnRoundEnd();
+            if (owner.bufListDetail.GetKewordBufStack(KeywordBuf.Burn) > 70)
+            {
+                owner.TakeDamage(100, DamageType.Buf, owner, KeywordBuf.Burn);
+                owner.bufListDetail.GetActivatedBuf(KeywordBuf.Burn).Destroy();
+            }
+        }
+    }
+
+    // Cauterize
+    // Once per reception, when Staggered, recover from Stagger, recover 40 Stagger resist and 20 HP, and gain 20 Burn.
+    public class PassiveAbility_SlickMod_MidnightCauterize : PassiveAbilityBase
+    {
+        public override void OnWaveStart()
+        {
+            base.OnWaveStart();
+            _triggered = false;
+            // Check if there is a stored value for this passive
+            if (Singleton<StageController>.Instance.GetStageModel().GetStageStorageData("MidnightCauterize", out List<UnitCount> list))
+            {
+                // Check if it corresponds to this specific unit, and if so, set _triggered to the stored value
+                if (list.Exists((UnitCount x) => x.Unit == owner.UnitData))
+                {
+                    _triggered = list.Find((UnitCount x) => x.Unit == owner.UnitData).Triggered;
+                }
+            }
+        }
+
+        public override bool OnBreakGageZero()
+        {
+            if (!_triggered)
+            {
+                _triggered = true;
+                owner.breakDetail.RecoverBreak(40);
+                owner.RecoverHP(20);
+                owner.bufListDetail.AddKeywordBufByEtc(KeywordBuf.Burn, 20, owner);
+                return true;
+            }
+            return false;
+        }
+
+        public override void OnBattleEnd()
+        {
+            base.OnBattleEnd();
+            // Check if there is a stored value for this passive
+            Singleton<StageController>.Instance.GetStageModel().GetStageStorageData("MidnightCauterize", out List<UnitCount> list);
+            if (list == null)
+            {
+                // If there isn't, set one up
+                list = new List<UnitCount>();
+                Singleton<StageController>.Instance.GetStageModel().SetStageStorgeData("MidnightCauterize", list);
+            }
+            // Check if there is a stored value for this specific unit; if so, update the Triggered variable with the current one
+            if (list.Exists((UnitCount x) => x.Unit == owner.UnitData))
+            {
+                list.Find((UnitCount x) => x.Unit == owner.UnitData).Triggered = _triggered;
+            }
+            else
+            {
+                // If there isn't, add one, and set the UnitData and Triggered variables to the ones for this unit and passive
+                list.Add(new UnitCount
+                {
+                    Unit = owner.UnitData,
+                    Triggered = _triggered,
+                });
+            }
+        }
+
+        private bool _triggered;
+        public class UnitCount
+        {
+            // Keeps track of which unit the saved data corresponds to
+            public UnitBattleDataModel Unit { get; set; }
+            public bool Triggered { get; set; }
+        }
+    }
+    #endregion
+
+    #region - AESIR OFFICE -
+
+    public class PassiveAbility_SlickMod_GamerCycle : PassiveAbilityBase
+    {
+        // :geguh:
     }
 
     #endregion

@@ -8,7 +8,7 @@ using Hat_Effect;
 using Hat_Method;
 using SlickRuinaMod;
 
-namespace SlickProgramming
+namespace SlickRuinaMod
 {
     public class passivedefectorbbase : PassiveAbilityBase
     {

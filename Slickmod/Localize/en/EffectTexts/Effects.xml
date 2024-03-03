@@ -62,5 +62,10 @@
 		<Desc>All enemies' Lightning Orbs deal damage to this character instead of dealing damage randomly. Only 1 character can be Locked On at a time. At the end of the Scene, lose Locked On.</Desc>
 	</BattleEffectText>
 
+	<BattleEffectText ID="SlickMod_GamerCycle">
+		<Name>Cycle</Name>
+		<Desc>Upon using a page, discard 2 random pages, then draw 2 pages, then lose 1 Cycle.</Desc>
+	</BattleEffectText>
+
   </effectTextList>
 </BattleEffectTextRoot>
