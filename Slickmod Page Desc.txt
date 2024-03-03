@@ -1,0 +1,43 @@
+Just a mod I felt like making, because I was hella bored. Will update with more content as time goes on.
+
+Here's a [url=https://discord.com/invite/afS3F3PxHu]Discord invite link to the development server.[/url] Join if you want. I could always use the help.
+
+[h3]The intent of this mod's receptions is to be balanced around vanilla content + its own content.[/h3]
+[h3]Listing a tier means it is intended to be fought using anything from a lower tier, not from the same tier.[/h3]
+[h3]( Ex. Couriers (I) is Urban Nightmare 2, meaning it is balanced assuming you are only using Keypages and Conbat Pages from Urban Nightmare Row 1 (or below). )[/h3]
+
+
+
+[h2]--- RECEPTIONS ---[/h2]
+
+[h3]-x- Urban Nightmare  -x-[/h3]
+(UN2) The Couriers (I) -> 2 Urban Nightmare books
+(UN2) Snow Coyote Office -> 2 Urban Nightmare books
+(UN2) Inferno Corps (I) -> 2 Urban Nightmare books
+
+
+
+[h2]----------- CREDITS -----------[/h2]
+[h3]-- PROJECT LEAD --[/h3]
+Slick - Lead Developer, Lead Combat Designer, Lead Writer
+Meedogh - Developer, Coder, Kitbasher
+
+[h3]-- EVERYONE ELSE --[/h3]
+VitreousVirtuosa - Snow Coyote Office Credenzas
+Dusk Boomspell - Design, Credenzas and balance for the Inferno Corps (I)
+Heetagan - Code and balance for the Inferno Corps (I)
+samson5580 - Inferno Templar skin, Inferno Corps page art; Design, skins, page art and balance of the Backstreets Sluggers and Midnight Office
+CountDuckoo - Code for the Backstreets Sluggers and Midnight Office
+
+
+
+[h3]-- SERVICES & DEPENDENCIES --[/h3]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2811698222]Localization Manager[/url] by StartUp
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2994035022]Enum Extender V2, Keyword Util, Sufficient Ammo Fix, Assorted Fixes (Via Cya's Toolbox)[/url] by Cyaminthe
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3051354156]HatSingularity[/url] by 華鳥風月 (AKA Hat)
+
+
+
+[h2]----- SPECIAL THANKS -----[/h2]
+CalmMagma for putting up with my incessant and probably stupid coding questions, and being a total bro.
+Aisir, Evilsweetblock, and splittedbanana for their assistance with an old private project that ended up going nowhere, unfortunately. Some of their code is in here and is being or will be repurposed.
