@@ -40,5 +40,46 @@ The Proxy was onto us. Found the weapon in progress; but didn’t act. Applied s
 </Desc>
       </TextList>
     </BookDesc>
+    <BookDesc BookID="10000006">
+      <BookName />
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+    <BookDesc BookID="10000007">
+      <BookName />
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+    <BookDesc BookID="10000008">
+      <BookName />
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+    <BookDesc BookID="10000009">
+      <BookName />
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+    <BookDesc BookID="10000010">
+      <BookName />
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+    <BookDesc BookID="10000011">
+      <BookName />
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+    <BookDesc BookID="10000012">
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
   </bookDescList>
 </BookDescRoot>

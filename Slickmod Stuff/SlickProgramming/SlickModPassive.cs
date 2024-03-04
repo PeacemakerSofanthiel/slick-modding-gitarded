@@ -9,10 +9,25 @@ using System.Collections;
 using static UnityEngine.GraphicsBuffer;
 using Hat_Method;
 using static DiceCardSelfAbility_smallBirdEgo;
+using HyperCard;
 
 namespace SlickRuinaMod
 {
     #region - GENERAL PURPOSE -
+
+    // Heightened Emotions I
+    // Start the reception at Emotion Level 1.
+    public class PassiveAbility_SlickMod_StartEmoLevel1 : PassiveAbilityBase
+    {
+        public override void OnWaveStart()
+        {
+            if (this.owner.emotionDetail.EmotionLevel == 0)
+            {
+                this.owner.emotionDetail.LevelUp_Forcely(1);
+            }
+            this.owner.emotionDetail.CheckLevelUp();
+        }
+    }
 
     // Heightened Emotions II
     // Start the reception at Emotion Level 2.
@@ -212,6 +227,18 @@ namespace SlickRuinaMod
             }
             return num;
         }
+    }
+
+    // Sparkling
+    // Restore 1 additional Light and draw 1 additional page at the start of each Scene.
+    public class PassiveAbility_SlickMod_Sparkling : PassiveAbilityBase
+    {
+        public override void OnRoundStart()
+        {
+            this.owner.cardSlotDetail.RecoverPlayPointByCard(1);
+            this.owner.allyCardDetail.DrawCards(1);
+        }
+
     }
 
     // Flow State (Player Ver. 1)
@@ -1159,7 +1186,7 @@ namespace SlickRuinaMod
         // Adds Speed Break to Ego Hand
         public override void OnWaveStart()
         {
-            owner.personalEgoDetail.AddCard(new LorId("SlickMod", 22));
+            owner.personalEgoDetail.AddCard(new LorId("SlickMod", 56));
         }
 
         // Gains Samsara equal to Haste
@@ -1179,42 +1206,40 @@ namespace SlickRuinaMod
         public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
         {
             base.OnUseCard(curCard);
-            if (CheckCondition(curCard))
+            curCard.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus());
             {
-                curCard.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
-                {
-                    power = 1
-                });
-            }
+                int CFSamsara = curCard.card.GetCost() + 1;
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_SparkSamsara, CFSamsara, this.owner);
+            };
         }
 
         #region - Combo Finisher keyword check -
-        private bool CheckCondition(BattlePlayingCardDataInUnitModel card)
+        private bool CheckCondition(BattleDiceCardModel card)
+{
+    if (card == null)
+        return false;
+    DiceCardXmlInfo xmlData = card.XmlData;
+    if (xmlData == null)
+        return false;
+    if (xmlData.Keywords.Contains("SlickMod_ComboFinisher"))
+        return true;
+    List<string> abilityKeywords = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords(xmlData);
+    for (int index = 0; index < abilityKeywords.Count; ++index)
+    {
+        if (abilityKeywords[index] == "SlickMod_ComboFinisher")
+            return true;
+    }
+    foreach (DiceBehaviour behaviour in card.GetBehaviourList())
+    {
+        List<string> keywordsByScript = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords_byScript(behaviour.Script);
+        for (int index = 0; index < keywordsByScript.Count; ++index)
         {
-            if (card == null)
-                return false;
-            DiceCardXmlInfo xmlData = card.card.XmlData;
-            if (xmlData == null)
-                return false;
-            if (xmlData.Keywords.Contains("SlickMod_ComboFinisher"))
+            if (keywordsByScript[index] == "SlickMod_ComboFinisher")
                 return true;
-            List<string> abilityKeywords = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords(xmlData);
-            for (int index = 0; index < abilityKeywords.Count; ++index)
-            {
-                if (abilityKeywords[index] == "SlickMod_ComboFinisher")
-                    return true;
-            }
-            foreach (DiceBehaviour behaviour in card.card.GetBehaviourList())
-            {
-                List<string> keywordsByScript = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords_byScript(behaviour.Script);
-                for (int index = 0; index < keywordsByScript.Count; ++index)
-                {
-                    if (keywordsByScript[index] == "SlickMod_ComboFinisher")
-                        return true;
-                }
-            }
-            return false;
         }
+    }
+    return false;
+}
         #endregion
 
     }
@@ -1282,14 +1307,42 @@ namespace SlickRuinaMod
             }
         }
 
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            foreach (BattleDiceCardModel thingy in this.owner.personalEgoDetail.GetHand())
+            {
+                if (thingy != null && CheckCondition(thingy))
+                {
+                    if (!thingy.HasBuf<BattleDiceCardBuf_CFMasteryCostDown>())
+                    {
+                        thingy.AddBuf(new BattleDiceCardBuf_CFMasteryCostDown());
+                    }
+                }
+            }
+
+            base.OnRoundStart();
+            foreach (BattleDiceCardModel thingy in this.owner.allyCardDetail.GetHand())
+            {
+                if (thingy != null && CheckCondition(thingy))
+                {
+                    if (!thingy.HasBuf<BattleDiceCardBuf_CFMasteryCostDown>())
+                    {
+                        thingy.AddBuf(new BattleDiceCardBuf_CFMasteryCostDown());
+                    }
+                }
+            }
+
+        }
+
         // I;m stuff
 
         #region - Combo Finisher keyword check -
-        private bool CheckCondition(BattlePlayingCardDataInUnitModel card)
+        private bool CheckCondition(BattleDiceCardModel card)
         {
             if (card == null)
                 return false;
-            DiceCardXmlInfo xmlData = card.card.XmlData;
+            DiceCardXmlInfo xmlData = card.XmlData;
             if (xmlData == null)
                 return false;
             if (xmlData.Keywords.Contains("SlickMod_ComboFinisher"))
@@ -1300,7 +1353,7 @@ namespace SlickRuinaMod
                 if (abilityKeywords[index] == "SlickMod_ComboFinisher")
                     return true;
             }
-            foreach (DiceBehaviour behaviour in card.card.GetBehaviourList())
+            foreach (DiceBehaviour behaviour in card.GetBehaviourList())
             {
                 List<string> keywordsByScript = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords_byScript(behaviour.Script);
                 for (int index = 0; index < keywordsByScript.Count; ++index)

@@ -89,4 +89,99 @@
     <Card>19</Card>
     <Card>20</Card>
   </Deck>
+  <Deck ID="9">
+    <Card>22</Card>
+    <Card>22</Card>
+    <Card>25</Card>
+    <Card>25</Card>
+    <Card>25</Card>
+    <Card>23</Card>
+    <Card>24</Card>
+    <Card>27</Card>
+  </Deck>
+  <Deck ID="10">
+    <Card>22</Card>
+    <Card>22</Card>
+    <Card>25</Card>
+    <Card>23</Card>
+    <Card>23</Card>
+    <Card>24</Card>
+    <Card>26</Card>
+  </Deck>
+  <Deck ID="11">
+    <Card>28</Card>
+    <Card>28</Card>
+    <Card>28</Card>
+    <Card>25</Card>
+    <Card>23</Card>
+    <Card>24</Card>
+    <Card>27</Card>
+    <Card>26</Card>
+  </Deck>
+  <Deck ID="12">
+    <Card>28</Card>
+    <Card>28</Card>
+    <Card>28</Card>
+    <Card>29</Card>
+    <Card>29</Card>
+    <Card>30</Card>
+    <Card>30</Card>
+    <Card>31</Card>
+    <Card>32</Card>
+  </Deck>
+  <Deck ID="13">
+    <Card>33</Card>
+    <Card>33</Card>
+    <Card>36</Card>
+    <Card>36</Card>
+    <Card>35</Card>
+    <Card>35</Card>
+    <Card>38</Card>
+    <Card>39</Card>
+    <Card>40</Card>
+  </Deck>
+  <Deck ID="14">
+    <Card>33</Card>
+    <Card>33</Card>
+    <Card>36</Card>
+    <Card>34</Card>
+    <Card>34</Card>
+    <Card>37</Card>
+    <Card>37</Card>
+    <Card>38</Card>
+    <Card>40</Card>
+  </Deck>
+  <Deck ID="15">
+    <Card>41</Card>
+    <Card>33</Card>
+    <Card>33</Card>
+    <Card>35</Card>
+    <Card>37</Card>
+    <Card>38</Card>
+    <Card>38</Card>
+    <Card>38</Card>
+    <Card>40</Card>
+  </Deck>
+  <Deck ID="16">
+    <Card>41</Card>
+    <Card>41</Card>
+    <Card>42</Card>
+    <Card>42</Card>
+    <Card>43</Card>
+    <Card>44</Card>
+    <Card>45</Card>
+    <Card>46</Card>
+    <Card>47</Card>
+  </Deck>
+  <Deck ID="17">
+    <Card>48</Card>
+    <Card>48</Card>
+    <Card>49</Card>
+    <Card>49</Card>
+    <Card>49</Card>
+    <Card>50</Card>
+    <Card>51</Card>
+    <Card>53</Card>
+    <Card>54</Card>
+  </Deck>
 </DeckXmlRoot>

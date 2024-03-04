@@ -1,0 +1,55 @@
+<ModInfo>
+  <ClothInfo>
+    <Name>ethanplayer1</Name>
+    <Default>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="163" pivot_y="-184" />
+      <Head head_x="2" head_y="400" rotation="0" head_enable="True" />
+    </Default>
+    <Guard>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-9" pivot_y="-156" />
+      <Head head_x="0" head_y="354" rotation="0" head_enable="True" />
+    </Guard>
+    <Evade>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="69" pivot_y="-137" />
+      <Head head_x="21" head_y="386" rotation="0" head_enable="True" />
+    </Evade>
+    <Damaged>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="83" pivot_y="-156" />
+      <Head head_x="7" head_y="363" rotation="0" head_enable="True" />
+    </Damaged>
+    <Slash>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="149" pivot_y="-170" />
+      <Head head_x="4" head_y="377" rotation="0" head_enable="True" />
+    </Slash>
+    <Penetrate>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="158" pivot_y="-151" />
+      <Head head_x="0" head_y="352" rotation="0" head_enable="True" />
+    </Penetrate>
+    <Hit>
+      <Direction>Side</Direction>
+      <Pivot pivot_x="-172" pivot_y="-227" />
+      <Head head_x="-9" head_y="361" rotation="0" head_enable="True" />
+    </Hit>
+    <Move>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="30" pivot_y="-151" />
+      <Head head_x="0" head_y="372" rotation="0" head_enable="True" />
+    </Move>
+    <Fire>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="163" pivot_y="-151" />
+      <Head head_x="0" head_y="352" rotation="0" head_enable="True" />
+    </Fire>
+    <Aim>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="156" pivot_y="-156" />
+      <Head head_x="0" head_y="356" rotation="0" head_enable="True" />
+    </Aim>
+  </ClothInfo>
+</ModInfo>

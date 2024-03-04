@@ -45,6 +45,55 @@ The Proxy was onto us. Found the weapon in progress; but didn’t act. Applied s
       </TextList>
       <PassiveList />
     </BookDesc>
+    <BookDesc BookID="10000006">
+      <BookName>A Backstreets Slugger, Page 1</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="10000007">
+      <BookName>A Backstreets Slugger, Page 2</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="10000008">
+      <BookName>Ethan's Incomplete Page</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="10000009">
+      <BookName>Ethan's Incomplete Page, Vol. 2</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="10000010">
+      <BookName>A Midnight Office Fixer, Page 1</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="10000011">
+      <BookName>A Midnight Office Fixer, Page 2</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="10000012">
+      <BookName>Susano'o's Incomplete Page</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+      <PassiveList />
+    </BookDesc>
     <BookDesc BookID="1">
       <BookName>A Courier's Page</BookName>
       <TextList />
@@ -82,6 +131,51 @@ The Proxy was onto us. Found the weapon in progress; but didn’t act. Applied s
     </BookDesc>
     <BookDesc BookID="8">
       <BookName>An Inferno Corps Underunt's Page</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="9">
+      <BookName>A Backstreets Slugger, Page 1</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="10">
+      <BookName>A Backstreets Slugger, Page 2</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="11">
+      <BookName>Ethan's Page</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="12">
+      <BookName>The Blazing Striker's Page</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="13">
+      <BookName>A Midnight Office Fixer, Page 1</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="14">
+      <BookName>A Midnight Office Fixer, Page 2</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="15">
+      <BookName>Ethan's Page</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="16">
+      <BookName>The Blazing Striker's Page, Vol. 2</BookName>
+      <TextList />
+      <PassiveList />
+    </BookDesc>
+    <BookDesc BookID="17">
+      <BookName>Susano'o's Page</BookName>
       <TextList />
       <PassiveList />
     </BookDesc>

@@ -324,17 +324,17 @@ namespace SlickRuinaMod
             bool flag = this._owner.faction > Faction.Enemy;
             if (!flag)
             {
-                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 69)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 52)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
             }
             else
             {
-                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 69));
+                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 52));
             }
         }
 
         public override void OnRoundEnd()
         {
-            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 69));
+            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 52));
             Destroy();
         }
     }
@@ -371,17 +371,17 @@ namespace SlickRuinaMod
             bool flag = this._owner.faction > Faction.Enemy;
             if (!flag)
             {
-                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 69)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 55)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
             }
             else
             {
-                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 69));
+                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 55));
             }
         }
 
         public override void OnRoundEnd()
         {
-            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 69));
+            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 55));
             Destroy();
         }
     }

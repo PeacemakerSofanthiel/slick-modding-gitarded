@@ -210,4 +210,304 @@
     <Name>Temperamental Weapon</Name>
     <Desc>While this character has Overheat, inflict 1 Burn upon a successful attack</Desc>
   </Passive>
+  <Passive ID="17">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Common</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>2</Cost>
+    <Script>SlickMod_BackstreetBlunt</Script>
+    <Name>Rat Breaker</Name>
+    <Desc>Blunt Stagger Damage +1. Blunt Damage +1 against staggered enemies.</Desc>
+  </Passive>
+  <Passive ID="18">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>1</Cost>
+    <Script>SlickMod_BackstreetProt</Script>
+    <Name>Cautious</Name>
+    <Desc>Gain 2 Protection for the first Scene of the Act.</Desc>
+  </Passive>
+  <Passive ID="19">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>1</Cost>
+    <Script>SlickMod_BackstreetDmgUp</Script>
+    <Name>Violent</Name>
+    <Desc>Gain 1 Damage Up for the first Scene of the Act.</Desc>
+  </Passive>
+  <Passive ID="20">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Common</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>1</Cost>
+    <Script>SlickMod_StartEmoLevel1</Script>
+    <Name>Heightened Emotions 1</Name>
+    <Desc>Start the reception at Emotion Level 1.</Desc>
+  </Passive>
+  <Passive ID="21">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Common</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>3</Cost>
+    <Script>SlickMod_BackstreetPunchUp</Script>
+    <Name>Punching Up</Name>
+    <Desc>Deal +2 Damage and Stagger Damage to enemies with a higher Keypage rarity</Desc>
+  </Passive>
+  <Passive ID="22">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_DelayedSpeed1</Script>
+    <Name>Speed I.5</Name>
+    <Desc>Speed Dice Slot +1. Gain an additional Speed die on Scene 3. (Cannot Overlap)</Desc>
+  </Passive>
+  <Passive ID="23">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_BackstreetFlames</Script>
+    <Name>Blazing Bat</Name>
+    <Desc>Upon a successful Blunt attack, inflict 1 Burn. At the start of each Scene, gain 2 Burn.</Desc>
+  </Passive>
+  <Passive ID="24">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>2</Cost>
+    <Script>SlickMod_StartEmoLevel2</Script>
+    <Name>Fervent Rage</Name>
+    <Desc>Start the reception at Emotion Level 2.</Desc>
+  </Passive>
+  <Passive ID="25">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>SlickMod_BackstreetFlames</Script>
+    <Name>Rampaging Flames</Name>
+    <Desc>At the start of each Scene, inflict 1 burn to all characters, including self. Every 3 scenes, increase the burn inflicted by 1 (max 15).</Desc>
+  </Passive>
+  <Passive ID="26">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>180005</Script>
+    <Name>Sparkling</Name>
+    <Desc>Restore 1 additional Light and draw 1 additional page at the start of each Scene.</Desc>
+  </Passive>
+  <Passive ID="27">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>5</Cost>
+    <Script>SlickMod_MidnightArrival</Script>
+    <Name>Midnight Arrival</Name>
+    <Desc>Starting with the fifth Scene, gain 1 Protection, Stagger Protection, Haste, and Damage Up each Scene</Desc>
+  </Passive>
+  <Passive ID="28">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>1</Cost>
+    <Script>SlickMod_MidnightCalm</Script>
+    <Name>Calm</Name>
+    <Desc>At the start of the Act, gain 1 Endurance.</Desc>
+  </Passive>
+  <Passive ID="29">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>1</Cost>
+    <Script>SlickMod_MidnightCourageous</Script>
+    <Name>Courageous</Name>
+    <Desc>At the start of the Act, gain 1 Strength</Desc>
+  </Passive>
+  <Passive ID="30">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Common</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>2</Cost>
+    <Script>SlickMod_MidnightRekindled</Script>
+    <Name>Rekindled Anger</Name>
+    <Desc>Every third successful attack inflicts 2 burn</Desc>
+  </Passive>
+  <Passive ID="31">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_MidnightIgnited</Script>
+    <Name>Ignited Bat</Name>
+    <Desc>Inflict 1 Burn on hit. At the start of each Scene, gain 5 burn.</Desc>
+  </Passive>
+  <Passive ID="32">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>SlickMod_MidnightSmoldering</Script>
+    <Name>Smoldering Insanity</Name>
+    <Desc>Dice gain +1 Power for every 20 stacks of Burn on self (max 3). If Burn on self reaches 70...</Desc>
+  </Passive>
+  <Passive ID="33">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_MidnightCauterize</Script>
+    <Name>Cauterize</Name>
+    <Desc>Once per reception, when Staggered, recover from Stagger, recover 40 Stagger resist and 20 HP, and gain 20 Burn.</Desc>
+  </Passive>
+  <Passive ID="34">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>8</Cost>
+    <Script>SlickMod_DelayedSpeed2</Script>
+    <Name>Speed II.5</Name>
+    <Desc>Speed Dice Slot +2. Gain an additional Speed die on the third Scene. (Cannot Overlap)</Desc>
+  </Passive>
+  <Passive ID="35">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_SparkSamsaraGaming</Script>
+    <Name>Beginnings of Samsara</Name>
+    <Desc>Untransferable. "Speed Break" becomes accessible, and can be used by spending Samsara. At the start of each Scene, gain Samsara equal to the amount of Haste on self. Upon using a Combo Finisher page, gain Samsara equal to its original Cost.</Desc>
+  </Passive>
+  <Passive ID="36">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_ComboFinisherMastery</Script>
+    <Name>Combo Mastery</Name>
+    <Desc>Reduce the Cost of Combo Finisher pages by 1.</Desc>
+  </Passive>
+  <Passive ID="37">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_OverTheRiver</Script>
+    <Name>Step Over the River</Name>
+    <Desc>Upon a successful evade, gain 1 Poise.</Desc>
+  </Passive>
+  <Passive ID="38">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_FormerShiFixer</Script>
+    <Name>Former Shi Fixer</Name>
+    <Desc>All dice gain +1 Power if an ally died this Act.</Desc>
+  </Passive>
+  <Passive ID="39">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_SparkUnwavering</Script>
+    <Name>Beginnings of Samsara</Name>
+    <Desc>Upon taking a lethal blow, reduce all incoming damage including what activated this passive by 69 for the Scene (Activates once per Act), then if this character is Staggered, fully recover from Stagger next Scene, and fully recover Stagger Resist. 
+At the start of the following Scene, activate Speed Break.</Desc>
+  </Passive>
 </PassiveXmlRoot>

@@ -11,9 +11,12 @@ Here's a [url=https://discord.com/invite/afS3F3PxHu]Discord invite link to the d
 [h2]--- RECEPTIONS ---[/h2]
 
 [h3]-x- Urban Nightmare  -x-[/h3]
+(UM) Backstreets Sluggers -> 1 Urban Myth book
+(UP2) Midnight Office -> 2 Urban Plague books
 (UN2) The Couriers (I) -> 2 Urban Nightmare books
 (UN2) Snow Coyote Office -> 2 Urban Nightmare books
 (UN2) Inferno Corps (I) -> 2 Urban Nightmare books
+(UN2) Wandering Fixer Susano'o -> 2 Urban Nightmare books
 
 
 
@@ -28,7 +31,7 @@ Dusk Boomspell - Design, Credenzas and balance for the Inferno Corps (I)
 Heetagan - Code and balance for the Inferno Corps (I)
 samson5580 - Inferno Templar skin, Inferno Corps page art; Design, skins, page art and balance of the Backstreets Sluggers and Midnight Office
 CountDuckoo - Code for the Backstreets Sluggers and Midnight Office
-Bucket AKA last of the kalo squad - Orb system
+Bucket AKA last of the kalo squad - Orb system, a few fixes
 
 
 

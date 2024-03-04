@@ -41,4 +41,46 @@
     <BookValue>0</BookValue>
     <DropItem Type="Equip">10000005</DropItem>
   </BookUse>
+  <BookUse ID="6">
+    <Name>Book of a Backstreets Slugger</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>2</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">10000006</DropItem>
+    <DropItem Type="Equip">10000007</DropItem>
+  </BookUse>
+  <BookUse ID="7">
+    <Name>Incomplete Book of Ethan, Vol. 1</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>2</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">10000008</DropItem>
+  </BookUse>
+  <BookUse ID="8">
+    <Name>Book of Moonlight Office</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>4</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">10000010</DropItem>
+    <DropItem Type="Equip">10000011</DropItem>
+  </BookUse>
+  <BookUse ID="9">
+    <Name>Incomplete Book of Ethan, Vol. 2</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>4</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">10000009</DropItem>
+  </BookUse>
+  <BookUse ID="10">
+    <Name>Incomplete Book of Susano'o</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>5</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">10000012</DropItem>
+  </BookUse>
 </BookUseXmlRoot>
