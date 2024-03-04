@@ -171,7 +171,7 @@
     <MaxHeight>170</MaxHeight>
     <Unknown>false</Unknown>
     <Gender>F</Gender>
-    <Retreat>false</Retreat>
+    <Retreat>true</Retreat>
     <BookId>11</BookId>
     <BodyId>0</BodyId>
     <Exp>0</Exp>
@@ -189,7 +189,7 @@
     <MaxHeight>170</MaxHeight>
     <Unknown>false</Unknown>
     <Gender>F</Gender>
-    <Retreat>false</Retreat>
+    <Retreat>true</Retreat>
     <BookId>12</BookId>
     <BodyId>0</BodyId>
     <Exp>0</Exp>
@@ -243,7 +243,7 @@
     <MaxHeight>170</MaxHeight>
     <Unknown>false</Unknown>
     <Gender>F</Gender>
-    <Retreat>false</Retreat>
+    <Retreat>true</Retreat>
     <BookId>15</BookId>
     <BodyId>0</BodyId>
     <Exp>0</Exp>
@@ -261,7 +261,7 @@
     <MaxHeight>170</MaxHeight>
     <Unknown>false</Unknown>
     <Gender>F</Gender>
-    <Retreat>false</Retreat>
+    <Retreat>true</Retreat>
     <BookId>16</BookId>
     <BodyId>0</BodyId>
     <Exp>0</Exp>

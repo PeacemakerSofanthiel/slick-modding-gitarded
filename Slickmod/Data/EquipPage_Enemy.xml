@@ -387,7 +387,7 @@
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>70</HP>
-      <DeadLine>0</DeadLine>
+      <DeadLine>3</DeadLine>
       <Break>35</Break>
       <SpeedMin>3</SpeedMin>
       <Speed>4</Speed>
@@ -425,7 +425,7 @@
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>125</HP>
-      <DeadLine>0</DeadLine>
+      <DeadLine>12</DeadLine>
       <Break>65</Break>
       <SpeedMin>2</SpeedMin>
       <Speed>6</Speed>
@@ -484,7 +484,7 @@
       <HBResist>Normal</HBResist>
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
-      <AddedStartDraw>0</AddedStartDraw>
+      <AddedStartDraw>2</AddedStartDraw>
       <Passive>27</Passive>
       <Passive>28</Passive>
     </EquipEffect>
@@ -520,7 +520,7 @@
       <HBResist>Normal</HBResist>
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
-      <AddedStartDraw>0</AddedStartDraw>
+      <AddedStartDraw>2</AddedStartDraw>
       <Passive>27</Passive>
       <Passive>29</Passive>
     </EquipEffect>
@@ -543,7 +543,7 @@
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>100</HP>
-      <DeadLine>0</DeadLine>
+      <DeadLine>50</DeadLine>
       <Break>65</Break>
       <SpeedMin>1</SpeedMin>
       <Speed>7</Speed>
@@ -582,8 +582,8 @@
     <BookIcon />
     <EquipEffect>
       <HpReduction>0</HpReduction>
-      <HP>225</HP>
-      <DeadLine>0</DeadLine>
+      <HP>235</HP>
+      <DeadLine>10</DeadLine>
       <Break>75</Break>
       <SpeedMin>2</SpeedMin>
       <Speed>6</Speed>
