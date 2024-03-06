@@ -504,6 +504,8 @@ namespace SlickRuinaMod
         }
     }
 
+    // Barrier
+    // Copeless
     public class BattleUnitBuf_SlickMod_Barrier : BattleUnitBuf
     {
         // Thing
@@ -606,6 +608,91 @@ namespace SlickRuinaMod
         }
     }
 
+    // Stagger Barrier
+    // AAAAAAAAAAAAAAAAAAAAA
+    public class BattleUnitBuf_SlickMod_StaggerBarrier : BattleUnitBuf
+    {
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_StaggerBarrier;
+
+            }
+        }
+
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.Positive;
+            }
+        }
+
+        public override float BreakDmgFactor(int dmg, DamageType type, KeywordBuf keyword)
+        {
+            float num = (float)this.stack;
+            float num2 = (float)dmg;
+            bool flag = num2 > num;
+            float result;
+            if (flag)
+            {
+                this.Add(-this.stack);
+                result = (num2 - num) / num2;
+            }
+            else
+            {
+                this.Add(-dmg);
+                result = 0f;
+            }
+            return result;
+        }
+
+        public void Add(int add)
+        {
+            BattleUnitBuf glut = _owner.bufListDetail.GetActivatedBufList().Find(x => x.GetType().Name.Contains("CWR_StaggerBarrier") && !x.IsDestroyed());
+            if (glut != null)
+            {
+                add += glut.stack;
+                glut.Destroy();
+            }
+            this.stack += add;
+            if (this.stack < 1)
+            {
+                this.Destroy();
+                if (this.IsDestroyed())
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+
+            this.stack += add;
+            bool flag = this.stack < 1;
+            if (flag)
+            {
+                this.Destroy();
+            }
+        }
+
+        public override void AfterDiceAction(BattleDiceBehavior behavior)
+        {
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+        }
+
+        public override string keywordId
+        {
+            get
+            {
+                return "SlickMod_StaggerBarrier";
+            }
+        }
+    }
+
     // Emerald Light
     // At the start of the Scene, spend 1 Emerald Light to restore 1 Light, until this character has 4 Light.
     public class BattleUnitBuf_SlickMod_EmeraldLight : BattleUnitBuf
@@ -693,9 +780,19 @@ namespace SlickRuinaMod
     }
 
     // Sinking
-    // 
+    // Me when I am sinking
     public class BattleUnitBuf_SlickMod_Sinking : BattleUnitBuf
     {
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_Sinking;
+
+            }
+        }
+
         public override BufPositiveType positiveType
         {
             get
@@ -788,8 +885,20 @@ namespace SlickRuinaMod
         }
     }
 
+    // Sinking Count
+    // Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking Sinking 
     public class BattleUnitBuf_SlickMod_SinkingCount : BattleUnitBuf
     {
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_SinkingCount;
+
+            }
+        }
+
         public override BufPositiveType positiveType
         {
             get
@@ -877,6 +986,218 @@ namespace SlickRuinaMod
             get
             {
                 return "SlickMod_SinkingCount";
+            }
+        }
+    }
+
+    // Rupture
+    // The only cool Limbus status
+    public class BattleUnitBuf_SlickMod_Rupture : BattleUnitBuf
+    {
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_Rupture;
+
+            }
+        }
+
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.Negative;
+            }
+        }
+
+        public void Add(int add)
+        {
+            BattleUnitBuf glut = _owner.bufListDetail.GetActivatedBufList().Find(x => x.GetType().Name.Contains("CWR_Rupture") && !x.IsDestroyed());
+            if (glut != null)
+            {
+                add += glut.stack;
+                glut.Destroy();
+            }
+            this.stack += add;
+            if (this.stack < 1)
+            {
+                this.Destroy();
+                if (this.IsDestroyed())
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+
+            this.stack += add;
+            bool flag = this.stack < 1;
+            if (flag)
+            {
+                this.Destroy();
+                bool flag2 = base.IsDestroyed();
+                if (flag2)
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+        }
+
+        public override void AfterDiceAction(BattleDiceBehavior behavior)
+        {
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+        }
+
+        public override void OnRoundEnd()
+        {
+            BattleUnitBuf battleUnitBuf = this._owner.bufListDetail.GetReadyBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_Rupture);
+            bool flag = battleUnitBuf != null && battleUnitBuf.stack > 0;
+            if (flag)
+            {
+                this.Add(battleUnitBuf.stack);
+                battleUnitBuf.Destroy();
+            }
+        }
+
+        public override void OnTakeDamageByAttack(BattleDiceBehavior atkDice, int dmg)
+        {
+            bool flag = this._owner.IsImmune(this.bufType);
+            if (!flag)
+            {
+                this._owner.TakeDamage(this.stack, DamageType.Buf, null, KeywordBuf.None);
+                BattleUnitBuf_SlickMod_RuptureCount battleUnitBuf_SlickMod_RuptureCount = this._owner.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_RuptureCount) as BattleUnitBuf_SlickMod_RuptureCount;
+                bool flag2 = battleUnitBuf_SlickMod_RuptureCount != null && battleUnitBuf_SlickMod_RuptureCount.stack >= 1;
+                if (flag2)
+                {
+                    battleUnitBuf_SlickMod_RuptureCount.UseStack(1);
+                }
+                else
+                {
+                    this.Destroy();
+                    bool flag3 = base.IsDestroyed();
+                    if (flag3)
+                    {
+                        this._owner.bufListDetail.RemoveBuf(this);
+                    }
+                }
+            }
+        }
+
+        public override string keywordId
+        {
+            get
+            {
+                return "SlickMod_Rupture";
+            }
+        }
+    }
+
+    // Rupture Count
+    // The only cool Limbus status count
+    public class BattleUnitBuf_SlickMod_RuptureCount : BattleUnitBuf
+    {
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_RuptureCount;
+
+            }
+        }
+
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.None;
+            }
+        }
+
+        public void Add(int add)
+        {
+            BattleUnitBuf glut = _owner.bufListDetail.GetActivatedBufList().Find(x => x.GetType().Name.Contains("CWR_RuptureCount") && !x.IsDestroyed());
+            if (glut != null)
+            {
+                add += glut.stack;
+                glut.Destroy();
+            }
+            this.stack += add;
+            if (this.stack < 1)
+            {
+                this.Destroy();
+                if (this.IsDestroyed())
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+
+            this.stack += add;
+            bool flag = this.stack < 1;
+            if (flag)
+            {
+                this.Destroy();
+                bool flag2 = base.IsDestroyed();
+                if (flag2)
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+        }
+
+        public override void AfterDiceAction(BattleDiceBehavior behavior)
+        {
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+        }
+
+        public override void OnRoundEnd()
+        {
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+            else
+            {
+                BattleUnitBuf battleUnitBuf = this._owner.bufListDetail.GetReadyBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_RuptureCount);
+                bool flag2 = battleUnitBuf != null && battleUnitBuf.stack > 0;
+                if (flag2)
+                {
+                    this.Add(battleUnitBuf.stack);
+                    battleUnitBuf.Destroy();
+                }
+            }
+        }
+
+        public bool UseStack(int v)
+        {
+            bool flag = this.stack < v;
+            bool result;
+            if (flag)
+            {
+                result = false;
+            }
+            else
+            {
+                this.Add(-v);
+                result = true;
+            }
+            return result;
+        }
+
+        public override string keywordId
+        {
+            get
+            {
+                return "SlickMod_RuptureCount";
             }
         }
     }

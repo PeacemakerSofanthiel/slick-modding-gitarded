@@ -75,6 +75,13 @@ namespace SlickRuinaMod
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Barrier>();
             }
 
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_StaggerBarrier", out var SwaggerBarrier) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out SwaggerBarrier) && EnumExtender.TryAddName("SlickMod_StaggerBarrier", SwaggerBarrier))
+            {
+                MyKeywordBufs.SlickMod_StaggerBarrier = SwaggerBarrier;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_StaggerBarrier>();
+            }
+
             if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_BlackTieInk", out var uhhhwahatever) ||
                 EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out uhhhwahatever) && EnumExtender.TryAddName("SlickMod_BlackTieInk", uhhhwahatever))
             {
@@ -101,6 +108,20 @@ namespace SlickRuinaMod
             {
                 MyKeywordBufs.SlickMod_SinkingCount = MeWhenISinkLonger;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_SinkingCount>();
+            }
+
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Rupture", out var RupTrue) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out RupTrue) && EnumExtender.TryAddName("SlickMod_Rupture", RupTrue))
+            {
+                MyKeywordBufs.SlickMod_Rupture = RupTrue;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Rupture>();
+            }
+
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_RuptureCount", out var RupTrue69) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out RupTrue69) && EnumExtender.TryAddName("SlickMod_RuptureCount", RupTrue69))
+            {
+                MyKeywordBufs.SlickMod_RuptureCount = RupTrue69;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_RuptureCount>();
             }
 
         }
@@ -143,9 +164,12 @@ namespace SlickRuinaMod
         public static KeywordBuf SlickMod_Orb_Focus;
         public static KeywordBuf SlickMod_SpareParts;
         public static KeywordBuf SlickMod_Barrier;
+        public static KeywordBuf SlickMod_StaggerBarrier;
         public static KeywordBuf SlickMod_BlackTieInk;
         public static KeywordBuf SlickMod_EmeraldLight;
         public static KeywordBuf SlickMod_Sinking;
         public static KeywordBuf SlickMod_SinkingCount;
+        public static KeywordBuf SlickMod_Rupture;
+        public static KeywordBuf SlickMod_RuptureCount;
     }
 }
