@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StageXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Stage id="1">
+    <Name>The Couriers (I)</Name>
+    <Wave>
+      <Unit>1</Unit>
+      <Unit>1</Unit>
+      <Unit>1</Unit>
+      <Unit>1</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+  <Stage id="2">
+    <Name>Snow Coyote Office</Name>
+    <Wave>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>3</Unit>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Unit>2</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+  <Stage id="3">
+    <Name>Inferno Corps (I)</Name>
+    <Wave>
+      <Unit>4</Unit>
+      <Unit>4</Unit>
+      <Unit>5</Unit>
+      <Unit>5</Unit>
+      <Unit>5</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>6</Unit>
+      <Unit>6</Unit>
+      <Unit>6</Unit>
+      <Unit>7</Unit>
+      <Unit>7</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+  <Stage id="4">
+    <Name>Backstreets Sluggers</Name>
+    <Wave>
+      <Unit>8</Unit>
+      <Unit>9</Unit>
+      <Unit>8</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>2</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>9</Unit>
+      <Unit>9</Unit>
+      <Unit>10</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>2</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>11</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>2</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>2</FloorNum>
+    <Chapter>2</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>2</Value>
+      <Num>1</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+  <Stage id="5">
+    <Name>Midnight Office</Name>
+    <Wave>
+      <Unit>12</Unit>
+      <Unit>13</Unit>
+      <Unit>12</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>3</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>12</Unit>
+      <Unit>13</Unit>
+      <Unit>14</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>3</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>15</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>3</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>2</FloorNum>
+    <Chapter>4</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>4</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+  <Stage id="6">
+    <Name>Wayward Fixer Susano'o</Name>
+    <Wave>
+      <Unit>16</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>1</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+  <Stage id="7">
+    <Name>Dan's Solutions</Name>
+    <Wave>
+      <Unit>18</Unit>
+      <Unit>17</Unit>
+      <Unit>17</Unit>
+      <Unit>17</Unit>
+      <Unit>17</Unit>
+      <Formation>1</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>2</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>1</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>1</Value>
+      <Num>3</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+</StageXmlRoot>

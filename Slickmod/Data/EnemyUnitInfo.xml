@@ -1,133 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EnemyUnitClassRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Version>1.1</Version>
-  <Enemy ID="1">
-    <Name>A Courier</Name>
-    <FaceType>Skin</FaceType>
-    <NameID>-1</NameID>
-    <MinHeight>155</MinHeight>
-    <MaxHeight>185</MaxHeight>
-    <Unknown>false</Unknown>
-    <Gender>F</Gender>
-    <Retreat>false</Retreat>
-    <BookId>1</BookId>
-    <BodyId>0</BodyId>
-    <Exp>0</Exp>
-    <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem Prob="1">1</DropItem>
-    </DropTable>
-    <AiScript />
-  </Enemy>
-  <Enemy ID="2">
-    <Name>A Snow Coyote Fixer</Name>
-    <FaceType>Skin</FaceType>
-    <NameID>-1</NameID>
-    <MinHeight>155</MinHeight>
-    <MaxHeight>185</MaxHeight>
-    <Unknown>false</Unknown>
-    <Gender>F</Gender>
-    <Retreat>false</Retreat>
-    <BookId>2</BookId>
-    <BodyId>0</BodyId>
-    <Exp>0</Exp>
-    <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem Prob="1">2</DropItem>
-    </DropTable>
-    <AiScript />
-  </Enemy>
-  <Enemy ID="3">
-    <Name>Alexander Turner</Name>
-    <FaceType>Skin</FaceType>
-    <NameID>-1</NameID>
-    <MinHeight>177</MinHeight>
-    <MaxHeight>177</MaxHeight>
-    <Unknown>false</Unknown>
-    <Gender>F</Gender>
-    <Retreat>false</Retreat>
-    <BookId>3</BookId>
-    <BodyId>0</BodyId>
-    <Exp>0</Exp>
-    <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem Prob="1">3</DropItem>
-    </DropTable>
-    <AiScript />
-  </Enemy>
-  <Enemy ID="4">
-    <Name>An Inferno Corps Templar</Name>
-    <FaceType>Skin</FaceType>
-    <NameID>-1</NameID>
-    <MinHeight>140</MinHeight>
-    <MaxHeight>195</MaxHeight>
-    <Unknown>false</Unknown>
-    <Gender>F</Gender>
-    <Retreat>false</Retreat>
-    <BookId>5</BookId>
-    <BodyId>0</BodyId>
-    <Exp>0</Exp>
-    <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem Prob="1">4</DropItem>
-    </DropTable>
-    <AiScript />
-  </Enemy>
-  <Enemy ID="5">
-    <Name>An Inferno Corps Underunt</Name>
-    <FaceType>Skin</FaceType>
-    <NameID>-1</NameID>
-    <MinHeight>120</MinHeight>
-    <MaxHeight>145</MaxHeight>
-    <Unknown>false</Unknown>
-    <Gender>F</Gender>
-    <Retreat>false</Retreat>
-    <BookId>6</BookId>
-    <BodyId>0</BodyId>
-    <Exp>0</Exp>
-    <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem Prob="1">5</DropItem>
-    </DropTable>
-    <AiScript />
-  </Enemy>
-  <Enemy ID="6">
-    <Name>An Inferno Corps Templar</Name>
-    <FaceType>Skin</FaceType>
-    <NameID>-1</NameID>
-    <MinHeight>140</MinHeight>
-    <MaxHeight>195</MaxHeight>
-    <Unknown>false</Unknown>
-    <Gender>F</Gender>
-    <Retreat>false</Retreat>
-    <BookId>7</BookId>
-    <BodyId>0</BodyId>
-    <Exp>0</Exp>
-    <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem Prob="1">4</DropItem>
-    </DropTable>
-    <AiScript />
-  </Enemy>
-  <Enemy ID="7">
-    <Name>An Inferno Corps Underrunt</Name>
-    <FaceType>Skin</FaceType>
-    <NameID>-1</NameID>
-    <MinHeight>140</MinHeight>
-    <MaxHeight>145</MaxHeight>
-    <Unknown>false</Unknown>
-    <Gender>F</Gender>
-    <Retreat>false</Retreat>
-    <BookId>8</BookId>
-    <BodyId>0</BodyId>
-    <Exp>0</Exp>
-    <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem Prob="1">5</DropItem>
-    </DropTable>
-    <AiScript />
-  </Enemy>
-  <Enemy ID="8">
+
+<!-- CANARD -->
+
+
+
+
+
+<!-- URBAN MYTH -->
+
+<!-- Backstreets Sluggers -->
+
+<!-- mooks -->
+  <Enemy ID="1201001">
     <Name>A Backstreets Slugger</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -145,7 +31,8 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="9">
+
+  <Enemy ID="1201002">
     <Name>A Backstreets Slugger</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -163,7 +50,9 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="10">
+
+<!-- Ethan 1 -->
+  <Enemy ID="1201003">
     <Name>Ethan</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -181,7 +70,8 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="11">
+<!-- Angy Ethan 1 -->
+  <Enemy ID="1201004">
     <Name>Ethan</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -199,7 +89,21 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="12">
+
+
+
+<!-- URBAN LEGEND -->
+
+
+
+
+
+<!-- URBAN PLAGUE -->
+
+<!-- Midnight Office -->
+
+<!-- Mook 1 -->
+  <Enemy ID="1401001">
     <Name>A Midnight Office Fixer</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -217,7 +121,9 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="13">
+
+<!-- Mook 2 -->
+  <Enemy ID="1401002">
     <Name>A Midnight Office Fixer</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -235,7 +141,9 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="14">
+
+<!-- Ethan 2 -->
+  <Enemy ID="1401003">
     <Name>Ethan</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -253,7 +161,9 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="15">
+
+<!-- ANGY Ethan 2 -->
+  <Enemy ID="1401004">
     <Name>Ethan</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -271,7 +181,149 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="16">
+
+
+
+<!-- URBAN NIGHTMARE -->
+
+<!-- Courier 1 -->
+  <Enemy ID="1501001">
+    <Name>A Courier</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>155</MinHeight>
+    <MaxHeight>185</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>1</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">1</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+
+<!-- Snow Coyote Office -->
+
+  <Enemy ID="1502001">
+    <Name>A Snow Coyote Fixer</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>155</MinHeight>
+    <MaxHeight>185</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>2</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">2</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+
+  <Enemy ID="1502002">
+    <Name>Alexander Turner</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>177</MinHeight>
+    <MaxHeight>177</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>3</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">3</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+
+<!-- Inferno Corps 1 -->
+  <Enemy ID="1503001">
+    <Name>An Inferno Corps Templar</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>140</MinHeight>
+    <MaxHeight>195</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>5</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">4</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+  <Enemy ID="1503002">
+    <Name>An Inferno Corps Underunt</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>120</MinHeight>
+    <MaxHeight>145</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>6</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">5</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+<!-- Wave 2 -->
+  <Enemy ID="1503003">
+    <Name>An Inferno Corps Templar</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>140</MinHeight>
+    <MaxHeight>195</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>7</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">4</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+  <Enemy ID="1503004">
+    <Name>An Inferno Corps Underrunt</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>140</MinHeight>
+    <MaxHeight>145</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>8</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">5</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+
+<!-- Wandering Fixer Susano'o -->
+
+  <Enemy ID="1504001">
     <Name>Susano'o</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -289,4 +341,34 @@
     </DropTable>
     <AiScript />
   </Enemy>
+
+<!-- STAR OF THE SUSSY -->
+
+
+
+
+
+<!-- IMPURITAS CIVITATIS -->
+
+
+
+
+
+<!-- JOKE RECEPTIONS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </EnemyUnitClassRoot>

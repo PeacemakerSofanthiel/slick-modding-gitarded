@@ -1,0 +1,60 @@
+C:\Users\wilga\source\repos\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.AssemblyReference.cache
+C:\Users\wilga\source\repos\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.CoreCompileInputs.cache
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\SlickProgramming.dll.config
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\SlickProgramming.dll
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\SlickProgramming.pdb
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\0Harmony.dll
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\10EnumExtender.dll
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\Assembly-CSharp.dll
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\HatSingularity.dll
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\KeywordUtil.dll
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\Mono.Cecil.dll
+C:\Users\wilga\source\repos\SlickProgramming\bin\Debug\MonoMod.RuntimeDetour.dll
+C:\Users\wilga\source\repos\SlickProgramming\obj\Debug\SlickRui.3B951F35.Up2Date
+C:\Users\wilga\source\repos\SlickProgramming\obj\Debug\SlickProgramming.dll
+C:\Users\wilga\source\repos\SlickProgramming\obj\Debug\SlickProgramming.pdb
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.dll.config
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.dll
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.pdb
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\bin\Debug\Mono.Cecil.dll
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\bin\Debug\MonoMod.RuntimeDetour.dll
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.AssemblyReference.cache
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.CoreCompileInputs.cache
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRui.3B951F35.Up2Date
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.dll
+C:\Users\wilga\Desktop\Library of Ruina\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.pdb
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.dll.config
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.dll
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.pdb
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\Mono.Cecil.dll
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\MonoMod.RuntimeDetour.dll
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.AssemblyReference.cache
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.CoreCompileInputs.cache
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRui.3B951F35.Up2Date
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.dll
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.pdb
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\UnityEngine.CoreModule.dll
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\UnityEngine.SharedInternalsModule.dll
+D:\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.dll.config
+D:\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.dll
+D:\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.pdb
+D:\Slickmod Stuff\SlickProgramming\bin\Debug\Mono.Cecil.dll
+D:\Slickmod Stuff\SlickProgramming\bin\Debug\MonoMod.RuntimeDetour.dll
+D:\Slickmod Stuff\SlickProgramming\bin\Debug\UnityEngine.SharedInternalsModule.dll
+D:\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.AssemblyReference.cache
+D:\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.CoreCompileInputs.cache
+D:\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.CopyComplete
+D:\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.dll
+D:\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.pdb
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.dll.config
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.dll
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\bin\Debug\SlickProgramming.pdb
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\bin\Debug\UnityEngine.CoreModule.dll
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\bin\Debug\Mono.Cecil.dll
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\bin\Debug\MonoMod.RuntimeDetour.dll
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\bin\Debug\UnityEngine.SharedInternalsModule.dll
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.AssemblyReference.cache
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.CoreCompileInputs.cache
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRui.3B951F35.Up2Date
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.dll
+D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.pdb
