@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\",
+  "WorkspaceRootPath": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|d:\\library of ruina\\slick modding\\slickmod stuff\\slickprogramming\\slickmodpassive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmodpassive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModPassive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SlickModPassive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\slickmodstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmodstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModPageEffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SlickModPageEffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\slickmodpageeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmodpageeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModDiceEffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SlickModDiceEffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\slickmodinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmodinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SlickModStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\slickmoddiceeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmoddiceeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SlickModInitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +34,11 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SlickModPageEffect.cs",
-              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModPageEffect.cs",
+              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModPageEffect.cs",
               "RelativeDocumentMoniker": "SlickModPageEffect.cs",
-              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModPageEffect.cs",
+              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModPageEffect.cs",
               "RelativeToolTip": "SlickModPageEffect.cs",
               "ViewState": "AQIAAGoCAAAAAAAAAAAmwHkCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -46,11 +46,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "SlickModDiceEffect.cs",
-              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModDiceEffect.cs",
+              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModDiceEffect.cs",
               "RelativeDocumentMoniker": "SlickModDiceEffect.cs",
-              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModDiceEffect.cs",
+              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModDiceEffect.cs",
               "RelativeToolTip": "SlickModDiceEffect.cs",
               "ViewState": "AQIAAAcBAAAAAAAAAAAuwB8BAAC5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -58,37 +58,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SlickModStatus.cs",
-              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModStatus.cs",
+              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModStatus.cs",
               "RelativeDocumentMoniker": "SlickModStatus.cs",
-              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModStatus.cs",
+              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModStatus.cs",
               "RelativeToolTip": "SlickModStatus.cs",
               "ViewState": "AQIAAKEBAAAAAAAAAAAuwH8BAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T03:15:24.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-27T03:15:24.273Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SlickModPassive.cs",
-              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModPassive.cs",
+              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModPassive.cs",
               "RelativeDocumentMoniker": "SlickModPassive.cs",
-              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModPassive.cs",
-              "RelativeToolTip": "SlickModPassive.cs",
-              "ViewState": "AQIAAJ8EAAAAAAAAAAA4wKQEAABEAAAA",
+              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModPassive.cs*",
+              "RelativeToolTip": "SlickModPassive.cs*",
+              "ViewState": "AQIAACgEAAAAAAAAAAAAAFgHAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-27T01:24:20.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SlickModInitializer.cs",
-              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModInitializer.cs",
+              "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModInitializer.cs",
               "RelativeDocumentMoniker": "SlickModInitializer.cs",
-              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModInitializer.cs",
+              "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Steal Dan\u0027s Solutions\\Slickmod Stuff\\SlickProgramming\\SlickModInitializer.cs",
               "RelativeToolTip": "SlickModInitializer.cs",
               "ViewState": "AQIAAFkAAAAAAAAAAAAYwGkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

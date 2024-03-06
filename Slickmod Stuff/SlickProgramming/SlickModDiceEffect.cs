@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace SlickRuinaMod
 {
-    #region - COURIERS 1 -
+    #region --COURIERS 1--
 
     // Lucky Slip: Dice 2 Effect
     // [On Hit] Inflict 1 Bind and 1 Bleed next Scene
@@ -45,7 +45,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - SNOW COYOTE OFFICE -
+    #region --SNOW COYOTE OFFICE--
 
     // Mutual 2 Bind
     // [On Hit] Inflict 2 Bind to target and self next Scene
@@ -158,7 +158,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region -INFERNAL CORPS I-
+    #region --INFERNAL CORPS 1--
 
     // [On Hit] Inflict 1 Overheat to self next Scene
     public class DiceCardAbility_SlickMod_InfernalOverheat1OnHit : DiceCardAbilityBase
@@ -208,7 +208,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - UN GOLDEN SPARK -
+    #region --UN GOLDEN SPARK--
 
     // Tatsumaki: Dice Effect 1
     // This die is rolled twice if user has 10+ Samsara
@@ -234,7 +234,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - BACKSTREET SLUGGERS
+    #region --BACKSTREET SLUGGERS--
 
     // [On Clash Lose] Deal 2 Stagger damage to target
     public class DiceCardAbility_SlickMod_BackstreetShieldShards : DiceCardAbilityBase
@@ -307,7 +307,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - MIDNIGHT OFFICE
+    #region --MIDNIGHT OFFICE--
 
     // [On Clash Lose] Inflict 3 Burn to each other
     public class DiceCardAbility_SlickMod_MidnightCLBurnEachother1 : DiceCardAbilityBase
@@ -418,6 +418,53 @@ namespace SlickRuinaMod
         {
             base.OnSucceedAttack();
             owner.breakDetail.TakeBreakDamage(behavior.DiceResultValue, DamageType.Card_Ability);
+        }
+    }
+
+    #endregion
+
+    #region --DANS SOLUTIONS--
+    public class DiceCardAbility_SlickMod_Dan1StaggerFragile : DiceCardAbilityBase
+    {
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            this.card.target.bufListDetail.AddKeywordBufByCard(KeywordBuf.Vulnerable_break, 1, this.owner);
+        }
+    }
+
+    public class DiceCardAbility_SlickMod_DanShittyDodge : DiceCardAbilityBase
+    {
+        public override void OnWinParrying()
+        {
+            base.OnWinParrying();
+            this.owner.TakeBreakDamage(3, DamageType.Card_Ability);
+        }
+    }
+
+    public class DiceCardAbility_SlickMod_DanWin1Ink : DiceCardAbilityBase
+    {
+        public override void OnWinParrying()
+        {
+            base.OnWinParrying();
+            this.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_BlackTieInk, 1, this.owner);
+        }
+    }
+    public class DiceCardAbility_SlickMod_Dan1Ink1Paralysis : DiceCardAbilityBase
+    {
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            this.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_BlackTieInk, 1, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(KeywordBuf.Paralysis, 1, this.owner);
+        }
+    }
+    public class DiceCardAbility_SlickMod_Dan1Ink : DiceCardAbilityBase
+    {
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            this.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_BlackTieInk, 1, this.owner);
         }
     }
 

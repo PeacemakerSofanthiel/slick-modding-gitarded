@@ -12,7 +12,7 @@ using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_BarghestNail;
 
 namespace SlickRuinaMod
 {
-    #region - COURIERS 1 -
+    #region --COURIERS 1--
 
     // Take a Breather: Page Effect
     // Restore 1 Light upon discarding this page
@@ -118,7 +118,7 @@ namespace SlickRuinaMod
     }
     #endregion
 
-    #region - SNOW COYOTE OFFICE -
+    #region --SNOW COYOTE OFFICE--
 
     // Trudge: Page Effect
     // [On Use] Restore 1 Light; If Speed is 2 or lower, boost the minimum value of all dice on this page by 1
@@ -355,7 +355,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - INFERNAL CORPS I -
+    #region --INFERNAL CORPS 1--
     
     // [On Use] Inflict 1 Overheat to self next Scene
     public class DiceCardSelfAbility_SlickMod_InfernalOverheat1 : DiceCardSelfAbilityBase
@@ -458,7 +458,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - UN GOLDEN SPARK -
+    #region --UN GOLDEN SPARK--
 
     // Speed Break
     // Can only be used at 15+ Samsara
@@ -675,7 +675,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - BACKSTREET SLUGGERS -
+    #region --BACKSTREET SLUGGERS--
 
     // Rats with Bats
     // [On Use] Next Scene gain 1 Damage Up for each ally using 'Rats with Bats' this Scene (including self)
@@ -832,7 +832,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - MIDNIGHT OFFICE -
+    #region --MIDNIGHT OFFICE--
 
     // Midnight Hunt
     // [On Use] Next Scene gain 1 Haste and Endurance for each ally using 'Midnight Hunt' this Scene (including self)
@@ -1009,7 +1009,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - UN CHEYTAC -
+    #region --UN CHEYTAC--
 
     public class DiceCardSelfAbility_SlickMod_BizarreArtifact : DiceCardSelfAbilityBase
     {
@@ -1036,6 +1036,198 @@ namespace SlickRuinaMod
             public override int GetCost(int oldCost)
             {
                 return oldCost - 1;
+            }
+        }
+    }
+
+    #endregion
+
+    #region --DANS SOLUTIONS--
+    public class DiceCardSelfAbility_SlickMod_DanAmature : DiceCardSelfAbilityBase
+    {
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_Mewhenihityou);
+            bool thingy = battleUnitBuf == null;
+            if (thingy)
+            {
+                this.card.target.bufListDetail.AddBuf(new BattleUnitBuf_Mewhenihityou(1));
+            }
+            else
+            {
+                battleUnitBuf.stack++;
+            }
+        }
+        public override void OnEndBattle()
+        {
+            base.OnEndBattle();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_Mewhenihityou);
+            bool thingy = battleUnitBuf == null;
+            if (thingy)
+            {
+                this.owner.TakeBreakDamage(7, DamageType.Card_Ability);
+            }
+        }
+        public class BattleUnitBuf_Mewhenihityou : BattleUnitBuf
+        {
+            public BattleUnitBuf_Mewhenihityou(int stack)
+            {
+                this.stack = stack;
+            }
+        }
+        public override void OnRoundEnd(BattleUnitModel unit, BattleDiceCardModel self)
+        {
+            base.OnRoundEnd(unit, self);
+        }
+    }
+
+    public class DiceCardSelfAbility_SlickMod_DanBrainDamagedEconomy : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            this.owner.TakeBreakDamage(4, DamageType.Card_Ability);
+            this.owner.allyCardDetail.DrawCards(1);
+        }
+    }
+
+    public class DiceCardSelfAbility_SlickMod_DanBrainDamagedLight : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            this.owner.TakeBreakDamage(4, DamageType.Card_Ability);
+            this.owner.cardSlotDetail.RecoverPlayPointByCard(1);
+        }
+    }
+
+    public class DiceCardSelfAbility_SlickMod_DanChicago : DiceCardSelfAbilityBase
+    {
+        public override void OnStartBattle()
+        {
+            base.OnStartBattle();
+            foreach (BattleUnitModel guy in BattleObjectManager.instance.GetAliveList_random(base.owner.faction, 1))
+            {
+                guy.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp, 1, base.owner);
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DanIHaveNoIdeaWhatIsHappening : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            this.owner.TakeBreakDamage(7, DamageType.Card_Ability);
+        }
+    }
+
+    public class DiceCardSelfAbility_SlickMod_DanInkBlot : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            this.owner.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_BlackTieInk, 1, this.owner);
+            this.owner.cardSlotDetail.RecoverPlayPoint(1);
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DanShitAtArt : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf Inky = this.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_BlackTieInk);
+            if (Inky != null)
+            {
+                if (Inky.stack >= 5)
+                {
+                    this.owner.allyCardDetail.DrawCards(2);
+                    Inky.stack -= 2;
+                }
+                else
+                {
+                    this.owner.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_BlackTieInk, 1, this.owner);
+                }
+            }
+            else
+            {
+                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_BlackTieInk, 1, this.owner);
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DanAmateurInkwork : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf Inky = this.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_BlackTieInk);
+            if (Inky != null)
+            {
+                if (Inky.stack >= 2)
+                {
+                    Inky.stack -= 2;
+                    if (Inky.stack <= 0)
+                    {
+                        Inky.Destroy();
+                    }
+                    this.card.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+                    {
+                        power = 2
+                    });
+                }
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DanArtistsInterpretation : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            this.owner.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_BlackTieInk, 2, this.owner);
+            BattleUnitBuf Inky = this.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_BlackTieInk);
+            if (Inky != null)
+            {
+                if (Inky.stack >= 7)
+                {
+                    this.owner.TakeBreakDamage(7, DamageType.Card_Ability);
+                    foreach (BattleUnitModel guy in BattleObjectManager.instance.GetAliveList_random(base.owner.faction, 3))
+                    {
+                        guy.bufListDetail.AddKeywordBufByCard(KeywordBuf.DmgUp, 1, base.owner);
+                    }
+                }
+            }
+
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DanInkDroplets : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf Inky = this.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_BlackTieInk);
+            if (Inky != null)
+            {
+                if (Inky.stack >= 7)
+                {
+                    Inky.stack -= 7;
+                    if (Inky.stack <= 0)
+                    {
+                        Inky.Destroy();
+                    }
+                    this.card.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+                    {
+                        power = 2
+                    });
+                    this.card.ApplyDiceAbility(DiceMatch.AllDice, new DiceCardAbility_DanInksAllOverYou());
+                }
+            }
+        }
+        public class DiceCardAbility_DanInksAllOverYou : DiceCardAbilityBase
+        {
+            public override void OnSucceedAttack()
+            {
+                base.OnSucceedAttack();
+                this.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_BlackTieInk, 2, this.owner);
             }
         }
     }

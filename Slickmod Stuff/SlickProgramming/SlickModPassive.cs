@@ -11,7 +11,7 @@ using HyperCard;
 
 namespace SlickRuinaMod
 {
-    #region - GENERAL PURPOSE -
+    #region --GENERAL PURPOSE--
 
     // Heightened Emotions I
     // Start the reception at Emotion Level 1.
@@ -777,7 +777,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - COURIERS 1 -
+    #region --COURIERS 1--
 
     // Pony Express
     // At the end of the Scene, if all allies are alive, gain 1 Haste and 1 Cycle next Scene; if all other allies are dead, inflict 2 Bind on self instead.
@@ -865,7 +865,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - SNOW COYOTE OFFICE -
+    #region --SNOW COYOTE OFFICE--
 
     // Arctic Drift
     // Offensive dice on the first Combat Page the character uses each Scene gain an additional effect:
@@ -1007,11 +1007,11 @@ namespace SlickRuinaMod
             });
         }
     }
-    
+
     #endregion
-    
-    #region - INFERNAL TEMPLAR 1 -
-    
+
+    #region --INFERNAL CORPS 1--
+
     // Inferno Templar
     // Pierce dice on Melee pages gain +1 Power and deal +2 damage.
     public class PassiveAbility_SlickMod_InfernalInfernoTemplar : PassiveAbilityBase
@@ -1124,7 +1124,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - UN GOLDEN SPARK -
+    #region --UN GOLDEN SPARK--
 
     // Beginnings of Samsara
     // Untransferable. "Speed Break" becomes accessible, and can be used by spending Samsara.
@@ -1471,7 +1471,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - BACKSTREET SLUGGERS -
+    #region --BACKSTREET SLUGGERS--
 
     // Rat Breaker
     // Blunt Stagger Damage +1. Blunt Damage +1 against staggered enemies.
@@ -1594,7 +1594,7 @@ namespace SlickRuinaMod
     }
     #endregion
 
-    #region - MIDNIGHT OFFICE -
+    #region --MIDNIGHT OFFICE--
 
     // Midnight Arrival
     // Starting with the fifth Scene, gain 1 Protection, Stagger Protection, Haste, and Damage Up each Scene
@@ -1767,7 +1767,83 @@ namespace SlickRuinaMod
     }
     #endregion
 
-    #region - AESIR OFFICE -
+    #region --DANS SOLUTIONS--
+    public class PassiveAbility_SlickMod_DanDansGuarentee : PassiveAbilityBase
+    {
+        public override void OnDie()
+        {
+            base.OnDie();
+            BattleUnitModel battleUnitModel = BattleObjectManager.instance.GetAliveList(this.owner.faction).Find((BattleUnitModel x) => x.index == 0);
+            bool flag = battleUnitModel != null;
+            if (flag)
+            {
+                battleUnitModel.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_Barrier, 5, battleUnitModel);
+                battleUnitModel.cardSlotDetail.RecoverPlayPoint(1);
+                battleUnitModel.allyCardDetail.DrawCards(1);
+                battleUnitModel.RecoverBreakLife(5);
+            }
+        }
+    }
+
+    public class PassiveAbility_SlickMod_DanWtfThisWasntSupposedToHappen : PassiveAbilityBase
+    {
+        public override void OnRoundStart()
+        {
+            if (!BattleObjectManager.instance.GetAliveList(owner.faction).Exists((BattleUnitModel x) => x != owner))
+            {
+                owner.bufListDetail.AddBuf(new BattleUnitBuf_DanIsIncrediblyFast());
+            }
+        }
+
+        public class BattleUnitBuf_DanIsIncrediblyFast : BattleUnitBuf
+        {
+            public override int SpeedDiceNumAdder()
+            {
+                return 1;
+            }
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                this.Destroy();
+            }
+        }
+    }
+
+    public class PassiveAbility_SlickMod_DanSurplusInkwork : PassiveAbilityBase
+    {
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
+        {
+            base.BeforeRollDice(behavior);
+            BattleUnitBuf Inky = this.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_BlackTieInk);
+            if (Inky != null)
+            {
+                if (Inky.stack >= 10 && base.IsAttackDice(behavior.Detail))
+                {
+                    behavior.ApplyDiceStatBonus(new DiceStatBonus
+                    {
+                        power = 1
+                    });
+                }
+            }
+        }
+    }
+
+    public class PassiveAbility_SlickMod_DanJustBusiness : PassiveAbilityBase
+    {
+        public override void OnDieOtherUnit(BattleUnitModel unit)
+        {
+            base.OnDieOtherUnit(unit);
+            if (unit.faction == owner.faction)
+            {
+                this.owner.allyCardDetail.DrawCards(1);
+                this.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.DmgUp, 1, this.owner);
+            }
+        }
+    }
+
+    #endregion
+
+    #region --AESIR OFFICE--
 
     public class PassiveAbility_SlickMod_GamerCycle : PassiveAbilityBase
     {
@@ -1776,7 +1852,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - GRADE 1 FIXER MAO -
+    #region --GRADE 1 FIXER MAO--
 
     // Newjack Workshop
     // Dice Power +1. At the start of each Scene, randomize the types of all dice on all pages in the deck. (including Counter dice)

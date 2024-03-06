@@ -13,7 +13,7 @@ using static UnityEngine.GraphicsBuffer;
 namespace SlickRuinaMod
 {
 
-    #region - NORMAL STATUSES -
+    #region --NORMAL STATUSES--
 
     // Flow State
     // Increase minimum and maximum roll value of all dice by +1.
@@ -337,9 +337,79 @@ namespace SlickRuinaMod
         }
     }
 
+    // Black Tie Ink
+    // Take {0} more Stagger damage from attacks. At the end of the Scene, take {0}/4 Stagger damage (Rounded Down) and lose 1 stack of Ink. If Ink is 10 or higher, Defensive Dice gain +1 Power.
+    public class BattleUnitBuf_SlickMod_BlackTieInk : BattleUnitBuf
+    {
+        public override string keywordId => "SlickMod_BlackTieInk";
+
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_BlackTieInk;
+
+            }
+        }
+
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.Negative;
+            }
+        }
+        public override int GetBreakDamageIncreaseRate()
+        {
+            if (this._owner != null && this._owner.passiveDetail.HasPassive<PassiveAbility_SlickMod_DanSurplusInkwork>())
+            {
+                return this.stack / 2;
+            }
+            else
+            {
+                return this.stack;
+            }
+        }
+        public override void BeforeRollDice(BattleDiceBehavior behavior)
+        {
+            base.BeforeRollDice(behavior);
+            if (this.stack >= 10 && base.IsDefenseDice(behavior.Detail))
+            {
+                behavior.ApplyDiceStatBonus(new DiceStatBonus
+                {
+                    power = 1
+                });
+            }
+        }
+
+        public override void OnRoundEnd()
+        {
+            base.OnRoundEnd();
+            if (this._owner != null && this._owner.passiveDetail.HasPassive<PassiveAbility_SlickMod_DanSurplusInkwork>())
+            {
+                int damage = this.stack / 4;
+                this._owner.TakeBreakDamage(damage / 2, DamageType.Buf);
+                this.stack--;
+                if (this.stack <= 0)
+                {
+                    this.Destroy();
+                }
+            }
+            else
+            {
+                this._owner.TakeBreakDamage(this.stack / 4, DamageType.Buf);
+                this.stack--;
+                if (this.stack <= 0)
+                {
+                    this.Destroy();
+                }
+            }
+        }
+    }
+
     #endregion
 
-    #region - STATUSES STOLEN FROM CWR -
+    #region --STATUSES STOLEN FROM CWR--
 
     // Spare Parts
     // Affects the properties of certain Combat Pages. Stacks up to 10.
@@ -536,9 +606,284 @@ namespace SlickRuinaMod
         }
     }
 
+    // Emerald Light
+    // At the start of the Scene, spend 1 Emerald Light to restore 1 Light, until this character has 4 Light.
+    public class BattleUnitBuf_SlickMod_EmeraldLight : BattleUnitBuf
+    {
+
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.None;
+            }
+        }
+
+        public bool UseStack(int v)
+        {
+            bool flag = this.stack < v;
+            bool result;
+            if (flag)
+            {
+                result = false;
+            }
+            else
+            {
+                this.Add(-v);
+                result = true;
+            }
+            return result;
+        }
+
+        public void Add(int add)
+        {
+            BattleUnitBuf glut = _owner.bufListDetail.GetActivatedBufList().Find(x => x.GetType().Name.Contains("CWR_EmeraldLight") && !x.IsDestroyed());
+            if (glut != null)
+            {
+                add += glut.stack;
+                glut.Destroy();
+            }
+            this.stack += add;
+            if (this.stack < 1)
+            {
+                this.Destroy();
+                if (this.IsDestroyed())
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+
+            this.stack += add;
+            bool flag = this.stack < 1;
+            if (flag)
+            {
+                this.Destroy();
+            }
+            bool flag2 = base.IsDestroyed();
+            if (flag2)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+        }
+
+        public override void AfterDiceAction(BattleDiceBehavior behavior)
+        {
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+        }
+
+        public override void OnRoundStart()
+        {
+            while (this._owner.cardSlotDetail.PlayPoint < 4 && this._owner.cardSlotDetail.PlayPoint < this._owner.cardSlotDetail.GetMaxPlayPoint() && this.stack > 0)
+            {
+                this._owner.cardSlotDetail.RecoverPlayPoint(1);
+                this.stack--;
+            }
+            bool flag = this.stack <= 0;
+            if (flag)
+            {
+                this.Destroy();
+                this._owner.bufListDetail.GetActivatedBufList().Remove(this);
+            }
+        }
+
+    }
+
+    // Sinking
+    // 
+    public class BattleUnitBuf_SlickMod_Sinking : BattleUnitBuf
+    {
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.Negative;
+            }
+        }
+
+        public void Add(int add)
+        {
+            BattleUnitBuf glut = _owner.bufListDetail.GetActivatedBufList().Find(x => x.GetType().Name.Contains("CWR_Sinking") && !x.IsDestroyed());
+            if (glut != null)
+            {
+                add += glut.stack;
+                glut.Destroy();
+            }
+            this.stack += add;
+            if (this.stack < 1)
+            {
+                this.Destroy();
+                if (this.IsDestroyed())
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+
+            this.stack += add;
+            bool flag = this.stack < 1;
+            if (flag)
+            {
+                this.Destroy();
+                bool flag2 = base.IsDestroyed();
+                if (flag2)
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+        }
+
+        public override void AfterDiceAction(BattleDiceBehavior behavior)
+        {
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+        }
+
+        public override void OnRoundEnd()
+        {
+            BattleUnitBuf battleUnitBuf = this._owner.bufListDetail.GetReadyBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_Sinking);
+            bool flag = battleUnitBuf != null && battleUnitBuf.stack > 0;
+            if (flag)
+            {
+                this.Add(battleUnitBuf.stack);
+                battleUnitBuf.Destroy();
+            }
+        }
+
+        public override void OnTakeDamageByAttack(BattleDiceBehavior atkDice, int dmg)
+        {
+            bool flag = this._owner.IsImmune(this.bufType);
+            if (!flag)
+            {
+                this._owner.TakeBreakDamage(this.stack, DamageType.Buf, null, AtkResist.None, KeywordBuf.None);
+                BattleUnitBuf_SlickMod_SinkingCount battleUnitBuf_SlickMod_SinkingCount = this._owner.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_SinkingCount) as BattleUnitBuf_SlickMod_SinkingCount;
+                bool flag2 = battleUnitBuf_SlickMod_SinkingCount != null && battleUnitBuf_SlickMod_SinkingCount.stack >= 1;
+                if (flag2)
+                {
+                    battleUnitBuf_SlickMod_SinkingCount.UseStack(1);
+                }
+                else
+                {
+                    this.Destroy();
+                    bool flag3 = base.IsDestroyed();
+                    if (flag3)
+                    {
+                        this._owner.bufListDetail.RemoveBuf(this);
+                    }
+                }
+            }
+        }
+
+        public override string keywordId
+        {
+            get
+            {
+                return "SlickMod_Sinking";
+            }
+        }
+    }
+
+    public class BattleUnitBuf_SlickMod_SinkingCount : BattleUnitBuf
+    {
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.None;
+            }
+        }
+
+        public void Add(int add)
+        {
+            BattleUnitBuf glut = _owner.bufListDetail.GetActivatedBufList().Find(x => x.GetType().Name.Contains("CWR_SinkingCount") && !x.IsDestroyed());
+            if (glut != null)
+            {
+                add += glut.stack;
+                glut.Destroy();
+            }
+            this.stack += add;
+            if (this.stack < 1)
+            {
+                this.Destroy();
+                if (this.IsDestroyed())
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+
+            this.stack += add;
+            bool flag = this.stack < 1;
+            if (flag)
+            {
+                this.Destroy();
+                bool flag2 = base.IsDestroyed();
+                if (flag2)
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+        }
+
+        public override void AfterDiceAction(BattleDiceBehavior behavior)
+        {
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+        }
+
+        public override void OnRoundEnd()
+        {
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+            else
+            {
+                BattleUnitBuf battleUnitBuf = this._owner.bufListDetail.GetReadyBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_SinkingCount);
+                bool flag2 = battleUnitBuf != null && battleUnitBuf.stack > 0;
+                if (flag2)
+                {
+                    this.Add(battleUnitBuf.stack);
+                    battleUnitBuf.Destroy();
+                }
+            }
+        }
+        public bool UseStack(int v)
+        {
+            bool flag = this.stack < v;
+            bool result;
+            if (flag)
+            {
+                result = false;
+            }
+            else
+            {
+                this.Add(-v);
+                result = true;
+            }
+            return result;
+        }
+
+        public override string keywordId
+        {
+            get
+            {
+                return "SlickMod_SinkingCount";
+            }
+        }
+    }
+
     #endregion
 
-    #region - COMBO STUFF -
+    #region --COMBO STUFF--
 
     // Sakanagi set
     public class BattleUnitBuf_SlickMod_SakanagiComboPieceA : BattleUnitBuf
@@ -636,7 +981,7 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region - ETC -
+    #region --ETC--
 
     public class BattleUnitBuf_SlickMod_AddBackAfterX : BattleUnitBuf
     {
