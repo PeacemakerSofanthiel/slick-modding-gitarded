@@ -61,6 +61,19 @@ namespace SlickRuinaMod
                 MyKeywordBufs.SlickMod_Orb_Focus = SlickMalice;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Orb_Malice>();
             }
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_SpareParts", out var SlickParts) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out SlickParts) && EnumExtender.TryAddName("SlickMod_SpareParts", SlickParts))
+            {
+                MyKeywordBufs.SlickMod_Orb_Focus = SlickParts;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_SpareParts>();
+            }
+
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Barrier", out var Barrier) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out Barrier) && EnumExtender.TryAddName("SlickMod_Barrier", Barrier))
+            {
+                MyKeywordBufs.SlickMod_Orb_Focus = Barrier;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Barrier>();
+            }
 
         }
         //Exclusive Combat Page Patch
@@ -100,6 +113,7 @@ namespace SlickRuinaMod
         public static KeywordBuf SlickMod_Dangerous;
         public static KeywordBuf SlickMod_Orb_Malice;
         public static KeywordBuf SlickMod_Orb_Focus;
-        public static KeywordBuf SlickMod_Shielding;
+        public static KeywordBuf SlickMod_SpareParts;
+        public static KeywordBuf SlickMod_Barrier;
     }
 }

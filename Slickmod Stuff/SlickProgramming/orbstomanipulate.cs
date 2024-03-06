@@ -210,12 +210,12 @@ namespace SlickRuinaMod
         public override void onevoke()
         {
             base.onevoke();
-            _owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_Shielding, 7 + _owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Orb_Focus), _owner);
+            _owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_Barrier, 7 + _owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Orb_Focus), _owner);
         }
         public override void OnRoundStartAfter()
         {
             base.OnRoundStartAfter();
-            _owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_Shielding, 3 + _owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Orb_Focus), _owner);
+            _owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_Barrier, 3 + _owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Orb_Focus), _owner);
         }
     }
     public class SlickMod_Orb_Darkness : bufforbbase

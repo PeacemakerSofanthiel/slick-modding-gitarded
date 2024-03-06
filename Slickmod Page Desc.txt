@@ -33,12 +33,13 @@ samson5580 - Inferno Templar skin, Inferno Corps page art; Design, skins, page a
 CountDuckoo - Code for the Backstreets Sluggers and Midnight Office
 Bucket AKA last of the kalo squad - Orb system, a few fixes
 
+[url=https://game-icons.net/]game-icons.net[/url] for Cycle, Overheat, Flow State, Geared Up, Dangerous, and Samsara icons
+
 
 
 [h3]-- SERVICES & DEPENDENCIES --[/h3]
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2811698222]Localization Manager[/url] by StartUp
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2994035022]Enum Extender V2, Keyword Util, Sufficient Ammo Fix, Assorted Fixes (Via Cya's Toolbox)[/url] by Cyaminthe
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3051354156]HatSingularity[/url] by 華鳥風月 (AKA Hat)
 
 
 

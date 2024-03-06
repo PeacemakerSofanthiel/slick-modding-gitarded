@@ -337,16 +337,112 @@ namespace SlickRuinaMod
         }
     }
 
-    // Shielding
-    // Lol
+    #endregion
 
-    public class BattleUnitBuf_SlickMod_Shielding : BattleUnitBuf
+    #region - STATUSES STOLEN FROM CWR -
+
+    // Spare Parts
+    // Affects the properties of certain Combat Pages. Stacks up to 10.
+    public class BattleUnitBuf_SlickMod_SpareParts : BattleUnitBuf
     {
+
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_SpareParts;
+
+            }
+        }
+
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.None;
+            }
+        }
+
+        public bool UseStack(int v)
+        {
+            if (this.stack < v)
+            {
+                return false;
+            }
+            this.Add(-v);
+            return true;
+        }
+
+        public void Add(int add)
+        {
+
+            BattleUnitBuf glut = _owner.bufListDetail.GetActivatedBufList().Find(x => x.GetType().Name.Contains("CWR_SpareParts") && !x.IsDestroyed());
+            if (glut != null)
+            {
+                add += glut.stack;
+                glut.Destroy();
+            }
+            this.stack += add;
+            if (this.stack < 1)
+            {
+                this.Destroy();
+                if (this.IsDestroyed())
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+
+            int num = 10;
+            bool flag2 = this._owner.passiveDetail.PassiveList.Exists(x => x.id == new LorId("CWRCurrent", 206));
+            if (flag2)
+            {
+                num = 25;
+            }
+            bool flag3 = this.stack > num;
+            if (flag3)
+            {
+                this.stack = num;
+            }
+        }
+
+        public override void AfterDiceAction(BattleDiceBehavior behavior)
+        {
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+        }
+
         public override string keywordId
         {
             get
             {
-                return "SlickMod_Shielding";
+                bool flag = this._owner.passiveDetail.PassiveList.Exists(x => x.id == new LorId("CWRCurrent", 206));
+                    string result;
+                if (flag)
+                {
+                    result = "SlickMod_SparePartsLilacChamber";
+                }
+                else
+                {
+                    result = "SlickMod_SpareParts";
+                }
+                return result;
+            }
+        }
+    }
+
+    public class BattleUnitBuf_SlickMod_Barrier : BattleUnitBuf
+    {
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_Barrier;
+
             }
         }
 
@@ -358,48 +454,53 @@ namespace SlickRuinaMod
             }
         }
 
-        public override KeywordBuf bufType
+        public override float DmgFactor(int dmg, DamageType type, KeywordBuf keyword)
         {
-            get
+            float num = (float)this.stack;
+            float num2 = (float)dmg;
+            bool flag = num2 > num;
+            float result;
+            if (flag)
             {
-                return MyKeywordBufs.SlickMod_Shielding;
+                this.Add(-this.stack);
+                result = (num2 - num) / num2;
             }
+            else
+            {
+                this.Add(-dmg);
+                result = 0f;
+            }
+            return result;
         }
 
         public void Add(int add)
         {
+            BattleUnitBuf glut = _owner.bufListDetail.GetActivatedBufList().Find(x => x.GetType().Name.Contains("CWR_Barrier") && !x.IsDestroyed());
+            if (glut != null)
+            {
+                add += glut.stack;
+                glut.Destroy();
+            }
+            this.stack += add;
+            if (this.stack < 1)
+            {
+                this.Destroy();
+                if (this.IsDestroyed())
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+
             this.stack += add;
             bool flag = this.stack < 1;
             if (flag)
             {
                 this.Destroy();
-                bool flag2 = base.IsDestroyed();
-                if (flag2)
-                {
-                    this._owner.bufListDetail.RemoveBuf(this);
-                }
             }
         }
 
-        public bool UseStack(int num)
+        public override void AfterDiceAction(BattleDiceBehavior behavior)
         {
-            bool flag = this.stack < num;
-            bool result;
-            if (flag)
-            {
-                result = false;
-            }
-            else
-            {
-                this.Add(-num);
-                result = true;
-            }
-            return result;
-        }
-
-        public override void OnRoundEnd()
-        {
-            this.Destroy();
             bool flag = base.IsDestroyed();
             if (flag)
             {
@@ -407,22 +508,30 @@ namespace SlickRuinaMod
             }
         }
 
-        public override void OnTakeDamageByAttack(BattleDiceBehavior atkDice, int dmg)
+        public override void OnRoundEnd()
         {
-            this._owner.hp = this._owner.hp + (float)dmg;
-            bool flag = this._owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Shielding) > dmg;
+            bool flag = base.IsDestroyed();
             if (flag)
             {
-                this.UseStack(dmg);
+                this._owner.bufListDetail.RemoveBuf(this);
             }
             else
             {
-                this.Destroy();
-                bool flag2 = base.IsDestroyed();
+                BattleUnitBuf battleUnitBuf = this._owner.bufListDetail.GetReadyBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_Barrier);
+                bool flag2 = battleUnitBuf != null && battleUnitBuf.stack > 0;
                 if (flag2)
                 {
-                    this._owner.bufListDetail.RemoveBuf(this);
+                    this.Add(battleUnitBuf.stack);
+                    battleUnitBuf.Destroy();
                 }
+            }
+        }
+
+        public override string keywordId
+        {
+            get
+            {
+                return "SlickMod_Barrier";
             }
         }
     }

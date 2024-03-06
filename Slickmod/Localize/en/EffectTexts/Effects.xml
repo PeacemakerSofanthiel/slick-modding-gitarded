@@ -67,5 +67,20 @@
 		<Desc>Upon using a page, discard 2 random pages, then draw 2 pages, then lose 1 Cycle.</Desc>
 	</BattleEffectText>
 
+ <BattleEffectText ID="SlickMod_SpareParts">
+      <Name>Spare Parts</Name>
+      <Desc>Affects the properties of certain Combat Pages. Stacks up to 10.</Desc>
+    </BattleEffectText>
+
+ <BattleEffectText ID="SlickMod_SparePartsLilacChamber">
+      <Name>Spare Parts</Name>
+      <Desc>Affects the properties of certain Combat Pages. Stacks up to 25.</Desc>
+    </BattleEffectText>
+
+ <BattleEffectText ID="SlickMod_Barrier">
+      <Name>Barrier</Name>
+      <Desc>Prevent the next {0} damage taken.</Desc>
+    </BattleEffectText>
+
   </effectTextList>
 </BattleEffectTextRoot>
