@@ -21,49 +21,44 @@ namespace SlickRuinaMod
             Harmony.CreateAndPatchAll(typeof(Patchlist), base.GetType().Assembly.GetName().Name);
 
             // Stackable buff returns corresponding bufType
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Cycle", out var newKeyword) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword) && EnumExtender.TryAddName("SlickMod_Cycle", newKeyword))
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Cycle", out var SlickCycle) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out SlickCycle) && EnumExtender.TryAddName("SlickMod_Cycle", SlickCycle))
             {
-                MyKeywordBufs.SlickMod_Cycle = newKeyword;
+                MyKeywordBufs.SlickMod_Cycle = SlickCycle;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Cycle>();
             }
 
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_InfernalOverheat", out var newKeyword2) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword2) && EnumExtender.TryAddName("SlickMod_InfernalOverheat", newKeyword2))
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_DamageDown", out var SlickDamageDown) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out SlickDamageDown) && EnumExtender.TryAddName("SlickMod_DamageDown", SlickDamageDown))
             {
-                MyKeywordBufs.SlickMod_InfernalOverheat = newKeyword2;
+                MyKeywordBufs.SlickMod_Cycle = SlickDamageDown;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Cycle>();
+            }
+
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_InfernalOverheat", out var SlickOverheat) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out SlickOverheat) && EnumExtender.TryAddName("SlickMod_InfernalOverheat", SlickOverheat))
+            {
+                MyKeywordBufs.SlickMod_InfernalOverheat = SlickOverheat;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_InfernalOverheat>();
             }
 
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_SparkSamsara", out var newKeyword3) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword3) && EnumExtender.TryAddName("SlickMod_SparkSamsara", newKeyword2))
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_SparkSamsara", out var SlickSamsara) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out SlickSamsara) && EnumExtender.TryAddName("SlickMod_SparkSamsara", SlickSamsara))
             {
-                MyKeywordBufs.SlickMod_SparkSamsara = newKeyword3;
+                MyKeywordBufs.SlickMod_SparkSamsara = SlickSamsara;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_SparkSamsara>();
             }
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_GearedUp", out var newKeyword4) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword4) && EnumExtender.TryAddName("SlickMod_GearedUp", newKeyword4))
-            {
-                MyKeywordBufs.SlickMod_GearedUp = newKeyword4;
-                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_GearedUp>();
-            }
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Dangerous", out var newKeyword5) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out newKeyword5) && EnumExtender.TryAddName("SlickMod_Dangerous", newKeyword5))
-            {
-                MyKeywordBufs.SlickMod_Dangerous = newKeyword5;
-                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Dangerous>();
-            }
 
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Orb_Focus", out var a) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out a) && EnumExtender.TryAddName("SlickMod_Orb_Focus", a))
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Orb_Focus", out var SlickFocus) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out SlickFocus) && EnumExtender.TryAddName("SlickMod_Orb_Focus", SlickFocus))
             {
-                MyKeywordBufs.SlickMod_Orb_Focus = a;
+                MyKeywordBufs.SlickMod_Orb_Focus = SlickFocus;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Orb_Focus>();
             }
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Orb_Malice", out var b) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out b) && EnumExtender.TryAddName("SlickMod_Orb_Malice", b))
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Orb_Malice", out var SlickMalice) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out SlickMalice) && EnumExtender.TryAddName("SlickMod_Orb_Malice", SlickMalice))
             {
-                MyKeywordBufs.SlickMod_Orb_Focus = b;
+                MyKeywordBufs.SlickMod_Orb_Focus = SlickMalice;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Orb_Malice>();
             }
 
@@ -95,6 +90,7 @@ namespace SlickRuinaMod
     {
         public static KeywordBuf SlickMod_Cycle;
         public static KeywordBuf SlickMod_FlowState;
+        public static KeywordBuf SlickMod_DamageDown;
         public static KeywordBuf SlickMod_InfernalOverheat;
         public static KeywordBuf SlickMod_SparkSamsara;
         public static KeywordBuf SlickMod_SparkSpeedBreak;
@@ -104,5 +100,6 @@ namespace SlickRuinaMod
         public static KeywordBuf SlickMod_Dangerous;
         public static KeywordBuf SlickMod_Orb_Malice;
         public static KeywordBuf SlickMod_Orb_Focus;
+        public static KeywordBuf SlickMod_Shielding;
     }
 }

@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Security.Policy;
 using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_PackHuntingTactics;
 using static DiceCardSelfAbility_unitePower;
-using Hat_Method;
 using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_BarghestNail;
 
 namespace SlickRuinaMod
@@ -506,7 +505,7 @@ namespace SlickRuinaMod
 
     // Breakdown: Page Effect
     // [On Use] Restore 1 Light; If user has 5+ Samsara, gain 1 Haste next Scene
-    public class DiceCardSelfAbility_SparkBreakdownUN : DiceCardSelfAbilityBase
+    public class DiceCardSelfAbility_SlickMod_SparkBreakdownUN : DiceCardSelfAbilityBase
     {
         public static string Desc = "[On Use] Restore 1 Light; If user has 5+ Samsara, gain 1 Haste next Scene";
 
@@ -526,7 +525,7 @@ namespace SlickRuinaMod
 
     // Mirage: Page Effect
     // [On Use] Draw 1 page; Gain 1 Haste next Scene; If user has 7+ Samsara, all dice on this page gain +1 Power
-    public class DiceCardSelfAbility_SparkMirageUN : DiceCardSelfAbilityBase
+    public class DiceCardSelfAbility_SlickMod_SparkMirageUN : DiceCardSelfAbilityBase
     {
         public static string Desc = "[On Use] Draw 1 page; Gain 1 Haste next Scene; If user has 7+ Samsara, all dice on this page gain +1 Power";
 
@@ -551,25 +550,25 @@ namespace SlickRuinaMod
 
     // Tatsumaki: Page Effect
     // [Combo: Sakanagi]
-    // [On Use] If used alongside "Karyuken", gain 3 Poise
-    public class DiceCardSelfAbility_TatsumakiUN : DiceCardSelfAbilityBase
+    // [On Use] If used alongside "Karyuken", gain 3 Damage Up next Scene
+    public class DiceCardSelfAbility_SlickMod_TatsumakiUN : DiceCardSelfAbilityBase
     {
-        public static string Desc = "[Combo: Sakanagi]\n[On Use] If used alongside \"Karyuken\", gain 3 Poise";
+        public static string Desc = "[Combo: Sakanagi]\n[On Use] If used alongside \"Karyuken\", gain 3 Damage Up next Scene";
 
-        public override string[] Keywords => new string[2] { "SlickMod_Combo", "Hat_Poise_Keyword" };
+        public override string[] Keywords => new string[1] { "SlickMod_Combo" };
 
         public override void OnStartBattle()
         {
-            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_UsingTatsumaki());
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_UsingTatsumaki());
         }
 
         public override void OnUseCard()
         {
-            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_SakanagiComboPieceA());
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_SakanagiComboPieceA());
 
-            if (base.owner.bufListDetail.HasBuf<BattleUnitBuf_UsingKaryuken>())
+            if (base.owner.bufListDetail.HasBuf<BattleUnitBuf_SlickMod_UsingKaryuken>())
             {
-                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Poise, 3, owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp, 3, owner);
             }
         }
     }
@@ -577,7 +576,7 @@ namespace SlickRuinaMod
     // Karyuken: Page Effect
     // [Combo: Sakanagi]
     // [On Use] If used alongside "Tatsumaki", restore 1 Light
-    public class DiceCardSelfAbility_KaryukenUN : DiceCardSelfAbilityBase
+    public class DiceCardSelfAbility_SlickMod_KaryukenUN : DiceCardSelfAbilityBase
     {
         public static string Desc = "[Combo: Sakanagi]\n[On Use] If used alongside \"Tatsumaki\", restore 1 Light";
 
@@ -585,14 +584,14 @@ namespace SlickRuinaMod
 
         public override void OnStartBattle()
         {
-            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_UsingKaryuken());
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_UsingKaryuken());
         }
 
         public override void OnUseCard()
         {
-            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_SakanagiComboPieceB());
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_SakanagiComboPieceB());
 
-            if (base.owner.bufListDetail.HasBuf<BattleUnitBuf_UsingTatsumaki>())
+            if (base.owner.bufListDetail.HasBuf<BattleUnitBuf_SlickMod_UsingTatsumaki>())
             {
                 base.owner.cardSlotDetail.RecoverPlayPointByCard(1);
             }
@@ -601,16 +600,16 @@ namespace SlickRuinaMod
 
     // Sakanagi: Page Effect
     // [Combo Finisher]
-    // [On Use] Gain 5 Poise
-    public class DiceCardSelfAbility_SakanagiUN : DiceCardSelfAbilityBase
+    // [Combat Start] Gain 3 Damage Up this Scene
+    public class DiceCardSelfAbility_SlickMod_SakanagiUN : DiceCardSelfAbilityBase
     {
-        public static string Desc = "[Combo Finisher]\n[On Use] Gain 5 Poise";
+        public static string Desc = "[Combo Finisher]\n[Combat Start] Gain 3 Damage Up this Scene";
 
-        public override string[] Keywords => new string[2] { "SlickMod_ComboFinisher", "Hat_Poise_Keyword" };
+        public override string[] Keywords => new string[1] { "SlickMod_ComboFinisher" };
 
-        public override void OnUseCard()
+        public override void OnStartBattle()
         {
-            this.owner.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Poise, 5, owner);
+            this.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp, 3, owner);
         }
 
         public override void OnRoundEnd(BattleUnitModel unit, BattleDiceCardModel self)
@@ -622,7 +621,7 @@ namespace SlickRuinaMod
     // Spiral Strike: Page Effect
     // Combo: Tempest
     // [On Use] Gain 2 Haste next Scene
-    public class DiceCardSelfAbility_WindStepUN : DiceCardSelfAbilityBase
+    public class DiceCardSelfAbility_SlickMod_WindStepUN : DiceCardSelfAbilityBase
     {
         public static string Desc = "[Combo: Tempest]\n[On Use] Gain 2 Haste next Scene";
 
@@ -630,26 +629,26 @@ namespace SlickRuinaMod
 
         public override void OnUseCard()
         {
-            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_TempestComboPieceA());
+            card.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_TempestComboPieceA());
             base.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Quickness, 2, base.owner);
         }
     }
 
     // Spiral Strike: Page Effect
     // Combo: Tempest
-    // [On Use] Gain 1 Poise for every 3 Samsara on self (max. 5)
-    public class DiceCardSelfAbility_SpiralStrikeUN : DiceCardSelfAbilityBase
+    // [On Use] Gain 1 Damage Up next Scene for every 3 Samsara on self (max. 5)
+    public class DiceCardSelfAbility_SlickMod_SpiralStrikeUN : DiceCardSelfAbilityBase
     {
-        public static string Desc = "[Combo: Tempest]\n[On Use] Gain 1 Poise for every 3 Samsara on self (max. 5)";
+        public static string Desc = "[Combo: Tempest]\n[On Use] Gain 1 Damage Up next Scene for every 3 Samsara on self (max. 5)";
 
-        public override string[] Keywords => new string[3] { "SlickMod_Combo", "Hat_Poise_Keyword", "SlickMod_Samsara" };
+        public override string[] Keywords => new string[2] { "SlickMod_Combo", "SlickMod_Samsara" };
 
         public override void OnUseCard()
         {
             BattleUnitBuf_SlickMod_SparkSamsara battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag = this.card.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara) as BattleUnitBuf_SlickMod_SparkSamsara;
             if (battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag != null && battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag.stack >= 3)
             {
-                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Poise, Mathf.Min(battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag.stack / 3, 5), this.owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp, Mathf.Min(battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag.stack / 3, 5), this.owner);
             }
         }
     }
@@ -657,7 +656,7 @@ namespace SlickRuinaMod
     // Tempest: Page Effect
     // [Combo Finisher]
     // [Combat Start] Gain 1 Strength this Scene
-    public class DiceCardSelfAbility_TempestUN : DiceCardSelfAbilityBase
+    public class DiceCardSelfAbility_SlickMod_TempestUN : DiceCardSelfAbilityBase
     {
         public static string Desc = "[Combo Finisher]\n[Combat Start] Gain 1 Strength this Scene";
 

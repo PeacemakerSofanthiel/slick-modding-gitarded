@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hat_Method;
 using System.Net;
 using UnityEngine;
 
@@ -78,19 +77,6 @@ namespace SlickRuinaMod
         }
     }
 
-    // [On Hit] Inflict 1 Rupture
-    public class DiceCardAbility_SlickMod_1Rupture : DiceCardAbilityBase
-    {
-        public static string Desc = "[On Hit] Inflict 1 Rupture";
-
-        public override string[] Keywords => new string[1] { "Hat_Rupture_Keyword" };
-
-        public override void OnSucceedAttack()
-        {
-            base.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, 1, base.owner);
-        }
-    }
-
     // +1 Power if opponent has Bind
     public class DiceCardAbility_SlickMod_powerUp1targetBind : DiceCardAbilityBase
     {
@@ -113,31 +99,31 @@ namespace SlickRuinaMod
     }
 
     // Pack Hunting Tactics: Dice Effect
-    // [On Hit] Inflict 2 Rupture; Inflict 1 Bind next Scene; Inflict 2 Bind to self next Scene
-    public class DiceCardAbility_SlickMod_2Rupture1Bind2SelfBind : DiceCardAbilityBase
+    // [On Hit] Inflict 2 Fragile and 1 Bind next Scene; Inflict 2 Bind to self next Scene
+    public class DiceCardAbility_SlickMod_2Fragile1Bind2SelfBind : DiceCardAbilityBase
     {
-        public static string Desc = "[On Hit] Inflict 2 Rupture; Inflict 1 Bind next Scene; Inflict 2 Bind to self next Scene";
+        public static string Desc = "[On Hit] Inflict 2 Fragile and 1 Bind next Scene; Inflict 2 Bind to self next Scene";
 
-        public override string[] Keywords => new string[2] { "Hat_Rupture_Keyword", "Binding_Keyword" };
+        public override string[] Keywords => new string[2] { "Vulnerable_Keyword", "Binding_Keyword" };
 
         public override void OnSucceedAttack()
         {
-            this.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, 2, this.owner);
+            this.card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Vulnerable, 2, this.owner);
             base.card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Binding, 1, base.owner);
             owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Binding, 2, base.owner);
         }
     }
 
-    // [On Hit] Inflict 3 Rupture
+    // [On Hit] Inflict 3 Fragile
     public class DiceCardAbility_SlickMod_3Rupture : DiceCardAbilityBase
     {
-        public static string Desc = "[On Hit] Inflict 3 Rupture";
+        public static string Desc = "[On Hit] Inflict 3 Fragile next Scene";
 
-        public override string[] Keywords => new string[1] { "Hat_Rupture_Keyword" };
+        public override string[] Keywords => new string[1] { "Vulnerable_Keyword" };
 
         public override void OnSucceedAttack()
         {
-            base.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, 3, base.owner);
+            base.card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Vulnerable, 3, base.owner);
         }
     }
 
@@ -146,14 +132,14 @@ namespace SlickRuinaMod
     // user and all allied Snow Coyote Fixers restore 2 Light)
     public class DiceCardAbility_SlickMod_TurnerFuckening : DiceCardAbilityBase
     {
-        public static string Desc = "[On Hit] Inflict 3 Rupture";
+        public static string Desc = "[On Hit] Inflict 3 Fragile next Scene";
 
-        public override string[] Keywords => new string[2] { "Hat_Rupture_Keyword", "Energy_Keyword" };
+        public override string[] Keywords => new string[2] { "Vulnerable_Keyword", "Energy_Keyword" };
 
         public override void OnSucceedAttack()
         {
             // Inflict 3 Rupture; Restore 2 Light
-            base.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, 3, base.owner);
+            base.card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Vulnerable, 3, base.owner);
             base.owner.cardSlotDetail.RecoverPlayPointByCard(2);
 
             foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList(base.owner.faction))
@@ -163,7 +149,7 @@ namespace SlickRuinaMod
                 if ( flag3 && battleUnitModel.Book.BookId == new LorId("SlickMod", 10000002) || flag3 && battleUnitModel.Book.BookId == new LorId("SlickMod", 10000004) || flag3 && battleUnitModel.Book.BookId == new LorId("SlickMod", 2) )
                 {
                     // Adds page with temporary card buf; Restores 2 Light
-                    battleUnitModel.allyCardDetail.AddNewCard(new LorId("SlickMod", 14)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+                    battleUnitModel.allyCardDetail.AddNewCard(new LorId("SlickMod", 0502009)).AddBuf(new BattleDiceCardBuf_SlickMod_Temp());
                     battleUnitModel.cardSlotDetail.RecoverPlayPointByCard(2);
                 }
             }
@@ -242,50 +228,6 @@ namespace SlickRuinaMod
                     _repeatCount++;
                     ActivateBonusAttackDice();
                 }
-            }
-        }
-    }
-
-    // [On Hit] Inflict 2 Rupture
-    public class DiceCardAbility_SlickMod_2Rupture : DiceCardAbilityBase
-    {
-        public static string Desc = "[On Hit] Inflict 2 Rupture";
-
-        public override string[] Keywords => new string[1] { "Hat_Rupture_Keyword" };
-
-        public override void OnSucceedAttack()
-        {
-            base.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, 2, base.owner);
-        }
-    }
-
-    // [On Hit] Inflict 5 Rupture
-    public class DiceCardAbility_SlickMod_5Rupture : DiceCardAbilityBase
-    {
-        public static string Desc = "[On Hit] Inflict 5 Rupture";
-
-        public override string[] Keywords => new string[1] { "Hat_Rupture_Keyword" };
-
-        public override void OnSucceedAttack()
-        {
-            base.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, 5, base.owner);
-        }
-    }
-
-    // Sakanagi: Dice Effect 1
-    // 
-    public class DiceCardAbility_SlickMod_SamsaraRupture : DiceCardAbilityBase
-    {
-        public static string Desc = "[On Hit] Inflict Rupture equal to Samsara on self (max. 10)";
-
-        public override string[] Keywords => new string[1] { "Hat_Rupture_Keyword" };
-
-        public override void OnSucceedAttack()
-        {
-            BattleUnitBuf_SlickMod_SparkSamsara battleUnitBuf_slickSparkSamsaraSakanagiGaming = this.card.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara) as BattleUnitBuf_SlickMod_SparkSamsara;
-            if (battleUnitBuf_slickSparkSamsaraSakanagiGaming != null && battleUnitBuf_slickSparkSamsaraSakanagiGaming.stack >= 1)
-            {
-                this.card.target?.bufListDetail.AddKeywordBufThisRoundByCard(Hat_KeywordBuf.KeywordBufs.Rupture, Mathf.Min(battleUnitBuf_slickSparkSamsaraSakanagiGaming.stack, 10), this.owner);
             }
         }
     }

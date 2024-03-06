@@ -387,7 +387,7 @@
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>70</HP>
-      <DeadLine>3</DeadLine>
+      <DeadLine>25</DeadLine>
       <Break>35</Break>
       <SpeedMin>3</SpeedMin>
       <Speed>4</Speed>
@@ -425,7 +425,7 @@
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>125</HP>
-      <DeadLine>12</DeadLine>
+      <DeadLine>50</DeadLine>
       <Break>65</Break>
       <SpeedMin>2</SpeedMin>
       <Speed>6</Speed>
@@ -543,7 +543,7 @@
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>100</HP>
-      <DeadLine>50</DeadLine>
+      <DeadLine>40</DeadLine>
       <Break>65</Break>
       <SpeedMin>1</SpeedMin>
       <Speed>7</Speed>

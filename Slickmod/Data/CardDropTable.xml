@@ -1,82 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CardDropTableXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Version>1.1</Version>
-  <DropTable ID="1">
-    <Card>1</Card>
-    <Card>2</Card>
-    <Card>3</Card>
-    <Card>4</Card>
-    <Card>5</Card>
+
+<!-- CANARD -->
+
+
+
+
+
+<!-- URBAN MYTH -->
+
+<!-- Backstreets Sluggers -->
+
+<!-- Mook -->
+  <DropTable ID="0201001">
+    <Card>0201001</Card>
+    <Card>0201002</Card>
+    <Card>0201003</Card>
+    <Card>0201004</Card>
+    <Card>0201005</Card>
+    <Card>0201006</Card>
   </DropTable>
-  <DropTable ID="2">
-    <Card>6</Card>
-    <Card>7</Card>
-    <Card>8</Card>
-    <Card>9</Card>
-    <Card>10</Card>
-    <Card>11</Card>
+
+<!-- Ethan 1 -->
+  <DropTable ID="0201002">
+    <Card>0201007</Card>
+    <Card>0201009</Card>
   </DropTable>
-  <DropTable ID="3">
-    <Card>8</Card>
-    <Card>9</Card>
-    <Card>10</Card>
-    <Card>12</Card>
-    <Card>13</Card>
+
+
+
+<!-- URBAN LEGEND -->
+
+
+
+
+
+<!-- URBAN PLAGUE -->
+
+<!-- Midnight Office -->
+
+<!-- Mook -->
+  <DropTable ID="0401001">
+    <Card>0401001</Card>
+    <Card>0401002</Card>
+    <Card>0401003</Card>
+    <Card>0401004</Card>
+    <Card>0401005</Card>
+    <Card>0401006</Card>
+    <Card>0401007</Card>
+    <Card>0401008</Card>
   </DropTable>
-  <DropTable ID="4">
-    <Card>16</Card>
-    <Card>17</Card>
-    <Card>18</Card>
-    <Card>19</Card>
-    <Card>21</Card>
+
+<!-- Ethan 2 Midnight Boogaloo -->
+  <DropTable ID="0401002">
+    <Card>2401016</Card>
+    <Card>2401017</Card>
   </DropTable>
-  <DropTable ID="5">
-    <Card>16</Card>
-    <Card>17</Card>
-    <Card>18</Card>
-    <Card>19</Card>
-    <Card>20</Card>
+
+
+
+<!-- URBAN NIGHTMARE -->
+
+<!-- Couriers 1 -->
+
+<!-- Courier -->
+  <DropTable ID="0501001">
+    <Card>0501001</Card>
+    <Card>0501002</Card>
+    <Card>0501003</Card>
+    <Card>0501004</Card>
+    <Card>0501005</Card>
   </DropTable>
-  <DropTable ID="6">
-    <Card>22</Card>
-    <Card>23</Card>
-    <Card>24</Card>
-    <Card>25</Card>
-    <Card>26</Card>
-    <Card>27</Card>
+
+<!-- Snow Coyote Office -->
+
+<!-- Mook -->
+  <DropTable ID="0502001">
+    <Card>0502001</Card>
+    <Card>0502002</Card>
+    <Card>0502003</Card>
+    <Card>0502004</Card>
+    <Card>0502005</Card>
+    <Card>0502006</Card>
   </DropTable>
-  <DropTable ID="7">
-    <Card>28</Card>
-    <Card>29</Card>
-    <Card>30</Card>
-    <Card>31</Card>
-    <Card>32</Card>
+
+<!-- Alex -->
+  <DropTable ID="0502002">
+    <Card>0502003</Card>
+    <Card>0502005</Card>
+    <Card>0502006</Card>
+    <Card>0502007</Card>
+    <Card>0502008</Card>
   </DropTable>
-  <DropTable ID="8">
-    <Card>33</Card>
-    <Card>34</Card>
-    <Card>35</Card>
-    <Card>36</Card>
-    <Card>37</Card>
-    <Card>38</Card>
-    <Card>39</Card>
-    <Card>40</Card>
+
+<!-- Inferno Corps 1 -->
+
+<!-- Underrunt -->
+  <DropTable ID="0503001">
+    <Card>0503001</Card>
+    <Card>0503002</Card>
+    <Card>0503003</Card>
+    <Card>0503004</Card>
+    <Card>0503005</Card>
   </DropTable>
-  <DropTable ID="9">
-    <Card>41</Card>
-    <Card>42</Card>
-    <Card>43</Card>
-    <Card>44</Card>
-    <Card>45</Card>
-    <Card>46</Card>
-    <Card>47</Card>
+
+<!-- Templar -->
+  <DropTable ID="0503002">
+    <Card>0503001</Card>
+    <Card>0503002</Card>
+    <Card>0503003</Card>
+    <Card>0503004</Card>
+    <Card>0503006</Card>
   </DropTable>
-  <DropTable ID="10">
-    <Card>48</Card>
-    <Card>49</Card>
-    <Card>50</Card>
-    <Card>51</Card>
-    <Card>53</Card>
-    <Card>54</Card>
+
+<1-- Wandering Fixer Susano'o -->
+
+  <DropTable ID="0504001">
+    <Card>0504001</Card>
+    <Card>0504002</Card>
+    <Card>0504003</Card>
+    <Card>0504004</Card>
+    <Card>0504007</Card>
+    <Card>0504008</Card>
   </DropTable>
+
+
+
+<!-- STAR OF THE CITY -->
+
+
+
+
+
+<!-- IMPURITAS CIVITATIS -->
+
+
+
+
+
+<!-- JOKE RECEPTION -->
+
+
+
+
+
+
+
 </CardDropTableXmlRoot>

@@ -7,8 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using static UnityEngine.GraphicsBuffer;
-using Hat_Method;
-using static DiceCardSelfAbility_smallBirdEgo;
 using HyperCard;
 
 namespace SlickRuinaMod
@@ -21,11 +19,11 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if (this.owner.emotionDetail.EmotionLevel == 0)
+            for (int i = 0; i < 1 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
+                this.owner.emotionDetail.CheckLevelUp();
             }
-            this.owner.emotionDetail.CheckLevelUp();
         }
     }
 
@@ -35,16 +33,11 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if ( this.owner.emotionDetail.EmotionLevel == 0 )
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(2);
-            }
-
-            if ( this.owner.emotionDetail.EmotionLevel == 1)
+            for (int i = 0; i < 2 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
+                this.owner.emotionDetail.CheckLevelUp();
             }
-            this.owner.emotionDetail.CheckLevelUp();
         }
     }
 
@@ -54,21 +47,11 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if (owner.emotionDetail.EmotionLevel == 0)
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(3);
-            }
-
-            if (owner.emotionDetail.EmotionLevel == 1)
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(2);
-            }
-
-            if (owner.emotionDetail.EmotionLevel == 2)
+            for (int i = 0; i < 3 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
+                this.owner.emotionDetail.CheckLevelUp();
             }
-            this.owner.emotionDetail.CheckLevelUp();
         }
     }
 
@@ -78,26 +61,11 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if (owner.emotionDetail.EmotionLevel == 0)
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(4);
-            }
-
-            if (owner.emotionDetail.EmotionLevel == 1)
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(3);
-            }
-
-            if (owner.emotionDetail.EmotionLevel == 2)
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(2);
-            }
-
-            if (owner.emotionDetail.EmotionLevel == 3)
+            for (int i = 0; i < 4 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
+                this.owner.emotionDetail.CheckLevelUp();
             }
-            this.owner.emotionDetail.CheckLevelUp();
         }
     }
 
@@ -107,31 +75,11 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            if (owner.emotionDetail.EmotionLevel == 0)
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(5);
-            }
-
-            if (owner.emotionDetail.EmotionLevel == 1)
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(4);
-            }
-
-            if (owner.emotionDetail.EmotionLevel == 2)
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(3);
-            }
-
-            if (owner.emotionDetail.EmotionLevel == 3)
-            {
-                this.owner.emotionDetail.LevelUp_Forcely(2);
-            }
-
-            if (owner.emotionDetail.EmotionLevel == 4)
+            for (int i = 0; i < 5 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
+                this.owner.emotionDetail.CheckLevelUp();
             }
-            this.owner.emotionDetail.CheckLevelUp();
         }
     }
 
@@ -1376,7 +1324,6 @@ namespace SlickRuinaMod
             if (behavior.Detail == BehaviourDetail.Evasion)
             {
                 owner.ShowPassiveTypo(this);
-                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(Hat_KeywordBuf.KeywordBufs.Poise, 1, owner);
             }
         }
     }

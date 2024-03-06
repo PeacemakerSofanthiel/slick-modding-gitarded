@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hat_Buf;
-using Hat_Effect;
-using Hat_Method;
 using SlickRuinaMod;
+using UnityEngine;
 
 namespace SlickRuinaMod
 {
@@ -14,9 +12,12 @@ namespace SlickRuinaMod
     {
         public virtual bool halvefocusgain => false;
         public virtual int orblimit => 1;
-    }
+        public virtual void onevoke()
+        {
 
-    public class PassiveAbilityBase_SlickMod_DefectiveCapacitor2 : passivedefectorbbase
+        }
+    }
+    class PassiveAbilityBase_SlickMod_DefectiveCapacitor2 : passivedefectorbbase
     {
         public override bool halvefocusgain => true;
         public override int orblimit => 2;
@@ -106,6 +107,21 @@ namespace SlickRuinaMod
     {
         public virtual void onevoke()
         {
+            foreach (PassiveAbilityBase thingy in _owner.passiveDetail.PassiveList)
+            {
+                if (thingy != null && thingy is passivedefectorbbase)
+                {
+                    try
+                    {
+                        passivedefectorbbase bimmer = thingy as passivedefectorbbase;
+                        bimmer.onevoke();
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Log(ex);
+                    }
+                }
+            }
             Destroy();
         }
         public override void Init(BattleUnitModel owner)
@@ -117,10 +133,17 @@ namespace SlickRuinaMod
             {
                 if (thingy != null && thingy is passivedefectorbbase)
                 {
-                    passivedefectorbbase bimmer = thingy as passivedefectorbbase;
-                    if (bimmer.orblimit > b)
+                    try
                     {
-                        b = bimmer.orblimit;
+                        passivedefectorbbase bimmer = thingy as passivedefectorbbase;
+                        if (bimmer.orblimit > b)
+                        {
+                            b = bimmer.orblimit;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.Log(ex);
                     }
                 }
             }
@@ -187,12 +210,12 @@ namespace SlickRuinaMod
         public override void onevoke()
         {
             base.onevoke();
-            _owner.bufListDetail.AddKeywordBufThisRoundByEtc(Hat_KeywordBuf.KeywordBufs.PhysicalShield, 7 + _owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Orb_Focus), _owner);
+            _owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_Shielding, 7 + _owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Orb_Focus), _owner);
         }
         public override void OnRoundStartAfter()
         {
             base.OnRoundStartAfter();
-            _owner.bufListDetail.AddKeywordBufThisRoundByEtc(Hat_KeywordBuf.KeywordBufs.PhysicalShield, 3 + _owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Orb_Focus), _owner);
+            _owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_Shielding, 3 + _owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Orb_Focus), _owner);
         }
     }
     public class SlickMod_Orb_Darkness : bufforbbase

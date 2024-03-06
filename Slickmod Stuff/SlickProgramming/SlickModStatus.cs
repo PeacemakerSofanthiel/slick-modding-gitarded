@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static Hat_Method.Hat_KeywordBuf;
 using HyperCard;
 using static UnityEngine.GraphicsBuffer;
 
@@ -86,7 +85,55 @@ namespace SlickRuinaMod
     }
 
     // Damage Down
-    // Damage Down used to be here, but it was literally the same effect as Hat Singularity's Damage Down, so I'll just use that instead
+    // Hat Singularity mid
+    // All Offensive dice the character plays deal -{0} damage for the Scene.
+    public class BattleUnitBuf_SlickMod_DamageDown : BattleUnitBuf
+    {
+
+        // Get keyword
+        public override string keywordId => "SlickMod_FlowState";
+
+        // Thing
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_FlowState;
+
+            }
+        }
+
+        // Status type
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.Negative;
+            }
+        }
+
+        public BattleUnitBuf_SlickMod_DamageDown(int Stack)
+        {
+            this.stack = Stack;
+        }
+
+        public override void BeforeGiveDamage(BattleDiceBehavior behavior)
+        {
+            bool flag = this._owner.IsImmune(this.bufType);
+            if (!flag)
+            {
+                behavior.ApplyDiceStatBonus(new DiceStatBonus
+                {
+                    dmg = -this.stack
+                });
+            }
+        }
+
+        public override void OnRoundEnd()
+        {
+            this.Destroy();
+        }
+    }
 
     // Cycle
     // Upon using a page, discard 1 random page, then draw 1 page, then lose 1 Cycle.
@@ -141,6 +188,8 @@ namespace SlickRuinaMod
         }
     }
 
+    // Overheat
+    // Comedy
     public class BattleUnitBuf_SlickMod_InfernalOverheat : BattleUnitBuf
     {
         // Get keyword
@@ -288,100 +337,190 @@ namespace SlickRuinaMod
         }
     }
 
+    // Shielding
+    // Lol
+
+    public class BattleUnitBuf_SlickMod_Shielding : BattleUnitBuf
+    {
+        public override string keywordId
+        {
+            get
+            {
+                return "SlickMod_Shielding";
+            }
+        }
+
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.Positive;
+            }
+        }
+
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_Shielding;
+            }
+        }
+
+        public void Add(int add)
+        {
+            this.stack += add;
+            bool flag = this.stack < 1;
+            if (flag)
+            {
+                this.Destroy();
+                bool flag2 = base.IsDestroyed();
+                if (flag2)
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+        }
+
+        public bool UseStack(int num)
+        {
+            bool flag = this.stack < num;
+            bool result;
+            if (flag)
+            {
+                result = false;
+            }
+            else
+            {
+                this.Add(-num);
+                result = true;
+            }
+            return result;
+        }
+
+        public override void OnRoundEnd()
+        {
+            this.Destroy();
+            bool flag = base.IsDestroyed();
+            if (flag)
+            {
+                this._owner.bufListDetail.RemoveBuf(this);
+            }
+        }
+
+        public override void OnTakeDamageByAttack(BattleDiceBehavior atkDice, int dmg)
+        {
+            this._owner.hp = this._owner.hp + (float)dmg;
+            bool flag = this._owner.bufListDetail.GetKewordBufStack(MyKeywordBufs.SlickMod_Shielding) > dmg;
+            if (flag)
+            {
+                this.UseStack(dmg);
+            }
+            else
+            {
+                this.Destroy();
+                bool flag2 = base.IsDestroyed();
+                if (flag2)
+                {
+                    this._owner.bufListDetail.RemoveBuf(this);
+                }
+            }
+        }
+    }
+
     #endregion
 
     #region - COMBO STUFF -
 
     // Sakanagi set
-    public class BattleUnitBuf_SakanagiComboPieceA : BattleUnitBuf
+    public class BattleUnitBuf_SlickMod_SakanagiComboPieceA : BattleUnitBuf
     {
         public override void OnRoundEnd()
         {
-            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_SakanagiComboPieceB>())
+            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_SlickMod_SakanagiComboPieceB>())
             {
-                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_SakanagiComboFinisher());
+                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_SlickMod_SakanagiComboFinisher());
             }
             Destroy();
         }
     }
 
-    public class BattleUnitBuf_SakanagiComboPieceB : BattleUnitBuf
+    public class BattleUnitBuf_SlickMod_SakanagiComboPieceB : BattleUnitBuf
     {
         public override void OnRoundEnd()
         {
-            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_SakanagiComboPieceA>())
+            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_SlickMod_SakanagiComboPieceA>())
             {
-                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_SakanagiComboFinisher());
+                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_SlickMod_SakanagiComboFinisher());
             }
             Destroy();
         }
     }
 
-    public class BattleUnitBuf_SakanagiComboFinisher : BattleUnitBuf
+    public class BattleUnitBuf_SlickMod_SakanagiComboFinisher : BattleUnitBuf
     {
         public override void OnRoundStart()
         {
             bool flag = this._owner.faction > Faction.Enemy;
             if (!flag)
             {
-                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 52)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 1504006)).AddBuf(new BattleDiceCardBuf_SlickMod_Temp());
             }
             else
             {
-                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 52));
+                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 2504005));
             }
         }
 
         public override void OnRoundEnd()
         {
-            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 52));
+            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 2504005));
             Destroy();
         }
     }
 
     // Tempest set
-    public class BattleUnitBuf_TempestComboPieceA : BattleUnitBuf
+    public class BattleUnitBuf_SlickMod_TempestComboPieceA : BattleUnitBuf
     {
         public override void OnRoundEnd()
         {
-            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_TempestComboPieceB>())
+            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_SlickMod_TempestComboPieceB>())
             {
-                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_TempestComboFinisher());
+                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_SlickMod_TempestComboFinisher());
             }
             Destroy();
         }
     }
 
-    public class BattleUnitBuf_TempestComboPieceB : BattleUnitBuf
+    public class BattleUnitBuf_SlickMod_TempestComboPieceB : BattleUnitBuf
     {
         public override void OnRoundEnd()
         {
-            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_TempestComboPieceA>())
+            if (this._owner.bufListDetail.HasBuf<BattleUnitBuf_SlickMod_TempestComboPieceA>())
             {
-                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_TempestComboFinisher());
+                this._owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_SlickMod_TempestComboFinisher());
             }
             Destroy();
         }
     }
 
-    public class BattleUnitBuf_TempestComboFinisher : BattleUnitBuf
+    public class BattleUnitBuf_SlickMod_TempestComboFinisher : BattleUnitBuf
     {
         public override void OnRoundStart()
         {
             bool flag = this._owner.faction > Faction.Enemy;
             if (!flag)
             {
-                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 55)).AddBuf(new BattleDiceCardBuf_SlickModTemp());
+                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 1504010)).AddBuf(new BattleDiceCardBuf_SlickMod_Temp());
             }
             else
             {
-                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 55));
+                this._owner.personalEgoDetail.AddCard(new LorId("SlickMod", 2504009));
             }
         }
 
         public override void OnRoundEnd()
         {
-            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 55));
+            _owner.personalEgoDetail.RemoveCard(new LorId("SlickMod", 2504009));
             Destroy();
         }
     }
@@ -429,7 +568,7 @@ namespace SlickRuinaMod
     }
 
     // Page Buff to make card exhaust at end of Scene whether used or not
-    public class BattleDiceCardBuf_SlickModTemp : BattleDiceCardBuf
+    public class BattleDiceCardBuf_SlickMod_Temp : BattleDiceCardBuf
     {
         public override void OnRoundStart()
         {
@@ -437,7 +576,7 @@ namespace SlickRuinaMod
         }
     }
 
-    public class BattleUnitBuf_UsingTatsumaki : BattleUnitBuf
+    public class BattleUnitBuf_SlickMod_UsingTatsumaki : BattleUnitBuf
     {
         public override void OnRoundEnd()
         {
@@ -445,7 +584,7 @@ namespace SlickRuinaMod
         }
     }
 
-    public class BattleUnitBuf_UsingKaryuken : BattleUnitBuf
+    public class BattleUnitBuf_SlickMod_UsingKaryuken : BattleUnitBuf
     {
         public override void OnRoundEnd()
         {
