@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmodstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\slickmodpageeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmodpageeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\slickmodinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmodinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\slickmoddiceeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmoddiceeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\slickmodpageeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|solutionrelative:slickmodpageeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11F4F8BD-FCEB-4F62-8B11-AEA01E1DE48D}|SlickRuinaMod.csproj|D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\slickmodactionscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "orbstomanipulate.cs",
               "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\orbstomanipulate.cs",
               "RelativeDocumentMoniker": "orbstomanipulate.cs",
@@ -50,8 +50,7 @@
               "RelativeToolTip": "orbstomanipulate.cs",
               "ViewState": "AQIAAMgAAAAAAAAAAAAowNkAAABbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T05:12:20.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-06T05:12:20.155Z"
             },
             {
               "$type": "Document",
@@ -67,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "SlickModPageEffect.cs",
               "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModPageEffect.cs",
               "RelativeDocumentMoniker": "SlickModPageEffect.cs",
@@ -75,11 +74,12 @@
               "RelativeToolTip": "SlickModPageEffect.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T22:42:22.031Z"
+              "WhenOpened": "2024-02-27T22:42:22.031Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SlickModDiceEffect.cs",
               "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModDiceEffect.cs",
               "RelativeDocumentMoniker": "SlickModDiceEffect.cs",
@@ -91,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SlickModPassive.cs",
               "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModPassive.cs",
               "RelativeDocumentMoniker": "SlickModPassive.cs",
@@ -109,14 +109,14 @@
               "RelativeDocumentMoniker": "SlickModStatus.cs",
               "ToolTip": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModStatus.cs",
               "RelativeToolTip": "SlickModStatus.cs",
-              "ViewState": "AQIAANABAAAAAAAAAAAAAOABAAAiAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAFMBAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-27T03:15:24.273Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SlickModInitializer.cs",
               "DocumentMoniker": "D:\\Library of Ruina\\Slick Modding\\Slickmod Stuff\\SlickProgramming\\SlickModInitializer.cs",
               "RelativeDocumentMoniker": "SlickModInitializer.cs",
@@ -124,8 +124,7 @@
               "RelativeToolTip": "SlickModInitializer.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAuwHQAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T02:08:12.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-03T02:08:12.131Z"
             }
           ]
         }

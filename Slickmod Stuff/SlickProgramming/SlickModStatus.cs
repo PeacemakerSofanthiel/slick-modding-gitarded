@@ -91,14 +91,14 @@ namespace SlickRuinaMod
     {
 
         // Get keyword
-        public override string keywordId => "SlickMod_FlowState";
+        public override string keywordId => "SlickMod_DamageDown";
 
         // Thing
         public override KeywordBuf bufType
         {
             get
             {
-                return MyKeywordBufs.SlickMod_FlowState;
+                return MyKeywordBufs.SlickMod_DamageDown;
 
             }
         }
