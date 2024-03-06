@@ -7,7 +7,7 @@
   <!-- URBAN MYTH -->
 
   <!-- Backstreets Sluggers-->
-  <Book ID="9">
+  <Book ID="1201001">
     <Name>A Backstreets Slugger, Page 1</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -43,7 +43,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="10">
+  <Book ID="1201002">
     <Name>A Backstreets Slugger, Page 2</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -79,7 +79,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="11">
+  <Book ID="1201003">
     <Name>Ethan's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -117,12 +117,13 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="12">
+  
   <!-- URBAN LEGEND -->
 
   <!-- URBAN PLAGUE -->
 
   <!-- Midnight Office and Ethan 1-->
+  <Book ID="1201004">
   <Name>The Blazing Striker's Page</Name>
   <TextId>-1</TextId>
   <BookIcon />
@@ -168,7 +169,7 @@
   <SoundInfo Motion="G" WinExternal="false" Win="Riu_Guard" LoseExternal="false" Lose="" />
   <SoundInfo Motion="E" WinExternal="false" Win="Defense_Evasion" LoseExternal="false" Lose="" />
 </Book>
-<Book ID="13">
+<Book ID="1401001">
   <Name>A Midnight Office Fixer, Page 1</Name>
   <TextId>-1</TextId>
   <BookIcon />
@@ -204,7 +205,7 @@
   <SpeedDiceNum>1</SpeedDiceNum>
   <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
 </Book>
-<Book ID="14">
+<Book ID="1401002">
   <Name>A Midnight Office Fixer, Page 2</Name>
   <TextId>-1</TextId>
   <BookIcon />
@@ -240,7 +241,7 @@
   <SpeedDiceNum>1</SpeedDiceNum>
   <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
 </Book>
-<Book ID="15">
+<Book ID="1401003">
   <Name>Ethan's Page</Name>
   <TextId>-1</TextId>
   <BookIcon />
@@ -280,7 +281,7 @@
   <SpeedDiceNum>1</SpeedDiceNum>
   <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
 </Book>
-<Book ID="16">
+<Book ID="1401004">
   <Name>The Blazing Striker's Page, Vol. 2</Name>
   <TextId>-1</TextId>
   <BookIcon />
@@ -330,7 +331,7 @@
   <!-- URBAN NIGHTMARE -->
 
   <!-- Couriers -->
-  <Book ID="1">
+  <Book ID="1501001">
     <Name>A Courier's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -368,9 +369,9 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="2">
 
 <!-- Snow Coyote -->
+<Book ID="1502001">
     <Name>A Snow Coyote Fixer's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -408,7 +409,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="3">
+  <Book ID="1502002">
     <Name>Alexander Turner's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -449,7 +450,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="4">
+  <Book ID="1502003">
     <Name>A Snow Coyote Fixer's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -489,7 +490,7 @@
   </Book>
 
   <!-- Inferno Corps Templar-->
-  <Book ID="5">
+  <Book ID="1503001">
     <Name>An Inferno Corps Templar's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -527,7 +528,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="6">
+  <Book ID="1503002">
     <Name>An Inferno Corps Underunt's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -564,7 +565,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="7">
+  <Book ID="1503003">
     <Name>An Inferno Corps Templar's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -603,7 +604,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="8">
+  <Book ID="1503004">
     <Name>An Inferno Corps Underunt's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -644,7 +645,7 @@
 
 
   <!-- (Susano'o) Sussyowo, member of Sex Havers Inc, somehow.-->
-  <Book ID="17">
+  <Book ID="1504001">
     <Name>Susano'o's Page</Name>
     <TextId>-1</TextId>
     <BookIcon />

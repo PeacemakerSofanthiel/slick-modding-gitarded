@@ -1,197 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BookXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Version>1.1</Version>
-  <Book ID="10000001">
-    <Name>A Courier's Page</Name>
-    <TextId>-1</TextId>
-    <BookIcon />
-    <EquipEffect>
-      <HpReduction>0</HpReduction>
-      <HP>75</HP>
-      <DeadLine>0</DeadLine>
-      <Break>42</Break>
-      <SpeedMin>2</SpeedMin>
-      <Speed>5</Speed>
-      <SpeedDiceNum>0</SpeedDiceNum>
-      <SResist>Vulnerable</SResist>
-      <PResist>Normal</PResist>
-      <HResist>Endure</HResist>
-      <SBResist>Normal</SBResist>
-      <PBResist>Normal</PBResist>
-      <HBResist>Normal</HBResist>
-      <MaxPlayPoint>3</MaxPlayPoint>
-      <StartPlayPoint>3</StartPlayPoint>
-      <AddedStartDraw>0</AddedStartDraw>
-      <Passive Pid="@origin">10001</Passive>
-      <Passive>1</Passive>
-      <Passive>2</Passive>
-      <Passive>3</Passive>
-    </EquipEffect>
-    <Rarity>Common</Rarity>
-    <CharacterSkin>Yun</CharacterSkin>
-    <CharacterSkinType>Lor</CharacterSkinType>
-    <SkinGender>N</SkinGender>
-    <Chapter>5</Chapter>
-    <Episode>-1</Episode>
-    <RangeType>Melee</RangeType>
-    <NotEquip>false</NotEquip>
-    <RandomFace>false</RandomFace>
-    <SpeedDiceNum>1</SpeedDiceNum>
-    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
-  </Book>
-  <Book ID="10000002">
-    <Name>A Snow Coyote Fixer's Page</Name>
-    <TextId>-1</TextId>
-    <BookIcon />
-    <EquipEffect>
-      <HpReduction>0</HpReduction>
-      <HP>78</HP>
-      <DeadLine>0</DeadLine>
-      <Break>42</Break>
-      <SpeedMin>2</SpeedMin>
-      <Speed>4</Speed>
-      <SpeedDiceNum>0</SpeedDiceNum>
-      <SResist>Endure</SResist>
-      <PResist>Normal</PResist>
-      <HResist>Normal</HResist>
-      <SBResist>Normal</SBResist>
-      <PBResist>Normal</PBResist>
-      <HBResist>Vulnerable</HBResist>
-      <MaxPlayPoint>3</MaxPlayPoint>
-      <StartPlayPoint>3</StartPlayPoint>
-      <AddedStartDraw>0</AddedStartDraw>
-      <Passive>4</Passive>
-      <Passive>6</Passive>
-      <Passive>7</Passive>
-    </EquipEffect>
-    <Rarity>Uncommon</Rarity>
-    <CharacterSkin>IndexUnit</CharacterSkin>
-    <CharacterSkinType>Lor</CharacterSkinType>
-    <SkinGender>N</SkinGender>
-    <Chapter>5</Chapter>
-    <Episode>-1</Episode>
-    <RangeType>Melee</RangeType>
-    <NotEquip>false</NotEquip>
-    <RandomFace>false</RandomFace>
-    <SpeedDiceNum>1</SpeedDiceNum>
-    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
-  </Book>
-  <Book ID="10000003">
-    <Name>Alexander Turner's Page</Name>
-    <TextId>-1</TextId>
-    <BookIcon />
-    <EquipEffect>
-      <HpReduction>0</HpReduction>
-      <HP>96</HP>
-      <DeadLine>0</DeadLine>
-      <Break>42</Break>
-      <SpeedMin>2</SpeedMin>
-      <Speed>4</Speed>
-      <SpeedDiceNum>0</SpeedDiceNum>
-      <SResist>Endure</SResist>
-      <PResist>Normal</PResist>
-      <HResist>Normal</HResist>
-      <SBResist>Normal</SBResist>
-      <PBResist>Normal</PBResist>
-      <HBResist>Normal</HBResist>
-      <MaxPlayPoint>3</MaxPlayPoint>
-      <StartPlayPoint>3</StartPlayPoint>
-      <AddedStartDraw>0</AddedStartDraw>
-      <OnlyCard>13</OnlyCard>
-      <Passive Pid="@origin">10001</Passive>
-      <Passive>6</Passive>
-      <Passive>7</Passive>
-      <Passive>9</Passive>
-      <Passive>10</Passive>
-      <Passive>8</Passive>
-    </EquipEffect>
-    <Rarity>Unique</Rarity>
-    <CharacterSkin>Liwei</CharacterSkin>
-    <CharacterSkinType>Lor</CharacterSkinType>
-    <SkinGender>N</SkinGender>
-    <Chapter>5</Chapter>
-    <Episode>-1</Episode>
-    <RangeType>Hybrid</RangeType>
-    <NotEquip>false</NotEquip>
-    <RandomFace>false</RandomFace>
-    <SpeedDiceNum>1</SpeedDiceNum>
-    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
-  </Book>
-  <Book ID="10000004">
-    <Name>An Inferno Corps Templar's Page</Name>
-    <TextId>-1</TextId>
-    <BookIcon />
-    <EquipEffect>
-      <HpReduction>0</HpReduction>
-      <HP>90</HP>
-      <DeadLine>0</DeadLine>
-      <Break>51</Break>
-      <SpeedMin>3</SpeedMin>
-      <Speed>6</Speed>
-      <SpeedDiceNum>0</SpeedDiceNum>
-      <SResist>Endure</SResist>
-      <PResist>Endure</PResist>
-      <HResist>Normal</HResist>
-      <SBResist>Endure</SBResist>
-      <PBResist>Normal</PBResist>
-      <HBResist>Normal</HBResist>
-      <MaxPlayPoint>3</MaxPlayPoint>
-      <StartPlayPoint>3</StartPlayPoint>
-      <AddedStartDraw>0</AddedStartDraw>
-      <OnlyCard>21</OnlyCard>
-      <Passive Pid="@origin">10001</Passive>
-      <Passive>12</Passive>
-    </EquipEffect>
-    <Rarity>Rare</Rarity>
-    <CharacterSkin>Consta</CharacterSkin>
-    <CharacterSkinType>Lor</CharacterSkinType>
-    <SkinGender>N</SkinGender>
-    <Chapter>5</Chapter>
-    <Episode>-1</Episode>
-    <RangeType>Melee</RangeType>
-    <NotEquip>false</NotEquip>
-    <RandomFace>false</RandomFace>
-    <SpeedDiceNum>1</SpeedDiceNum>
-    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
-  </Book>
-  <Book ID="10000005">
-    <Name>An Inferno Corps Underunt's Page</Name>
-    <TextId>-1</TextId>
-    <BookIcon />
-    <EquipEffect>
-      <HpReduction>0</HpReduction>
-      <HP>88</HP>
-      <DeadLine>0</DeadLine>
-      <Break>48</Break>
-      <SpeedMin>2</SpeedMin>
-      <Speed>5</Speed>
-      <SpeedDiceNum>0</SpeedDiceNum>
-      <SResist>Endure</SResist>
-      <PResist>Endure</PResist>
-      <HResist>Normal</HResist>
-      <SBResist>Normal</SBResist>
-      <PBResist>Endure</PBResist>
-      <HBResist>Normal</HBResist>
-      <MaxPlayPoint>3</MaxPlayPoint>
-      <StartPlayPoint>3</StartPlayPoint>
-      <AddedStartDraw>0</AddedStartDraw>
-      <OnlyCard>20</OnlyCard>
-      <Passive Pid="@origin">10001</Passive>
-      <Passive>13</Passive>
-    </EquipEffect>
-    <Rarity>Rare</Rarity>
-    <CharacterSkin>StrayDogs_1</CharacterSkin>
-    <CharacterSkinType>Lor</CharacterSkinType>
-    <SkinGender>N</SkinGender>
-    <Chapter>5</Chapter>
-    <Episode>-1</Episode>
-    <RangeType>Melee</RangeType>
-    <NotEquip>false</NotEquip>
-    <RandomFace>false</RandomFace>
-    <SpeedDiceNum>1</SpeedDiceNum>
-    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
-  </Book>
-  <Book ID="10000006">
+
+  <!-- CANARD -->
+
+  <!-- URBAN MYTH -->
+  <Book ID="2201001">
     <Name>A Backstreets Slugger, Page 1</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -227,7 +41,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="10000007">
+  <Book ID="2201002">
     <Name>A Backstreets Slugger, Page 2</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -263,7 +77,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="10000008">
+  <Book ID="2201003">
     <Name>Ethan's Incomplete Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -301,7 +115,11 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="10000009">
+
+  <!-- URBAN LEGEND -->
+
+  <!-- URBAN PLAGUE -->
+  <Book ID="2201003">
     <Name>Ethan's Incomplete Page, Vol. 2</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -343,7 +161,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="10000010">
+  <Book ID="2401001">
     <Name>A Midnight Office Fixer, Page 1</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -379,7 +197,7 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="10000011">
+  <Book ID="2401002">
     <Name>A Midnight Office Fixer, Page 2</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -415,7 +233,206 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="10000012">
+  <!-- URBAN NIGHTMARE -->
+
+  <!-- Couriers -->
+  <Book ID="2501001">
+    <Name>A Courier's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>75</HP>
+      <DeadLine>0</DeadLine>
+      <Break>42</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>5</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Vulnerable</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Endure</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Normal</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive Pid="@origin">10001</Passive>
+      <Passive>1</Passive>
+      <Passive>2</Passive>
+      <Passive>3</Passive>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>Yun</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>5</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+
+<!-- Snow Coyotes -->
+  <Book ID="2502001">
+    <Name>A Snow Coyote Fixer's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>78</HP>
+      <DeadLine>0</DeadLine>
+      <Break>42</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>4</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Vulnerable</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive>4</Passive>
+      <Passive>6</Passive>
+      <Passive>7</Passive>
+    </EquipEffect>
+    <Rarity>Uncommon</Rarity>
+    <CharacterSkin>IndexUnit</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>5</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+  <Book ID="2502002">
+    <Name>Alexander Turner's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>96</HP>
+      <DeadLine>0</DeadLine>
+      <Break>42</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>4</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Normal</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <OnlyCard>13</OnlyCard>
+      <Passive Pid="@origin">10001</Passive>
+      <Passive>6</Passive>
+      <Passive>7</Passive>
+      <Passive>9</Passive>
+      <Passive>10</Passive>
+      <Passive>8</Passive>
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin>Liwei</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>5</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Hybrid</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+
+<!-- Inferno Templars -->
+  <Book ID="2503001">
+    <Name>An Inferno Corps Templar's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>90</HP>
+      <DeadLine>0</DeadLine>
+      <Break>51</Break>
+      <SpeedMin>3</SpeedMin>
+      <Speed>6</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Endure</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Endure</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Normal</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <OnlyCard>21</OnlyCard>
+      <Passive Pid="@origin">10001</Passive>
+      <Passive>12</Passive>
+    </EquipEffect>
+    <Rarity>Rare</Rarity>
+    <CharacterSkin>Consta</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>5</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+  <Book ID="2503002">
+    <Name>An Inferno Corps Underunt's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>88</HP>
+      <DeadLine>0</DeadLine>
+      <Break>48</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>5</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Endure</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Endure</PBResist>
+      <HBResist>Normal</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <OnlyCard>20</OnlyCard>
+      <Passive Pid="@origin">10001</Passive>
+      <Passive>13</Passive>
+    </EquipEffect>
+    <Rarity>Rare</Rarity>
+    <CharacterSkin>StrayDogs_1</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>5</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+
+  <!-- (Susano'o) Card Carrying Member of DEPRESSION Ltd.-->
+  <Book ID="2504001">
     <Name>Susano'o's Incomplete Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -454,4 +471,10 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
+  <!-- STAR OF THE CITY -->
+
+  <!-- IMPURITY SUS -->
+  
+  
+  
 </BookXmlRoot>
