@@ -1,215 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PassiveXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Passive ID="1">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Rare</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>4</Cost>
-    <Script>SlickMod_PonyExpress</Script>
-    <Name>Pony Express</Name>
-    <Desc>At the end of the Scene, if all allies are alive, gain 1 Haste and 1 Cycle next Scene; if all other allies are dead, inflict 2 Bind on self instead. This passive ability is only active if the Act started with one or more other allies.</Desc>
-  </Passive>
-  <Passive ID="2">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Uncommon</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>4</Cost>
-    <Script>SlickMod_SpecialDelivery</Script>
-    <Name>Special Delivery!</Name>
-    <Desc>While the character has Cycle, Blunt and Defensive dice gain +1 Power.
-</Desc>
-  </Passive>
-  <Passive ID="3">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Common</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>3</Cost>
-    <Script>SlickMod_SameDayDelivery</Script>
-    <Name>Same-Day Delivery</Name>
-    <Desc>If 3 or fewer pages are in-hand at the end of the Scene, gain 1 Haste and Cycle next Scene.</Desc>
-  </Passive>
-  <Passive ID="4">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Uncommon</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>3</Cost>
-    <Script>SlickMod_HalfSpeed</Script>
-    <Name>Posthaste</Name>
-    <Desc>Gain an additional Speed Die at Emotion Level 2. (Cannot Overlap)</Desc>
-  </Passive>
-  <Passive ID="5">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Uncommon</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>3</Cost>
-    <Script>SlickMod_HalfSpeed</Script>
-    <Name>Posthaste</Name>
-    <Desc>Gain an additional Speed Die at Emotion Level 2.</Desc>
-  </Passive>
-  <Passive ID="6">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Unique</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>7</Cost>
-    <Script>SlickMod_ArcticDrift</Script>
-    <Name>Arctic Drift</Name>
-    <Desc>Offensive dice on the first Combat Page the character uses each Scene gain an additional effect:
- ‘[On Hit] Inflict 1 Bind to each other next Scene’</Desc>
-  </Passive>
-  <Passive ID="7">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Uncommon</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>2</Cost>
-    <Script>SlickMod_Steady</Script>
-    <Name>Steady</Name>
-    <Desc>Take 2 less damage and Stagger damage from enemies with higher Speed.</Desc>
-  </Passive>
-  <Passive ID="8">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Rare</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>5</Cost>
-    <Script>SlickMod_VengeanceCall</Script>
-    <Name>Vengeance Call</Name>
-    <Desc>If an ally dies, restore 1 Light and gain a Speed die next Scene.</Desc>
-  </Passive>
-  <Passive ID="9">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Rare</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>2</Cost>
-    <Script>SlickMod_AuroraBorealis</Script>
-    <Name>Aurora Workshop Firearm</Name>
-    <Desc>Ranged Attack Stagger Damage +2</Desc>
-  </Passive>
-  <Passive ID="10">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Unique</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>2</Cost>
-    <Script>SlickMod_TurnerTrolling</Script>
-    <Name>Do I Wanna Know?</Name>
-    <Desc>Choose the Speed dice with the lowest value; the Speed values of the dice become 2.</Desc>
-  </Passive>
-  <Passive ID="11">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Common</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>2</Cost>
-    <Script>SlickMod_StartEmoLevel2</Script>
-    <Name>Heightened Emotions II</Name>
-    <Desc>Start the reception at Emotion Level 2.</Desc>
-  </Passive>
-  <Passive ID="12">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Rare</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>5</Cost>
-    <Script>SlickMod_InfernalInfernoTemplar</Script>
-    <Name>Inferno Templar</Name>
-    <Desc>Melee Pierce Dice gain +1 Power and deal +2 damage.</Desc>
-  </Passive>
-  <Passive ID="13">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Uncommon</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>4</Cost>
-    <Script>SlickMod_InfernalInfernoCorps</Script>
-    <Name>Inferno Corps</Name>
-    <Desc>Pierce Dice Power +1; Ranged Pierce dice deal +1 damage.</Desc>
-  </Passive>
-  <Passive ID="14">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Uncommon</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>1</Cost>
-    <Script>SlickMod_InfernalExperimentalPlateB1</Script>
-    <Name>Experimental Plate B1</Name>
-    <Desc>When hit, while this character has Overheat, inflict 1 Burn to the attacker</Desc>
-  </Passive>
-  <Passive ID="15">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Rare</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>4</Cost>
-    <Script>SlickMod_InfernalCounterBlock</Script>
-    <Name>Experimental Plate D4</Name>
-    <Desc>While this character has Overheat, gain two Counter dice (Block, 3-6) at combat start.</Desc>
-  </Passive>
-  <Passive ID="16">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Uncommon</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>1</Cost>
-    <Script>SlickMod_InfernalTemperamental</Script>
-    <Name>Temperamental Weapon</Name>
-    <Desc>While this character has Overheat, inflict 1 Burn upon a successful attack</Desc>
-  </Passive>
+
+  <!-- CANARD -->
+
+  <!-- URBAN LEGEND -->
+
+  <!-- Backstreet Sluggers -->
   <Passive ID="17">
     <Negative>false</Negative>
     <IsHide>false</IsHide>
@@ -327,19 +123,11 @@
     <Name>Rampaging Flames</Name>
     <Desc>At the start of each Scene, inflict 1 burn to all characters, including self. Every 3 scenes, increase the burn inflicted by 1 (max 15).</Desc>
   </Passive>
-  <Passive ID="26">
-    <Negative>false</Negative>
-    <IsHide>false</IsHide>
-    <Rarity>Unique</Rarity>
-    <Lock>false</Lock>
-    <CanGivePassive>true</CanGivePassive>
-    <CanReceivePassive>false</CanReceivePassive>
-    <InnerType>-1</InnerType>
-    <Cost>0</Cost>
-    <Script>180005</Script>
-    <Name>Sparkling</Name>
-    <Desc>Restore 1 additional Light and draw 1 additional page at the start of each Scene.</Desc>
-  </Passive>
+  <!-- URBAN MYTH -->
+
+  <!-- URBAN PLAGUE -->
+
+  <!-- Ethan please learn to cope -->
   <Passive ID="27">
     <Negative>false</Negative>
     <IsHide>false</IsHide>
@@ -431,6 +219,212 @@
     <Name>Cauterize</Name>
     <Desc>Once per reception, when Staggered, recover from Stagger, recover 40 Stagger resist and 20 HP, and gain 20 Burn.</Desc>
   </Passive>
+  <!-- URBRAN NIGHTMARE-->
+
+  <!-- Couriers -->
+  <Passive ID="1">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_PonyExpress</Script>
+    <Name>Pony Express</Name>
+    <Desc>At the end of the Scene, if all allies are alive, gain 1 Haste and 1 Cycle next Scene; if all other allies are dead, inflict 2 Bind on self instead. This passive ability is only active if the Act started with one or more other allies.</Desc>
+  </Passive>
+  <Passive ID="2">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_SpecialDelivery</Script>
+    <Name>Special Delivery!</Name>
+    <Desc>While the character has Cycle, Blunt and Defensive dice gain +1 Power.
+</Desc>
+  </Passive>
+  <Passive ID="3">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Common</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>3</Cost>
+    <Script>SlickMod_SameDayDelivery</Script>
+    <Name>Same-Day Delivery</Name>
+    <Desc>If 3 or fewer pages are in-hand at the end of the Scene, gain 1 Haste and Cycle next Scene.</Desc>
+  </Passive>
+  <Passive ID="4">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>0</InnerType>
+    <Cost>3</Cost>
+    <Script>SlickMod_HalfSpeed</Script>
+    <Name>Posthaste</Name>
+    <Desc>Gain an additional Speed Die at Emotion Level 2. (Cannot Overlap)</Desc>
+  </Passive>
+
+  <!-- Snow Coyotes -->
+  <Passive ID="6">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>7</Cost>
+    <Script>SlickMod_ArcticDrift</Script>
+    <Name>Arctic Drift</Name>
+    <Desc>Offensive dice on the first Combat Page the character uses each Scene gain an additional effect:
+ ‘[On Hit] Inflict 1 Bind to each other next Scene’</Desc>
+  </Passive>
+  <Passive ID="7">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>2</Cost>
+    <Script>SlickMod_Steady</Script>
+    <Name>Steady</Name>
+    <Desc>Take 2 less damage and Stagger damage from enemies with higher Speed.</Desc>
+  </Passive>
+  <Passive ID="8">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>5</Cost>
+    <Script>SlickMod_VengeanceCall</Script>
+    <Name>Vengeance Call</Name>
+    <Desc>If an ally dies, restore 1 Light and gain a Speed die next Scene.</Desc>
+  </Passive>
+  <Passive ID="9">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>2</Cost>
+    <Script>SlickMod_AuroraBorealis</Script>
+    <Name>Aurora Workshop Firearm</Name>
+    <Desc>Ranged Attack Stagger Damage +2</Desc>
+  </Passive>
+  <Passive ID="10">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>2</Cost>
+    <Script>SlickMod_TurnerTrolling</Script>
+    <Name>Do I Wanna Know?</Name>
+    <Desc>Choose the Speed dice with the lowest value; the Speed values of the dice become 2.</Desc>
+  </Passive>
+  <Passive ID="11">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Common</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>2</Cost>
+    <Script>SlickMod_StartEmoLevel2</Script>
+    <Name>Heightened Emotions II</Name>
+    <Desc>Start the reception at Emotion Level 2.</Desc>
+  </Passive>
+
+  <!-- Infernal Templars -->
+  <Passive ID="12">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>5</Cost>
+    <Script>SlickMod_InfernalInfernoTemplar</Script>
+    <Name>Inferno Templar</Name>
+    <Desc>Melee Pierce Dice gain +1 Power and deal +2 damage.</Desc>
+  </Passive>
+  <Passive ID="13">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_InfernalInfernoCorps</Script>
+    <Name>Inferno Corps</Name>
+    <Desc>Pierce Dice Power +1; Ranged Pierce dice deal +1 damage.</Desc>
+  </Passive>
+  <Passive ID="14">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>1</Cost>
+    <Script>SlickMod_InfernalExperimentalPlateB1</Script>
+    <Name>Experimental Plate B1</Name>
+    <Desc>When hit, while this character has Overheat, inflict 1 Burn to the attacker</Desc>
+  </Passive>
+  <Passive ID="15">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>4</Cost>
+    <Script>SlickMod_InfernalCounterBlock</Script>
+    <Name>Experimental Plate D4</Name>
+    <Desc>While this character has Overheat, gain two Counter dice (Block, 3-6) at combat start.</Desc>
+  </Passive>
+  <Passive ID="16">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Uncommon</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>1</Cost>
+    <Script>SlickMod_InfernalTemperamental</Script>
+    <Name>Temperamental Weapon</Name>
+    <Desc>While this character has Overheat, inflict 1 Burn upon a successful attack</Desc>
+  </Passive>
+
+  <!-- Susano'o -->
   <Passive ID="34">
     <Negative>false</Negative>
     <IsHide>false</IsHide>
@@ -510,4 +504,25 @@
     <Desc>Upon taking a lethal blow, reduce all incoming damage including what activated this passive by 69 for the Scene (Activates once per Act), then if this character is Staggered, fully recover from Stagger next Scene, and fully recover Stagger Resist. 
 At the start of the following Scene, activate Speed Break.</Desc>
   </Passive>
+  <!-- STAR OF THE CITY-->
+
+  <!-- WATSON TIER-->
+
+  
+ 
+ <!-- Not Shimmerinng?-->
+  <Passive ID="26">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>180005</Script>
+    <Name>Sparkling</Name>
+    <Desc>Restore 1 additional Light and draw 1 additional page at the start of each Scene.</Desc>
+  </Passive>
+ 
 </PassiveXmlRoot>
