@@ -146,7 +146,7 @@ namespace SlickRuinaMod
             {
                 // Checks for only Snow Coyote Fixers (enemy and player)
                 bool flag3 = battleUnitModel != base.owner;
-                if ( flag3 && battleUnitModel.Book.BookId == new LorId("SlickMod", 10000002) || flag3 && battleUnitModel.Book.BookId == new LorId("SlickMod", 10000004) || flag3 && battleUnitModel.Book.BookId == new LorId("SlickMod", 2) )
+                if ( flag3 && battleUnitModel.Book.BookId == new LorId("SlickMod", 1502001) || flag3 && battleUnitModel.Book.BookId == new LorId("SlickMod", 1502003) || flag3 && battleUnitModel.Book.BookId == new LorId("SlickMod", 2502001) )
                 {
                     // Adds page with temporary card buf; Restores 2 Light
                     battleUnitModel.allyCardDetail.AddNewCard(new LorId("SlickMod", 0502009)).AddBuf(new BattleDiceCardBuf_SlickMod_Temp());

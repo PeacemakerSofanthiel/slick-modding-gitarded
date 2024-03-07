@@ -1,50 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DeckXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Version>1.1</Version>
-  <Deck ID="1">
-    <Card>1</Card>
-    <Card>1</Card>
-    <Card>2</Card>
-    <Card>2</Card>
-    <Card>5</Card>
-    <Card>3</Card>
-    <Card>3</Card>
-    <Card>4</Card>
-    <Card>4</Card>
+<!-- CANARD -->
+
+
+
+
+
+<!-- URBAN MYTH -->
+
+
+
+
+
+<!-- URBAN LEGEND -->
+
+
+
+
+
+<!-- URBAN PLAGUE -->
+
+
+
+
+
+<!-- URBAN NIGHTMARE -->
+
+<!-- Courier mook -->
+  <Deck ID="1501001">
+    <Card>0501001</Card>
+    <Card>0501001</Card>
+    <Card>0501002</Card>
+    <Card>0501002</Card>
+    <Card>0501005</Card>
+    <Card>0501003</Card>
+    <Card>0501003</Card>
+    <Card>0501004</Card>
+    <Card>0501004</Card>
   </Deck>
-  <Deck ID="2">
-    <Card>6</Card>
-    <Card>6</Card>
-    <Card>7</Card>
-    <Card>7</Card>
-    <Card>8</Card>
-    <Card>9</Card>
-    <Card>10</Card>
-    <Card>11</Card>
-    <Card>11</Card>
+
+<!-- Snow Coyote Fixer -->
+  <Deck ID="1502001">
+    <Card>0502001</Card>
+    <Card>0502001</Card>
+    <Card>0502002</Card>
+    <Card>0502002</Card>
+    <Card>0502003</Card>
+    <Card>0502004</Card>
+    <Card>0502005</Card>
+    <Card>0502006</Card>
+    <Card>0502006</Card>
   </Deck>
-  <Deck ID="3">
-    <Card>6</Card>
-    <Card>6</Card>
-    <Card>7</Card>
-    <Card>8</Card>
-    <Card>12</Card>
-    <Card>12</Card>
-    <Card>10</Card>
-    <Card>11</Card>
-    <Card>13</Card>
+  <Deck ID="1502003">
+    <Card>0502001</Card>
+    <Card>0502001</Card>
+    <Card>0502002</Card>
+    <Card>0502002</Card>
+    <Card>0502003</Card>
+    <Card>0502004</Card>
+    <Card>0502005</Card>
+    <Card>0502006</Card>
+    <Card>0502006</Card>
   </Deck>
-  <Deck ID="4">
-    <Card>6</Card>
-    <Card>6</Card>
-    <Card>7</Card>
-    <Card>7</Card>
-    <Card>8</Card>
-    <Card>9</Card>
-    <Card>10</Card>
-    <Card>11</Card>
-    <Card>11</Card>
+
+<!-- Alexander Turner -->
+  <Deck ID="1502002">
+    <Card>0502001</Card>
+    <Card>0502001</Card>
+    <Card>0502002</Card>
+    <Card>0502003</Card>
+    <Card>0502005</Card>
+    <Card>0502007</Card>
+    <Card>0502007</Card>
+    <Card>0502006</Card>
+    <Card>0502008</Card>
   </Deck>
+
+<!-- Inferno Underrunt -->
+
+
+
+
+<!-- URBAN STAR OF THE CITY -->
+
+
+
+
+
+<!-- IMPURITAS CIVITATIS / IMPURITY / IMPURISUS -->
+
+
+
+
+
+
+
+
+
   <Deck ID="5">
     <Card>16</Card>
     <Card>16</Card>

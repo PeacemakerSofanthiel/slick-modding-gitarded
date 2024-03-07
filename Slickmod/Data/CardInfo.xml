@@ -184,7 +184,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1201008">
+  <Card ID="0201008">
     <Name>Flaming Strikes</Name>
     <TextId>-1</TextId>
     <Artwork>Flaming_Strikes.png</Artwork>
@@ -233,7 +233,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1201010">
+  <Card ID="0201010">
     <Name>Handling Real Power!</Name>
     <TextId>-1</TextId>
     <Artwork>Handling_Real_Power.png</Artwork>
@@ -259,7 +259,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1201011">
+  <Card ID="0201011">
     <Name>Blazing Bone Breaker</Name>
     <TextId>-1</TextId>
     <Artwork>Blazing_Bone_Breaker.png</Artwork>
@@ -500,7 +500,7 @@
 
 <!-- Ethan 2 Moonight Boogaloo -->
 
-  <Card ID="1401009">
+  <Card ID="0401009">
     <Name>Ignite Bat</Name>
     <TextId>-1</TextId>
     <Artwork>Ignite_Bat.png</Artwork>
@@ -525,7 +525,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1401010">
+  <Card ID="0401010">
     <Name>Intimidating Guard</Name>
     <TextId>-1</TextId>
     <Artwork>Intimidating_Guard.png</Artwork>
@@ -552,7 +552,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1401011">
+  <Card ID="0401011">
     <Name>Blazing Thrust</Name>
     <TextId>-1</TextId>
     <Artwork>Blazing_Thrust.png</Artwork>
@@ -577,7 +577,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1401012">
+  <Card ID="0401012">
     <Name>Burning Bash</Name>
     <TextId>-1</TextId>
     <Artwork>Burning_Bash.png</Artwork>
@@ -603,7 +603,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1401013">
+  <Card ID="0401013">
     <Name>Burning Overswing</Name>
     <TextId>-1</TextId>
     <Artwork>Burning_Overswing.png</Artwork>
@@ -629,7 +629,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1401014">
+  <Card ID="0401014">
     <Name>Unshakeable Anger</Name>
     <TextId>-1</TextId>
     <Artwork>Unshakeable_Anger.png</Artwork>
@@ -656,7 +656,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1401015">
+  <Card ID="0401015">
     <Name>Furious Flaming Rampage</Name>
     <TextId>-1</TextId>
     <Artwork>Furious_Flaming_Rampage.png</Artwork>
@@ -684,7 +684,7 @@
     <MaxNum>150</MaxNum>
   </Card>
 
-  <Card ID="2401016">
+  <Card ID="0401016">
     <Name>Handling Real Power!</Name>
     <TextId>-1</TextId>
     <Artwork>Handling_Real_Power.png</Artwork>
@@ -710,7 +710,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="2401017">
+  <Card ID="0401017">
     <Name>Blazing Bone Breaker</Name>
     <TextId>-1</TextId>
     <Artwork>Blazing_Bone_Breaker.png</Artwork>
@@ -1245,7 +1245,7 @@
     <Artwork>UN_Breakdown.png</Artwork>
     <Rarity>Rare</Rarity>
     <Spec Range="Near" Cost="0" Affection="One" EmotionLimit="0" />
-    <Script>SparkBreakdownUN</Script>
+    <Script>SlickMod_SparkBreakdownUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="2" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Dawn_Z" Script="energy1atk" ActionScript="" Desc="" />
@@ -1269,7 +1269,7 @@
     <Artwork>UN_Mirage.png</Artwork>
     <Rarity>Rare</Rarity>
     <Spec Range="Near" Cost="1" Affection="One" EmotionLimit="0" />
-    <Script>SparkMirageUN</Script>
+    <Script>SlickMod_SparkMirageUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="3" Dice="6" Type="Def" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="ch3_E" Script="" ActionScript="" Desc="" />
@@ -1293,7 +1293,7 @@
     <Artwork>UN_Tatsumaki.png</Artwork>
     <Rarity>Uncommon</Rarity>
     <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
-    <Script>TatsumakiUN</Script>
+    <Script>SlickMod_TatsumakiUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Dawn_Z" Script="SparkRepeatSamsara" ActionScript="" Desc="" />
@@ -1318,7 +1318,7 @@
     <Artwork>UN_Karyuken.png</Artwork>
     <Rarity>Rare</Rarity>
     <Spec Range="Near" Cost="3" Affection="One" EmotionLimit="0" />
-    <Script>KaryukenUN</Script>
+    <Script>SlickMod_KaryukenUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="ch3_E" Script="" ActionScript="" Desc="" />
@@ -1336,14 +1336,14 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="2504005">
+  <Card ID="0504005">
     <Name>Sakanagi</Name>
     <TextId>-1</TextId>
     <Artwork>UN_Sakanagi.png</Artwork>
     <Rarity>Unique</Rarity>
     <Option>Personal</Option>
     <Spec Range="Near" Cost="3" Affection="One" EmotionLimit="0" />
-    <Script>SakanagiUN</Script>
+    <Script>SlickMod_SakanagiUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="8" Dice="16" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Pluto_Z" Script="SlickMod_SamsaraRupture" ActionScript="" Desc="" />
@@ -1361,13 +1361,13 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1504006">
+  <Card ID="0504006">
     <Name>Sakanagi</Name>
     <TextId>-1</TextId>
     <Artwork>UN_Sakanagi.png</Artwork>
     <Rarity>Unique</Rarity>
     <Spec Range="Near" Cost="3" Affection="One" EmotionLimit="0" />
-    <Script>SakanagiUN</Script>
+    <Script>SlickMod_SakanagiUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="8" Dice="16" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Pluto_Z" Script="SlickMod_SamsaraRupture" ActionScript="" Desc="" />
@@ -1391,7 +1391,7 @@
     <Artwork>UN_WindStep.png</Artwork>
     <Rarity>Rare</Rarity>
     <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
-    <Script>WindStepUN</Script>
+    <Script>SlickMod_WindStepUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Dawn_Z" Script="SlickMod_3Fragile" ActionScript="" Desc="" />
@@ -1416,7 +1416,7 @@
     <Artwork>UN_SpiralStrike.png</Artwork>
     <Rarity>Rare</Rarity>
     <Spec Range="Near" Cost="3" Affection="One" EmotionLimit="0" />
-    <Script>SpiralStrikeUN</Script>
+    <Script>SlickMod_SpiralStrikeUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Dawn_Z" Script="" ActionScript="" Desc="" />
@@ -1434,14 +1434,14 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="2504009">
+  <Card ID="0504009">
     <Name>Tempest</Name>
     <TextId>-1</TextId>
     <Artwork>UN_Tempest.png</Artwork>
     <Rarity>Unique</Rarity>
     <Option>Personal</Option>
     <Spec Range="Near" Cost="1" Affection="One" EmotionLimit="0" />
-    <Script>TempestUN</Script>
+    <Script>SlickMod_TempestUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Pluto_J" Script="" ActionScript="" Desc="" />
@@ -1460,13 +1460,13 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="1504010">
+  <Card ID="0504010">
     <Name>Tempest</Name>
     <TextId>-1</TextId>
     <Artwork>UN_Tempest.png</Artwork>
     <Rarity>Unique</Rarity>
     <Spec Range="Near" Cost="1" Affection="One" EmotionLimit="0" />
-    <Script>TempestUN</Script>
+    <Script>SlickMod_TempestUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Pluto_J" Script="" ActionScript="" Desc="" />
@@ -1485,7 +1485,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="2504011">
+  <Card ID="0504011">
     <Name>Speed Break</Name>
     <TextId>-1</TextId>
     <Artwork>Speed_Break.png</Artwork>

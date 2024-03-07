@@ -13,7 +13,7 @@
 <!-- Backstreets Sluggers -->
 
 <!-- mooks -->
-  <Enemy ID="1201001">
+  <Enemy ID="5201001">
     <Name>A Backstreets Slugger</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -32,7 +32,7 @@
     <AiScript />
   </Enemy>
 
-  <Enemy ID="1201002">
+  <Enemy ID="5201002">
     <Name>A Backstreets Slugger</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -52,7 +52,7 @@
   </Enemy>
 
 <!-- Ethan 1 -->
-  <Enemy ID="1201003">
+  <Enemy ID="5201003">
     <Name>Ethan</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -71,7 +71,7 @@
     <AiScript />
   </Enemy>
 <!-- Angy Ethan 1 -->
-  <Enemy ID="1201004">
+  <Enemy ID="5201004">
     <Name>Ethan</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -103,7 +103,7 @@
 <!-- Midnight Office -->
 
 <!-- Mook 1 -->
-  <Enemy ID="1401001">
+  <Enemy ID="5401001">
     <Name>A Midnight Office Fixer</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -123,7 +123,7 @@
   </Enemy>
 
 <!-- Mook 2 -->
-  <Enemy ID="1401002">
+  <Enemy ID="5401002">
     <Name>A Midnight Office Fixer</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -143,7 +143,7 @@
   </Enemy>
 
 <!-- Ethan 2 -->
-  <Enemy ID="1401003">
+  <Enemy ID="5401003">
     <Name>Ethan</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -163,7 +163,7 @@
   </Enemy>
 
 <!-- ANGY Ethan 2 -->
-  <Enemy ID="1401004">
+  <Enemy ID="5401004">
     <Name>Ethan</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -182,12 +182,52 @@
     <AiScript />
   </Enemy>
 
+  <Enemy ID="5401005">
+    <Name>Minho</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>166</MinHeight>
+    <MaxHeight>166</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>true</Retreat>
+    <BookId>1401005</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">8</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+
+
+  <Enemy ID="5401006">
+    <Name>Minho</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>166</MinHeight>
+    <MaxHeight>166</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>1401006</BookId>
+    <BodyId>0</BodyId>
+    <Exp>0</Exp>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">8</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+
+
 
 
 <!-- URBAN NIGHTMARE -->
 
 <!-- Courier 1 -->
-  <Enemy ID="1501001">
+  <Enemy ID="5501001">
     <Name>A Courier</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -208,7 +248,7 @@
 
 <!-- Snow Coyote Office -->
 
-  <Enemy ID="1502001">
+  <Enemy ID="5502001">
     <Name>A Snow Coyote Fixer</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -227,7 +267,7 @@
     <AiScript />
   </Enemy>
 
-  <Enemy ID="1502002">
+  <Enemy ID="5502002">
     <Name>Alexander Turner</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -246,7 +286,7 @@
     <AiScript />
   </Enemy>
 
-  <Enemy ID="1502003">
+  <Enemy ID="5502003">
     <Name>A Snow Coyote Fixer</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -266,7 +306,7 @@
   </Enemy>
 
 <!-- Inferno Corps 1 -->
-  <Enemy ID="1503001">
+  <Enemy ID="5503001">
     <Name>An Inferno Corps Templar</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -284,7 +324,7 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="1503002">
+  <Enemy ID="5503002">
     <Name>An Inferno Corps Underunt</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -303,7 +343,7 @@
     <AiScript />
   </Enemy>
 <!-- Wave 2 -->
-  <Enemy ID="1503003">
+  <Enemy ID="5503003">
     <Name>An Inferno Corps Templar</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -321,7 +361,7 @@
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="1503004">
+  <Enemy ID="5503004">
     <Name>An Inferno Corps Underrunt</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -342,7 +382,7 @@
 
 <!-- Wandering Fixer Susano'o -->
 
-  <Enemy ID="1504001">
+  <Enemy ID="5504001">
     <Name>Susano'o</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>

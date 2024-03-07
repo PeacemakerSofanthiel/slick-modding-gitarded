@@ -1134,7 +1134,7 @@ namespace SlickRuinaMod
         // Adds Speed Break to Ego Hand
         public override void OnWaveStart()
         {
-            owner.personalEgoDetail.AddCard(new LorId("SlickMod", 56));
+            owner.personalEgoDetail.AddCard(new LorId("SlickMod", 0504011));
         }
 
         // Gains Samsara equal to Haste

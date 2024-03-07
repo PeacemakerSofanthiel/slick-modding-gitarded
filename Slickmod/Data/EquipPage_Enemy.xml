@@ -173,7 +173,7 @@
 <Book ID="1401001">
   <Name>A Midnight Office Fixer, Page 1</Name>
   <TextId>-1</TextId>
-  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
+  <BookIcon>SlickMod_MidnightOffice</BookIcon>
   <EquipEffect>
     <HpReduction>0</HpReduction>
     <HP>65</HP>
@@ -209,7 +209,7 @@
 <Book ID="1401002">
   <Name>A Midnight Office Fixer, Page 2</Name>
   <TextId>-1</TextId>
-  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
+  <BookIcon>SlickMod_MidnightOffice</BookIcon>
   <EquipEffect>
     <HpReduction>0</HpReduction>
     <HP>70</HP>
@@ -246,7 +246,7 @@
 <Book ID="1401003">
   <Name>Ethan's Page</Name>
   <TextId>-1</TextId>
-  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
+  <BookIcon>SlickMod_MidnightOffice</BookIcon>
   <EquipEffect>
     <HpReduction>0</HpReduction>
     <HP>100</HP>
@@ -287,7 +287,7 @@
 <Book ID="1401004">
   <Name>The Blazing Striker's Page, Vol. 2</Name>
   <TextId>-1</TextId>
-  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
+  <BookIcon>SlickMod_MidnightOffice</BookIcon>
   <EquipEffect>
     <HpReduction>0</HpReduction>
     <HP>235</HP>
@@ -331,13 +331,95 @@
   <SoundInfo Motion="E" WinExternal="false" Win="Claw_Evasion" LoseExternal="false" Lose="" />
   <SoundInfo Motion="F" WinExternal="false" Win="Riu_Shao_UpperAtk" LoseExternal="false" Lose="" />
 </Book>
+<!-- Minho -->
+<Book ID="1401005">
+  <Name>Minho's Page</Name>
+  <TextId>-1</TextId>
+  <BookIcon>SlickMod_MidnightOffice</BookIcon>
+  <EquipEffect>
+    <HpReduction>0</HpReduction>
+    <HP>70</HP>
+    <DeadLine>35</DeadLine>
+    <Break>32</Break>
+    <SpeedMin>1</SpeedMin>
+    <Speed>6</Speed>
+    <SpeedDiceNum>0</SpeedDiceNum>
+    <SResist>Normal</SResist>
+    <PResist>Endure</PResist>
+    <HResist>Normal</HResist>
+    <SBResist>Normal</SBResist>
+    <PBResist>Normal</PBResist>
+    <HBResist>Normal</HBResist>
+    <MaxPlayPoint>3</MaxPlayPoint>
+    <StartPlayPoint>3</StartPlayPoint>
+    <AddedStartDraw>2</AddedStartDraw>
+    <Passive>27</Passive>
+    <Passive>28</Passive>
+    <Passive>29</Passive>
+  </EquipEffect>
+  <Rarity>Rare</Rarity>
+  <CharacterSkin>midnightfix2</CharacterSkin>
+  <CharacterSkinType>Custom</CharacterSkinType>
+  <SkinGender>N</SkinGender>
+  <Chapter>4</Chapter>
+  <Episode>-1</Episode>
+  <RangeType>Melee</RangeType>
+  <NotEquip>false</NotEquip>
+  <RandomFace>true</RandomFace>
+  <SpeedDiceNum>1</SpeedDiceNum>
+  <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+</Book>
+
+<Book ID="1401006">
+  <Name>Minho's Page</Name>
+  <TextId>-1</TextId>
+  <BookIcon>SlickMod_MidnightOffice</BookIcon>
+  <EquipEffect>
+    <HpReduction>35</HpReduction>
+    <HP>70</HP>
+    <DeadLine>0</DeadLine>
+    <Break>32</Break>
+    <SpeedMin>1</SpeedMin>
+    <Speed>6</Speed>
+    <SpeedDiceNum>0</SpeedDiceNum>
+    <SResist>Normal</SResist>
+    <PResist>Endure</PResist>
+    <HResist>Normal</HResist>
+    <SBResist>Normal</SBResist>
+    <PBResist>Normal</PBResist>
+    <HBResist>Normal</HBResist>
+    <MaxPlayPoint>3</MaxPlayPoint>
+    <StartPlayPoint>3</StartPlayPoint>
+    <AddedStartDraw>2</AddedStartDraw>
+    <Passive>27</Passive>
+    <Passive>28</Passive>
+    <Passive>29</Passive>
+  </EquipEffect>
+  <Rarity>Rare</Rarity>
+  <CharacterSkin>midnightfix2</CharacterSkin>
+  <CharacterSkinType>Custom</CharacterSkinType>
+  <SkinGender>N</SkinGender>
+  <Chapter>4</Chapter>
+  <Episode>-1</Episode>
+  <RangeType>Melee</RangeType>
+  <NotEquip>false</NotEquip>
+  <RandomFace>true</RandomFace>
+  <SpeedDiceNum>1</SpeedDiceNum>
+  <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+</Book>
+
+
+
+
+
+
   <!-- URBAN NIGHTMARE -->
 
   <!-- Couriers -->
   <Book ID="1501001">
     <Name>A Courier's Page</Name>
     <TextId>-1</TextId>
-  <BookIcon>SlickMod_Courier</StoryIcon>
+  <BookIcon>SlickMod_Courier</BookIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>77</HP>
@@ -651,7 +733,7 @@
   <Book ID="1504001">
     <Name>Susano'o's Page</Name>
     <TextId>-1</TextId>
-  <BookIcon>SlickMod_Spark</StoryIcon>
+  <BookIcon>SlickMod_Spark</BookIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>88</HP>

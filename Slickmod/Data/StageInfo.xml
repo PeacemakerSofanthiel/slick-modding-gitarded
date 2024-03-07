@@ -8,25 +8,26 @@
   <Stage id="4">
   <Name>Backstreets Sluggers</Name>
   <Wave>
-    <Unit>8</Unit>
-    <Unit>9</Unit>
-    <Unit>8</Unit>
+    <Unit>5201001</Unit>
+    <Unit>5201002</Unit>
+    <Unit>5201001</Unit>
     <Formation>41</Formation>
     <FormationType>Default</FormationType>
     <AvailableUnit>2</AvailableUnit>
     <emotionCardList />
   </Wave>
   <Wave>
-    <Unit>9</Unit>
-    <Unit>9</Unit>
-    <Unit>10</Unit>
+    <Unit>5201002</Unit>
+    <Unit>5201005</Unit>
+    <Unit>5201003</Unit>
     <Formation>41</Formation>
     <FormationType>Default</FormationType>
     <AvailableUnit>2</AvailableUnit>
     <emotionCardList />
   </Wave>
   <Wave>
-    <Unit>11</Unit>
+    <Unit>5201004</Unit>
+    <Unit>5201006</Unit>
     <Formation>41</Formation>
     <FormationType>Default</FormationType>
     <AvailableUnit>2</AvailableUnit>
@@ -99,10 +100,10 @@
   <Stage id="1">
     <Name>The Couriers (I)</Name>
     <Wave>
-      <Unit>1</Unit>
-      <Unit>1</Unit>
-      <Unit>1</Unit>
-      <Unit>1</Unit>
+      <Unit>5501001</Unit>
+      <Unit>5501001</Unit>
+      <Unit>5501001</Unit>
+      <Unit>5501001</Unit>
       <Formation>41</Formation>
       <FormationType>Default</FormationType>
       <AvailableUnit>4</AvailableUnit>
@@ -127,20 +128,20 @@
   <Stage id="2">
     <Name>Snow Coyote Office</Name>
     <Wave>
-      <Unit>2</Unit>
-      <Unit>2</Unit>
-      <Unit>2</Unit>
-      <Unit>2</Unit>
+      <Unit>5502001</Unit>
+      <Unit>5502001</Unit>
+      <Unit>5502001</Unit>
+      <Unit>5502001</Unit>
       <Formation>41</Formation>
       <FormationType>Default</FormationType>
       <AvailableUnit>4</AvailableUnit>
       <emotionCardList />
     </Wave>
     <Wave>
-      <Unit>3</Unit>
-      <Unit>2</Unit>
-      <Unit>2</Unit>
-      <Unit>2</Unit>
+      <Unit>5502002</Unit>
+      <Unit>5502003</Unit>
+      <Unit>5502003</Unit>
+      <Unit>5502003</Unit>
       <Formation>41</Formation>
       <FormationType>Default</FormationType>
       <AvailableUnit>4</AvailableUnit>
@@ -164,22 +165,22 @@
   <Stage id="3">
     <Name>Inferno Corps (I)</Name>
     <Wave>
-      <Unit>4</Unit>
-      <Unit>4</Unit>
-      <Unit>5</Unit>
-      <Unit>5</Unit>
-      <Unit>5</Unit>
+      <Unit>5503001</Unit>
+      <Unit>5503001</Unit>
+      <Unit>5503002</Unit>
+      <Unit>5503002</Unit>
+      <Unit>5503002</Unit>
       <Formation>41</Formation>
       <FormationType>Default</FormationType>
       <AvailableUnit>5</AvailableUnit>
       <emotionCardList />
     </Wave>
     <Wave>
-      <Unit>6</Unit>
-      <Unit>6</Unit>
-      <Unit>6</Unit>
-      <Unit>7</Unit>
-      <Unit>7</Unit>
+      <Unit>5503003</Unit>
+      <Unit>5503003</Unit>
+      <Unit>5503003</Unit>
+      <Unit>5503004</Unit>
+      <Unit>5503004</Unit>
       <Formation>41</Formation>
       <FormationType>Default</FormationType>
       <AvailableUnit>5</AvailableUnit>
@@ -204,7 +205,7 @@
   <Stage id="6">
     <Name>Wayward Fixer Susano'o</Name>
     <Wave>
-      <Unit>16</Unit>
+      <Unit>5504001</Unit>
       <Formation>41</Formation>
       <FormationType>Default</FormationType>
       <AvailableUnit>1</AvailableUnit>

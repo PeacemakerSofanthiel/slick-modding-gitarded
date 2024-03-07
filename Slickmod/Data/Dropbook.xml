@@ -3,9 +3,8 @@
   <Version>1.1</Version>
   <BookUse ID="1">
     <Name>Book of a Courier</Name>
-    <BookIcon>SlickMod_Courier</BookIcon>
     <TextId />
-    <BookIcon>SlickMod_Courier<BookIcon/>
+    <BookIcon>SlickMod_Courier</BookIcon>
     <Chapter>5</Chapter>
     <BookValue>0</BookValue>
     <DropItem Type="Equip">10000001</DropItem>
