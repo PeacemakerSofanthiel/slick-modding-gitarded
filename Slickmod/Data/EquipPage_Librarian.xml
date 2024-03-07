@@ -122,7 +122,7 @@
   <Book ID="2201003">
     <Name>Ethan's Incomplete Page, Vol. 2</Name>
     <TextId>-1</TextId>
-    <BookIcon />
+  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>88</HP>
@@ -164,7 +164,7 @@
   <Book ID="2401001">
     <Name>A Midnight Office Fixer, Page 1</Name>
     <TextId>-1</TextId>
-    <BookIcon />
+  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>65</HP>
@@ -200,7 +200,7 @@
   <Book ID="2401002">
     <Name>A Midnight Office Fixer, Page 2</Name>
     <TextId>-1</TextId>
-    <BookIcon />
+  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>70</HP>
@@ -239,7 +239,7 @@
   <Book ID="2501001">
     <Name>A Courier's Page</Name>
     <TextId>-1</TextId>
-    <BookIcon />
+  <BookIcon>SlickMod_Courier</StoryIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>75</HP>
@@ -435,7 +435,7 @@
   <Book ID="2504001">
     <Name>Susano'o's Incomplete Page</Name>
     <TextId>-1</TextId>
-    <BookIcon />
+  <BookIcon>SlickMod_Spark</StoryIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>88</HP>

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Policy;
-using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_PackHuntingTactics;
+using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_WhoCaresClaw;
 using static DiceCardSelfAbility_unitePower;
 using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_BarghestNail;
 
@@ -1009,39 +1009,6 @@ namespace SlickRuinaMod
 
     #endregion
 
-    #region --UN CHEYTAC--
-
-    public class DiceCardSelfAbility_SlickMod_BizarreArtifact : DiceCardSelfAbilityBase
-    {
-        public static string Desc = "[On Use] Restore 1 Light; Draw 1 page; Lower this page's Cost by 1 (Up to 2 times); Dice on this page lose Power equal to the difference between it's current and original Cost";
-
-        public override void OnUseCard()
-        {
-            base.owner.allyCardDetail.DrawCards(1);
-            base.owner.cardSlotDetail.RecoverPlayPointByCard(1);
-            this.card.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
-            {
-                power = -Math.Abs(this.card.card.GetCost() - this.card.card.GetOriginCost())
-            });
-            List<BattleDiceCardBuf> list = this.card.card.GetBufList().FindAll((BattleDiceCardBuf x) => x is DiceCardSelfAbility_SlickMod_BizarreArtifact.CostDownSelfBuf);
-            bool flag = list.Count < 2;
-            if (flag)
-            {
-                this.card.card.AddBuf(new DiceCardSelfAbility_SlickMod_BizarreArtifact.CostDownSelfBuf());
-            }
-        }
-
-        public class CostDownSelfBuf : BattleDiceCardBuf
-        {
-            public override int GetCost(int oldCost)
-            {
-                return oldCost - 1;
-            }
-        }
-    }
-
-    #endregion
-
     #region --DANS SOLUTIONS--
     public class DiceCardSelfAbility_SlickMod_DanAmature : DiceCardSelfAbilityBase
     {
@@ -1228,6 +1195,116 @@ namespace SlickRuinaMod
             {
                 base.OnSucceedAttack();
                 this.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_BlackTieInk, 2, this.owner);
+            }
+        }
+    }
+
+    #endregion
+
+    #region --WORTHLESS AUTOMATONS--
+
+    // Shock
+    // 
+    public class DiceCardSelfAbility_SlickMod_Shock : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Restore 2 Light; Channel 1 Lightning Orb; Inflict 1 Paralysis to self next Scene";
+
+        public override string[] Keywords => new string[2] { "Energy_Keyword", "Paralysis_Keyword" };
+
+        public override void OnUseCard()
+        {
+            base.owner.cardSlotDetail.RecoverPlayPointByCard(2);
+            this.owner.bufListDetail.AddBuf(new SlickMod_Orb_Lightning());
+            base.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.Paralysis, 1, base.owner);
+        }
+    }
+
+    // Half-Hearted Claw
+    // [On Use] Dice on this page gain +1 Power for every “Half-hearted Claw” used last Scene
+    public class DiceCardSelfAbility_SlickMod_WhoCaresClaw : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Dice on this page gain +1 Power for every “Half-hearted Claw” used last Scene";
+
+        public override void OnUseCard()
+        {
+            this.card.owner.bufListDetail.AddReadyBuf(new BattleUnitBuf_SlickMod_WhoCaresClaw(1));
+
+            BattleUnitBuf battleUnitBuf = this.card.owner.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is DiceCardSelfAbility_SlickMod_WhoCaresClaw.BattleUnitBuf_SlickMod_WhoCaresClaw);
+            if (battleUnitBuf != null)
+            {
+                foreach (BattleDiceBehavior battleDiceBehavior in this.card.cardBehaviorQueue)
+                {
+                    battleDiceBehavior.ApplyDiceStatBonus(new DiceStatBonus
+                    {
+                        power = battleUnitBuf.stack
+                    });
+                }
+            }
+            base.OnUseCard();
+        }
+
+        public class BattleUnitBuf_SlickMod_WhoCaresClaw : BattleUnitBuf
+        {
+            public override void OnRoundEnd()
+            {
+                this.Destroy();
+                base.OnRoundEnd();
+            }
+
+            public BattleUnitBuf_SlickMod_WhoCaresClaw(int Stack)
+            {
+                this.stack = Stack;
+            }
+        }
+
+    }
+
+    // [On Use] Lower this page's Cost by 1
+    public class DiceCardSelfAbility_SlickMod_OnUseCostDown1 : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Lower this page's Cost by 1";
+
+        public override void OnUseCard()
+        {
+            card.card.AddBuf(new SlickMod_CostDownSelfBuf());
+        }
+    }
+
+    // This page prompts no action because it has no non-Counter dice.
+    // [On Use] Draw 3 pages
+    public class DiceCardSelfAbility_SlickMod_Draw3OopsAllCounters : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "This page prompts no action because it has no non-Counter dice.\r\n[On Use] Draw 3 pages";
+
+        public override string[] Keywords => new string[1] { "DrawCard_Keyword" };
+
+        public override void OnUseCard()
+        {
+            base.owner.allyCardDetail.DrawCards(3);
+        }
+    }
+
+    #endregion
+
+    #region --UN CHEYTAC--
+
+    public class DiceCardSelfAbility_SlickMod_BizarreArtifact : DiceCardSelfAbilityBase
+    {
+        public static string Desc = "[On Use] Restore 1 Light; Draw 1 page; Lower this page's Cost by 1 (Up to 2 times); Dice on this page lose Power equal to the difference between it's current and original Cost";
+
+        public override void OnUseCard()
+        {
+            base.owner.allyCardDetail.DrawCards(1);
+            base.owner.cardSlotDetail.RecoverPlayPointByCard(1);
+            this.card.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+            {
+                power = -Math.Abs(this.card.card.GetCost() - this.card.card.GetOriginCost())
+            });
+            List<BattleDiceCardBuf> list = this.card.card.GetBufList().FindAll((BattleDiceCardBuf x) => x is SlickMod_CostDownSelfBuf);
+            bool flag = list.Count < 2;
+            if (flag)
+            {
+                this.card.card.AddBuf(new SlickMod_CostDownSelfBuf());
             }
         }
     }

@@ -470,4 +470,53 @@ namespace SlickRuinaMod
 
     #endregion
 
+    #region --WORTHLESS AUTOMATONS--
+
+    // Add +2 Power if user has Paralysis
+    public class DiceCardAbility_SlickMod_PowerUp2SelfParalysis : DiceCardAbilityBase
+    {
+        public static string Desc = "Add +2 Power if user has Paralysis";
+        
+        public override string[] Keywords => new string[1] { "Paralysis_Keyword" };
+
+        public override void BeforeRollDice()
+        {
+            BattleUnitModel owner = base.card.owner;
+            if (owner != null && owner.bufListDetail.GetKewordBufStack(KeywordBuf.Paralysis) > 0)
+            {
+                behavior.ApplyDiceStatBonus(new DiceStatBonus
+                {
+                    power = 2
+                });
+            }
+        }
+    }
+
+    // [On Hit] Gain 1 Focus next Scene; Inflict 1 Fragile next Scene
+    public class DiceCardAbility_SlickMod_1Focus1Fragile : DiceCardAbilityBase
+    {
+        public static string Desc = "[On Hit] Gain 1 Focus next Scene; Inflict 1 Fragile next Scene";
+
+        public override string[] Keywords => new string[2] { "SlickMod_Focus", "Vulnerable_Keyword" };
+
+        public override void OnSucceedAttack()
+        {
+            base.owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Orb_Focus, 1, base.owner);
+            base.card.target?.bufListDetail.AddKeywordBufByCard(KeywordBuf.Vulnerable, 1, base.owner);
+        }
+    }
+
+    // [On Hit] Inflict Lock-On next Scene
+    public class DiceCardAbility_SlickMod_LockOnAtk : DiceCardAbilityBase
+    {
+        public static string Desc = "[On Hit] Inflict Lock-On next Scene";
+
+        public override void OnSucceedAttack()
+        {
+            base.card.target?.bufListDetail.AddReadyBuf(new BattleUnitBuf_SlickMod_Orb_Lockon());
+        }
+    }
+
+    #endregion
+
 }

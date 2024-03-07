@@ -54,7 +54,7 @@ example here:
 		<BufIconInfo Enable="true">
 			<Path>\Resource\Icons</Path>
 		</BufIconInfo>
-		<StoryIconInfo Enable="true" IconPostfix="_Default" IconGlowPostfix="_Glow">
+		<StoryIconInfo Enable="true" IconPostfix="" IconGlowPostfix="_Glow">
 			<Path>\Resource\StoryIcons</Path>
 		</StoryIconInfo>
 	</ExtraFile>

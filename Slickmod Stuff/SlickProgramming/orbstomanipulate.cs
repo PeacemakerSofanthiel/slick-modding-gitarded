@@ -30,7 +30,7 @@ namespace SlickRuinaMod
     {
         public override int orblimit => 4;
     }
-    public class PassiveAbilityBase_slickmod_Capacitor5 : passivedefectorbbase
+    public class PassiveAbilityBase_SlickMod_Capacitor5 : passivedefectorbbase
     {
         public override int orblimit => 5;
     }

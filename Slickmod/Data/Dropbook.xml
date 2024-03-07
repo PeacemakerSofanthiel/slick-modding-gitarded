@@ -3,8 +3,9 @@
   <Version>1.1</Version>
   <BookUse ID="1">
     <Name>Book of a Courier</Name>
+    <BookIcon>SlickMod_Courier</BookIcon>
     <TextId />
-    <BookIcon />
+    <BookIcon>SlickMod_Courier<BookIcon/>
     <Chapter>5</Chapter>
     <BookValue>0</BookValue>
     <DropItem Type="Equip">10000001</DropItem>
@@ -61,7 +62,7 @@
   <BookUse ID="8">
     <Name>Book of Moonlight Office</Name>
     <TextId />
-    <BookIcon />
+    <BookIcon>SlickMod_MidnightOffice</BookIcon>
     <Chapter>4</Chapter>
     <BookValue>0</BookValue>
     <DropItem Type="Equip">10000010</DropItem>
@@ -70,7 +71,7 @@
   <BookUse ID="9">
     <Name>Incomplete Book of Ethan, Vol. 2</Name>
     <TextId />
-    <BookIcon />
+    <BookIcon>SlickMod_MidnightOffice</BookIcon>
     <Chapter>4</Chapter>
     <BookValue>0</BookValue>
     <DropItem Type="Equip">10000009</DropItem>
@@ -78,7 +79,7 @@
   <BookUse ID="10">
     <Name>Incomplete Book of Susano'o</Name>
     <TextId />
-    <BookIcon />
+    <BookIcon>SlickMod_Spark</BookIcon>
     <Chapter>5</Chapter>
     <BookValue>0</BookValue>
     <DropItem Type="Equip">10000012</DropItem>

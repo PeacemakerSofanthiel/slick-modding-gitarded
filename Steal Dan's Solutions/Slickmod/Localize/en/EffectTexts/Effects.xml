@@ -67,78 +67,10 @@
 		<Desc>Upon using a page, discard 2 random pages, then draw 2 pages, then lose 1 Cycle.</Desc>
 	</BattleEffectText>
 
- <BattleEffectText ID="SlickMod_SpareParts">
-      <Name>Spare Parts</Name>
-      <Desc>Affects the properties of certain Combat Pages. Stacks up to 10.</Desc>
-    </BattleEffectText>
-
- <BattleEffectText ID="SlickMod_SparePartsLilacChamber">
-      <Name>Spare Parts</Name>
-      <Desc>Affects the properties of certain Combat Pages. Stacks up to 25.</Desc>
-    </BattleEffectText>
-
- <BattleEffectText ID="SlickMod_Barrier">
-      <Name>Barrier</Name>
-      <Desc>Prevent the next {0} damage taken.</Desc>
-    </BattleEffectText>
-
- <BattleEffectText ID="SlickMod_StaggerBarrier">
-      <Name>Barrier</Name>
-      <Desc>Prevent the next {0} Stagger damage taken.</Desc>
-    </BattleEffectText>
-
 	<BattleEffectText ID="SlickMod_BlackTieInk">
 		<Name>Ink</Name>
-		<Desc>Take {0} more Stagger damage from attacks. At the end of the Scene, take {0}/4 Stagger damage (Rounded Down) and lose 1 stack of Ink. If Ink is 10 or higher, Defensive Dice gain +1 Power.</Desc>
+		<Desc>Take {0} more Stagger damage from attacks. At the end of the Scene take {0}/4 Stagger damage (Rounded Down) and lose 1 stack of Ink. If Ink is 10 or higher, Defensive Dice gain +1 Power.</Desc>
 	</BattleEffectText>
-
-<BattleEffectText ID="SlickMod_EmeraldLight">
-      <Name>Emerald Light</Name>
-      <Desc>At the start of the Scene, spend 1 Emerald Light to restore 1 Light, until this character has 4 Light.</Desc>
-    </BattleEffectText>
-
-    <BattleEffectText ID="SlickMod_Sinking">
-      <Name>Sinking</Name>
-      <Desc>When hit, take {0} Stagger damage and lose 1 Sinking Count; if this character has no Sinking Count, lose all Sinking instead.</Desc>
-    </BattleEffectText>
-    <BattleEffectText ID="SlickMod_SinkingCount">
-      <Name>Sinking Count</Name>
-      <Desc>This status is not lost at the end of the Scene.</Desc>
-    </BattleEffectText>
-
-    <BattleEffectText ID="SlickMod_Rupture">
-      <Name>Sinking</Name>
-      <Desc>When hit, take {0} damage and lose 1 Rupture Count; if this character has no Rupture Count, lose all Rupture instead.</Desc>
-    </BattleEffectText>
-    <BattleEffectText ID="SlickMod_RuptureCount">
-      <Name>Sinking Count</Name>
-      <Desc>This status is not lost at the end of the Scene.</Desc>
-    </BattleEffectText>
-
-<BattleEffectText ID="Aftermath_Spore_Keyword">
-  <Name>Spore</Name>
-  <Desc>At the start of the Scene, take {0} damage and halve the stack. (Rounds down) Take {0} damage every time the character rolls an Offensive die.</Desc>
-</BattleEffectText>
-
-<BattleEffectText ID="Aftermath_BurnProtection">
-  <Name>Burn Protection</Name>
-  <Desc>Take {1}% less damage from Burn, up to 100%. Lose 1 stack at the end of the Scene. Can be stacked up to 11.</Desc>
-</BattleEffectText>
-
-<BattleEffectText ID="Aftermath_Thunderstruck">
-  <Name>Thunderstruck</Name>
-  <Desc>For the duration of the Scene, all dice played by this character gain a {1}% chance to lose 2 Power. Can be stacked up to 10.</Desc>
-</BattleEffectText>
-
-<BattleEffectText ID="Aftermath_Thunderstruck_Keyword">
-  <Name>Thunderstruck X</Name>
-  <Desc>For the duration of the Scene, all dice played by this character gain a (X * 10)% chance to lose 2 Power. Can be stacked up to 10.</Desc>
-</BattleEffectText>
-
-<BattleEffectText ID="Aftermath_StoredChems">
-  <Name>Stored Chems</Name>
-  <Desc>Affects the properties of certain Combat Pages.</Desc>
-</BattleEffectText>
 
   </effectTextList>
 </BattleEffectTextRoot>

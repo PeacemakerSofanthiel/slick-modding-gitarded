@@ -117,12 +117,6 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  
-  <!-- URBAN LEGEND -->
-
-  <!-- URBAN PLAGUE -->
-
-  <!-- Midnight Office and Ethan 1-->
   <Book ID="1201004">
   <Name>The Blazing Striker's Page</Name>
   <TextId>-1</TextId>
@@ -169,10 +163,17 @@
   <SoundInfo Motion="G" WinExternal="false" Win="Riu_Guard" LoseExternal="false" Lose="" />
   <SoundInfo Motion="E" WinExternal="false" Win="Defense_Evasion" LoseExternal="false" Lose="" />
 </Book>
+
+  
+  <!-- URBAN LEGEND -->
+
+  <!-- URBAN PLAGUE -->
+
+  <!-- Midnight Office and Ethan 2-->
 <Book ID="1401001">
   <Name>A Midnight Office Fixer, Page 1</Name>
   <TextId>-1</TextId>
-  <BookIcon />
+  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
   <EquipEffect>
     <HpReduction>0</HpReduction>
     <HP>65</HP>
@@ -208,7 +209,7 @@
 <Book ID="1401002">
   <Name>A Midnight Office Fixer, Page 2</Name>
   <TextId>-1</TextId>
-  <BookIcon />
+  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
   <EquipEffect>
     <HpReduction>0</HpReduction>
     <HP>70</HP>
@@ -241,10 +242,11 @@
   <SpeedDiceNum>1</SpeedDiceNum>
   <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
 </Book>
+<!-- Ethan 2 -->
 <Book ID="1401003">
   <Name>Ethan's Page</Name>
   <TextId>-1</TextId>
-  <BookIcon />
+  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
   <EquipEffect>
     <HpReduction>0</HpReduction>
     <HP>100</HP>
@@ -281,10 +283,11 @@
   <SpeedDiceNum>1</SpeedDiceNum>
   <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
 </Book>
+<!-- Ethan 2 Angry -->
 <Book ID="1401004">
   <Name>The Blazing Striker's Page, Vol. 2</Name>
   <TextId>-1</TextId>
-  <BookIcon />
+  <BookIcon>SlickMod_MidnightOffice</StoryIcon>
   <EquipEffect>
     <HpReduction>0</HpReduction>
     <HP>235</HP>
@@ -334,7 +337,7 @@
   <Book ID="1501001">
     <Name>A Courier's Page</Name>
     <TextId>-1</TextId>
-    <BookIcon />
+  <BookIcon>SlickMod_Courier</StoryIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>77</HP>
@@ -648,7 +651,7 @@
   <Book ID="1504001">
     <Name>Susano'o's Page</Name>
     <TextId>-1</TextId>
-    <BookIcon />
+  <BookIcon>SlickMod_Spark</StoryIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>88</HP>

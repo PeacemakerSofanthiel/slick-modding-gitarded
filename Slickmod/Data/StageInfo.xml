@@ -51,9 +51,9 @@
   <!-- URBAN LEGEND -->
   
   <!-- URBAN PLAGUE -->
-  <Stage id <Name>Midnight Office</Name>
-    <Wave>="5">
-   
+  <Stage id="5">
+  <Name>Midnight Office</Name>
+  <Wave>
       <Unit>12</Unit>
       <Unit>13</Unit>
       <Unit>12</Unit>
@@ -92,6 +92,7 @@
     <Story Condition="End" />
     <IsChapterLast>false</IsChapterLast>
     <invitationtype>false</invitationtype>
+    <StoryType>SlickMod_MidnightOffice</StoryType>
   </Stage>
   
   <!-- URBAN NIGHTMARE -->
@@ -121,6 +122,7 @@
     <Story Condition="End" />
     <IsChapterLast>false</IsChapterLast>
     <invitationtype>false</invitationtype>
+    <StoryType>SlickMod_Courier</StoryType>
   </Stage>
   <Stage id="2">
     <Name>Snow Coyote Office</Name>
@@ -222,6 +224,7 @@
     <Story Condition="End" />
     <IsChapterLast>false</IsChapterLast>
     <invitationtype>false</invitationtype>
+    <StoryType>SlickMod_Spark</StoryType>
   </Stage>
 </StageXmlRoot>
   <!-- SUSSY IN THE CITY -->

@@ -1843,6 +1843,63 @@ namespace SlickRuinaMod
 
     #endregion
 
+    #region --WORTHLESS AUTOMATONS--
+
+    // Faulty Capacitor
+    // Can store up to 3 Orbs. Upon Evoking an Orb, take 5 damage.
+    public class PassiveAbilityBase_SlickMod_FaultyCapacitor3 : passivedefectorbbase
+    {
+        public override int orblimit => 3;
+
+        public override void onevoke()
+        {
+            this.owner.TakeDamage(5, DamageType.Passive);
+        }
+    }
+
+    // Parameter Push
+    // At the start of each Scene, all allied Defective Machines take 5 Stagger damage and Channel 1 Lightning Orb.
+    public class PassiveAbilityBase_SlickMod_ParameterPush : DiceCardSelfAbilityBase
+    {
+
+        public override void OnDiscard(BattleUnitModel unit, BattleDiceCardModel self)
+        {
+            List<BattleUnitModel> aliveList = BattleObjectManager.instance.GetAliveList(unit.faction);
+            aliveList.Remove(unit);
+            foreach (BattleUnitModel item in aliveList)
+            {
+                item.bufListDetail.AddBuf(new SlickMod_Orb_Lightning());
+                item.TakeBreakDamage(5, DamageType.Passive);
+            }
+        }
+    }
+
+    // Better Things to do
+    // Fuck off lol
+    public class PassiveAbility_SlickMod_AquamarineManFuckThisImOut : PassiveAbilityBase
+    {
+
+        public override void OnWaveStart()
+        {
+            owner.emotionDetail.SetMaxEmotionLevel(0);
+        }
+
+        public override int GetEmotionCoinAdder(int defaultCount)
+        {
+            return --defaultCount;
+        }
+
+        public override void OnRoundEnd()
+        {
+            if (!BattleObjectManager.instance.GetAliveList(owner.faction).Exists((BattleUnitModel x) => x != owner))
+            {
+                owner.SetHp(950);
+            }
+        }
+    }
+
+    #endregion
+
     #region --AESIR OFFICE--
 
     public class PassiveAbility_SlickMod_GamerCycle : PassiveAbilityBase

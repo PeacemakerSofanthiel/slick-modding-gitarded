@@ -1367,6 +1367,14 @@ namespace SlickRuinaMod
         }
     }
 
+    public class SlickMod_CostDownSelfBuf : BattleDiceCardBuf
+    {
+        public override int GetCost(int oldCost)
+        {
+            return oldCost - 1;
+        }
+    }
+
     #endregion
 
 }
