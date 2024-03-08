@@ -79,6 +79,55 @@
 
 <!-- Inferno Underrunt -->
 
+  <Deck ID="1503002">
+    <Card>0503001</Card>
+    <Card>0503001</Card>
+    <Card>0503001</Card>
+    <Card>0503002</Card>
+    <Card>0503002</Card>
+    <Card>0503003</Card>
+    <Card>0503004</Card>
+    <Card>0503004</Card>
+    <Card>0503005</Card>
+  </Deck>
+
+  <Deck ID="1503004">
+    <Card>0503001</Card>
+    <Card>0503001</Card>
+    <Card>0503001</Card>
+    <Card>0503002</Card>
+    <Card>0503002</Card>
+    <Card>0503003</Card>
+    <Card>0503004</Card>
+    <Card>0503004</Card>
+    <Card>0503005</Card>
+  </Deck>
+
+<!-- Inferno Templar
+  <Deck ID="1503001">
+    <Card>0503001</Card>
+    <Card>0503001</Card>
+    <Card>0503001</Card>
+    <Card>0503002</Card>
+    <Card>0503003</Card>
+    <Card>0503003</Card>
+    <Card>0503003</Card>
+    <Card>0503004</Card>
+    <Card>0503006</Card>
+  </Deck>
+
+  <Deck ID="1503003">
+    <Card>0503001</Card>
+    <Card>0503001</Card>
+    <Card>0503001</Card>
+    <Card>0503002</Card>
+    <Card>0503003</Card>
+    <Card>0503003</Card>
+    <Card>0503003</Card>
+    <Card>0503004</Card>
+    <Card>0503006</Card>
+  </Deck>
+
 
 
 
@@ -98,50 +147,6 @@
 
 
 
-  <Deck ID="5">
-    <Card>16</Card>
-    <Card>16</Card>
-    <Card>16</Card>
-    <Card>17</Card>
-    <Card>18</Card>
-    <Card>18</Card>
-    <Card>19</Card>
-    <Card>19</Card>
-    <Card>21</Card>
-  </Deck>
-  <Deck ID="6">
-    <Card>16</Card>
-    <Card>16</Card>
-    <Card>16</Card>
-    <Card>17</Card>
-    <Card>18</Card>
-    <Card>18</Card>
-    <Card>19</Card>
-    <Card>19</Card>
-    <Card>20</Card>
-  </Deck>
-  <Deck ID="7">
-    <Card>16</Card>
-    <Card>16</Card>
-    <Card>16</Card>
-    <Card>17</Card>
-    <Card>18</Card>
-    <Card>18</Card>
-    <Card>19</Card>
-    <Card>19</Card>
-    <Card>21</Card>
-  </Deck>
-  <Deck ID="8">
-    <Card>16</Card>
-    <Card>16</Card>
-    <Card>16</Card>
-    <Card>17</Card>
-    <Card>18</Card>
-    <Card>18</Card>
-    <Card>19</Card>
-    <Card>19</Card>
-    <Card>20</Card>
-  </Deck>
   <Deck ID="9">
     <Card>22</Card>
     <Card>22</Card>

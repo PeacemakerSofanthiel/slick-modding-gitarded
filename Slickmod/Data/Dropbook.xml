@@ -1,54 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BookUseXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Version>1.1</Version>
-  <BookUse ID="1">
-    <Name>Book of a Courier</Name>
-    <TextId />
-    <BookIcon>SlickMod_Courier</BookIcon>
-    <Chapter>5</Chapter>
-    <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000001</DropItem>
-  </BookUse>
-  <BookUse ID="2">
-    <Name>Book of a Snow Coyote Fixer</Name>
-    <TextId />
-    <BookIcon />
-    <Chapter>5</Chapter>
-    <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000002</DropItem>
-  </BookUse>
-  <BookUse ID="3">
-    <Name>Book of Alexander Turner</Name>
-    <TextId />
-    <BookIcon />
-    <Chapter>5</Chapter>
-    <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000003</DropItem>
-  </BookUse>
-  <BookUse ID="4">
-    <Name>Book of an Inferno Corps Templar</Name>
-    <TextId />
-    <BookIcon />
-    <Chapter>5</Chapter>
-    <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000004</DropItem>
-  </BookUse>
-  <BookUse ID="5">
-    <Name>Book of an Inferno Corps Underunt</Name>
-    <TextId />
-    <BookIcon />
-    <Chapter>5</Chapter>
-    <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000005</DropItem>
-  </BookUse>
+
+   <!-- CANARD -->
+
+
+
+
+
+   <!-- URBAN MYTH -->
+
+<!-- Backstreets Sluggers -->
+
   <BookUse ID="6">
     <Name>Book of a Backstreets Slugger</Name>
     <TextId />
     <BookIcon />
     <Chapter>2</Chapter>
     <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000006</DropItem>
-    <DropItem Type="Equip">10000007</DropItem>
+    <DropItem Type="Equip">2201001</DropItem>
+    <DropItem Type="Equip">2201002</DropItem>
   </BookUse>
   <BookUse ID="7">
     <Name>Incomplete Book of Ethan, Vol. 1</Name>
@@ -56,26 +27,110 @@
     <BookIcon />
     <Chapter>2</Chapter>
     <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000008</DropItem>
+    <DropItem Type="Equip">2201003</DropItem>
   </BookUse>
+
+
+
+
+   <!-- URBAN LEGEND -->
+
+
+
+
+
+   <!-- URBAN PLAGUE -->
+
+<!-- Midnight Office -->
+
   <BookUse ID="8">
     <Name>Book of Moonlight Office</Name>
     <TextId />
     <BookIcon>SlickMod_MidnightOffice</BookIcon>
     <Chapter>4</Chapter>
     <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000010</DropItem>
-    <DropItem Type="Equip">10000011</DropItem>
+    <DropItem Type="Equip">2401001</DropItem>
+    <DropItem Type="Equip">2401002</DropItem>
   </BookUse>
+
   <BookUse ID="9">
     <Name>Incomplete Book of Ethan, Vol. 2</Name>
     <TextId />
     <BookIcon>SlickMod_MidnightOffice</BookIcon>
     <Chapter>4</Chapter>
     <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000009</DropItem>
+    <DropItem Type="Equip">2201003</DropItem>
   </BookUse>
-  <BookUse ID="10">
+
+
+
+
+   <!-- URBAN NIGHTMARE -->
+
+<!-- Couriers -->
+  <BookUse ID="3501001">
+    <Name>Book of a Courier</Name>
+    <TextId />
+    <BookIcon>SlickMod_Courier</BookIcon>
+    <Chapter>5</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">2501001</DropItem>
+  </BookUse>
+
+<!-- Snow Coyotes -->
+  <BookUse ID="3502001">
+    <Name>Book of a Snow Coyote Fixer</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>5</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">2502001</DropItem>
+  </BookUse>
+  <BookUse ID="3502002">
+    <Name>Book of Alexander Turner</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>5</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">2502002</DropItem>
+  </BookUse>
+
+<!-- Inferno Corps -->
+  <BookUse ID="3503001">
+    <Name>Book of an Inferno Corps Templar</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>5</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">2503001</DropItem>
+  </BookUse>
+
+  <BookUse ID="3503002">
+    <Name>Book of an Inferno Corps Underunt</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>5</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">2503002</DropItem>
+  </BookUse>
+
+   <!-- URBAN STAR OF THE CITY -->
+
+
+
+
+
+   <!-- IMPURITY -->
+
+
+
+
+
+ 
+
+
+
+  <BookUse ID="3504001">
     <Name>Incomplete Book of Susano'o</Name>
     <TextId />
     <BookIcon>SlickMod_Spark</BookIcon>

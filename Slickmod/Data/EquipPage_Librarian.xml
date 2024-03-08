@@ -78,7 +78,7 @@
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
   <Book ID="2201003">
-    <Name>Ethan's Incomplete Page</Name>
+    <Name>Ethan's Incomplete Page, Vol. I</Name>
     <TextId>-1</TextId>
     <BookIcon />
     <EquipEffect>
@@ -117,6 +117,11 @@
   </Book>
 
   <!-- URBAN LEGEND -->
+
+
+
+
+
 
   <!-- URBAN PLAGUE -->
   <Book ID="2201003">

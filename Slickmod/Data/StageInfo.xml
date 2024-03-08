@@ -5,6 +5,8 @@
   <!-- CANRAD -->
 
   <!-- URBAN MYTH -->
+
+<!-- Backstreets Sluggers -->
   <Stage id="4">
   <Name>Backstreets Sluggers</Name>
   <Wave>
@@ -51,29 +53,36 @@
 
   <!-- URBAN LEGEND -->
   
+
+
+
+
   <!-- URBAN PLAGUE -->
+
+<!-- Midnight Office -->
   <Stage id="5">
   <Name>Midnight Office</Name>
   <Wave>
-      <Unit>12</Unit>
-      <Unit>13</Unit>
-      <Unit>12</Unit>
+      <Unit>5401001</Unit>
+      <Unit>5401002</Unit>
+      <Unit>5401001</Unit>
       <Formation>41</Formation>
       <FormationType>Default</FormationType>
       <AvailableUnit>3</AvailableUnit>
       <emotionCardList />
     </Wave>
     <Wave>
-      <Unit>12</Unit>
-      <Unit>13</Unit>
-      <Unit>14</Unit>
+      <Unit>5401001</Unit>
+      <Unit>5401005</Unit>
+      <Unit>5401003</Unit>
       <Formation>41</Formation>
       <FormationType>Default</FormationType>
       <AvailableUnit>3</AvailableUnit>
       <emotionCardList />
     </Wave>
     <Wave>
-      <Unit>15</Unit>
+      <Unit>5401004</Unit>
+      <Unit>5401006</Unit>
       <Formation>41</Formation>
       <FormationType>Default</FormationType>
       <AvailableUnit>3</AvailableUnit>
@@ -97,6 +106,7 @@
   </Stage>
   
   <!-- URBAN NIGHTMARE -->
+<!-- Couriers 1 -->
   <Stage id="1">
     <Name>The Couriers (I)</Name>
     <Wave>
@@ -125,6 +135,9 @@
     <invitationtype>false</invitationtype>
     <StoryType>SlickMod_Courier</StoryType>
   </Stage>
+
+
+<!-- Snow Coyote Office -->
   <Stage id="2">
     <Name>Snow Coyote Office</Name>
     <Wave>

@@ -683,7 +683,7 @@
     <SkinGender>N</SkinGender>
     <Chapter>5</Chapter>
     <Episode>-1</Episode>
-    <RangeType>Hybrid</RangeType>
+    <RangeType>Melee</RangeType>
     <NotEquip>false</NotEquip>
     <RandomFace>true</RandomFace>
     <SpeedDiceNum>1</SpeedDiceNum>

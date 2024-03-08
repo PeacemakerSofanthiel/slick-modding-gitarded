@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Character ID="1">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Fightin' ain't our usual gig... What's goin' on?</BattleDialog>
+      <BattleDialog ID="1">Why York sent us here's beyond me, but he says it's orders from big man D.C., so...</BattleDialog>
+      <BattleDialog ID="2">Gotta have each others' backs. Like we always do.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Well, shit... I can't believe we lived!</BattleDialog>
+      <BattleDialog ID="1">Hahah, easy! Totally wasn't worried there, not even for a sec, nope!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Shit-!</BattleDialog>
+      <BattleDialog ID="1">Dammit-!</BattleDialog>
+      <BattleDialog ID="2">No way-</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">That ain't good...</BattleDialog>
+      <BattleDialog ID="1">Dammit! He owed me fifty! Now how am I gonna get it back!</BattleDialog>
+      <BattleDialog ID="2">Well, shit.</BattleDialog>
+      <BattleDialog ID="3">How'd they catch us?!</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">Gotcha!</BattleDialog>
+      <BattleDialog ID="1">Too slow!</BattleDialog>
+      <BattleDialog ID="2">Hah!</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="2">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Anyone else hot in here, or is it just me?</BattleDialog>
+      <BattleDialog ID="2">Not exactly my idea of a vacation, but it's better than the cold.</BattleDialog>
+      <BattleDialog ID="3">Hey. You there. Gotta die. Commander's orders. Nothin' personal.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">That could've gone better.</BattleDialog>
+      <BattleDialog ID="2">That could've gone worse.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Not like this-</BattleDialog>
+      <BattleDialog ID="2">Shit-</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Oh, no... Anyway...</BattleDialog>
+      <BattleDialog ID="2">Alas, poor... Whatever their name was. I knew 'em... I guess.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">That was too easy.</BattleDialog>
+      <BattleDialog ID="2">Try the fuck again, bitch. Try the fuck again.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="3">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Focus.</BattleDialog>
+      <BattleDialog ID="1">Enough chit-chat! Prepare to engage!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Hmph.</BattleDialog>
+      <BattleDialog ID="1">This is acceptable.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Dammit-! Tell my wife and kids that I don't have a wife or kids-</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">I said focus, dammit!</BattleDialog>
+      <BattleDialog ID="1">Negligible losses...</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">On to the next one!</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="4">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Anyone else hot in here, or is it just me?</BattleDialog>
+      <BattleDialog ID="2">Not exactly my idea of a vacation, but it's better than the cold.</BattleDialog>
+      <BattleDialog ID="3">Hey. You there. Gotta die. Commander's orders. Nothin' personal.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">That could've gone better.</BattleDialog>
+      <BattleDialog ID="2">That could've gone worse.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Not like this-Not like this-</BattleDialog>
+      <BattleDialog ID="2">Shit-</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">Oh, no... Anyway...Oh, no... Anyway...</BattleDialog>
+      <BattleDialog ID="2">Alas, poor... Whatever their name was. I knew 'em... I guess.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">...</BattleDialog>
+      <BattleDialog ID="1">That was too easy.</BattleDialog>
+      <BattleDialog ID="2">Try the fuck again, bitch. Try the fuck again.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="5">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">--- CONSCIOUSNESS NULLIFIED | INITIALIZING COMBAT MODE ---</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">--- ALL ENEMIES TERMINATED ---</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">--- CRITICAL SYSTEM FAILURE ---</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">...</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="6">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Let's make this quick. The Engineer wants efficiency.</BattleDialog>
+      <BattleDialog ID="1">Did the Engineer really just send us here to gather combat data...?</BattleDialog>
+      <BattleDialog ID="2">What the hell would the Engineer want with some dusty books...?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Wait, we actually did it?</BattleDialog>
+      <BattleDialog ID="1">We... Lived? YEAH! WOO!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Fucking arm-!</BattleDialog>
+      <BattleDialog ID="1">Dammit, my arm won't-!</BattleDialog>
+      <BattleDialog ID="2">Move, stupid fucking arm-!</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">... Well, it's combat data for the Engineer...</BattleDialog>
+      <BattleDialog ID="1">Dammit, I actually kinda liked working with them... Oh, well.</BattleDialog>
+      <BattleDialog ID="2">At least it wasn't me, haha... It'll be me next, won't it.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">Be cleansed in fire!</BattleDialog>
+      <BattleDialog ID="1">Falter!</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="7">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">--- CONSCIOUSNESS NULLIFIED | INITIALIZING COMBAT MODE ---</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">--- ALL ENEMIES TERMINATED ---</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">--- CRITICAL SYSTEM FAILURE ---</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">...</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">...</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="8">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Let's make this quick. The Engineer wants efficiency.</BattleDialog>
+      <BattleDialog ID="1">Did the Engineer really just send us here to gather combat data...?</BattleDialog>
+      <BattleDialog ID="2">What the hell would the Engineer want with some dusty books...?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Wait, we actually did it?</BattleDialog>
+      <BattleDialog ID="1">We... Lived? YEAH! WOO!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Fucking arm-!</BattleDialog>
+      <BattleDialog ID="1">Dammit, my arm won't-!</BattleDialog>
+      <BattleDialog ID="2">Move, stupid fucking arm-!</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">... Well, it's combat data for the Engineer...</BattleDialog>
+      <BattleDialog ID="1">Dammit, I actually kinda liked working with them... Oh, well.</BattleDialog>
+      <BattleDialog ID="2">At least it wasn't me, haha... It'll be me next, won't it.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">Be cleansed in fire!</BattleDialog>
+      <BattleDialog ID="1">Falter!</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="9">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="10">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="11">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="12">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="13">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="14">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="15">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="16">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+  <Character ID="17">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY" />
+    <Type ID="DEATH" />
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT" />
+  </Character>
+</BattleDialogRoot>

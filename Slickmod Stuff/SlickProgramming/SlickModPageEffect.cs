@@ -299,7 +299,7 @@ namespace SlickRuinaMod
     {
         // fake as fuck lmao
 
-        public static string Desc = "Turner's Exclusive Page\nGive all other allies a single-use copy of 'Pack Hunting Tactics' that exhausts at the end of the Scene; user and all allied Snow Coyote Fixers restore 2 Light";
+        public static string Desc = "[On Hit]Give all other allies a single-use copy of 'Pack Hunting Tactics' that exhausts at the end of the Scene; user and all allied Snow Coyote Fixers restore 2 Light";
     }
 
     // Pack Hunting Tactics (Turner): Page Effect

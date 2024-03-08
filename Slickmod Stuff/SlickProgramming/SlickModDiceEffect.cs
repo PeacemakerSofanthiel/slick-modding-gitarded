@@ -115,7 +115,7 @@ namespace SlickRuinaMod
     }
 
     // [On Hit] Inflict 3 Fragile
-    public class DiceCardAbility_SlickMod_3Rupture : DiceCardAbilityBase
+    public class DiceCardAbility_SlickMod_3Fragile : DiceCardAbilityBase
     {
         public static string Desc = "[On Hit] Inflict 3 Fragile next Scene";
 

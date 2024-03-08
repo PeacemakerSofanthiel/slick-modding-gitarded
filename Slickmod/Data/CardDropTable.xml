@@ -65,7 +65,7 @@
 <!-- Couriers 1 -->
 
 <!-- Courier -->
-  <DropTable ID="0501001">
+  <DropTable ID="3501001">
     <Card>0501001</Card>
     <Card>0501002</Card>
     <Card>0501003</Card>
@@ -76,7 +76,7 @@
 <!-- Snow Coyote Office -->
 
 <!-- Mook -->
-  <DropTable ID="0502001">
+  <DropTable ID="3502001">
     <Card>0502001</Card>
     <Card>0502002</Card>
     <Card>0502003</Card>
@@ -86,7 +86,7 @@
   </DropTable>
 
 <!-- Alex -->
-  <DropTable ID="0502002">
+  <DropTable ID="3502002">
     <Card>0502003</Card>
     <Card>0502005</Card>
     <Card>0502006</Card>
@@ -97,7 +97,7 @@
 <!-- Inferno Corps 1 -->
 
 <!-- Underrunt -->
-  <DropTable ID="0503001">
+  <DropTable ID="3503001">
     <Card>0503001</Card>
     <Card>0503002</Card>
     <Card>0503003</Card>
@@ -106,7 +106,7 @@
   </DropTable>
 
 <!-- Templar -->
-  <DropTable ID="0503002">
+  <DropTable ID="3503002">
     <Card>0503001</Card>
     <Card>0503002</Card>
     <Card>0503003</Card>
@@ -116,7 +116,7 @@
 
 <!-- Wandering Fixer Susano'o -->
 
-  <DropTable ID="0504001">
+  <DropTable ID="3504001">
     <Card>0504001</Card>
     <Card>0504002</Card>
     <Card>0504003</Card>
