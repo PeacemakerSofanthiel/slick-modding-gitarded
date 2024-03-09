@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeckXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+<!-- CANARD -->
+
+
+
+
+
+<!-- URBAN MYTH -->
+
+
+
+
+
+<!-- URBAN LEGEND -->
+
+
+
+
+
+<!-- URBAN PLAGUE -->
+
+
+
+
+
+<!-- URBAN NIGHTMARE -->
+
+<!-- Courier mook -->
+  <Deck ID="1501001">
+    <Card>0501001</Card>
+    <Card>0501001</Card>
+    <Card>0501002</Card>
+    <Card>0501002</Card>
+    <Card>0501005</Card>
+    <Card>0501003</Card>
+    <Card>0501003</Card>
+    <Card>0501004</Card>
+    <Card>0501004</Card>
+  </Deck>
+
+<!-- Snow Coyote Fixer -->
+  <Deck ID="1502001">
+    <Card>0502001</Card>
+    <Card>0502001</Card>
+    <Card>0502002</Card>
+    <Card>0502002</Card>
+    <Card>0502003</Card>
+    <Card>0502004</Card>
+    <Card>0502005</Card>
+    <Card>0502006</Card>
+    <Card>0502006</Card>
+  </Deck>
+  <Deck ID="1502003">
+    <Card>0502001</Card>
+    <Card>0502001</Card>
+    <Card>0502002</Card>
+    <Card>0502002</Card>
+    <Card>0502003</Card>
+    <Card>0502004</Card>
+    <Card>0502005</Card>
+    <Card>0502006</Card>
+    <Card>0502006</Card>
+  </Deck>
+
+<!-- Alexander Turner -->
+  <Deck ID="1502002">
+    <Card>0502001</Card>
+    <Card>0502001</Card>
+    <Card>0502002</Card>
+    <Card>0502003</Card>
+    <Card>0502005</Card>
+    <Card>0502007</Card>
+    <Card>0502007</Card>
+    <Card>0502006</Card>
+    <Card>0502008</Card>
+  </Deck>
+
+<!-- Inferno Underrunt -->
+
+
+
+
+<!-- URBAN STAR OF THE CITY -->
+
+
+
+
+
+<!-- IMPURITAS CIVITATIS / IMPURITY / IMPURISUS -->
+
+
+
+
+
+
+
+
+
+  <Deck ID="5">
+    <Card>16</Card>
+    <Card>16</Card>
+    <Card>16</Card>
+    <Card>17</Card>
+    <Card>18</Card>
+    <Card>18</Card>
+    <Card>19</Card>
+    <Card>19</Card>
+    <Card>21</Card>
+  </Deck>
+  <Deck ID="6">
+    <Card>16</Card>
+    <Card>16</Card>
+    <Card>16</Card>
+    <Card>17</Card>
+    <Card>18</Card>
+    <Card>18</Card>
+    <Card>19</Card>
+    <Card>19</Card>
+    <Card>20</Card>
+  </Deck>
+  <Deck ID="7">
+    <Card>16</Card>
+    <Card>16</Card>
+    <Card>16</Card>
+    <Card>17</Card>
+    <Card>18</Card>
+    <Card>18</Card>
+    <Card>19</Card>
+    <Card>19</Card>
+    <Card>21</Card>
+  </Deck>
+  <Deck ID="8">
+    <Card>16</Card>
+    <Card>16</Card>
+    <Card>16</Card>
+    <Card>17</Card>
+    <Card>18</Card>
+    <Card>18</Card>
+    <Card>19</Card>
+    <Card>19</Card>
+    <Card>20</Card>
+  </Deck>
+  <Deck ID="9">
+    <Card>22</Card>
+    <Card>22</Card>
+    <Card>25</Card>
+    <Card>25</Card>
+    <Card>25</Card>
+    <Card>23</Card>
+    <Card>24</Card>
+    <Card>27</Card>
+  </Deck>
+  <Deck ID="10">
+    <Card>22</Card>
+    <Card>22</Card>
+    <Card>25</Card>
+    <Card>23</Card>
+    <Card>23</Card>
+    <Card>24</Card>
+    <Card>26</Card>
+  </Deck>
+  <Deck ID="11">
+    <Card>28</Card>
+    <Card>28</Card>
+    <Card>28</Card>
+    <Card>25</Card>
+    <Card>23</Card>
+    <Card>24</Card>
+    <Card>27</Card>
+    <Card>26</Card>
+  </Deck>
+  <Deck ID="12">
+    <Card>28</Card>
+    <Card>28</Card>
+    <Card>28</Card>
+    <Card>29</Card>
+    <Card>29</Card>
+    <Card>30</Card>
+    <Card>30</Card>
+    <Card>31</Card>
+    <Card>32</Card>
+  </Deck>
+  <Deck ID="13">
+    <Card>33</Card>
+    <Card>33</Card>
+    <Card>36</Card>
+    <Card>36</Card>
+    <Card>35</Card>
+    <Card>35</Card>
+    <Card>38</Card>
+    <Card>39</Card>
+    <Card>40</Card>
+  </Deck>
+  <Deck ID="14">
+    <Card>33</Card>
+    <Card>33</Card>
+    <Card>36</Card>
+    <Card>34</Card>
+    <Card>34</Card>
+    <Card>37</Card>
+    <Card>37</Card>
+    <Card>38</Card>
+    <Card>40</Card>
+  </Deck>
+  <Deck ID="15">
+    <Card>41</Card>
+    <Card>33</Card>
+    <Card>33</Card>
+    <Card>35</Card>
+    <Card>37</Card>
+    <Card>38</Card>
+    <Card>38</Card>
+    <Card>38</Card>
+    <Card>40</Card>
+  </Deck>
+  <Deck ID="16">
+    <Card>41</Card>
+    <Card>41</Card>
+    <Card>42</Card>
+    <Card>42</Card>
+    <Card>43</Card>
+    <Card>44</Card>
+    <Card>45</Card>
+    <Card>46</Card>
+    <Card>47</Card>
+  </Deck>
+  <Deck ID="17">
+    <Card>48</Card>
+    <Card>48</Card>
+    <Card>49</Card>
+    <Card>49</Card>
+    <Card>49</Card>
+    <Card>50</Card>
+    <Card>51</Card>
+    <Card>53</Card>
+    <Card>54</Card>
+  </Deck>
+</DeckXmlRoot>

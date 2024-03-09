@@ -3,6 +3,31 @@
   <Version>1.1</Version>
 <!-- CANARD -->
 
+<!-- Dan's Solutions -->
+<!-- Grade 9 Fixers -->
+  <Deck ID="18">
+    <Card>65</Card>
+    <Card>65</Card>
+    <Card>57</Card>
+    <Card>57</Card>
+    <Card>58</Card>
+    <Card>58</Card>
+    <Card>59</Card>
+    <Card>59</Card>
+    <Card>60</Card>
+  </Deck>
+<!-- Dan -->
+  <Deck ID="19">
+    <Card>61</Card>
+    <Card>61</Card>
+    <Card>61</Card>
+    <Card>62</Card>
+    <Card>62</Card>
+    <Card>63</Card>
+    <Card>63</Card>
+    <Card>63</Card>
+    <Card>64</Card>
+  </Deck>
 
 
 

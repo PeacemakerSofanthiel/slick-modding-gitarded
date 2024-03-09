@@ -4,7 +4,22 @@
 
    <!-- CANARD -->
 
-
+  <BookUse ID="11">
+    <Name>Book of a Grade 9 Fixer</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>1</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">10000013</DropItem>
+  </BookUse>
+  <BookUse ID="12">
+    <Name>Book of Dan</Name>
+    <TextId />
+    <BookIcon />
+    <Chapter>1</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">10000014</DropItem>
+  </BookUse>
 
 
 

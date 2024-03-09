@@ -123,6 +123,18 @@ namespace SlickRuinaMod
                 MyKeywordBufs.SlickMod_RuptureCount = RupTrue69;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_RuptureCount>();
             }
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_DrownedDrowning", out var MewhenIdrown) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out MewhenIdrown) && EnumExtender.TryAddName("SlickMod_DrownedDrowning", MewhenIdrown))
+            {
+                MyKeywordBufs.SlickMod_DrownedDrowning = MewhenIdrown;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_DrownedDrowning>();
+            }
+            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_DrownedOmegaCringe", out var OmegaCringe) ||
+                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out OmegaCringe) && EnumExtender.TryAddName("SlickMod_DrownedOmegaCringe", OmegaCringe))
+            {
+                MyKeywordBufs.SlickMod_DrownedOmegaCringe = OmegaCringe;
+                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_DrownedOmegaCringe>();
+            }
 
         }
         //Exclusive Combat Page Patch
@@ -171,5 +183,7 @@ namespace SlickRuinaMod
         public static KeywordBuf SlickMod_SinkingCount;
         public static KeywordBuf SlickMod_Rupture;
         public static KeywordBuf SlickMod_RuptureCount;
+        public static KeywordBuf SlickMod_DrownedDrowning;
+        public static KeywordBuf SlickMod_DrownedOmegaCringe;
     }
 }

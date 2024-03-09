@@ -4,6 +4,86 @@
 
   <!-- CANARD -->
 
+<!-- Dan's Solutions -->
+
+  <Book ID="18">
+    <Name>A Grade 9 Fixer’s Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>24</HP>
+      <DeadLine>0</DeadLine>
+      <Break>14</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>3</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Vulnerable</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive>40</Passive>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>LuluFriend2</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>1</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>true</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+  <Book ID="19">
+    <Name>Dan’s Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>49</HP>
+      <DeadLine>0</DeadLine>
+      <Break>32</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>4</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Normal</SResist>
+      <PResist>Weak</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Weak</PBResist>
+      <HBResist>Normal</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive>41</Passive>
+      <Passive>42</Passive>
+      <Passive>43</Passive>
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin>NewStaff_2</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>1</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>true</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+
+
+
+
+
+
   <!-- URBAN MYTH -->
 
   <!-- Backstreets Sluggers-->
@@ -771,9 +851,58 @@
   </Book>
   <!-- STAR OF THE CITY -->
 
-  <!-- IMPURITY -->
 
+
+
+
+
+
+
+
+  <!-- IMPURITY -->
   
+  <!-- DrowningDrowningDrowningDrowningindrowningindrowningindrownignigndirongingidrowminginwbi- -->
+  <Book ID="1701001">
+    <Name>D70W171179's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>1</HP>
+      <DeadLine>0</DeadLine>
+      <Break>2000</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>1</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Resist</SResist>
+      <PResist>Resist</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Endure</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Immune</HBResist>
+      <MaxPlayPoint>0</MaxPlayPoint>
+      <StartPlayPoint>0</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive>40</Passive>
+      <Passive>41</Passive>
+      <Passive>42</Passive>
+      <Passive>43</Passive>
+      <Passive>44</Passive>
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin>EGO_Mountain</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>7</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>true</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+  
+
   
 
     

@@ -1900,6 +1900,343 @@ namespace SlickRuinaMod
 
     #endregion
 
+    #region --DROWNED--
+    public class PassiveAbility_SlickMod_DrownedDenizenofNothing : PassiveAbilityBase
+    {
+        public override int SpeedDiceNumAdder()
+        {
+            List<BattleUnitModel> aliveList_opponent = BattleObjectManager.instance.GetAliveList_opponent(this.owner.faction);
+            if (this.owner.emotionDetail.EmotionLevel < 5)
+            {
+                int stack = aliveList_opponent.Count;
+                return stack;
+            }
+            else
+            {
+                int stack2 = aliveList_opponent.Count * 2;
+                return stack2;
+            }
+
+        }
+        public override void OnUnitCreated()
+        {
+            base.OnUnitCreated();
+            this.minhp = 1;
+        }
+
+        public override void OnWaveStart()
+        {
+            this.owner.view.EnableStatNumber(false);
+        }
+        public override int GetMinHp()
+        {
+            return this.minhp;
+        }
+        public override void OnTakeDamageByAttack(BattleDiceBehavior atkDice, int dmg)
+        {
+            base.OnTakeDamageByAttack(atkDice, dmg);
+            this.owner.TakeBreakDamage(dmg, DamageType.Attack);
+        }
+
+        public override void OnBreakState()
+        {
+            base.OnBreakState();
+            this.owner.Die();
+        }
+        public override float BreakDmgFactor(int dmg, DamageType type = DamageType.ETC, KeywordBuf keyword = KeywordBuf.None)
+        {
+            return (type == DamageType.Card_Ability) ? .25f : 1f;
+        }
+        private int minhp;
+    }
+
+    public class PassiveAbility_SlickMod_DrownedAbyssalDepths : PassiveAbilityBase
+    {
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+            {
+                enemycount++;
+                if (battleUnitModel.breakDetail.breakLife == 0)
+                {
+                    this.owner.RecoverBreakLife(50);
+                    battleUnitModel.breakDetail.ResetGauge();
+                    staggeredcount++;
+                }
+                if (battleUnitModel != null)
+                {
+                    int schizo = battleUnitModel.breakDetail.GetDefaultBreakGauge();
+                    if (schizo <= 0)
+                    {
+                        battleUnitModel.Die();
+                        foreach (BattleUnitModel battleUnitModel2 in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+                        {
+                            battleUnitModel2.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedDrowning, 3, this.owner);
+                        }
+                    }
+                }
+                enemycount = 0;
+                staggeredcount = 0;
+            }
+            if (staggeredcount <= 0)
+            {
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedDrowning, 2, this.owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, 1, this.owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Endurance, 1, this.owner);
+            }
+            if (staggeredcount == enemycount)
+            {
+                this.owner.allyCardDetail.AddNewCard(new LorId(SlickModInitializer.packageId, 170113))?.SetCostToZero();
+            }
+        }
+        public int staggeredcount;
+        public int enemycount;
+    }
+    public class PassiveAbility_SlickMod_DrownedWanderingAimlessly : PassiveAbilityBase
+    {
+        private bool Staggeredererereded;
+        public override void OnUnitCreated()
+        {
+            base.OnUnitCreated();
+            this.speed = 0;
+        }
+
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+            {
+                if (battleUnitModel.breakDetail.IsBreakLifeZero())
+                {
+                    this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Binding, 1, this.owner);
+                }
+            }
+        }
+        public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
+        {
+            base.OnUseCard(curCard);
+            Staggeredererereded = false;
+            if (curCard.target != null && curCard.target.IsBreakLifeZero())
+            {
+                Staggeredererereded = true;
+            }
+            int speedDiceResultValue = curCard.speedDiceResultValue;
+            BattleUnitModel target = curCard.target;
+            int targetSlotOrder = curCard.targetSlotOrder;
+            if (targetSlotOrder < 0 || targetSlotOrder >= target.speedDiceResult.Count)
+            {
+                return;
+            }
+            SpeedDice speedDice = target.speedDiceResult[targetSlotOrder];
+            if (speedDiceResultValue > speedDice.value)
+            {
+                int num = speedDiceResultValue - speedDice.value;
+                int num2 = Mathf.Clamp(num, -20, 20);
+                if (num2 > 0)
+                {
+                    curCard.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+                    {
+                        breakDmg = num2
+                    });
+                }
+            }
+        }
+        public override void OnEndBattle(BattlePlayingCardDataInUnitModel curCard)
+        {
+            base.OnEndBattle(curCard);
+            if (!Staggeredererereded && curCard.target.IsBreakLifeZero())
+            {
+                curCard.target.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedDrowning, 1, this.owner);
+                this.speed++;
+            }
+        }
+
+        public override int GetSpeedDiceAdder(int speedDiceResult)
+        {
+            return this.speed;
+        }
+        public int speed;
+
+    }
+
+    public class PassiveAbility_SlickMod_DrownedMisery : PassiveAbilityBase
+    {
+        public override void OnRoundEnd()
+        {
+            base.OnRoundEnd();
+            int stagger = this.owner.breakDetail.breakLife;
+            int stagger2 = this.owner.breakDetail.GetDefaultBreakGauge();
+            int cringeinfliction = stagger2 - stagger;
+            for (int i = 0; i < cringeinfliction / 10; i++)
+            {
+                foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+                {
+                    item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
+                }
+            }
+        }
+        public override void AfterGiveDamage(int damage)
+        {
+            base.AfterGiveDamage(damage);
+            if (damage <= 10)
+            {
+                foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+                {
+                    battleUnitModel.TakeBreakDamage(damage / 2, DamageType.Passive);
+                }
+            }
+        }
+    }
+
+    public class PassiveAbility_SlickMod_DrownedShimmering : PassiveAbilityBase
+    {
+        private int Patterncounter;
+
+        public override void OnRoundStartAfter()
+        {
+            base.OnRoundStartAfter();
+            SetCards_phase();
+            this.Patterncounter++;
+            this.Patterncounter %= 5;
+        }
+        private void SetCards_phase()
+        {
+            owner.allyCardDetail.ExhaustAllCards();
+            if (Patterncounter == 0 && this.owner.emotionDetail.EmotionLevel < 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170102);
+                AddNewCard(170104);
+                AddNewCard(170106);
+                AddNewCard(170103);
+                AddNewCard(170109);
+            }
+            else if (Patterncounter == 1 && this.owner.emotionDetail.EmotionLevel < 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170102);
+                AddNewCard(170107);
+                AddNewCard(170103);
+                AddNewCard(170103);
+                AddNewCard(170108);
+            }
+            else if (Patterncounter == 2 && this.owner.emotionDetail.EmotionLevel < 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170102);
+                AddNewCard(170107);
+                AddNewCard(170106);
+                AddNewCard(170105);
+                AddNewCard(170110);
+            }
+            else if (Patterncounter == 3 && this.owner.emotionDetail.EmotionLevel < 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170102);
+                AddNewCard(170107);
+                AddNewCard(170106);
+                AddNewCard(170106);
+                AddNewCard(170111);
+            }
+            else if (Patterncounter == 4 && this.owner.emotionDetail.EmotionLevel < 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170112);
+            }
+            else if (Patterncounter == 0 && this.owner.emotionDetail.EmotionLevel == 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170102);
+                AddNewCard(170102);
+                AddNewCard(170104);
+                AddNewCard(170104);
+                AddNewCard(170105);
+                AddNewCard(170106);
+                AddNewCard(170107);
+                AddNewCard(170103);
+                AddNewCard(170109);
+            }
+            else if (Patterncounter == 1 && this.owner.emotionDetail.EmotionLevel == 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170102);
+                AddNewCard(170102);
+                AddNewCard(170102);
+                AddNewCard(170104);
+                AddNewCard(170107);
+                AddNewCard(170106);
+                AddNewCard(170103);
+                AddNewCard(170103);
+                AddNewCard(170108);
+            }
+            else if (Patterncounter == 2 && this.owner.emotionDetail.EmotionLevel == 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170102);
+                AddNewCard(170104);
+                AddNewCard(170105);
+                AddNewCard(170104);
+                AddNewCard(170106);
+                AddNewCard(170106);
+                AddNewCard(170107);
+                AddNewCard(170107);
+                AddNewCard(170110);
+            }
+            else if (Patterncounter == 3 && this.owner.emotionDetail.EmotionLevel == 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170102);
+                AddNewCard(170103);
+                AddNewCard(170102);
+                AddNewCard(170102);
+                AddNewCard(170106);
+                AddNewCard(170106);
+                AddNewCard(170103);
+                AddNewCard(170106);
+                AddNewCard(170111);
+            }
+            else if (Patterncounter == 4 && this.owner.emotionDetail.EmotionLevel == 5)
+            {
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170101);
+                AddNewCard(170103);
+                AddNewCard(170103);
+                AddNewCard(170112);
+            }
+        }
+
+        private void AddNewCard(int id)
+        {
+            this.owner.allyCardDetail.AddTempCard(new LorId(SlickModInitializer.packageId, id))?.SetCostToZero();
+        }
+    }
+    #endregion
+
     #region --AESIR OFFICE--
 
     public class PassiveAbility_SlickMod_GamerCycle : PassiveAbilityBase

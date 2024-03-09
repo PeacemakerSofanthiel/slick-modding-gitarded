@@ -42,6 +42,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\Desktop\Library of Ruina\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="CustomMapUtility">
+      <HintPath>..\..\Slickmod\Assemblies\CustomMapUtility.dll</HintPath>
+    </Reference>
     <Reference Include="HatSingularity">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\1256670\3051354156\Assemblies\1FrameworkAssemblies\HatSingularity.dll</HintPath>
     </Reference>
@@ -69,6 +72,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="SlickModInitializer.cs" />
+    <Compile Include="SlickModStageManager.cs" />
     <Compile Include="SlickModStatus.cs" />
     <Compile Include="SlickModPageEffect.cs" />
     <Compile Include="SlickModDiceEffect.cs" />

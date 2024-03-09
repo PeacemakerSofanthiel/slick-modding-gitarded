@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomMapUtility</name>
+    </assembly>
+    <members>
+        <member name="T:CustomMapUtility.CustomMapHandler">
+            <summary>
+            Contains most internal CustomMapUtility commands.
+            </summary>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.SetEnemyTheme(System.String,System.Boolean)">
+            <summary>
+            Sets the current EnemyTheme.
+            </summary>
+            <param name="bgmName">The name of the audio file (including extension).</param>
+            <param name="immediate">Whether it immediately forces the music to change</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.SetEnemyTheme(System.String[],System.Boolean)">
+            <summary>
+            Sets the current EnemyThemes.
+            </summary>
+            <param name="bgmNames">An array of audio file names (including extensions).</param>
+            <param name="immediate">Whether it immediately forces the music to change</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.LoadEnemyTheme(System.String)">
+            <summary>
+            Preloads a sound file to be used with other functions.
+            </summary>
+            <param name="bgmName">The name of the audio file (including extension).</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.LoadEnemyTheme(System.String[])">
+            <summary>
+            Preloads multiple sound files to be used with other functions.
+            </summary>
+            <param name="bgmNames">An array of audio file names (including extensions).</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.LoadEnemyTheme(System.String,UnityEngine.AudioClip@)">
+            <summary>
+            Loads a sound file and outputs it as an AudioClip.
+            </summary>
+            <param name="bgmName">The name of the audio file (including extension).</param>
+            <param name="clip">The loaded AudioClip</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.LoadEnemyTheme(System.String[],UnityEngine.AudioClip[]@)">
+            <summary>
+            Loads multiple sound files and outputs it as an AudioClip array.
+            </summary>
+            <param name="bgmNames">An array of audio file names (including extensions).</param>
+            <param name="clips">The loaded AudioClips</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.StartEnemyTheme(System.String,System.Boolean)">
+            <summary>
+            Sets the current EnemyTheme using a loaded AudioClip.
+            </summary>
+            <param name="bgmName">The name of the audio file (including extension).</param>
+            <param name="immediate">Whether it immediately forces the music to change</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.StartEnemyTheme(System.String[],System.Boolean)">
+            <summary>
+            Sets the current EnemyTheme using a loaded AudioClip array.
+            </summary>
+            <param name="bgmNames">An array of audio file names (including extensions).</param>
+            <param name="immediate">Whether it immediately forces the music to change</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.StartEnemyTheme_LoopPair(UnityEngine.AudioClip,UnityEngine.AudioClip,System.Single,System.Boolean,System.Single)">
+            <param name="overlap">How far back from the end of the audio file the loop should start in seconds.</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.StartEnemyTheme_LoopPair(System.String,System.String,System.Single,System.Boolean,System.Single)">
+            <param name="overlap">How far back from the end of the audio file the loop should start in seconds.</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.GetEnemyTheme(System.String)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.GetAudioClip(System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.GetAudioClip(System.String)">
+            <param name="bgmName">The name of the audio file (including extension).</param>
+            <returns>A loaded AudioClip</returns>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.GetAudioClip(System.String[])">
+            <param name="bgmNames">An array of audio file names (including extensions).</param>
+            <returns>An array of loaded AudioClips</returns>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.GetAudioClips(System.String[])">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.GetAudioClip(System.String[])"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.SetMapBgm(System.String,System.Boolean)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.SetMapBgm(System.String,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.SetMapBgm(System.String,System.Boolean,System.String)">
+            <summary>
+            Sets the specified map's mapBgm.
+            </summary>
+            <remarks>
+            If <paramref name="mapName"/> is null, changes Sephirah's mapBgm instead.
+            Also sets EnemyTheme to be sure.
+            </remarks>
+            <param name="bgmName">The name of the audio file (including extension).</param>
+            <param name="immediate">Whether it immediately forces the music to change</param>
+            <param name="mapName">The name of the target map</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.SetMapBgm(System.String[],System.Boolean,System.String)">
+            <summary>
+            Sets the specified map's mapBgm.
+            </summary>
+            <remarks>
+            If <paramref name="mapName"/> is null, changes Sephirah's mapBgm instead.
+            Also sets EnemyTheme to be sure.
+            </remarks>
+            <param name="bgmNames">The name of the audio file (including extension).</param>
+            <param name="immediate">Whether it immediately forces the music to change</param>
+            <param name="mapName">The name of the target map</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.LoadMapBgm(System.String,System.Boolean)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.SetMapBgm(System.String,System.Boolean,System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.StartMapBgm(System.String,System.Boolean)">
+            <summary>
+            Sets the specified map's mapBgm using a loaded AudioClip.
+            Also sets EnemyTheme to be sure.
+            </summary>
+            <param name="bgmName">The name of the audio file (including extension).</param>
+            <param name="immediate">Whether it immediately forces the music to change</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.StartMapBgm(System.String,System.Boolean,System.String)">
+            <summary>
+            Sets the specified map's mapBgm using a loaded AudioClip.
+            If mapName is null, changes Sephirah's mapBgm instead.
+            Also sets EnemyTheme to be sure.
+            </summary>
+            <param name="bgmName">The name of the audio file (including extension).</param>
+            <param name="immediate">Whether it immediately forces the music to change</param>
+            <param name="mapName">The name of the target map</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.StartMapBgm(System.String[],System.Boolean,System.String)">
+            <summary>
+            Sets the specified map's mapBgm using a loaded AudioClip array.
+            If mapName is null, changes Sephirah's mapBgm instead.
+            Also sets EnemyTheme to be sure.
+            </summary>
+            <param name="bgmNames">The name of the audio file (including extension).</param>
+            <param name="immediate">Whether it immediately forces the music to change</param>
+            <param name="mapName">The name of the target map</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.EnforceMap(System.Int32)">
+            <summary>
+            Informs the game that a given map and its music in the StageInfo XML should be active.
+            </summary>
+            <param name="num">Which map from the stage XML is chosen, or -1 for the Sephirah Map</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.EnforceTheme">
+            <summary>
+            Informs the game that the enemy's (and by extension custom) music should be active.
+            </summary>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.UnEnforceTheme(System.Boolean)">
+            <summary>
+            Informs the game that the enemy's (and by extension custom) music shouldn't be active.
+            </summary>
+            <param name="force">Forces the command even if it appears something else has set the theme</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.AntiEardrumDamage(System.Boolean)">
+            <summary>
+            Call this method before changing to your map to stop it from breaking the user's eardrums
+            </summary>
+            <param name="enemy">Whether this is operating on EnemyTheme or AllyTheme</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String)">
+            <summary>
+            Initializes a custom map.
+            </summary>
+            <remarks>
+            Will automatically try to get previous init values for unspecified arguments.
+            </remarks>
+            <param name="stageName">The name of your stage folder</param>
+            <param name="managerType">Your custom map manager</param>
+            <param name="isEgo">Whether your map is an EGO map or an Invitation map</param>
+            <param name="initBGMs">Whether the map automatically loads and starts the BGM</param>
+            <param name="bgx">Background x pivot</param>
+            <param name="bgy">Background y pivot</param>
+            <param name="floorx">Floor x pivot</param>
+            <param name="floory">Floor y pivot</param>
+            <param name="underx">FloorUnder x pivot</param>
+            <param name="undery">FloorUnder y pivot</param>
+            <param name="managerType">Your custom map manager</param>
+            <param name="offsets">A user-defined Offsets struct</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String,System.Boolean)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String,System.Boolean,System.Boolean)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String,System.Boolean,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String,System.Boolean,System.Boolean,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String,CustomMapUtility.Offsets)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String,CustomMapUtility.Offsets,System.Boolean)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String,CustomMapUtility.Offsets,System.Boolean,System.Boolean)">
+            <inheritdoc cref="M:CustomMapUtility.CustomMapHandler.InitCustomMap``1(System.String)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.ChangeToCustomMap``1(System.String,System.Nullable{Faction},System.Boolean)">
+            <summary>
+            Changes to a custom map while insuring it's initialized.
+            </summary>
+            <param name="mapName">The name of the target map</param>
+            <param name="playEffect">Determines what direction the transition special effect starts from, currently unsupported</param>
+            <param name="scaleChange">Whether units are rescaled to the new map size</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.ChangeToCustomEgoMapByAssimilation``1(System.String,Faction)">
+            <inheritdoc cref="!:CustomMapUtilityExtensions.AddCustomEgoMapByAssimilation(string, Faction, Type)"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.RemoveCustomEgoMapByAssimilation(System.String)">
+            <summary>
+            Removes a synchonization map.
+            </summary>
+            <param name="name">The name of the target map</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.ChangeToCustomEgoMap``1(System.String,Faction,System.Boolean)">
+            <summary>
+            Changes to a custom EGO map.
+            </summary>
+            <param name="mapName">The name of the target map</param>
+            <param name="faction">Determines what direction the transition special effect starts from</param>
+            <param name="manager">If not null, automatically reinitializes the map if it's been removed</param>
+            <param name="byAssimilationFlag">Should always be false, don't change this yourself</param>
+        </member>
+        <member name="M:CustomMapUtility.CustomMapHandler.AddCustomEgoMapByAssimilation``1(System.String,Faction)">
+            <summary>
+            Adds and Changes to a custom synchonization map.
+            </summary>
+            <param name="name">The name of the target map</param>
+            <param name="mapName">The name of the target map</param>
+            <param name="faction">Determines what direction the transition special effect starts from</param>
+            <param name="managerType">If not null, automatically reinitializes the map if it's been removed</param>
+            <param name="byAssimilationFlag">Should always be false, don't change this yourself</param>
+        </member>
+        <member name="P:CustomMapUtility.CustomMapManager.CustomBGMs">
+            <summary>
+            Override and specify a string array with audio file names (including extensions) for the get parameter.
+            </summary>
+            <remarks>
+            If you put multiple strings in it'll change between them based on emotion level. (Emotion level 0, 2, and 4 respectively).
+            </remarks>
+        </member>
+        <member name="P:CustomMapUtility.CustomCreatureMapManager.CustomBGMs">
+            <inheritdoc cref="P:CustomMapUtility.CustomMapManager.CustomBGMs"/>
+        </member>
+        <member name="M:CustomMapUtility.CustomCreatureMapManager.CreateDialog_Shared">
+            <summary>
+            Returns the next abnormality text. 
+            </summary>
+            <returns>A dialog string</returns>
+        </member>
+        <member name="M:CustomMapUtility.CustomCreatureMapManager.IdxIterator(System.Int32)">
+            <summary>
+            Chooses a list entry to pull abnormality text from.
+            </summary>
+        </member>
+        <member name="P:CustomMapUtility.CustomCreatureMapManager.AbnoTextRandomOrder">
+            <summary>
+            Whether abnormality text is chosen sequentially or randomly.
+            </summary>
+            <remarks>
+            You can override <c>IdxIterator(int totalEntries)</c> for finer control.
+            </remarks>
+        </member>
+        <member name="P:CustomMapUtility.CustomCreatureMapManager.AbnoText">
+            <summary>
+            Override and specify a string array with abnormality text.
+            </summary>
+            <remarks>
+            This is an auto-fill helper for <c>AbnoTextList</c>.
+            </remarks>
+        </member>
+        <member name="F:CustomMapUtility.CustomCreatureMapManager.AbnoTextList">
+            <summary>
+            The list of strings that will be displayed as the abnormality text.
+            </summary>
+            <remarks>
+            If this isn't empty, the default handler won't check XML entries anymore.
+            </remarks>
+        </member>
+        <member name="P:CustomMapUtility.CustomCreatureMapManager.AbnoTextColor">
+            <summary>
+            If not null, changes the abnormality text color.
+            </summary>
+        </member>
+        <member name="P:CustomMapUtility.CustomCreatureMapManager.AbnoTextForce">
+            <summary>
+            Forces the abno text to appear even for EGO maps
+            </summary>
+            <remarks>
+            This isn't reccomended to use by itself, it's better to override <c>CreateDialogShared()</c> for finer control
+            </remarks>
+        </member>
+        <member name="M:CustomMapUtility.Extensions.GetCurrentThemes(BattleSoundManager)">
+            <summary>
+            Gets the current playing theme.
+            </summary>
+        </member>
+        <member name="M:CustomMapUtility.Extensions.GetCurrentThemes(BattleSoundManager,System.Boolean@,System.Boolean@)">
+            <summary>
+            Gets the current playing theme and outputs whether it's an EnemyTheme.
+            </summary>
+        </member>
+        <member name="M:CustomMapUtility.Extensions.GetEnemyThemes(BattleSoundManager)">
+            <summary>
+            Gets the current enemy themes.
+            </summary>
+        </member>
+        <member name="M:CustomMapUtility.Extensions.GetAllyThemes(BattleSoundManager)">
+            <summary>
+            Gets the current ally themes.
+            </summary>
+        </member>
+        <member name="T:CustomMapUtility.Offsets">
+            <summary>
+            Contains a set of image offsets ranging from 0 to 1 for initializing the stage
+            </summary>
+        </member>
+        <member name="M:CustomMapUtility.Offsets.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Contains a set of image offsets ranging from 0 to 1 for initializing the stage
+            </summary>
+            <param name="bgOffsetX">Background x pivot</param>
+            <param name="bgOffsetY">Background y pivot</param>
+            <param name="floorOffsetX">Floor x pivot</param>
+            <param name="floorOffsetY">Floor y pivot</param>
+            <param name="underOffsetX">FloorUnder x pivot</param>
+            <param name="underOffsetY">FloorUnder y pivot</param>
+        </member>
+        <member name="F:CustomMapUtility.Offsets.BGOffset">
+            <summary>
+            A pair of values defining the Background's x and y offset
+            </summary>
+        </member>
+        <member name="F:CustomMapUtility.Offsets.FloorOffset">
+            <summary>
+            A pair of values defining the Floor's x and y offset
+            </summary>
+        </member>
+        <member name="F:CustomMapUtility.Offsets.UnderOffset">
+            <summary>
+            A pair of values defining the FloorUnder's x and y offset
+            </summary>
+        </member>
+    </members>
+</doc>

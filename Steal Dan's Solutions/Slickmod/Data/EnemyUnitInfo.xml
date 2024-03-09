@@ -2,40 +2,4 @@
 <EnemyUnitClassRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Version>1.1</Version>
 
-  <Enemy ID="17">
-    <Name>A Grade 9 Fixer</Name>
-    <FaceType>Skin</FaceType>
-    <NameID>-1</NameID>
-    <MinHeight>120</MinHeight>
-    <MaxHeight>190</MaxHeight>
-    <Unknown>false</Unknown>
-    <Gender>F</Gender>
-    <Retreat>false</Retreat>
-    <BookId>18</BookId>
-    <BodyId>0</BodyId>
-    <Exp>0</Exp>
-    <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem Prob="1">11</DropItem>
-    </DropTable>
-    <AiScript />
-  </Enemy>
-  <Enemy ID="18">
-    <Name>Dan</Name>
-    <FaceType>Skin</FaceType>
-    <NameID>-1</NameID>
-    <MinHeight>120</MinHeight>
-    <MaxHeight>120</MaxHeight>
-    <Unknown>false</Unknown>
-    <Gender>F</Gender>
-    <Retreat>false</Retreat>
-    <BookId>19</BookId>
-    <BodyId>0</BodyId>
-    <Exp>0</Exp>
-    <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem Prob="1">12</DropItem>
-    </DropTable>
-    <AiScript />
-  </Enemy>
 </EnemyUnitClassRoot>

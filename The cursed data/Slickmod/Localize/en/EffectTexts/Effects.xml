@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <effectTextList>
+  
+	<BattleEffectText ID="SlickMod_FlowState">
+		<Name>Flow State</Name>
+		<Desc>Increase minimum and maximum roll value of all dice by +1.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_Cycle">
+		<Name>Cycle</Name>
+		<Desc>Upon using a page, discard 1 random page, then draw 1 page, then lose 1 Cycle.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_InfernalOverheat">
+		<Name>Overheat</Name>
+		<Desc>{0} Speed dice become unusable. This character's rightmost Speed die cannot become unusable from this effect. Lose 1 Stack at the end of the Scene.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_SparkSamsara">
+		<Name>Samsara</Name>
+		<Desc>Used in order to use Speed Break. Can be gained by gaining Haste and by using Combo Finisher Combat Pages.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_SparkSpeedBreak">
+		<Name>Speed Break</Name>
+		<Desc>Moving faster than visible motion.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_Orb_Lightning_Orb">
+		<Name>Lightning Orb</Name>
+		<Desc>At the start of the Scene, deal 3 damage to a random enemy. If this Orb is Evoked, deal 8 damage to a random enemy.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_Orb_Frost_Orb">
+		<Name>Frost Orb</Name>
+		<Desc>At the start of the Scene, gain 3 Shield. If this Orb is Evoked, gain 7 Shield.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_Orb_Darkness_Orb">
+		<Name>Darkness Orb</Name>
+		<Desc>At the start of the Scene, gain 3 Malice. If this Orb is Evoked, deal 6 damage to the enemy with the lowest HP.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_Orb_Plasma_Orb">
+		<Name>Plasma Orb</Name>
+		<Desc>Gain +1 Max Light Capacity. At the start of the Scene, restore 1 Light. If this Orb is Evoked, restore 2 Light at the start of the next Scene.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_Orb_Focus">
+		<Name>Focus</Name>
+		<Desc>Lightning Orbs deal +{0} additional damage. Frost Orbs gain +{0} additional Shield. Gain +{0} additional Malice from Darkness Orbs, and deal +{0} additional damage with Darkness Orbs.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_Orb_Malice">
+		<Name>Malice</Name>
+		<Desc>When Evoking a Darkness Orb, it deals +{0} additional damage. After Evoking a Darkness Orb, lose all Malice.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_Orb_Lockon">
+		<Name>Locked On</Name>
+		<Desc>All enemies' Lightning Orbs deal damage to this character instead of dealing damage randomly. Only 1 character can be Locked On at a time. At the end of the Scene, lose Locked On.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_GamerCycle">
+		<Name>Cycle</Name>
+		<Desc>Upon using a page, discard 2 random pages, then draw 2 pages, then lose 1 Cycle.</Desc>
+	</BattleEffectText>
+
+ <BattleEffectText ID="SlickMod_SpareParts">
+      <Name>Spare Parts</Name>
+      <Desc>Affects the properties of certain Combat Pages. Stacks up to 10.</Desc>
+    </BattleEffectText>
+
+ <BattleEffectText ID="SlickMod_SparePartsLilacChamber">
+      <Name>Spare Parts</Name>
+      <Desc>Affects the properties of certain Combat Pages. Stacks up to 25.</Desc>
+    </BattleEffectText>
+
+ <BattleEffectText ID="SlickMod_Barrier">
+      <Name>Barrier</Name>
+      <Desc>Prevent the next {0} damage taken.</Desc>
+    </BattleEffectText>
+
+ <BattleEffectText ID="SlickMod_StaggerBarrier">
+      <Name>Barrier</Name>
+      <Desc>Prevent the next {0} Stagger damage taken.</Desc>
+    </BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_BlackTieInk">
+		<Name>Ink</Name>
+		<Desc>Take {0} more Stagger damage from attacks. At the end of the Scene, take {0}/4 Stagger damage (Rounded Down) and lose 1 stack of Ink. If Ink is 10 or higher, Defensive Dice gain +1 Power.</Desc>
+	</BattleEffectText>
+
+<BattleEffectText ID="SlickMod_EmeraldLight">
+      <Name>Emerald Light</Name>
+      <Desc>At the start of the Scene, spend 1 Emerald Light to restore 1 Light, until this character has 4 Light.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SlickMod_Sinking">
+      <Name>Sinking</Name>
+      <Desc>When hit, take {0} Stagger damage and lose 1 Sinking Count; if this character has no Sinking Count, lose all Sinking instead.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SlickMod_SinkingCount">
+      <Name>Sinking Count</Name>
+      <Desc>This status is not lost at the end of the Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SlickMod_Rupture">
+      <Name>Sinking</Name>
+      <Desc>When hit, take {0} damage and lose 1 Rupture Count; if this character has no Rupture Count, lose all Rupture instead.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SlickMod_RuptureCount">
+      <Name>Sinking Count</Name>
+      <Desc>This status is not lost at the end of the Scene.</Desc>
+    </BattleEffectText>
+
+<BattleEffectText ID="Aftermath_Spore_Keyword">
+  <Name>Spore</Name>
+  <Desc>At the start of the Scene, take {0} damage and halve the stack. (Rounds down) Take {0} damage every time the character rolls an Offensive die.</Desc>
+</BattleEffectText>
+
+<BattleEffectText ID="Aftermath_BurnProtection">
+  <Name>Burn Protection</Name>
+  <Desc>Take {1}% less damage from Burn, up to 100%. Lose 1 stack at the end of the Scene. Can be stacked up to 11.</Desc>
+</BattleEffectText>
+
+<BattleEffectText ID="Aftermath_Thunderstruck">
+  <Name>Thunderstruck</Name>
+  <Desc>For the duration of the Scene, all dice played by this character gain a {1}% chance to lose 2 Power. Can be stacked up to 10.</Desc>
+</BattleEffectText>
+
+<BattleEffectText ID="Aftermath_Thunderstruck_Keyword">
+  <Name>Thunderstruck X</Name>
+  <Desc>For the duration of the Scene, all dice played by this character gain a (X * 10)% chance to lose 2 Power. Can be stacked up to 10.</Desc>
+</BattleEffectText>
+
+<BattleEffectText ID="Aftermath_StoredChems">
+  <Name>Stored Chems</Name>
+  <Desc>Affects the properties of certain Combat Pages.</Desc>
+</BattleEffectText>
+
+<BattleEffectText ID="SlickMod_DrownedDrowning">
+  <Name>Drowning</Name>
+  <Desc>Maximum Stagger Resist is lowered by {0}</Desc>
+</BattleEf
+<BattleEffectText ID="SlickMod_DrownedOmegaCringe">
+  <Name>Strangling Despair</Name>
+  <Desc>Gain a random status ailment this Scene (Bleed, Erosion,  Paralysis, Feeble, Disarm, Bind, Stagger Fragile, Rupture, Rupture Count, Sinking and Sinking Count) for each stack of Strangling Despair at the start of the Scene then lose 3 Strangling Despair.</Desc>
+</BattleEffectText>
+fectText>
+
+  </effectTextList>
+</BattleEffectTextRoot>

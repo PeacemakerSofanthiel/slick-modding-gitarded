@@ -243,7 +243,41 @@
 </StageXmlRoot>
   <!-- SUSSY IN THE CITY -->
 
+
+
+
+
   <!-- WATSON TIER -->
   
+    <Stage id="7">
+    <Name>Drowning Drowning Drowning</Name>
+    <Wave>
+      <Unit>1701001</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>1</Value>
+      <Num>1</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+    <ManagerScript>SlickMod_DrownedMapManager</ManagerScript>
+  </Stage>
+
   
-  
+
+
+
+
+</StageXmlRoot>

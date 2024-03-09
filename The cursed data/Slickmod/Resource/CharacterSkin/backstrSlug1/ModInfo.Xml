@@ -1,0 +1,56 @@
+<ModInfo>
+  <ClothInfo>
+    <Name>
+    </Name>
+    <Default>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="115" pivot_y="-145" />
+      <Head head_x="0" head_y="349" rotation="0" head_enable="True" />
+    </Default>
+    <Guard>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="4" pivot_y="-138" />
+      <Head head_x="0" head_y="342" rotation="0" head_enable="True" />
+    </Guard>
+    <Evade>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="124" pivot_y="-165" />
+      <Head head_x="0" head_y="331" rotation="0" head_enable="True" />
+    </Evade>
+    <Damaged>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-16" pivot_y="-161" />
+      <Head head_x="0" head_y="365" rotation="0" head_enable="True" />
+    </Damaged>
+    <Slash>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="32" pivot_y="-144" />
+      <Head head_x="0" head_y="347" rotation="0" head_enable="True" />
+    </Slash>
+    <Penetrate>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="140" pivot_y="-128" />
+      <Head head_x="0" head_y="326" rotation="0" head_enable="True" />
+    </Penetrate>
+    <Hit>
+      <Direction>Side</Direction>
+      <Pivot pivot_x="-133" pivot_y="-216" />
+      <Head head_x="-18" head_y="312" rotation="0" head_enable="True" />
+    </Hit>
+    <Move>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="55" pivot_y="-131" />
+      <Head head_x="0" head_y="324" rotation="0" head_enable="True" />
+    </Move>
+    <Fire>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="133" pivot_y="-130" />
+      <Head head_x="0" head_y="329" rotation="0" head_enable="True" />
+    </Fire>
+    <Aim>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="135" pivot_y="-131" />
+      <Head head_x="0" head_y="326" rotation="0" head_enable="True" />
+    </Aim>
+  </ClothInfo>
+</ModInfo>

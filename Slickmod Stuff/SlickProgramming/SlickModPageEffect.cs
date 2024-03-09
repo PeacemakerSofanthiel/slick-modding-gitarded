@@ -1311,4 +1311,374 @@ namespace SlickRuinaMod
 
     #endregion
 
+    #region -DROWNED-
+    public class DiceCardSelfAbility_SlickMod_DrownedSinkersSinking : DiceCardSelfAbilityBase
+    {
+        public override void OnStartBattle()
+        {
+            base.OnStartBattle();
+            foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+            {
+                BattleUnitBuf battleUnitBuf = battleUnitModel.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+                if (battleUnitBuf != null)
+                {
+                    battleUnitModel.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_Sinking, battleUnitBuf.stack / 2, this.owner);
+                }
+            }
+        }
+    }
+
+    public class DiceCardSelfAbility_SlickMod_DrownedImtakingyouinfortreason : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            this.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedDrowning, 1, this.owner);
+            foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+            {
+                item.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedDrowning, 1, this.owner);
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DrownedLoudNoise : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                int dice = battleUnitBuf.stack / 5;
+                for (int i = 0; i < dice; i++)
+                {
+                    DiceCardXmlInfo cardItem = ItemXmlDataList.instance.GetCardItem(new LorId("SlickMod", 137), false);
+                    new DiceBehaviour();
+                    int num = 0;
+                    foreach (DiceBehaviour diceBehaviour in cardItem.DiceBehaviourList)
+                    {
+                        BattleDiceBehavior battleDiceBehavior = new BattleDiceBehavior();
+                        battleDiceBehavior.behaviourInCard = diceBehaviour.Copy();
+                        battleDiceBehavior.AddAbility(new DiceCardAbility_SlickMod_DrownedLoudNoiseDie());
+                        battleDiceBehavior.SetIndex(num++);
+                        this.card.AddDice(battleDiceBehavior);
+
+                    }
+                }
+            }
+        }
+        public override void BeforeGiveDamage(BattleDiceBehavior behavior)
+        {
+            base.BeforeGiveDamage(behavior);
+            behavior.ApplyDiceStatBonus(new DiceStatBonus
+            {
+                dmg = -9999
+            });
+        }
+    }
+
+    public class DiceCardSelfAbility_SlickMod_DrownedDrop : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                if (battleUnitBuf.stack >= 10)
+                {
+                    card.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+                    {
+                        power = 5
+                    });
+                }
+            }
+        }
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                if (battleUnitBuf.stack >= 10)
+                {
+                    foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+                    {
+                        battleUnitModel.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 5, this.owner);
+                    }
+                }
+            }
+        }
+    }
+
+    public class DiceCardSelfAbility_SlickMod_DrownedTwistingPathways : DiceCardSelfAbilityBase
+    {
+        protected virtual int Onslaught
+        {
+            get
+            {
+                BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+                if (battleUnitBuf == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return battleUnitBuf.stack / 5;
+                }
+            }
+        }
+        public override void OnApplyCard()
+        {
+            this.card.subTargets.Clear();
+            List<BattlePlayingCardDataInUnitModel.SubTarget> list2 = new List<BattlePlayingCardDataInUnitModel.SubTarget>(this.card.subTargets);
+            list2.Add(new BattlePlayingCardDataInUnitModel.SubTarget
+            {
+                target = this.card.target,
+                targetSlotOrder = this.card.targetSlotOrder
+            });
+            int targetslotorder = this.card.targetSlotOrder;
+            foreach (BattlePlayingCardDataInUnitModel.SubTarget subTarget in list2)
+            {
+                List<BattlePlayingCardDataInUnitModel.SubTarget> list3 = new List<BattlePlayingCardDataInUnitModel.SubTarget>();
+                int num = UnityEngine.Mathf.Clamp(this.Onslaught, 0, (subTarget.target.speedDiceResult.Count - 1));
+                for (int j = 0; j < num; j++)
+                {
+                    if (!list2.Exists((BattlePlayingCardDataInUnitModel.SubTarget x) => x.target == subTarget.target && x.targetSlotOrder <= j))
+                    {
+                        list3.Add(new BattlePlayingCardDataInUnitModel.SubTarget
+                        {
+                            target = subTarget.target,
+                            targetSlotOrder = j + 1
+                        });
+                    }
+                    else
+                    {
+                        list3.Add(new BattlePlayingCardDataInUnitModel.SubTarget
+                        {
+                            target = subTarget.target,
+                            targetSlotOrder = j + 1
+                        });
+                    }
+                }
+            }
+        }
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                if (battleUnitBuf.stack >= 5)
+                {
+                    foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 2))
+                    {
+                        item.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, this.owner);
+                    }
+                }
+            }
+        }
+
+    }
+
+    public class DiceCardSelfAbility_SlickMod_DrownedLetitGo : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                int num = battleUnitBuf.stack;
+                int power = Mathf.Clamp(num, 1, 10);
+                card.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+                {
+                    power = power
+                });
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DrownedSmothering : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                int num = battleUnitBuf.stack / 4;
+                this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SinkingCount, num, this.owner);
+                this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, num * 3, this.owner);
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DrownedMeaningless : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                if (battleUnitBuf.stack >= 7)
+                {
+                    card.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+                    {
+                        power = 5
+                    });
+                }
+            }
+        }
+        public override void OnSucceedAttack()
+        {
+            base.OnSucceedAttack();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                if (battleUnitBuf.stack >= 7)
+                {
+                    foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+                    {
+                        battleUnitModel.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 2, this.owner);
+                    }
+                }
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DrownedNumbness : DiceCardSelfAbilityBase
+    {
+        public override void OnStartBattle()
+        {
+            base.OnStartBattle();
+            this.owner.bufListDetail.AddBuf(new BattleUnitBuf_DrownedImfuckinginvincible());
+            foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+            {
+                battleUnitModel.bufListDetail.AddBuf(new BattleUnitBuf_DrownedYoursodepressedrightnow());
+            }
+        }
+        public class BattleUnitBuf_DrownedImfuckinginvincible : BattleUnitBuf
+        {
+            public override int GetDamageReduction(BattleDiceBehavior behavior)
+            {
+                return 9999999;
+            }
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                this.Destroy();
+            }
+        }
+        public class BattleUnitBuf_DrownedYoursodepressedrightnow : BattleUnitBuf
+        {
+            public override int GetDamageReduction(BattleDiceBehavior behavior)
+            {
+                return 9999999;
+            }
+            public override void OnTakeDamageByAttack(BattleDiceBehavior atkDice, int dmg)
+            {
+                base.OnTakeDamageByAttack(atkDice, dmg);
+                this._owner.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_Sinking, 1, this._owner);
+                this._owner.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_SinkingCount, 1, this._owner);
+            }
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                this.Destroy();
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DrownedEmptyFeeling : DiceCardSelfAbilityBase
+    {
+        public override void OnStartBattle()
+        {
+            base.OnStartBattle();
+            foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+            {
+                battleUnitModel.bufListDetail.AddBuf(new BattleUnitBuf_DrownedCripplingDepression());
+            }
+        }
+        public class BattleUnitBuf_DrownedCripplingDepression : BattleUnitBuf
+        {
+            public override void BeforeRollDice(BattleDiceBehavior behavior)
+            {
+                base.BeforeRollDice(behavior);
+                BattleUnitBuf battleUnitBuf = this._owner.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_Sinking);
+                if (battleUnitBuf != null)
+                {
+                    int depression = battleUnitBuf.stack / 5;
+                    behavior.ApplyDiceStatBonus(new DiceStatBonus
+                    {
+                        power = -depression
+                    });
+                }
+            }
+            public override void OnRoundEnd()
+            {
+                base.OnRoundEnd();
+                this.Destroy();
+            }
+        }
+    }
+
+    public class DiceCardSelfAbility_SlickMod_DrownedGnawing : DiceCardSelfAbilityBase
+    {
+        public override void OnStartBattle()
+        {
+            base.OnStartBattle();
+            foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
+            {
+                BattleUnitBuf battleUnitBuf = battleUnitModel.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+                if (battleUnitBuf != null)
+                {
+                    battleUnitModel.TakeDamage(battleUnitBuf.stack, DamageType.Emotion);
+                    battleUnitModel.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_SinkingCount, battleUnitBuf.stack / 4, this.owner);
+                }
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DrownedNoLight : DiceCardSelfAbilityBase
+    {
+        public override void OnUseCard()
+        {
+            base.OnUseCard();
+            BattleUnitBuf battleUnitBuf = this.owner.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                int powerloss = battleUnitBuf.stack * 5;
+                this.card.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus
+                {
+                    power = -powerloss
+                });
+            }
+        }
+        public override void OnEndBattle()
+        {
+            base.OnEndBattle();
+            BattleUnitBuf battleUnitBuf = this.owner.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
+            if (battleUnitBuf != null)
+            {
+                if (battleUnitBuf.stack >= 10)
+                {
+                    battleUnitBuf.stack -= 10;
+                    if (battleUnitBuf.stack <= 0)
+                    {
+                        battleUnitBuf.Destroy();
+                    }
+                }
+            }
+        }
+    }
+    public class DiceCardSelfAbility_SlickMod_DrownedNoDamage : DiceCardSelfAbilityBase
+    {
+        public override void BeforeGiveDamage(BattleDiceBehavior behavior)
+        {
+            base.BeforeGiveDamage(behavior);
+            behavior.ApplyDiceStatBonus(new DiceStatBonus
+            {
+                dmg = -9999,
+                breakDmg = -9999
+            });
+        }
+    }
+    #endregion
+
 }

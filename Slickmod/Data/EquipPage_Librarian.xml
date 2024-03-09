@@ -4,6 +4,84 @@
 
   <!-- CANARD -->
 
+<!-- Dan's Solutions -->
+
+  <Book ID="10000013">
+    <Name>A Grade 9 Fixer’s Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>41</HP>
+      <DeadLine>0</DeadLine>
+      <Break>22</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>3</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Vulnerable</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+      <MaxPlayPoint>3</MaxPlayPoint>
+      <StartPlayPoint>3</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive>40</Passive>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>LuluFriend2</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>1</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+  <Book ID="10000014">
+    <Name>Dan’s Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon />
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>49</HP>
+      <DeadLine>0</DeadLine>
+      <Break>25</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>4</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Normal</SResist>
+      <PResist>Weak</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Weak</PBResist>
+      <HBResist>Normal</HBResist>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive>41</Passive>
+      <Passive>42</Passive>
+      <Passive>43</Passive>
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin>NewStaff_2</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>1</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+
+
+
+
+
+
   <!-- URBAN MYTH -->
   <Book ID="2201001">
     <Name>A Backstreets Slugger, Page 1</Name>

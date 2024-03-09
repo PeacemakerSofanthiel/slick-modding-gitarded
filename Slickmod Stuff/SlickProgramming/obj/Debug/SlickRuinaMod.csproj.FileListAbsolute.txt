@@ -58,3 +58,5 @@ D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRuinaMod.csproj.Co
 D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickRui.3B951F35.Up2Date
 D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.dll
 D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.pdb
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\CustomMapUtility.dll
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\CustomMapUtility.xml

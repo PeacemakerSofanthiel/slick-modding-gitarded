@@ -407,6 +407,98 @@ namespace SlickRuinaMod
         }
     }
 
+    // Drowning
+    // Drowning Drowning Drowning Drowning
+    public class BattleUnitBuf_SlickMod_DrownedDrowning : BattleUnitBuf
+    {
+        public override string keywordId => "SlickMod_DrownedDrowning";
+
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_DrownedDrowning;
+
+            }
+        }
+
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.None;
+            }
+        }
+        public override int paramInBufDesc
+        {
+            get
+            {
+                return this.stack * 3;
+            }
+        }
+        public override StatBonus GetStatBonus()
+        {
+            return new StatBonus
+            {
+                breakGageAdder = -stack * 3
+            };
+        }
+    }
+
+    // Drowned Omega Cringe
+    // qwertyuiopasdfghjklzxcvbnm
+    public class BattleUnitBuf_SlickMod_DrownedOmegaCringe : BattleUnitBuf
+    {
+        public override string keywordId => "SlickMod_DrownedOmegaCringe";
+
+        public override KeywordBuf bufType
+        {
+            get
+            {
+                return MyKeywordBufs.SlickMod_DrownedOmegaCringe;
+
+            }
+        }
+
+        public override BufPositiveType positiveType
+        {
+            get
+            {
+                return BufPositiveType.None;
+            }
+        }
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            for (int i = 0; i < this.stack; i++)
+            {
+                KeywordBuf bufType = this.bufs[UnityEngine.Random.Range(0, this.bufs.Length)];
+                this._owner.bufListDetail.AddKeywordBufByCard(bufType, 1, this._owner);
+                this.stack -= 3;
+                if (this.stack <= 3)
+                {
+                    this.Destroy();
+                }
+            }
+        }
+
+        private KeywordBuf[] bufs = new KeywordBuf[]
+        {
+           KeywordBuf.Bleeding,
+           KeywordBuf.Weak,
+           KeywordBuf.Paralysis,
+           KeywordBuf.Disarm,
+           KeywordBuf.Binding,
+           KeywordBuf.Vulnerable_break,
+           KeywordBuf.Decay,
+           MyKeywordBufs.SlickMod_Rupture,
+           MyKeywordBufs.SlickMod_RuptureCount,
+           MyKeywordBufs.SlickMod_Sinking,
+           MyKeywordBufs.SlickMod_SinkingCount
+        };
+
+    }
+
     #endregion
 
     #region --STATUSES STOLEN FROM CWR--

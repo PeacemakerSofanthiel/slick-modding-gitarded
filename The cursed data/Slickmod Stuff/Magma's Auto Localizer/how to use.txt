@@ -1,0 +1,8 @@
+simply extract this into your mod's root folder (the same folder as the one with StageModInfo.xml) and then run the executable
+and yes, the DLL and config in the .zip file also need to be in the same folder for the executable to work 
+
+
+this program was made by CalmMagma for Lux(field) because much like a lazy cat he didn't want to localize his mod manually
+
+VERSION 2!!!! it now localizes card/dice abilities and ACTUALLY reads the StageModInfo of the mod meaning you can customize the 
+Data folder and tear it to shreds however you want, the program should be able to keep up
