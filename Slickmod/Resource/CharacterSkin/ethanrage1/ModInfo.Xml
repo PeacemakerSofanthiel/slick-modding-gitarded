@@ -1,54 +1,55 @@
 <ModInfo>
   <ClothInfo>
-    <Name>ethanrage1</Name>
+    <Name>
+    </Name>
     <Default>
       <Direction>Front</Direction>
-      <Pivot pivot_x="1901" pivot_y="-225" />
+      <Pivot pivot_x="196" pivot_y="-221" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Default>
     <Guard>
       <Direction>Front</Direction>
-      <Pivot pivot_x="23" pivot_y="-243" />
+      <Pivot pivot_x="41" pivot_y="-244" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Guard>
     <Evade>
       <Direction>Front</Direction>
-      <Pivot pivot_x="60" pivot_y="-145" />
+      <Pivot pivot_x="64" pivot_y="-138" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Evade>
     <Damaged>
       <Direction>Front</Direction>
-      <Pivot pivot_x="76" pivot_y="-147" />
+      <Pivot pivot_x="92" pivot_y="-149" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Damaged>
     <Slash>
       <Direction>Front</Direction>
-      <Pivot pivot_x="145" pivot_y="-237" />
+      <Pivot pivot_x="156" pivot_y="-237" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Slash>
     <Penetrate>
       <Direction>Front</Direction>
-      <Pivot pivot_x="177" pivot_y="-271" />
+      <Pivot pivot_x="195" pivot_y="-273" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Penetrate>
     <Hit>
       <Direction>Front</Direction>
-      <Pivot pivot_x="-25" pivot_y="-303" />
+      <Pivot pivot_x="-30" pivot_y="-299" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Hit>
     <Move>
       <Direction>Front</Direction>
-      <Pivot pivot_x="46" pivot_y="-205" />
+      <Pivot pivot_x="39" pivot_y="-209" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Move>
     <Fire>
       <Direction>Front</Direction>
-      <Pivot pivot_x="191" pivot_y="-228" />
+      <Pivot pivot_x="188" pivot_y="-269" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Fire>
     <Aim>
       <Direction>Front</Direction>
-      <Pivot pivot_x="193" pivot_y="-227" />
+      <Pivot pivot_x="202" pivot_y="-220" />
       <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
     </Aim>
   </ClothInfo>
