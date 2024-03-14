@@ -39,6 +39,9 @@
     <Reference Include="10EnumExtender">
       <HintPath>..\..\..\Desktop\Library of Ruina\Slickmod\Assemblies\10EnumExtender.dll</HintPath>
     </Reference>
+    <Reference Include="AftermathBufs">
+      <HintPath>..\..\Slickmod\Assemblies\AftermathBufs.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\Desktop\Library of Ruina\Assembly-CSharp.dll</HintPath>
     </Reference>

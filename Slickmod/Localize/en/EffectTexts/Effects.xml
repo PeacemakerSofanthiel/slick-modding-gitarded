@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <effectTextList>
+
+<!-- Exclusivity Keywords -->
+
+	<BattleEffectText ID="SlickMod_Midnight1Exclusive">
+		<Name>Midnight Fixer 1's Exclusive Page</Name>
+		<Desc>Can only be set in the deck of Midnight Office Fixer 1's Keypage.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_EthanExclusive">
+		<Name>Ethan's Exclusive Page</Name>
+		<Desc>Can only be set in the deck of Ethan's Keypage.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_TurnerExclusive">
+		<Name>Turner's Exclusive Page</Name>
+		<Desc>Can only be set in the deck of Alexander Turner's Keypage.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_TemplarExclusive">
+		<Name>Inferno Templar's Exclusive Page</Name>
+		<Desc>Can only be set in the deck of the Inferno Corps Templar's Keypage.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_RuntExclusive">
+		<Name>Inferno Runt's Exclusive Page</Name>
+		<Desc>Can only be set in the deck of the Inferno Corps Underrunt's Keypage.</Desc>
+	</BattleEffectText>
+
+	<BattleEffectText ID="SlickMod_SusanoUNExclusive">
+		<Name>Susano'o's Exclusive Page</Name>
+		<Desc>Can only be set in the deck of Susano'o's Keypage.</Desc>
+	</BattleEffectText>
+
+
+
+
+
   
+<!-- Everything else -->
+
 	<BattleEffectText ID="SlickMod_FlowState">
 		<Name>Flow State</Name>
 		<Desc>Increase minimum and maximum roll value of all dice by +1.</Desc>
@@ -19,7 +58,7 @@
 
 	<BattleEffectText ID="SlickMod_SparkSamsara">
 		<Name>Samsara</Name>
-		<Desc>Used in order to use Speed Break. Can be gained by gaining Haste and by using Combo Finisher Combat Pages.</Desc>
+		<Desc>Used in order to use Speed Break.</Desc>
 	</BattleEffectText>
 
 	<BattleEffectText ID="SlickMod_SparkSpeedBreak">
@@ -98,8 +137,12 @@
     </BattleEffectText>
 
     <BattleEffectText ID="SlickMod_Sinking">
+      <Name>Sinking Potency</Name>
+      <Desc>When hit, take {0} Stagger damage and lose 1 Sinking Count; if this character has no Sinking Count, lose all Sinking Potency instead.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SlickMod_Sinking_Keyword">
       <Name>Sinking</Name>
-      <Desc>When hit, take {0} Stagger damage and lose 1 Sinking Count; if this character has no Sinking Count, lose all Sinking instead.</Desc>
+      <Desc>When hit, take Stagger damage equal to the stack and lose 1 Sinking Count; if this character has no Sinking Count, lose all Sinking Potency instead.</Desc>
     </BattleEffectText>
     <BattleEffectText ID="SlickMod_SinkingCount">
       <Name>Sinking Count</Name>
@@ -107,11 +150,15 @@
     </BattleEffectText>
 
     <BattleEffectText ID="SlickMod_Rupture">
-      <Name>Sinking</Name>
-      <Desc>When hit, take {0} damage and lose 1 Rupture Count; if this character has no Rupture Count, lose all Rupture instead.</Desc>
+      <Name>Rupture Potency</Name>
+      <Desc>When hit, take {0} damage and lose 1 Rupture Count; if this character has no Rupture Count, lose all Rupture Potency instead.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SlickMod_Rupture_Keyword">
+      <Name>Rupture</Name>
+      <Desc>When hit, take damage equal to the stack and lose 1 Rupture Count; if this character has no Rupture Count, lose all Rupture Potency instead.</Desc>
     </BattleEffectText>
     <BattleEffectText ID="SlickMod_RuptureCount">
-      <Name>Sinking Count</Name>
+      <Name>Rupture Count</Name>
       <Desc>This status is not lost at the end of the Scene.</Desc>
     </BattleEffectText>
 

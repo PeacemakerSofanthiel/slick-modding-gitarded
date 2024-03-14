@@ -212,7 +212,7 @@ namespace SlickRuinaMod
 
     // Tatsumaki: Dice Effect 1
     // This die is rolled twice if user has 10+ Samsara
-    public class DiceCardAbility_SparkRepeatSamsara : DiceCardAbilityBase
+    public class DiceCardAbility_SlickMod_SparkRepeatSamsara : DiceCardAbilityBase
     {
         public static string Desc = "This die is rolled twice if user has 10+ Samsara";
 
@@ -229,6 +229,63 @@ namespace SlickRuinaMod
                     ActivateBonusAttackDice();
                 }
             }
+        }
+    }
+
+    // Tatsumaki: Dice Effect 2
+    // [On Hit] Inflict 2 Thunderstuck next Scene
+    public class DiceCardAbility_SlickMod_OnHitThunderStruck2 : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Aftermath_Thunderstruck_Keyword" };
+
+        public static string Desc = "[On Hit] Inflict 2 Thunderstuck next Scene";
+
+        public override void OnSucceedAttack()
+        {
+            base.card.target?.bufListDetail.AddKeywordBufByCard(AftermathBufs.AftermathBufs.Thunderstruck, 2, base.owner);
+        }
+    }
+
+    // Karyuken: Dice Effect 2
+    // [On Hit] Inflict 5 Thunderstuck next Scene
+    public class DiceCardAbility_SlickMod_OnHitThunderStruck5 : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Aftermath_Thunderstruck_Keyword" };
+
+        public static string Desc = "[On Hit] Inflict 5 Thunderstuck next Scene";
+
+        public override void OnSucceedAttack()
+        {
+            base.card.target?.bufListDetail.AddKeywordBufByCard(AftermathBufs.AftermathBufs.Thunderstruck, 5, base.owner);
+        }
+    }
+
+    // Sakanagi: Dice Effect 1
+    // [On Hit] Inflict Thunderstuck next Scene equal to Samsara on self (max. 10)
+    public class DiceCardAbility_SlickMod_OnHitThunderStruckSamsara : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Aftermath_Thunderstruck_Keyword" };
+
+        public static string Desc = "[On Hit] Inflict Thunderstuck next Scene equal to Samsara on self (max. 10)";
+
+        public override void OnSucceedAttack()
+        {
+            BattleUnitBuf activatedBuf = owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara);
+            base.card.target?.bufListDetail.AddKeywordBufByCard(AftermathBufs.AftermathBufs.Thunderstruck, (activatedBuf.stack < 10) ? activatedBuf.stack : 10, base.owner);
+        }
+    }
+
+    // Wind Step: Dice Effect 1
+    // [On Hit] Inflict 3 Thunderstuck next Scene
+    public class DiceCardAbility_SlickMod_OnHitThunderStruck3 : DiceCardAbilityBase
+    {
+        public override string[] Keywords => new string[1] { "Aftermath_Thunderstruck_Keyword" };
+
+        public static string Desc = "[On Hit] Inflict 3 Thunderstuck next Scene";
+
+        public override void OnSucceedAttack()
+        {
+            base.card.target?.bufListDetail.AddKeywordBufByCard(AftermathBufs.AftermathBufs.Thunderstruck, 3, base.owner);
         }
     }
 

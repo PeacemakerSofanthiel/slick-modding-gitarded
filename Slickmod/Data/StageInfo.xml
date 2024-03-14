@@ -4,6 +4,37 @@
 
   <!-- CANRAD -->
 
+  <Stage id="7">
+    <Name>Dan's Solutions</Name>
+    <Wave>
+      <Unit>5101002</Unit>
+      <Unit>5101001</Unit>
+      <Unit>5101001</Unit>
+      <Unit>5101001</Unit>
+      <Unit>5101001</Unit>
+      <Formation>1</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>2</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>1</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>1</Value>
+      <Num>3</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+    <StoryType>SlickMod_Actual_Scam</StoryType>
+  </Stage>
+
+
   <!-- URBAN MYTH -->
 
 <!-- Backstreets Sluggers -->
@@ -20,8 +51,8 @@
   </Wave>
   <Wave>
     <Unit>5201002</Unit>
-    <Unit>5201005</Unit>
     <Unit>5201003</Unit>
+    <Unit>5201001</Unit>
     <Formation>41</Formation>
     <FormationType>Default</FormationType>
     <AvailableUnit>2</AvailableUnit>
@@ -29,7 +60,6 @@
   </Wave>
   <Wave>
     <Unit>5201004</Unit>
-    <Unit>5201006</Unit>
     <Formation>41</Formation>
     <FormationType>Default</FormationType>
     <AvailableUnit>2</AvailableUnit>
@@ -249,7 +279,7 @@
 
   <!-- WATSON TIER -->
   
-    <Stage id="7">
+    <Stage id="8">
     <Name>Drowning Drowning Drowning</Name>
     <Wave>
       <Unit>1701001</Unit>

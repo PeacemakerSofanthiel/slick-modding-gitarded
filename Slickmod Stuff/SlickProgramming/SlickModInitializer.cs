@@ -144,12 +144,17 @@ namespace SlickRuinaMod
             [HarmonyPatch(typeof(BookModel), "SetXmlInfo")]
             public static void BookModel_SetXmlInfo(BookModel __instance, BookXmlInfo ____classInfo, ref List<DiceCardXmlInfo> ____onlyCards)
             {
-                if (__instance.BookId.packageId == SlickModInitializer.packageId)
+                if (__instance.BookId.packageId == packageId)
                 {
                     foreach (int id in ____classInfo.EquipEffect.OnlyCard)
                     {
-                        DiceCardXmlInfo cardItem = ItemXmlDataList.instance.GetCardItem(new LorId(SlickModInitializer.packageId, id), false);
+                        DiceCardXmlInfo cardItem = ItemXmlDataList.instance.GetCardItem(new LorId(packageId, id), false);
                         ____onlyCards.Add(cardItem);
+                        DiceCardXmlInfo b = ItemXmlDataList.instance.GetCardItem(id, false);
+                        if (____onlyCards.Contains(b))
+                        {
+                            ____onlyCards.Remove(b);
+                        }
                     }
                 }
             }

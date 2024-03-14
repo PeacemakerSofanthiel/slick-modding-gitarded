@@ -520,7 +520,7 @@
     <SkinChangeType>EGO</SkinChangeType>
     <SkinHeight>0</SkinHeight>
     <MapChange />
-    <Priority>0</Priority>
+    <Priority>5</Priority>
     <PriorityScript />
     <Category>None</Category>
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
@@ -694,6 +694,7 @@
     <Rarity>Rare</Rarity>
     <Option>OnlyPage</Option>
     <Spec Range="Far" Cost="2" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_Midnight1Exclusive</Keyword>
     <Script>SlickMod_MidnightJavelin</Script>
     <ScriptDesc />
     <BehaviourList>
@@ -803,6 +804,7 @@
     <Script />
     <ScriptDesc />
     <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Liu1_Z" Script="SlickMod_MidnightBurnEveryone2" ActionScript="" Desc="" />
       <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Liu1_Z" Script="SlickMod_MidnightBurnEveryone2" ActionScript="" Desc="" />
       <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Liu1_Z" Script="SlickMod_MidnightBurnEveryone2" ActionScript="" Desc="" />
     </BehaviourList>
@@ -932,6 +934,7 @@
     <Rarity>Unique</Rarity>
     <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="1" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_EthanExclusive</Keyword>
     <Script>SlickMod_BackstreetHandlingPower</Script>
     <ScriptDesc />
     <BehaviourList>
@@ -958,12 +961,40 @@
     <Rarity>Unique</Rarity>
     <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="1" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_EthanExclusive</Keyword>
     <Script>SlickMod_BackstreetBoneBreaker</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="2" Dice="3" Type="Def" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="ch3_G" Script="SlickMod_BackstreetCLWheels" ActionScript="" Desc="" />
       <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Street_Ruru_Z" Script="yanOnly2Dice" ActionScript="" Desc="" />
       <Behaviour Min="8" Dice="12" Type="Atk" Detail="Hit" Motion="J" MotionDefault="N" EffectRes="Liu1_J" Script="SlickMod_BackstreetBigBurn" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>5</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="0401018">
+    <Name>Threatening Aura</Name>
+    <TextId>-1</TextId>
+    <Artwork>Aura.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_EthanExclusive</Keyword>
+    <Script>SlickMod_MidnightAnger</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="ch3_E" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="Liu1_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Standby" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="Liu1_G" Script="" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>4</Chapter>
     <SpecialEffect />
@@ -1260,7 +1291,9 @@
     <TextId>-1</TextId>
     <Artwork>FullStop10.png</Artwork>
     <Rarity>Uncommon</Rarity>
+    <Option>OnlyPage</Option>
     <Spec Range="Far" Cost="2" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_TurnerExclusive</Keyword>
     <Script>drawAndEnergy</Script>
     <ScriptDesc />
     <BehaviourList>
@@ -1285,6 +1318,7 @@
     <Rarity>Unique</Rarity>
     <Option>OnlyPage</Option>
     <Spec Range="Far" Cost="4" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_TurnerExclusive</Keyword>
     <Script>SlickMod_TurnerExclusive</Script>
     <ScriptDesc />
     <BehaviourList>
@@ -1356,7 +1390,7 @@
     <MaxNum>150</MaxNum>
   </Card>
   <Card ID="0503002">
-    <Name>Scuff Em Out</Name>
+    <Name>Scuff 'Em Out</Name>
     <TextId>-1</TextId>
     <Artwork>Puppet4.png</Artwork>
     <Rarity>Uncommon</Rarity>
@@ -1385,7 +1419,6 @@
     <TextId>-1</TextId>
     <Artwork>Phasing_Strike.png</Artwork>
     <Rarity>Rare</Rarity>
-    <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
     <Script>SlickMod_InfernalOverEAT2Energy3</Script>
     <ScriptDesc />
@@ -1435,6 +1468,7 @@
     <Rarity>Unique</Rarity>
     <Option>OnlyPage</Option>
     <Spec Range="Far" Cost="4" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_RuntExclusive</Keyword>
     <Script>SlickMod_InfernalPRISIMBLAAAAAAAST</Script>
     <ScriptDesc />
     <BehaviourList>
@@ -1459,6 +1493,7 @@
     <Rarity>Unique</Rarity>
     <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="4" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_TemplarExclusive</Keyword>
     <Script>SlickMod_InfernalBurningBladework</Script>
     <ScriptDesc />
     <BehaviourList>
@@ -1485,7 +1520,9 @@
     <TextId>-1</TextId>
     <Artwork>UN_Breakdown.png</Artwork>
     <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="0" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_SusanoUNExclusive</Keyword>
     <Script>SlickMod_SparkBreakdownUN</Script>
     <ScriptDesc />
     <BehaviourList>
@@ -1509,7 +1546,9 @@
     <TextId>-1</TextId>
     <Artwork>UN_Mirage.png</Artwork>
     <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="1" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_SusanoUNExclusive</Keyword>
     <Script>SlickMod_SparkMirageUN</Script>
     <ScriptDesc />
     <BehaviourList>
@@ -1533,12 +1572,14 @@
     <TextId>-1</TextId>
     <Artwork>UN_Tatsumaki.png</Artwork>
     <Rarity>Uncommon</Rarity>
+    <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_SusanoUNExclusive</Keyword>
     <Script>SlickMod_TatsumakiUN</Script>
     <ScriptDesc />
     <BehaviourList>
-      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Dawn_Z" Script="SparkRepeatSamsara" ActionScript="" Desc="" />
-      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Dawn_J" Script="SlickMod_2Rupture" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Dawn_Z" Script="SlickMod_SparkRepeatSamsara" ActionScript="SlickMod_QuickAttack_Z" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Dawn_J" Script="SlickMod_OnHitThunderStruck2" ActionScript="" Desc="" />
       <Behaviour Min="2" Dice="6" Type="Def" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="ch3_E" Script="" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>5</Chapter>
@@ -1558,12 +1599,14 @@
     <TextId>-1</TextId>
     <Artwork>UN_Karyuken.png</Artwork>
     <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="3" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_SusanoUNExclusive</Keyword>
     <Script>SlickMod_KaryukenUN</Script>
     <ScriptDesc />
     <BehaviourList>
       <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="ch3_E" Script="" ActionScript="" Desc="" />
-      <Behaviour Min="6" Dice="14" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Dawn_J" Script="SlickMod_5Rupture" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="14" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Dawn_J" Script="SlickMod_OnHitThunderStruck5" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>5</Chapter>
     <SpecialEffect />
@@ -1577,7 +1620,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="0504005">
+  <Card ID="2504005">
     <Name>Sakanagi</Name>
     <TextId>-1</TextId>
     <Artwork>UN_Sakanagi.png</Artwork>
@@ -1587,7 +1630,7 @@
     <Script>SlickMod_SakanagiUN</Script>
     <ScriptDesc />
     <BehaviourList>
-      <Behaviour Min="8" Dice="16" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Pluto_Z" Script="SlickMod_SamsaraRupture" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="16" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Pluto_Z" Script="SlickMod_OnHitThunderStruckSamsara" ActionScript="" Desc="" />
       <Behaviour Min="3" Dice="7" Type="Standby" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="ch3_E" Script="" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>5</Chapter>
@@ -1602,7 +1645,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="0504006">
+  <Card ID="1504006">
     <Name>Sakanagi</Name>
     <TextId>-1</TextId>
     <Artwork>UN_Sakanagi.png</Artwork>
@@ -1611,7 +1654,7 @@
     <Script>SlickMod_SakanagiUN</Script>
     <ScriptDesc />
     <BehaviourList>
-      <Behaviour Min="8" Dice="16" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Pluto_Z" Script="SlickMod_SamsaraRupture" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="16" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Pluto_Z" Script="SlickMod_OnHitThunderStruckSamsara" ActionScript="" Desc="" />
       <Behaviour Min="3" Dice="7" Type="Standby" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="ch3_E" Script="" ActionScript="" Desc="" />
     </BehaviourList>
     <Chapter>5</Chapter>
@@ -1631,11 +1674,13 @@
     <TextId>-1</TextId>
     <Artwork>UN_WindStep.png</Artwork>
     <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_SusanoUNExclusive</Keyword>
     <Script>SlickMod_WindStepUN</Script>
     <ScriptDesc />
     <BehaviourList>
-      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Dawn_Z" Script="SlickMod_3Fragile" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Dawn_Z" Script="SlickMod_OnHitThunderStruck3" ActionScript="" Desc="" />
       <Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="ch3_E" Script="" ActionScript="" Desc="" />
       <Behaviour Min="3" Dice="7" Type="Standby" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="ch3_E" Script="" ActionScript="" Desc="" />
     </BehaviourList>
@@ -1656,7 +1701,9 @@
     <TextId>-1</TextId>
     <Artwork>UN_SpiralStrike.png</Artwork>
     <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
     <Spec Range="Near" Cost="3" Affection="One" EmotionLimit="0" />
+    <Keyword>SlickMod_SusanoUNExclusive</Keyword>
     <Script>SlickMod_SpiralStrikeUN</Script>
     <ScriptDesc />
     <BehaviourList>
@@ -1675,7 +1722,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="0504009">
+  <Card ID="2504009">
     <Name>Tempest</Name>
     <TextId>-1</TextId>
     <Artwork>UN_Tempest.png</Artwork>
@@ -1701,7 +1748,7 @@
     <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
     <MaxNum>150</MaxNum>
   </Card>
-  <Card ID="0504010">
+  <Card ID="1504010">
     <Name>Tempest</Name>
     <TextId>-1</TextId>
     <Artwork>UN_Tempest.png</Artwork>
@@ -1731,6 +1778,7 @@
     <TextId>-1</TextId>
     <Artwork>Speed_Break.png</Artwork>
     <Rarity>Unique</Rarity>
+    <Option>Personal</Option>
     <Spec Range="Instance" Cost="3" Affection="One" EmotionLimit="0" />
     <Script>SlickMod_SparkSpeedBreak</Script>
     <ScriptDesc />

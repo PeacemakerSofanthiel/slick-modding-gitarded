@@ -1327,10 +1327,9 @@ namespace SlickRuinaMod
     {
         public override void OnRoundStart()
         {
-            bool flag = this._owner.faction > Faction.Enemy;
-            if (!flag)
+            if (this._owner.faction == Faction.Enemy)
             {
-                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 1504006)).AddBuf(new BattleDiceCardBuf_SlickMod_Temp());
+                this._owner.allyCardDetail.AddTempCard(new LorId("SlickMod", 1504006));
             }
             else
             {
@@ -1374,10 +1373,9 @@ namespace SlickRuinaMod
     {
         public override void OnRoundStart()
         {
-            bool flag = this._owner.faction > Faction.Enemy;
-            if (!flag)
+            if (this._owner.faction == Faction.Enemy)
             {
-                this._owner.allyCardDetail.AddNewCard(new LorId("SlickMod", 1504010)).AddBuf(new BattleDiceCardBuf_SlickMod_Temp());
+                this._owner.allyCardDetail.AddTempCard(new LorId("SlickMod", 1504010));
             }
             else
             {

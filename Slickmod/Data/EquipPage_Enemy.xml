@@ -6,7 +6,7 @@
 
 <!-- Dan's Solutions -->
 
-  <Book ID="18">
+  <Book ID="1101001">
     <Name>A Grade 9 Fixer’s Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -41,10 +41,10 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="19">
+  <Book ID="1101002">
     <Name>Dan’s Page</Name>
     <TextId>-1</TextId>
-    <BookIcon />
+    <BookIcon>SlickMod_Actual_Scam</BookIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>49</HP>
@@ -438,7 +438,7 @@
     <Passive>29</Passive>
   </EquipEffect>
   <Rarity>Rare</Rarity>
-  <CharacterSkin>midnightfix2</CharacterSkin>
+  <CharacterSkin>midnightfix1</CharacterSkin>
   <CharacterSkinType>Custom</CharacterSkinType>
   <SkinGender>N</SkinGender>
   <Chapter>4</Chapter>
@@ -834,7 +834,6 @@
       <Passive Pid="@origin">10008</Passive>
       <Passive>39</Passive>
       <Passive>36</Passive>
-      <Passive>37</Passive>
       <Passive>38</Passive>
     </EquipEffect>
     <Rarity>Unique</Rarity>

@@ -553,7 +553,7 @@ namespace SlickRuinaMod
     // [On Use] If used alongside "Karyuken", gain 3 Damage Up next Scene
     public class DiceCardSelfAbility_SlickMod_TatsumakiUN : DiceCardSelfAbilityBase
     {
-        public static string Desc = "[Combo: Sakanagi]\n[On Use] If used alongside \"Karyuken\", gain 3 Damage Up next Scene";
+        public static string Desc = "[Combo: Sakanagi]\n[On Use] If used alongside \"Karyuken\", gain 2 Damage Up next Scene";
 
         public override string[] Keywords => new string[1] { "SlickMod_Combo" };
 
@@ -568,7 +568,7 @@ namespace SlickRuinaMod
 
             if (base.owner.bufListDetail.HasBuf<BattleUnitBuf_SlickMod_UsingKaryuken>())
             {
-                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp, 3, owner);
+                this.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.DmgUp, 2, owner);
             }
         }
     }
@@ -600,16 +600,16 @@ namespace SlickRuinaMod
 
     // Sakanagi: Page Effect
     // [Combo Finisher]
-    // [Combat Start] Gain 3 Damage Up this Scene
+    // [On Use] Draw 1 page
     public class DiceCardSelfAbility_SlickMod_SakanagiUN : DiceCardSelfAbilityBase
     {
-        public static string Desc = "[Combo Finisher]\n[Combat Start] Gain 3 Damage Up this Scene";
+        public static string Desc = "[Combo Finisher]\n[On Use] Draw 1 page";
 
         public override string[] Keywords => new string[1] { "SlickMod_ComboFinisher" };
 
-        public override void OnStartBattle()
+        public override void OnUseCard()
         {
-            this.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp, 3, owner);
+            base.owner.allyCardDetail.DrawCards(1);
         }
 
         public override void OnRoundEnd(BattleUnitModel unit, BattleDiceCardModel self)
@@ -618,7 +618,7 @@ namespace SlickRuinaMod
         }
     }
 
-    // Spiral Strike: Page Effect
+    // Wind Step: Page Effect
     // Combo: Tempest
     // [On Use] Gain 2 Haste next Scene
     public class DiceCardSelfAbility_SlickMod_WindStepUN : DiceCardSelfAbilityBase
@@ -636,19 +636,19 @@ namespace SlickRuinaMod
 
     // Spiral Strike: Page Effect
     // Combo: Tempest
-    // [On Use] Gain 1 Damage Up next Scene for every 3 Samsara on self (max. 5)
+    // [On Use] Gain 1 Damage Up next Scene for every 5 Samsara on self (max. 3)
     public class DiceCardSelfAbility_SlickMod_SpiralStrikeUN : DiceCardSelfAbilityBase
     {
-        public static string Desc = "[Combo: Tempest]\n[On Use] Gain 1 Damage Up next Scene for every 3 Samsara on self (max. 5)";
+        public static string Desc = "[Combo: Tempest]\n[On Use] Gain 1 Damage Up next Scene for every 5 Samsara on self (max. 3)";
 
-        public override string[] Keywords => new string[2] { "SlickMod_Combo", "SlickMod_Samsara" };
+        public override string[] Keywords => new string[1] { "SlickMod_Combo" };
 
         public override void OnUseCard()
         {
             BattleUnitBuf_SlickMod_SparkSamsara battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag = this.card.owner.bufListDetail.GetActivatedBuf(MyKeywordBufs.SlickMod_SparkSamsara) as BattleUnitBuf_SlickMod_SparkSamsara;
-            if (battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag != null && battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag.stack >= 3)
+            if (battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag != null && battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag.stack >= 5)
             {
-                this.owner.bufListDetail.AddKeywordBufThisRoundByCard(KeywordBuf.DmgUp, Mathf.Min(battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag.stack / 3, 5), this.owner);
+                this.owner.bufListDetail.AddKeywordBufByCard(KeywordBuf.DmgUp, Mathf.Min(battleUnitBuf_slickSparkSamsaraSpiralStrikeSwag.stack / 5, 3), this.owner);
             }
         }
     }
@@ -773,7 +773,7 @@ namespace SlickRuinaMod
     // [On Use] Gain 'Geared Up' next scene
     public class DiceCardSelfAbility_SlickMod_BackstreetHandlingPower : DiceCardSelfAbilityBase
     {
-        public static string Desc = "This page is exhausted on use and returns to hand after 3 Scenes\r\n [On Use] Gain 'Geared Up' next scene";
+        public static string Desc = "This page is exhausted on use and returns to hand after 3 Scenes\r\n [On Use] Become 'Geared Up' next scene";
 
         // Card is exhausted and a new copy is added after 3 Scenes
         public void ExhaustAndReturn()
@@ -946,17 +946,17 @@ namespace SlickRuinaMod
     }
 
     // Unshakeable Anger
-    // This page is exhausted on use and returns to hand after 5 Scenes
+    // This page is exhausted on use and returns to hand after 3 Scenes
     // [On Use] Gain 'Dangerous' next scene
     public class DiceCardSelfAbility_SlickMod_MidnightAnger : DiceCardSelfAbilityBase
     {
-        public static string Desc = "This page is exhausted on use and returns to hand after 5 Scenes\r\n [On Use] Become 'Dangerous' next Scene";
+        public static string Desc = "This page is exhausted on use and returns to hand after 3 Scenes\r\n [On Use] Become 'Dangerous' next Scene";
 
         // Card is exhausted and a new copy is added after 5 Scenes
         public void ExhaustAndReturn()
         {
             card.card.exhaust = true;
-            base.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddBackAfterX(card.card.GetID(), 5));
+            base.owner.bufListDetail.AddBuf(new BattleUnitBuf_SlickMod_AddBackAfterX(card.card.GetID(), 3));
         }
 
         public override void OnUseCard()

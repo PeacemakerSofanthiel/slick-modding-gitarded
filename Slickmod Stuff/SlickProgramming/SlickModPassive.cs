@@ -19,7 +19,7 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            for (int i = 0; i < 1 - this.owner.emotionDetail.EmotionLevel; i++)
+            for (int i = 0; i <= 1 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
                 this.owner.emotionDetail.CheckLevelUp();
@@ -33,7 +33,7 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            for (int i = 0; i < 2 - this.owner.emotionDetail.EmotionLevel; i++)
+            for (int i = 0; i <= 2 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
                 this.owner.emotionDetail.CheckLevelUp();
@@ -47,7 +47,7 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            for (int i = 0; i < 3 - this.owner.emotionDetail.EmotionLevel; i++)
+            for (int i = 0; i <= 3 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
                 this.owner.emotionDetail.CheckLevelUp();
@@ -61,7 +61,7 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            for (int i = 0; i < 4 - this.owner.emotionDetail.EmotionLevel; i++)
+            for (int i = 0; i <= 4 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
                 this.owner.emotionDetail.CheckLevelUp();
@@ -75,7 +75,7 @@ namespace SlickRuinaMod
     {
         public override void OnWaveStart()
         {
-            for (int i = 0; i < 5 - this.owner.emotionDetail.EmotionLevel; i++)
+            for (int i = 0; i <= 5 - this.owner.emotionDetail.EmotionLevel; i++)
             {
                 this.owner.emotionDetail.LevelUp_Forcely(1);
                 this.owner.emotionDetail.CheckLevelUp();
@@ -1105,7 +1105,6 @@ namespace SlickRuinaMod
                     DiceBehaviourList = new List<DiceBehaviour>
                     {
                         diceBehaviour,
-                        diceBehaviour
                     },
                     Chapter = 5,
                     Priority = 0,
@@ -1116,6 +1115,7 @@ namespace SlickRuinaMod
                 battleDiceBehavior.SetIndex(0);
                 this.owner.cardSlotDetail.keepCard.AddBehaviours(cardInfo, new List<BattleDiceBehavior>
                 {
+                    battleDiceBehavior,
                     battleDiceBehavior
                 });
             }
@@ -1128,7 +1128,7 @@ namespace SlickRuinaMod
 
     // Beginnings of Samsara
     // Untransferable. "Speed Break" becomes accessible, and can be used by spending Samsara.
-    // At the start of each Scene, gain Samsara equal to the amount of Haste on self. Upon using a Combo Finisher page, gain Samsara equal to its original Cost.
+    // At the start of each Scene, gain Samsara equal to the amount of Haste on self. Upon using a Combo Finisher page, gain Samsara equal to its original Cost. Upon a successful evade, gain 1 Samsara.
     public class PassiveAbility_SlickMod_SparkSamsaraGaming : PassiveAbilityBase
     {
         // Adds Speed Break to Ego Hand
@@ -1137,59 +1137,59 @@ namespace SlickRuinaMod
             owner.personalEgoDetail.AddCard(new LorId("SlickMod", 0504011));
         }
 
-        // Gains Samsara equal to Haste
-        public override void OnRoundStart()
+        // Gains Samsara equal to Haste at the start of the Scene
+        public override void OnRoundStartAfter()
         {
-            BattleUnitBuf activatedBuf = owner.bufListDetail.GetActivatedBuf(KeywordBuf.Quickness);
-            if (activatedBuf != null)
-            {
-                int stack = activatedBuf.stack;
-                if (stack > 0)
-                {
-                    base.owner.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SparkSamsara, stack, base.owner);
-                }
-            }
+            base.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_SparkSamsara, this.owner.bufListDetail.GetKewordBufStack(KeywordBuf.Quickness), base.owner);
         }
 
+        // Gains Samsara equal to the original Cost of Combo Finishers
         public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
         {
             base.OnUseCard(curCard);
-            curCard.ApplyDiceStatBonus(DiceMatch.AllDice, new DiceStatBonus());
+            if (CheckCondition(curCard.card))
             {
-                int CFSamsara = curCard.card.GetCost() + 1;
-                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_SparkSamsara, CFSamsara, this.owner);
-            };
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_SparkSamsara, curCard.card.GetOriginCost(), this.owner);
+            }
+        }
+
+        // Gains 1 Samsara upon clash win using Evade
+        public override void OnWinParrying(BattleDiceBehavior behavior)
+        {
+            if (behavior.Detail == BehaviourDetail.Evasion)
+            {
+                base.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_SparkSamsara, 1, base.owner);
+            }
         }
 
         #region - Combo Finisher keyword check -
         private bool CheckCondition(BattleDiceCardModel card)
-{
-    if (card == null)
-        return false;
-    DiceCardXmlInfo xmlData = card.XmlData;
-    if (xmlData == null)
-        return false;
-    if (xmlData.Keywords.Contains("SlickMod_ComboFinisher"))
-        return true;
-    List<string> abilityKeywords = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords(xmlData);
-    for (int index = 0; index < abilityKeywords.Count; ++index)
-    {
-        if (abilityKeywords[index] == "SlickMod_ComboFinisher")
-            return true;
-    }
-    foreach (DiceBehaviour behaviour in card.GetBehaviourList())
-    {
-        List<string> keywordsByScript = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords_byScript(behaviour.Script);
-        for (int index = 0; index < keywordsByScript.Count; ++index)
         {
-            if (keywordsByScript[index] == "SlickMod_ComboFinisher")
+            if (card == null)
+                return false;
+            DiceCardXmlInfo xmlData = card.XmlData;
+            if (xmlData == null)
+                return false;
+            if (xmlData.Keywords.Contains("SlickMod_ComboFinisher"))
                 return true;
+            List<string> abilityKeywords = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords(xmlData);
+            for (int index = 0; index < abilityKeywords.Count; ++index)
+            {
+                if (abilityKeywords[index] == "SlickMod_ComboFinisher")
+                    return true;
+            }
+            foreach (DiceBehaviour behaviour in card.GetBehaviourList())
+            {
+                List<string> keywordsByScript = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords_byScript(behaviour.Script);
+                for (int index = 0; index < keywordsByScript.Count; ++index)
+                {
+                    if (keywordsByScript[index] == "SlickMod_ComboFinisher")
+                        return true;
+                }
+            }
+            return false;
         }
-    }
-    return false;
-}
         #endregion
-
     }
 
     // lol
@@ -1315,19 +1315,6 @@ namespace SlickRuinaMod
         #endregion
     }
 
-    // Step Over the River
-    // Upon a successful evade, gain 1 Poise.
-    public class PassiveAbility_SlickMod_OverTheRiver : PassiveAbilityBase
-    {
-        public override void OnWinParrying(BattleDiceBehavior behavior)
-        {
-            if (behavior.Detail == BehaviourDetail.Evasion)
-            {
-                owner.ShowPassiveTypo(this);
-            }
-        }
-    }
-
     // Former Shi Fixer
     // All dice gain +1 Power if an ally died this Act.
     public class PassiveAbility_SlickMod_FormerShiFixer : PassiveAbilityBase
@@ -1415,6 +1402,31 @@ namespace SlickRuinaMod
 
         private bool _activated;
 
+        // Gains Samsara equal to Haste at the start of the Scene
+        public override void OnRoundStartAfter()
+        {
+            base.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_SparkSamsara, this.owner.bufListDetail.GetKewordBufStack(KeywordBuf.Quickness), base.owner);
+        }
+
+        // Gains Samsara equal to the original Cost of Combo Finishers
+        public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
+        {
+            base.OnUseCard(curCard);
+            if (CheckCondition(curCard.card))
+            {
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_SparkSamsara, curCard.card.GetOriginCost(), this.owner);
+            }
+        }
+
+        // Gains 1 Samsara upon clash win using Evade
+        public override void OnWinParrying(BattleDiceBehavior behavior)
+        {
+            if (behavior.Detail == BehaviourDetail.Evasion)
+            {
+                base.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_SparkSamsara, 1, base.owner);
+            }
+        }
+
         public class UnwaverBuf : BattleUnitBuf
         {
             public UnwaverBuf()
@@ -1440,6 +1452,35 @@ namespace SlickRuinaMod
                 this.Destroy();
             }
         }
+
+        #region - Combo Finisher keyword check -
+        private bool CheckCondition(BattleDiceCardModel card)
+        {
+            if (card == null)
+                return false;
+            DiceCardXmlInfo xmlData = card.XmlData;
+            if (xmlData == null)
+                return false;
+            if (xmlData.Keywords.Contains("SlickMod_ComboFinisher"))
+                return true;
+            List<string> abilityKeywords = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords(xmlData);
+            for (int index = 0; index < abilityKeywords.Count; ++index)
+            {
+                if (abilityKeywords[index] == "SlickMod_ComboFinisher")
+                    return true;
+            }
+            foreach (DiceBehaviour behaviour in card.GetBehaviourList())
+            {
+                List<string> keywordsByScript = Singleton<BattleCardAbilityDescXmlList>.Instance.GetAbilityKeywords_byScript(behaviour.Script);
+                for (int index = 0; index < keywordsByScript.Count; ++index)
+                {
+                    if (keywordsByScript[index] == "SlickMod_ComboFinisher")
+                        return true;
+                }
+            }
+            return false;
+        }
+        #endregion
 
         #region - Funny enemy version of Speed Break -
         public class BattleUnitBuf_OppSpeedBreak : BattleUnitBuf

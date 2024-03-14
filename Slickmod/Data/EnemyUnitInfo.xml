@@ -5,7 +5,7 @@
 <!-- CANARD -->
 
 <!-- Dan's Solutions -->
-  <Enemy ID="17">
+  <Enemy ID="5101001">
     <Name>A Grade 9 Fixer</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -14,16 +14,16 @@
     <Unknown>false</Unknown>
     <Gender>F</Gender>
     <Retreat>false</Retreat>
-    <BookId>18</BookId>
+    <BookId>1101001</BookId>
     <BodyId>0</BodyId>
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
     <DropTable Level="0">
-      <DropItem Prob="1">11</DropItem>
+      <DropItem Prob="1">3101001</DropItem>
     </DropTable>
     <AiScript />
   </Enemy>
-  <Enemy ID="18">
+  <Enemy ID="5101002">
     <Name>Dan</Name>
     <FaceType>Skin</FaceType>
     <NameID>-1</NameID>
@@ -32,12 +32,12 @@
     <Unknown>false</Unknown>
     <Gender>F</Gender>
     <Retreat>false</Retreat>
-    <BookId>19</BookId>
+    <BookId>1101002</BookId>
     <BodyId>0</BodyId>
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
     <DropTable Level="0">
-      <DropItem Prob="1">12</DropItem>
+      <DropItem Prob="1">3101002</DropItem>
     </DropTable>
     <AiScript />
   </Enemy>
@@ -64,7 +64,7 @@
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
     <DropTable Level="0">
-      <DropItem Prob="1">6</DropItem>
+      <DropItem Prob="1">3201001</DropItem>
     </DropTable>
     <AiScript />
   </Enemy>
@@ -83,7 +83,7 @@
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
     <DropTable Level="0">
-      <DropItem Prob="1">6</DropItem>
+      <DropItem Prob="1">3201001</DropItem>
     </DropTable>
     <AiScript />
   </Enemy>
@@ -122,7 +122,7 @@
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
     <DropTable Level="0">
-      <DropItem Prob="1">7</DropItem>
+      <DropItem Prob="1">3201002</DropItem>
     </DropTable>
     <AiScript />
   </Enemy>
@@ -154,7 +154,7 @@
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
     <DropTable Level="0">
-      <DropItem Prob="1">8</DropItem>
+      <DropItem Prob="1">3401001</DropItem>
     </DropTable>
     <AiScript />
   </Enemy>
@@ -174,7 +174,7 @@
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
     <DropTable Level="0">
-      <DropItem Prob="1">8</DropItem>
+      <DropItem Prob="1">3401001</DropItem>
     </DropTable>
     <AiScript />
   </Enemy>
@@ -253,7 +253,7 @@
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
     <DropTable Level="0">
-      <DropItem Prob="1">8</DropItem>
+      <DropItem Prob="1">3401001</DropItem>
     </DropTable>
     <AiScript />
   </Enemy>

@@ -5,28 +5,28 @@
 
 <!-- Dan's Solutions -->
 <!-- Grade 9 Fixers -->
-  <Deck ID="18">
-    <Card>65</Card>
-    <Card>65</Card>
-    <Card>57</Card>
-    <Card>57</Card>
-    <Card>58</Card>
-    <Card>58</Card>
-    <Card>59</Card>
-    <Card>59</Card>
-    <Card>60</Card>
+  <Deck ID="1101001">
+    <Card>0101010</Card>
+    <Card>0101010</Card>
+    <Card>0101001</Card>
+    <Card>0101001</Card>
+    <Card>0101002</Card>
+    <Card>0101002</Card>
+    <Card>0101003</Card>
+    <Card>0101003</Card>
+    <Card>0101004</Card>
   </Deck>
 <!-- Dan -->
-  <Deck ID="19">
-    <Card>61</Card>
-    <Card>61</Card>
-    <Card>61</Card>
-    <Card>62</Card>
-    <Card>62</Card>
-    <Card>63</Card>
-    <Card>63</Card>
-    <Card>63</Card>
-    <Card>64</Card>
+  <Deck ID="1101002">
+    <Card>0101005</Card>
+    <Card>0101005</Card>
+    <Card>0101005</Card>
+    <Card>0101006</Card>
+    <Card>0101006</Card>
+    <Card>0101007</Card>
+    <Card>0101007</Card>
+    <Card>0101008</Card>
+    <Card>0101009</Card>
   </Deck>
 
 
@@ -34,7 +34,53 @@
 
 <!-- URBAN MYTH -->
 
+<!-- Slugger 1 -->
+  <Deck ID="1201001">
+    <Card>0201001</Card>
+    <Card>0201001</Card>
+    <Card>0201004</Card>
+    <Card>0201004</Card>
+    <Card>0201004</Card>
+    <Card>0201002</Card>
+    <Card>0201003</Card>
+    <Card>0201006</Card>
+  </Deck>
 
+<!-- Slugger 2 -->
+  <Deck ID="1201002">
+    <Card>0201001</Card>
+    <Card>0201001</Card>
+    <Card>0201004</Card>
+    <Card>0201002</Card>
+    <Card>0201002</Card>
+    <Card>0201003</Card>
+    <Card>0201005</Card>
+  </Deck>
+
+<!-- Ethan 1 -->
+  <Deck ID="1201003">
+    <Card>0201007</Card>
+    <Card>0201007</Card>
+    <Card>0201007</Card>
+    <Card>0201004</Card>
+    <Card>0201002</Card>
+    <Card>0201003</Card>
+    <Card>0201006</Card>
+    <Card>0201005</Card>
+  </Deck>
+
+<!-- Angy Ethan 1 -->
+  <Deck ID="1201004">
+    <Card>0201007</Card>
+    <Card>0201007</Card>
+    <Card>0201007</Card>
+    <Card>0201008</Card>
+    <Card>0201008</Card>
+    <Card>0201009</Card>
+    <Card>0201009</Card>
+    <Card>0201010</Card>
+    <Card>0201011</Card>
+  </Deck>
 
 
 
@@ -46,8 +92,83 @@
 
 <!-- URBAN PLAGUE -->
 
+<!-- Midnight Fixer 1 -->
+  <Deck ID="1401001">
+    <Card>0401001</Card>
+    <Card>0401001</Card>
+    <Card>0401004</Card>
+    <Card>0401004</Card>
+    <Card>0401003</Card>
+    <Card>0401003</Card>
+    <Card>0401007</Card>
+    <Card>0401006</Card>
+    <Card>0401008</Card>
+  </Deck>
 
+<!-- Midnight Fixer 2 -->
+  <Deck ID="1401002">
+    <Card>0401001</Card>
+    <Card>0401001</Card>
+    <Card>0401002</Card>
+    <Card>0401002</Card>
+    <Card>0401005</Card>
+    <Card>0401005</Card>
+    <Card>0401005</Card>
+    <Card>0401006</Card>
+    <Card>0401008</Card>
+  </Deck>
 
+<!-- Minho 1 -->
+  <Deck ID="1401005">
+    <Card>0401001</Card>
+    <Card>0401001</Card>
+    <Card>0401004</Card>
+    <Card>0401004</Card>
+    <Card>0401003</Card>
+    <Card>0401007</Card>
+    <Card>0401007</Card>
+    <Card>0401006</Card>
+    <Card>0401006</Card>
+  </Deck>
+
+<!-- Midnight Ethan -->
+  <Deck ID="1401003">
+    <Card>0401009</Card>
+    <Card>0401009</Card>
+    <Card>0401004</Card>
+    <Card>0401003</Card>
+    <Card>0401003</Card>
+    <Card>0401006</Card>
+    <Card>0401006</Card>
+    <Card>0401008</Card>
+    <Card>0401008</Card>
+  </Deck>
+
+<!-- ANGERY Midnight Ethan -->
+  <Deck ID="1401004">
+    <Card>0401009</Card>
+    <Card>0401009</Card>
+    <Card>0401010</Card>
+    <Card>0401010</Card>
+    <Card>0401011</Card>
+    <Card>0401012</Card>
+    <Card>0401013</Card>
+    <Card>0401014</Card>
+    <Card>0401015</Card>
+  </Deck>
+
+<!-- Minho 2 -->
+  <Deck ID="1401006">
+    <Card>0401001</Card>
+    <Card>0401001</Card>
+    <Card>0401004</Card>
+    <Card>0401004</Card>
+    <Card>0401003</Card>
+    <Card>0401007</Card>
+    <Card>0401007</Card>
+    <Card>0401006</Card>
+    <Card>0401006</Card>
+  </Deck>
 
 
 <!-- URBAN NIGHTMARE -->
@@ -153,7 +274,19 @@
     <Card>0503006</Card>
   </Deck>
 
+<!-- Susano'o -->
 
+  <Deck ID="1504001">
+    <Card>48</Card>
+    <Card>48</Card>
+    <Card>49</Card>
+    <Card>49</Card>
+    <Card>49</Card>
+    <Card>50</Card>
+    <Card>51</Card>
+    <Card>53</Card>
+    <Card>54</Card>
+  </Deck>
 
 
 <!-- URBAN STAR OF THE CITY -->
@@ -172,99 +305,7 @@
 
 
 
-  <Deck ID="9">
-    <Card>22</Card>
-    <Card>22</Card>
-    <Card>25</Card>
-    <Card>25</Card>
-    <Card>25</Card>
-    <Card>23</Card>
-    <Card>24</Card>
-    <Card>27</Card>
-  </Deck>
-  <Deck ID="10">
-    <Card>22</Card>
-    <Card>22</Card>
-    <Card>25</Card>
-    <Card>23</Card>
-    <Card>23</Card>
-    <Card>24</Card>
-    <Card>26</Card>
-  </Deck>
-  <Deck ID="11">
-    <Card>28</Card>
-    <Card>28</Card>
-    <Card>28</Card>
-    <Card>25</Card>
-    <Card>23</Card>
-    <Card>24</Card>
-    <Card>27</Card>
-    <Card>26</Card>
-  </Deck>
-  <Deck ID="12">
-    <Card>28</Card>
-    <Card>28</Card>
-    <Card>28</Card>
-    <Card>29</Card>
-    <Card>29</Card>
-    <Card>30</Card>
-    <Card>30</Card>
-    <Card>31</Card>
-    <Card>32</Card>
-  </Deck>
-  <Deck ID="13">
-    <Card>33</Card>
-    <Card>33</Card>
-    <Card>36</Card>
-    <Card>36</Card>
-    <Card>35</Card>
-    <Card>35</Card>
-    <Card>38</Card>
-    <Card>39</Card>
-    <Card>40</Card>
-  </Deck>
-  <Deck ID="14">
-    <Card>33</Card>
-    <Card>33</Card>
-    <Card>36</Card>
-    <Card>34</Card>
-    <Card>34</Card>
-    <Card>37</Card>
-    <Card>37</Card>
-    <Card>38</Card>
-    <Card>40</Card>
-  </Deck>
-  <Deck ID="15">
-    <Card>41</Card>
-    <Card>33</Card>
-    <Card>33</Card>
-    <Card>35</Card>
-    <Card>37</Card>
-    <Card>38</Card>
-    <Card>38</Card>
-    <Card>38</Card>
-    <Card>40</Card>
-  </Deck>
-  <Deck ID="16">
-    <Card>41</Card>
-    <Card>41</Card>
-    <Card>42</Card>
-    <Card>42</Card>
-    <Card>43</Card>
-    <Card>44</Card>
-    <Card>45</Card>
-    <Card>46</Card>
-    <Card>47</Card>
-  </Deck>
-  <Deck ID="17">
-    <Card>48</Card>
-    <Card>48</Card>
-    <Card>49</Card>
-    <Card>49</Card>
-    <Card>49</Card>
-    <Card>50</Card>
-    <Card>51</Card>
-    <Card>53</Card>
-    <Card>54</Card>
-  </Deck>
+
+
+
 </DeckXmlRoot>

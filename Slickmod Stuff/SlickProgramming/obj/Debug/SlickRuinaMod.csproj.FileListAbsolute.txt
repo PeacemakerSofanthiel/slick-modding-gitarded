@@ -60,3 +60,4 @@ D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.dll
 D:\Heetagaming\Slickmod Stuff\SlickProgramming\obj\Debug\SlickProgramming.pdb
 D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\CustomMapUtility.dll
 D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\CustomMapUtility.xml
+D:\Library of Ruina\Slick Modding\Slickmod Stuff\SlickProgramming\bin\Debug\AftermathBufs.dll

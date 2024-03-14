@@ -4,21 +4,21 @@
 
    <!-- CANARD -->
 
-  <BookUse ID="11">
+  <BookUse ID="3101001">
     <Name>Book of a Grade 9 Fixer</Name>
     <TextId />
     <BookIcon />
     <Chapter>1</Chapter>
     <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000013</DropItem>
+    <DropItem Type="Equip">2101001</DropItem>
   </BookUse>
-  <BookUse ID="12">
+  <BookUse ID="3101002">
     <Name>Book of Dan</Name>
     <TextId />
-    <BookIcon />
+    <BookIcon>SlickMod_Actual_Scam</BookIcon>
     <Chapter>1</Chapter>
     <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000014</DropItem>
+    <DropItem Type="Equip">2101002</DropItem>
   </BookUse>
 
 
@@ -27,7 +27,7 @@
 
 <!-- Backstreets Sluggers -->
 
-  <BookUse ID="6">
+  <BookUse ID="3201001">
     <Name>Book of a Backstreets Slugger</Name>
     <TextId />
     <BookIcon />
@@ -36,7 +36,7 @@
     <DropItem Type="Equip">2201001</DropItem>
     <DropItem Type="Equip">2201002</DropItem>
   </BookUse>
-  <BookUse ID="7">
+  <BookUse ID="3201002">
     <Name>Incomplete Book of Ethan, Vol. 1</Name>
     <TextId />
     <BookIcon />
@@ -58,7 +58,7 @@
 
 <!-- Midnight Office -->
 
-  <BookUse ID="8">
+  <BookUse ID="3401001">
     <Name>Book of Moonlight Office</Name>
     <TextId />
     <BookIcon>SlickMod_MidnightOffice</BookIcon>
@@ -68,7 +68,7 @@
     <DropItem Type="Equip">2401002</DropItem>
   </BookUse>
 
-  <BookUse ID="9">
+  <BookUse ID="3401002">
     <Name>Incomplete Book of Ethan, Vol. 2</Name>
     <TextId />
     <BookIcon>SlickMod_MidnightOffice</BookIcon>
@@ -129,6 +129,16 @@
     <DropItem Type="Equip">2503002</DropItem>
   </BookUse>
 
+<!-- The sus and owo -->
+  <BookUse ID="3504001">
+    <Name>Incomplete Book of Susano'o</Name>
+    <TextId />
+    <BookIcon>SlickMod_Spark</BookIcon>
+    <Chapter>5</Chapter>
+    <BookValue>0</BookValue>
+    <DropItem Type="Equip">2504001</DropItem>
+  </BookUse>
+
    <!-- URBAN STAR OF THE CITY -->
 
 
@@ -145,12 +155,5 @@
 
 
 
-  <BookUse ID="3504001">
-    <Name>Incomplete Book of Susano'o</Name>
-    <TextId />
-    <BookIcon>SlickMod_Spark</BookIcon>
-    <Chapter>5</Chapter>
-    <BookValue>0</BookValue>
-    <DropItem Type="Equip">10000012</DropItem>
-  </BookUse>
+
 </BookUseXmlRoot>

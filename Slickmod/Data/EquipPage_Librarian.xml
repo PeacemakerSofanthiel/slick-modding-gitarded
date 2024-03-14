@@ -6,7 +6,7 @@
 
 <!-- Dan's Solutions -->
 
-  <Book ID="10000013">
+  <Book ID="2101001">
     <Name>A Grade 9 Fixer’s Page</Name>
     <TextId>-1</TextId>
     <BookIcon />
@@ -41,10 +41,10 @@
     <SpeedDiceNum>1</SpeedDiceNum>
     <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
   </Book>
-  <Book ID="10000014">
+  <Book ID="2101002">
     <Name>Dan’s Page</Name>
     <TextId>-1</TextId>
-    <BookIcon />
+    <BookIcon>SlickMod_Actual_Scam</BookIcon>
     <EquipEffect>
       <HpReduction>0</HpReduction>
       <HP>49</HP>
@@ -176,8 +176,8 @@
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
       <AddedStartDraw>0</AddedStartDraw>
-      <OnlyCard>31</OnlyCard>
-      <OnlyCard>32</OnlyCard>
+      <OnlyCard>0401016</OnlyCard>
+      <OnlyCard>0401017</OnlyCard>
       <Passive>17</Passive>
       <Passive>19</Passive>
     </EquipEffect>
@@ -223,10 +223,9 @@
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
       <AddedStartDraw>0</AddedStartDraw>
-      <OnlyCard>31</OnlyCard>
-      <OnlyCard>32</OnlyCard>
-      <OnlyCard>41</OnlyCard>
-      <OnlyCard>42</OnlyCard>
+      <OnlyCard>0401016</OnlyCard>
+      <OnlyCard>0401017</OnlyCard>
+      <OnlyCard>0401018</OnlyCard>
       <Passive Pid="@origin">10008</Passive>
       <Passive>27</Passive>
       <Passive>21</Passive>
@@ -417,7 +416,8 @@
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
       <AddedStartDraw>0</AddedStartDraw>
-      <OnlyCard>13</OnlyCard>
+      <OnlyCard>0502007</OnlyCard>
+      <OnlyCard>0502008</OnlyCard>
       <Passive Pid="@origin">10001</Passive>
       <Passive>6</Passive>
       <Passive>7</Passive>
@@ -460,9 +460,11 @@
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
       <AddedStartDraw>0</AddedStartDraw>
-      <OnlyCard>21</OnlyCard>
+      <OnlyCard>0503006</OnlyCard>
       <Passive Pid="@origin">10001</Passive>
       <Passive>12</Passive>
+      <Passive>14</Passive>
+      <Passive>15</Passive>
     </EquipEffect>
     <Rarity>Rare</Rarity>
     <CharacterSkin>Consta</CharacterSkin>
@@ -497,9 +499,10 @@
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
       <AddedStartDraw>0</AddedStartDraw>
-      <OnlyCard>20</OnlyCard>
+      <OnlyCard>0503005</OnlyCard>
       <Passive Pid="@origin">10001</Passive>
       <Passive>13</Passive>
+      <Passive>16</Passive>
     </EquipEffect>
     <Rarity>Rare</Rarity>
     <CharacterSkin>StrayDogs_1</CharacterSkin>
@@ -536,10 +539,15 @@
       <MaxPlayPoint>3</MaxPlayPoint>
       <StartPlayPoint>3</StartPlayPoint>
       <AddedStartDraw>0</AddedStartDraw>
+      <OnlyCard>0504001</OnlyCard>
+      <OnlyCard>0504002</OnlyCard>
+      <OnlyCard>0504003</OnlyCard>
+      <OnlyCard>0504004</OnlyCard>
+      <OnlyCard>0504007</OnlyCard>
+      <OnlyCard>0504008</OnlyCard>
       <Passive Pid="@origin">10008</Passive>
       <Passive>35</Passive>
       <Passive>36</Passive>
-      <Passive>37</Passive>
       <Passive>38</Passive>
     </EquipEffect>
     <Rarity>Unique</Rarity>

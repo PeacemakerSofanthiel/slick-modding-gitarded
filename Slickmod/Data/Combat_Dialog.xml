@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BattleDialogRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Version>1.1</Version>
+
+<!-- Courier mook -->
   <Character ID="1">
     <Type ID="START_BATTLE">
       <BattleDialog ID="0">Fightin' ain't our usual gig... What's goin' on?</BattleDialog>
@@ -28,6 +30,8 @@
       <BattleDialog ID="2">Hah!</BattleDialog>
     </Type>
   </Character>
+
+<!-- Snow Coyote mook -->
   <Character ID="2">
     <Type ID="START_BATTLE">
       <BattleDialog ID="0">...</BattleDialog>
@@ -56,6 +60,8 @@
       <BattleDialog ID="2">Try the fuck again, bitch. Try the fuck again.</BattleDialog>
     </Type>
   </Character>
+
+<!-- Alexander Turner, AKA John Snow Coyote -->
   <Character ID="3">
     <Type ID="START_BATTLE">
       <BattleDialog ID="0">Focus.</BattleDialog>
@@ -76,6 +82,8 @@
       <BattleDialog ID="0">On to the next one!</BattleDialog>
     </Type>
   </Character>
+
+<!-- Snow Coyote mook 2 -->
   <Character ID="4">
     <Type ID="START_BATTLE">
       <BattleDialog ID="0">...</BattleDialog>
@@ -104,6 +112,8 @@
       <BattleDialog ID="2">Try the fuck again, bitch. Try the fuck again.</BattleDialog>
     </Type>
   </Character>
+
+<!-- Inferno Templar -->
   <Character ID="5">
     <Type ID="START_BATTLE">
       <BattleDialog ID="0">--- CONSCIOUSNESS NULLIFIED | INITIALIZING COMBAT MODE ---</BattleDialog>
@@ -121,6 +131,8 @@
       <BattleDialog ID="0">...</BattleDialog>
     </Type>
   </Character>
+
+<!-- Inferno Runt -->
   <Character ID="6">
     <Type ID="START_BATTLE">
       <BattleDialog ID="0">Let's make this quick. The Engineer wants efficiency.</BattleDialog>
@@ -146,6 +158,8 @@
       <BattleDialog ID="1">Falter!</BattleDialog>
     </Type>
   </Character>
+
+<!-- Inferno Templar -->
   <Character ID="7">
     <Type ID="START_BATTLE">
       <BattleDialog ID="0">--- CONSCIOUSNESS NULLIFIED | INITIALIZING COMBAT MODE ---</BattleDialog>
@@ -163,6 +177,8 @@
       <BattleDialog ID="0">...</BattleDialog>
     </Type>
   </Character>
+
+<!-- Inferno Runt -->
   <Character ID="8">
     <Type ID="START_BATTLE">
       <BattleDialog ID="0">Let's make this quick. The Engineer wants efficiency.</BattleDialog>
@@ -251,4 +267,63 @@
     <Type ID="COLLEAGUE_DEATH" />
     <Type ID="KILLS_OPPONENT" />
   </Character>
+
+<!-- Grade 9 Fixer -->
+  <Character ID="1101001">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Do you think we'll actually get paid if we survive this?</BattleDialog>
+      <BattleDialog ID="1">Ugh, I'm only putting up with this treatment until you pay us what you promised.</BattleDialog>
+      <BattleDialog ID="2">Yes boss...</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Holy shit, we actually did it!?</BattleDialog>
+      <BattleDialog ID="1">Oh thank god...</BattleDialog>
+      <BattleDialog ID="2">Finally we don't have to put up with Dan's shit anymore... Right?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Dan, you bastard...</BattleDialog>
+      <BattleDialog ID="1">What were we even supposed to do..?</BattleDialog>
+      <BattleDialog ID="2">But the training... Fuck you Dan...</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">Wasn't the training supposed to help us!?</BattleDialog>
+      <BattleDialog ID="1">Hey hey hey, I don't know how much longer I can handle this!</BattleDialog>
+      <BattleDialog ID="2">Wait but... He was just there a moment ago!</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">Haah!? That worked!?</BattleDialog>
+      <BattleDialog ID="1">Yes!</BattleDialog>
+      <BattleDialog ID="2">Please let this be almost over!</BattleDialog>
+    </Type>
+  </Character>
+
+<!-- Dan -->
+  <Character ID="1101002">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Alright idiots, remember your training! I don't pay you to stand around like dumbasses.</BattleDialog>
+      <BattleDialog ID="1">Always remember that your lives are expendable, so don't be afraid to take a blow for me!</BattleDialog>
+      <BattleDialog ID="2">Black Tie would want us to fuck over those Bee and Dee losers. So if you fuckers do your job, I might get promoted.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Thankfully, nothing of value was lost.</BattleDialog>
+      <BattleDialog ID="1">I'll just check those off as workplace expenditures.</BattleDialog>
+      <BattleDialog ID="2">Now remember, this chip in my katana would cost more to repair than replacing each and every one of you.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">Fucking bastards, how dare you let me die here...</BattleDialog>
+      <BattleDialog ID="1">I'm not dying here like the rest of you trash...</BattleDialog>
+      <BattleDialog ID="2">Black Tie paid good money for this, so you better let me-</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">Hmm... That's within expected losses.</BattleDialog>
+      <BattleDialog ID="1">Remember your training! Make sure to take as much advantage from their death as possible!</BattleDialog>
+      <BattleDialog ID="2">I do not care HOW you feel right now, get in front of me and take the next attack immediately!</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">I'll send your boss the bills for my repairs later.</BattleDialog>
+      <BattleDialog ID="1">You should be happy, you died to a weapon worth more than your entire family.</BattleDialog>
+      <BattleDialog ID="2">What were you thinking? You could have damaged my suit!</BattleDialog>
+    </Type>
+  </Character>
+
 </BattleDialogRoot>
