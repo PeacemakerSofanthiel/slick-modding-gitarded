@@ -102,9 +102,7 @@
     <BodyId>0</BodyId>
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem />
-    </DropTable>
+    <DropTable />
     <AiScript />
   </Enemy>
 <!-- Angy Ethan 1 -->
@@ -193,9 +191,7 @@
     <BodyId>0</BodyId>
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem />
-    </DropTable>
+    <DropTable />
     <AiScript />
   </Enemy>
 
@@ -214,7 +210,7 @@
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
     <DropTable Level="0">
-      <DropItem Prob="1">9</DropItem>
+      <DropItem Prob="1">3401002</DropItem>
     </DropTable>
     <AiScript />
   </Enemy>
@@ -232,9 +228,7 @@
     <BodyId>0</BodyId>
     <Exp>0</Exp>
     <DropBonus>0</DropBonus>
-    <DropTable Level="0">
-      <DropItem />
-    </DropTable>
+    <DropTable />
     <AiScript />
   </Enemy>
 

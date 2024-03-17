@@ -48,6 +48,9 @@
     <Reference Include="CustomMapUtility">
       <HintPath>..\..\Slickmod\Assemblies\CustomMapUtility.dll</HintPath>
     </Reference>
+    <Reference Include="generic_buffs">
+      <HintPath>..\..\Slickmod\Assemblies\1FrameworkAssemblies\generic_buffs.dll</HintPath>
+    </Reference>
     <Reference Include="HatSingularity">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\1256670\3051354156\Assemblies\1FrameworkAssemblies\HatSingularity.dll</HintPath>
     </Reference>

@@ -67,61 +67,11 @@ namespace SlickRuinaMod
                 MyKeywordBufs.SlickMod_SpareParts = SlickParts;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_SpareParts>();
             }
-
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Barrier", out var Barrier) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out Barrier) && EnumExtender.TryAddName("SlickMod_Barrier", Barrier))
-            {
-                MyKeywordBufs.SlickMod_Barrier = Barrier;
-                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Barrier>();
-            }
-
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_StaggerBarrier", out var SwaggerBarrier) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out SwaggerBarrier) && EnumExtender.TryAddName("SlickMod_StaggerBarrier", SwaggerBarrier))
-            {
-                MyKeywordBufs.SlickMod_StaggerBarrier = SwaggerBarrier;
-                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_StaggerBarrier>();
-            }
-
             if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_BlackTieInk", out var uhhhwahatever) ||
                 EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out uhhhwahatever) && EnumExtender.TryAddName("SlickMod_BlackTieInk", uhhhwahatever))
             {
                 MyKeywordBufs.SlickMod_BlackTieInk = uhhhwahatever;
                 KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_BlackTieInk>();
-            }
-
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_EmeraldLight", out var EmeraldGaming) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out EmeraldGaming) && EnumExtender.TryAddName("SlickMod_EmeraldLight", EmeraldGaming))
-            {
-                MyKeywordBufs.SlickMod_EmeraldLight = EmeraldGaming;
-                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_EmeraldLight>();
-            }
-
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Sinking", out var MeWhenISink) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out MeWhenISink) && EnumExtender.TryAddName("SlickMod_Sinking", MeWhenISink))
-            {
-                MyKeywordBufs.SlickMod_Sinking = MeWhenISink;
-                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Sinking>();
-            }
-
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_SinkingCount", out var MeWhenISinkLonger) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out MeWhenISinkLonger) && EnumExtender.TryAddName("SlickMod_SinkingCount", MeWhenISinkLonger))
-            {
-                MyKeywordBufs.SlickMod_SinkingCount = MeWhenISinkLonger;
-                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_SinkingCount>();
-            }
-
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_Rupture", out var RupTrue) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out RupTrue) && EnumExtender.TryAddName("SlickMod_Rupture", RupTrue))
-            {
-                MyKeywordBufs.SlickMod_Rupture = RupTrue;
-                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_Rupture>();
-            }
-
-            if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_RuptureCount", out var RupTrue69) ||
-                EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out RupTrue69) && EnumExtender.TryAddName("SlickMod_RuptureCount", RupTrue69))
-            {
-                MyKeywordBufs.SlickMod_RuptureCount = RupTrue69;
-                KeywordUtils.RegisterKeywordBuf<BattleUnitBuf_SlickMod_RuptureCount>();
             }
             if (EnumExtender.TryGetValueOf<KeywordBuf>("SlickMod_DrownedDrowning", out var MewhenIdrown) ||
                 EnumExtender.TryFindUnnamedValue(default(KeywordBuf), null, false, out MewhenIdrown) && EnumExtender.TryAddName("SlickMod_DrownedDrowning", MewhenIdrown))
@@ -180,14 +130,7 @@ namespace SlickRuinaMod
         public static KeywordBuf SlickMod_Orb_Malice;
         public static KeywordBuf SlickMod_Orb_Focus;
         public static KeywordBuf SlickMod_SpareParts;
-        public static KeywordBuf SlickMod_Barrier;
-        public static KeywordBuf SlickMod_StaggerBarrier;
         public static KeywordBuf SlickMod_BlackTieInk;
-        public static KeywordBuf SlickMod_EmeraldLight;
-        public static KeywordBuf SlickMod_Sinking;
-        public static KeywordBuf SlickMod_SinkingCount;
-        public static KeywordBuf SlickMod_Rupture;
-        public static KeywordBuf SlickMod_RuptureCount;
         public static KeywordBuf SlickMod_DrownedDrowning;
         public static KeywordBuf SlickMod_DrownedOmegaCringe;
     }
