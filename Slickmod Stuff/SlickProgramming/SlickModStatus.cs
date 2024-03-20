@@ -84,57 +84,6 @@ namespace SlickRuinaMod
 
     }
 
-    // Damage Down
-    // Hat Singularity mid
-    // All Offensive dice the character plays deal -{0} damage for the Scene.
-    public class BattleUnitBuf_SlickMod_DamageDown : BattleUnitBuf
-    {
-
-        // Get keyword
-        public override string keywordId => "SlickMod_DamageDown";
-
-        // Thing
-        public override KeywordBuf bufType
-        {
-            get
-            {
-                return MyKeywordBufs.SlickMod_DamageDown;
-
-            }
-        }
-
-        // Status type
-        public override BufPositiveType positiveType
-        {
-            get
-            {
-                return BufPositiveType.Negative;
-            }
-        }
-
-        public BattleUnitBuf_SlickMod_DamageDown(int Stack)
-        {
-            this.stack = Stack;
-        }
-
-        public override void BeforeGiveDamage(BattleDiceBehavior behavior)
-        {
-            bool flag = this._owner.IsImmune(this.bufType);
-            if (!flag)
-            {
-                behavior.ApplyDiceStatBonus(new DiceStatBonus
-                {
-                    dmg = -this.stack
-                });
-            }
-        }
-
-        public override void OnRoundEnd()
-        {
-            this.Destroy();
-        }
-    }
-
     // Cycle
     // Upon using a page, discard 1 random page, then draw 1 page, then lose 1 Cycle.
     public class BattleUnitBuf_SlickMod_Cycle : BattleUnitBuf
@@ -491,6 +440,11 @@ namespace SlickRuinaMod
            KeywordBuf.Binding,
            KeywordBuf.Vulnerable_break,
            KeywordBuf.Decay,
+           generic_buffs.keywordsing.sinking,
+           generic_buffs.keywordsing.sinking_count,
+           generic_buffs.keywordsing.rupture,
+           generic_buffs.keywordsing.rupture_count,
+
         };
 
     }

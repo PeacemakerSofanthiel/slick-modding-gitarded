@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using UnityEngine;
+using generic_buffs;
 
 namespace SlickRuinaMod
 {
@@ -584,7 +585,7 @@ namespace SlickRuinaMod
         {
             base.OnWinParrying();
             this.card.target.bufListDetail.AddKeywordBufByCard(KeywordBuf.Paralysis, 1, this.owner);
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 1, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 1, this.owner);
         }
     }
     public class DiceCardAbility_SlickMod_DrownedBrainViolence : DiceCardAbilityBase
@@ -592,7 +593,7 @@ namespace SlickRuinaMod
         public override void OnWinParrying()
         {
             base.OnWinParrying();
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SinkingCount, 3, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking_count, 3, this.owner);
             this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 2, this.owner);
         }
     }
@@ -620,7 +621,7 @@ namespace SlickRuinaMod
         public override void OnSucceedAttack()
         {
             base.OnSucceedAttack();
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 2, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 2, this.owner);
         }
     }
     public class DiceCardAbility_SlickMod_DrownedDepressionDice2 : DiceCardAbilityBase
@@ -647,7 +648,7 @@ namespace SlickRuinaMod
         public override void OnSucceedAttack()
         {
             base.OnSucceedAttack();
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 2, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 2, this.owner);
         }
     }
     public class DiceCardAbility_SlickMod_DrownedDepressionDice3 : DiceCardAbilityBase
@@ -674,15 +675,14 @@ namespace SlickRuinaMod
         public override void OnSucceedAttack()
         {
             base.OnSucceedAttack();
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 2, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 2, this.owner);
         }
     }
     public class DiceCardAbility_SlickMod_DrownedLoudNoiseDie : DiceCardAbilityBase
     {
-        public override void OnSucceedAttack()
+        public override void OnSucceedAttack(BattleUnitModel target)
         {
-            base.OnSucceedAttack();
-            base.behavior.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 2, this.owner);
+            target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 2, this.owner);
         }
     }
     public class DiceCardAbility_SlickMod_DrownedDropDie : DiceCardAbilityBase
@@ -695,8 +695,8 @@ namespace SlickRuinaMod
                 if (battleUnitModel != this.card.target)
                 {
                     battleUnitModel.TakeBreakDamage(7, DamageType.Card_Ability);
-                    battleUnitModel.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 2, this.owner);
-                    battleUnitModel.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SinkingCount, 1, this.owner);
+                    battleUnitModel.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 2, this.owner);
+                    battleUnitModel.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking_count, 1, this.owner);
                 }
             }
         }
@@ -706,8 +706,8 @@ namespace SlickRuinaMod
         public override void OnWinParrying()
         {
             base.OnWinParrying();
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 2, this.owner);
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SinkingCount, 1, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 2, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking_count, 1, this.owner);
         }
     }
 
@@ -725,7 +725,7 @@ namespace SlickRuinaMod
         public override void OnSucceedAttack()
         {
             base.OnSucceedAttack();
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 2, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 2, this.owner);
         }
     }
 
@@ -743,7 +743,7 @@ namespace SlickRuinaMod
         public override void OnWinParrying()
         {
             base.OnWinParrying();
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SinkingCount, 2, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking_count, 2, this.owner);
             this.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedDrowning, 2, this.owner);
         }
         public override void OnLoseParrying()
@@ -790,8 +790,8 @@ namespace SlickRuinaMod
         public override void OnSucceedAttack()
         {
             base.OnSucceedAttack();
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 3, this.owner);
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SinkingCount, 1, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 3, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking_count, 1, this.owner);
         }
     }
     public class DiceCardAbility_SlickMod_DrownedMeaninglessReroll : DiceCardAbilityBase
@@ -813,8 +813,8 @@ namespace SlickRuinaMod
         public override void OnWinParrying()
         {
             base.OnWinParrying();
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 3, this.owner);
-            this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SinkingCount, 2, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 3, this.owner);
+            this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking_count, 2, this.owner);
             this.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedDrowning, 2, this.owner);
         }
         public override void OnLoseParrying()
@@ -935,7 +935,7 @@ namespace SlickRuinaMod
             base.OnSucceedAttack();
             didihitthem = true;
             base.behavior.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedDrowning, 2, this.owner);
-            base.behavior.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, 5, this.owner);
+            base.behavior.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, 5, this.owner);
         }
         public override void AfterAction()
         {
@@ -945,7 +945,7 @@ namespace SlickRuinaMod
                 foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
                 {
                     BattleUnitBuf battleUnitBuf = battleUnitModel.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
-                    BattleUnitBuf battleUnitBuf2 = battleUnitModel.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_SinkingCount);
+                    BattleUnitBuf battleUnitBuf2 = battleUnitModel.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_generic_sinkingcountbutMYsinkingcount);
                     if (battleUnitBuf != null)
                     {
                         if (battleUnitBuf.stack <= 3)
@@ -973,7 +973,7 @@ namespace SlickRuinaMod
             base.BeforeRollDice();
             didihitthem = false;
         }
-        public override void OnSucceedAttack()
+        public override void OnSucceedAttack(BattleUnitModel target)
         {
             base.OnSucceedAttack();
             didihitthem = true;
@@ -989,12 +989,12 @@ namespace SlickRuinaMod
                     battleUnitBuf.stack -= 2;
                 }
             }
-            base.behavior.card.target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedDrowning, 2, this.owner);
+            target.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_DrownedDrowning, 2, this.owner);
         }
         public override void AfterAction()
         {
             base.AfterAction();
-            if (!didihitthem)
+            if (didihitthem == false)
             {
                 foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
                 {
@@ -1017,7 +1017,7 @@ namespace SlickRuinaMod
     }
     public class DiceCardAbility_SlickMod_DrownedFuckYou : DiceCardAbilityBase
     {
-        public override void OnSucceedAttack()
+        public override void OnSucceedAttack(BattleUnitModel target)
         {
             base.OnSucceedAttack();
             foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))

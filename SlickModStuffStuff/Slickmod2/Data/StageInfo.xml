@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StageXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+
+  <!-- CANRAD -->
+
+  <!-- URBAN MYTH -->
+  <Stage id="4">
+  <Name>Backstreets Sluggers</Name>
+  <Wave>
+    <Unit>5201001</Unit>
+    <Unit>5201002</Unit>
+    <Unit>5201001</Unit>
+    <Formation>41</Formation>
+    <FormationType>Default</FormationType>
+    <AvailableUnit>2</AvailableUnit>
+    <emotionCardList />
+  </Wave>
+  <Wave>
+    <Unit>5201002</Unit>
+    <Unit>5201005</Unit>
+    <Unit>5201003</Unit>
+    <Formation>41</Formation>
+    <FormationType>Default</FormationType>
+    <AvailableUnit>2</AvailableUnit>
+    <emotionCardList />
+  </Wave>
+  <Wave>
+    <Unit>5201004</Unit>
+    <Unit>5201006</Unit>
+    <Formation>41</Formation>
+    <FormationType>Default</FormationType>
+    <AvailableUnit>2</AvailableUnit>
+    <emotionCardList />
+  </Wave>
+  <StageType>Invitation</StageType>
+  <FloorNum>2</FloorNum>
+  <Chapter>2</Chapter>
+  <Invitation Combine="BookValue">
+    <Value>2</Value>
+    <Num>1</Num>
+  </Invitation>
+  <Condition>
+    <Level>0</Level>
+  </Condition>
+  <Story Condition="Start">Button</Story>
+  <Story Condition="End" />
+  <IsChapterLast>false</IsChapterLast>
+  <invitationtype>false</invitationtype>
+</Stage>
+
+  <!-- URBAN LEGEND -->
+  
+  <!-- URBAN PLAGUE -->
+  <Stage id="5">
+  <Name>Midnight Office</Name>
+  <Wave>
+      <Unit>12</Unit>
+      <Unit>13</Unit>
+      <Unit>12</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>3</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>12</Unit>
+      <Unit>13</Unit>
+      <Unit>14</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>3</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>15</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>3</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>2</FloorNum>
+    <Chapter>4</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>4</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+    <StoryType>SlickMod_MidnightOffice</StoryType>
+  </Stage>
+  
+  <!-- URBAN NIGHTMARE -->
+  <Stage id="1">
+    <Name>The Couriers (I)</Name>
+    <Wave>
+      <Unit>5501001</Unit>
+      <Unit>5501001</Unit>
+      <Unit>5501001</Unit>
+      <Unit>5501001</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+    <StoryType>SlickMod_Courier</StoryType>
+  </Stage>
+  <Stage id="2">
+    <Name>Snow Coyote Office</Name>
+    <Wave>
+      <Unit>5502001</Unit>
+      <Unit>5502001</Unit>
+      <Unit>5502001</Unit>
+      <Unit>5502001</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>5502002</Unit>
+      <Unit>5502003</Unit>
+      <Unit>5502003</Unit>
+      <Unit>5502003</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+  <Stage id="3">
+    <Name>Inferno Corps (I)</Name>
+    <Wave>
+      <Unit>5503001</Unit>
+      <Unit>5503001</Unit>
+      <Unit>5503002</Unit>
+      <Unit>5503002</Unit>
+      <Unit>5503002</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <Wave>
+      <Unit>5503003</Unit>
+      <Unit>5503003</Unit>
+      <Unit>5503003</Unit>
+      <Unit>5503004</Unit>
+      <Unit>5503004</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+
+  <Stage id="6">
+    <Name>Wayward Fixer Susano'o</Name>
+    <Wave>
+      <Unit>5504001</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>1</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>5</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+    <StoryType>SlickMod_Spark</StoryType>
+  </Stage>
+  <!-- SUSSY IN THE CITY -->
+
+
+  <!-- WATSON TIER -->
+  
+  
+  <Stage id="7">
+    <Name>Drowning Drowning Drowning</Name>
+    <Wave>
+      <Unit>1701001</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <emotionCardList />
+    <ManagerScript>SlickMod_DrownedMapManager</ManagerScript>
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Invitation Combine="BookValue">
+      <Value>1</Value>
+      <Num>1</Num>
+    </Invitation>
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+    <MapInfo>DrownedStage</MapInfo>
+  </Stage>
+</StageXmlRoot>

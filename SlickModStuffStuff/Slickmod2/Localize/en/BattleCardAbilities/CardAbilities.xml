@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- COURIERS 1 -->
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Courier_DiscardUseLight1">
+	<Desc>Restore 1 Light upon discarding this page\n[On Use] Restore 1 Light</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Courier_LuckySlipPage">
+	<Desc>[On Use] Gain 1 Haste next Scene; Gain 1 Cycle next Scene; If Speed is higher than the target's, all dice on this page gain +2 minimum roll value</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Courier_Cycle3Draw1">
+	<Desc>[On Use] Gain 3 Cycle next Scene; Draw 1 page</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_FuckOff">
+	<Desc>Draw 1 page upon discarding this page\n[On Use] If user has Cycle, all dice on this page gain +1 Power</Desc>
+ </BattleCardAbility>
+
+<!-- SNOW COYOTES -->
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Trudge">
+	<Desc>[On Use] Restore 1 Light; If Speed is 2 or lower, boost the minimum value of all dice on this page by 1</Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Placeholder">
+	<Desc></Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Placeholder">
+	<Desc></Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Placeholder">
+	<Desc></Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Placeholder">
+	<Desc></Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Placeholder">
+	<Desc></Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Placeholder">
+	<Desc></Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="DiceCardSelfAbility_SlickMod_Placeholder">
+	<Desc></Desc>
+ </BattleCardAbility>
+
+<!-- INFERNAL CORPS I -->
+ <BattleCardAbility ID="SlickMod_InfernalOverheat1">
+	<Desc>[On Use] Gain 1 Overheat next Scene</Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="SlickMod_InfernalOverheat2">
+	<Desc>[On Use] Gain 2 Overheat next Scene</Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="SlickMod_InfernalOverEAT2Energy3">
+	<Desc>[On Use] Spend 2 Overheat to restore 3 Light</Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="SlickMod_InfernalHeavyHand">
+	<Desc>[On Use] Gain 1 Strength this Scene, inflict 3 Bind to self next Scene</Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="SlickMod_InfernalPRISIMBLAAAAAAAST">
+	<Desc>[Single-use]
+[On Use] Take damage equal to Overheat on self * 5</Desc>
+ </BattleCardAbility>
+  
+ <BattleCardAbility ID="SlickMod_InfernalBurningBladework">
+	<Desc>[On Use] Spend all Overheat, gain 1 Strength and Endurance this Scene for every 2 Overheat spent; Immobilize self next Scene</Desc>
+ </BattleCardAbility>
+
+<!-- DAN'S SOLUTIONS -->
+ <BattleCardAbility ID="SlickMod_DanAmature">
+	<Desc>[After Use] If neither of the dice on this page hit, take 7 Stagger damage</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DanBrainDamagedEconomy">
+	<Desc>[On Use] Take 4 Stagger damage and draw 1 page</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DanBrainDamagedLight">
+	<Desc>[On Use] Take 4 Stagger damage and restore 1 Light</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DanChicago">
+	<Desc>[Combat Start] Give a random ally 1 Damage Up this Scene</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DanIHaveNoIdeaWhatIsHappening">
+	<Desc>[On Use] Take 7 Stagger damage</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DanInkBlot">
+	<Desc>[On Use] Gain 1 Ink; restore 1 Light</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DanShitAtArt">
+	<Desc>[On Use] If Ink is lower than 5, gain 1 Ink; if Ink is 5 or higher, spend 2 Ink to draw 2 pages</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DanAmateurInkwork">
+	<Desc>[On Use] Spend 2 Ink to give all dice on this page +2 power</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DanArtistsInterpretation">
+	<Desc>[On Use] Gain 2 Ink, if Ink is 7 or higher, take 7 Stagger damage to give 3 random allies 1 Damage Up next Scene</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DanInkDroplets">
+	<Desc>[On Use] Spend 5 Ink to give all dice on this page +2 Power and “[On Hit] Inflict 2 Ink”</Desc>
+ </BattleCardAbility>
+
+<!-- DROWNED -->
+
+ <BattleCardAbility ID="SlickMod_DrownedSinkersSinking">
+	<Desc>[Combat Start] All enemies with Drowning gain Sinking this Scene equal to half their Drowning</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedImtakingyouinfortreason">
+	<Desc>[On Use] Inflict 1 Drowning to target and a random enemy</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedLoudNoise">
+	<Desc>Dice on this page deal no damage
+[On Use] Add a copy of the first die on this page for every 5 Drowning on the manually selected target</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedDrop">
+	<Desc>[On Use] If target has 10 or more Drowning, all dice on this page gain +5 Power and inflict 5 Strangling Despair to all enemies on hit</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedTwistingPathways">
+	<Desc>This page cannot be redirected and targets an additional Speed Die on the target for every 5 Drowning they have
+[On Use] If target has 5 or more Drowning, all dice on this page gain “[On Hit] Inflict 1 Strangling Despair to 2 random enemies”</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedTwistingPathways">
+	<Desc>This page cannot be redirected and targets an additional Speed Die on the target for every 5 Drowning they have
+[On Use] If target has 5 or more Drowning, all dice on this page gain “[On Hit] Inflict 1 Strangling Despair to 2 random enemies”</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedLetitGo">
+	<Desc>[On Use] All dice on this page gain Power equal to target’s Drowning (Max +10)</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedSmothering">
+	<Desc>[On Use] Inflict 3 Sinking and 1 Sinking Count next Scene for every 4 Drowning target has</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedMeaningless">
+	<Desc>[On Use] If target has 7 or more Drowning, all dice on this page gain +5 Power and inflict 2 Strangling Despair to all enemies</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedNumbness">
+	<Desc>[Combat Start] For this Scene, all characters take no damage from attacks and Librarians gain 1 Sinking and Sinking Count this Scene upon taking a hit</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedEmptyFeeling">
+	<Desc>[Combat Start] For this Scene, whenever an enemy uses a Combat Page, all dice on that page lose 1 Power for every 5 Sinking on self</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedGnawing">
+	<Desc>[Combat Start] All enemies take damage equal to their Drowning and gain Sinking Count equal to 1/4th of their Drowning</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedNoLight">
+	<Desc>[On Use] All dice on this page lose 5 power for every Drowning on self
+[After Use] If Drowning is 10 or higher, lose 10 Drowning</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedNoLight">
+	<Desc>[On Use] All dice on this page lose 5 power for every Drowning on self
+[After Use] If Drowning is 10 or higher, lose 10 Drowning</Desc>
+ </BattleCardAbility>
+
+ <BattleCardAbility ID="SlickMod_DrownedNoDamage">
+	<Desc>Dice on this page deal no damage or Stagger damage</Desc>
+ </BattleCardAbility>
+
+</BattleCardAbilityDescRoot>

@@ -146,5 +146,54 @@
   <Desc>Affects the properties of certain Combat Pages.</Desc>
 </BattleEffectText>
 
+    <BattleEffectText ID="generic_ireallyREALLYlikepoise">
+      <Name>Poise</Name>
+      <Desc>Deal 20% more damage with an attack at a {0}% chance. When this activates, reduce Poise Count by 1 and trigger [On Crit] effects.
+If this character has no Poise Count at the end of the Scene, lose all stacks of this status.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="generic_ireallyREALLYlikepoise_count">
+      <Name>Poise Count</Name>
+      <Desc>At the start of the Scene, lose 1 stack of Poise Count.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="generic_rutprutpruertruee">
+      <Name>Rupture</Name>
+      <Desc>When taking a hit, if Rupture Count is 1 or higher, take {0} damage and reduce Rupture Count by 1.
+If this character has no Rupture Count at the end of the Scene, lose all stacks of this status.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="generic_rutprutpruertruee_count_count">
+      <Name>Rupture Count</Name>
+      <Desc>Affects the properties of Rupture.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="generic_Erratic_errastatic">
+      <Name>Erratic</Name>
+      <Desc>For the duration of the Scene, whenever the character plays any Combat Page, up to {0} random dice on it have their minimum roll value decreased by 3.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="generic_minimalultima_upwards">
+      <Name>Min Value Up</Name>
+      <Desc>Increase the minimum value of all dice by {0} for the duration of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="generic_shieldingshield">
+      <Name>Shield</Name>
+      <Desc>Prevent the next {0} damage taken.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="generic_shieldingshield_Keyword">
+      <Name>Shield X</Name>
+      <Desc>Prevent the next X damage taken.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="generic_staggershieldingshield">
+      <Name>Stagger Shield</Name>
+      <Desc>Prevent the next {0} Stagger damage taken.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="generic_staggershieldingshield_Keyword">
+      <Name>Stagger Shield X</Name>
+      <Desc>Prevent the next X Stagger damage taken.</Desc>
+    </BattleEffectText>
+
   </effectTextList>
 </BattleEffectTextRoot>

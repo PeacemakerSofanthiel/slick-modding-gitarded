@@ -1,0 +1,55 @@
+<ModInfo>
+  <ClothInfo>
+    <Name>Drowning Denizen</Name>
+    <Default>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="-13.8" head_y="388.7" rotation="2.53001" head_enable="True" />
+    </Default>
+    <Guard>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="20.7" head_y="391" rotation="3.37335" head_enable="True" />
+    </Guard>
+    <Evade>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="46" head_y="349.6" rotation="5.060041" head_enable="True" />
+    </Evade>
+    <Damaged>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="-9.2" head_y="331.2" rotation="5.903349" head_enable="True" />
+    </Damaged>
+    <Slash>
+      <Direction>Side</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="29.9" head_y="358.8" rotation="0" head_enable="True" />
+    </Slash>
+    <Penetrate>
+      <Direction>Side</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="23" head_y="347.3" rotation="-5.903359" head_enable="True" />
+    </Penetrate>
+    <Hit>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="69.00001" head_y="377.2" rotation="2.53001" head_enable="True" />
+    </Hit>
+    <Move>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="-25.3" head_y="377.2" rotation="5.060009" head_enable="True" />
+    </Move>
+    <Fire>
+      <Direction>Side</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="29.9" head_y="358.8" rotation="0" head_enable="True" />
+    </Fire>
+    <Aim>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="0" pivot_y="-400" />
+      <Head head_x="-13.8" head_y="388.7" rotation="2.53001" head_enable="True" />
+    </Aim>
+  </ClothInfo>
+</ModInfo>

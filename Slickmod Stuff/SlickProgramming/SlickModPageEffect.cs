@@ -9,6 +9,7 @@ using System.Security.Policy;
 using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_WhoCaresClaw;
 using static DiceCardSelfAbility_unitePower;
 using static SlickRuinaMod.DiceCardSelfAbility_SlickMod_BarghestNail;
+using generic_buffs;
 
 namespace SlickRuinaMod
 {
@@ -1322,7 +1323,7 @@ namespace SlickRuinaMod
                 BattleUnitBuf battleUnitBuf = battleUnitModel.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
                 if (battleUnitBuf != null)
                 {
-                    battleUnitModel.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_Sinking, battleUnitBuf.stack / 2, this.owner);
+                    battleUnitModel.bufListDetail.AddKeywordBufThisRoundByCard(generic_buffs.keywordsing.sinking, battleUnitBuf.stack / 2, this.owner);
                 }
             }
         }
@@ -1351,7 +1352,7 @@ namespace SlickRuinaMod
                 int dice = battleUnitBuf.stack / 5;
                 for (int i = 0; i < dice; i++)
                 {
-                    DiceCardXmlInfo cardItem = ItemXmlDataList.instance.GetCardItem(new LorId("SlickMod", 137), false);
+                    DiceCardXmlInfo cardItem = ItemXmlDataList.instance.GetCardItem(new LorId("SlickMod", 170103), false);
                     new DiceBehaviour();
                     int num = 0;
                     foreach (DiceBehaviour diceBehaviour in cardItem.DiceBehaviourList)
@@ -1429,37 +1430,24 @@ namespace SlickRuinaMod
         }
         public override void OnApplyCard()
         {
+            base.OnApplyCard();
+            BattleUnitBuf battleUnitBuf = this.card.target.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_DrownedDrowning);
             this.card.subTargets.Clear();
-            List<BattlePlayingCardDataInUnitModel.SubTarget> list2 = new List<BattlePlayingCardDataInUnitModel.SubTarget>(this.card.subTargets);
-            list2.Add(new BattlePlayingCardDataInUnitModel.SubTarget
+            List<int> b = new List<int>();
+            for (int i = 0; i < battleUnitBuf.stack / 5; i++)
             {
-                target = this.card.target,
-                targetSlotOrder = this.card.targetSlotOrder
-            });
-            int targetslotorder = this.card.targetSlotOrder;
-            foreach (BattlePlayingCardDataInUnitModel.SubTarget subTarget in list2)
-            {
-                List<BattlePlayingCardDataInUnitModel.SubTarget> list3 = new List<BattlePlayingCardDataInUnitModel.SubTarget>();
-                int num = UnityEngine.Mathf.Clamp(this.Onslaught, 0, (subTarget.target.speedDiceResult.Count - 1));
-                for (int j = 0; j < num; j++)
+                if (this.card.targetSlotOrder != i && i < this.card.target.speedDiceResult.Count)
                 {
-                    if (!list2.Exists((BattlePlayingCardDataInUnitModel.SubTarget x) => x.target == subTarget.target && x.targetSlotOrder <= j))
-                    {
-                        list3.Add(new BattlePlayingCardDataInUnitModel.SubTarget
-                        {
-                            target = subTarget.target,
-                            targetSlotOrder = j + 1
-                        });
-                    }
-                    else
-                    {
-                        list3.Add(new BattlePlayingCardDataInUnitModel.SubTarget
-                        {
-                            target = subTarget.target,
-                            targetSlotOrder = j + 1
-                        });
-                    }
+                    b.Add(i);
                 }
+            }
+            if (b.Count > 0)
+            {
+                this.card.subTargets.Add(new BattlePlayingCardDataInUnitModel.SubTarget
+                {
+                    target = this.card.target,
+                    targetSlotOrder = RandomUtil.SelectOne(b)
+                });
             }
         }
         public override void OnSucceedAttack()
@@ -1506,8 +1494,8 @@ namespace SlickRuinaMod
             if (battleUnitBuf != null)
             {
                 int num = battleUnitBuf.stack / 4;
-                this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_SinkingCount, num, this.owner);
-                this.card.target.bufListDetail.AddKeywordBufByCard(MyKeywordBufs.SlickMod_Sinking, num * 3, this.owner);
+                this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking_count, num, this.owner);
+                this.card.target.bufListDetail.AddKeywordBufByCard(generic_buffs.keywordsing.sinking, num * 3, this.owner);
             }
         }
     }
@@ -1576,8 +1564,8 @@ namespace SlickRuinaMod
             public override void OnTakeDamageByAttack(BattleDiceBehavior atkDice, int dmg)
             {
                 base.OnTakeDamageByAttack(atkDice, dmg);
-                this._owner.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_Sinking, 1, this._owner);
-                this._owner.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_SinkingCount, 1, this._owner);
+                this._owner.bufListDetail.AddKeywordBufThisRoundByCard(generic_buffs.keywordsing.sinking, 1, this._owner);
+                this._owner.bufListDetail.AddKeywordBufThisRoundByCard(generic_buffs.keywordsing.sinking_count, 1, this._owner);
             }
             public override void OnRoundEnd()
             {
@@ -1601,7 +1589,7 @@ namespace SlickRuinaMod
             public override void BeforeRollDice(BattleDiceBehavior behavior)
             {
                 base.BeforeRollDice(behavior);
-                BattleUnitBuf battleUnitBuf = this._owner.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_SlickMod_Sinking);
+                BattleUnitBuf battleUnitBuf = this._owner.bufListDetail.GetActivatedBufList().Find((BattleUnitBuf x) => x is BattleUnitBuf_generic_sinkingbutMYsinking);
                 if (battleUnitBuf != null)
                 {
                     int depression = battleUnitBuf.stack / 5;
@@ -1630,7 +1618,7 @@ namespace SlickRuinaMod
                 if (battleUnitBuf != null)
                 {
                     battleUnitModel.TakeDamage(battleUnitBuf.stack, DamageType.Emotion);
-                    battleUnitModel.bufListDetail.AddKeywordBufThisRoundByCard(MyKeywordBufs.SlickMod_SinkingCount, battleUnitBuf.stack / 4, this.owner);
+                    battleUnitModel.bufListDetail.AddKeywordBufThisRoundByCard(generic_buffs.keywordsing.sinking_count, battleUnitBuf.stack / 4, this.owner);
                 }
             }
         }

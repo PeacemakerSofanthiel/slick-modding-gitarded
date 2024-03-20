@@ -1818,7 +1818,7 @@ namespace SlickRuinaMod
             bool flag = battleUnitModel != null;
             if (flag)
             {
-                battleUnitModel.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_Barrier, 5, battleUnitModel);
+                battleUnitModel.bufListDetail.AddKeywordBufThisRoundByEtc(generic_buffs.keywordsing.shield, 5, battleUnitModel);
                 battleUnitModel.cardSlotDetail.RecoverPlayPoint(1);
                 battleUnitModel.allyCardDetail.DrawCards(1);
                 battleUnitModel.RecoverBreakLife(5);
@@ -1996,13 +1996,31 @@ namespace SlickRuinaMod
         public override void OnRoundStart()
         {
             base.OnRoundStart();
+            if (staggeredcount <= 0)
+            {
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedDrowning, 2, this.owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, 1, this.owner);
+                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Endurance, 1, this.owner);
+            }
+            if (staggeredcount == enemycount)
+            {
+                this.owner.allyCardDetail.AddNewCard(new LorId(SlickModInitializer.packageId, 170113))?.SetCostToZero();
+            }
+            enemycount = 0;
+            staggeredcount = 0;
+        }
+        public override void OnRoundEnd()
+        {
+            base.OnRoundEnd();
             foreach (BattleUnitModel battleUnitModel in BattleObjectManager.instance.GetAliveList((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy))
             {
                 enemycount++;
                 if (battleUnitModel.breakDetail.breakLife == 0)
                 {
                     this.owner.RecoverBreakLife(50);
-                    battleUnitModel.breakDetail.ResetGauge();
+                    battleUnitModel.breakDetail.RecoverBreakLife(battleUnitModel.MaxBreakLife);
+                    battleUnitModel.breakDetail.nextTurnBreak = false;
+                    battleUnitModel.breakDetail.RecoverBreak(battleUnitModel.breakDetail.GetDefaultBreakGauge());
                     staggeredcount++;
                 }
                 if (battleUnitModel != null)
@@ -2017,18 +2035,7 @@ namespace SlickRuinaMod
                         }
                     }
                 }
-                enemycount = 0;
-                staggeredcount = 0;
-            }
-            if (staggeredcount <= 0)
-            {
-                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedDrowning, 2, this.owner);
-                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Strength, 1, this.owner);
-                this.owner.bufListDetail.AddKeywordBufThisRoundByEtc(KeywordBuf.Endurance, 1, this.owner);
-            }
-            if (staggeredcount == enemycount)
-            {
-                this.owner.allyCardDetail.AddNewCard(new LorId(SlickModInitializer.packageId, 170113))?.SetCostToZero();
+
             }
         }
         public int staggeredcount;
@@ -2107,15 +2114,70 @@ namespace SlickRuinaMod
         {
             base.OnRoundEnd();
             int stagger = this.owner.breakDetail.breakLife;
-            int stagger2 = this.owner.breakDetail.GetDefaultBreakGauge();
-            int cringeinfliction = stagger2 - stagger;
-            for (int i = 0; i < cringeinfliction / 10; i++)
+            if (stagger >= 1800)
             {
                 foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
                 {
                     item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
                 }
             }
+            if (stagger >= 1600)
+            {
+                foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+                {
+                    item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
+                }
+            }
+            if (stagger >= 1400)
+            {
+                foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+                {
+                    item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
+                }
+            }
+            if (stagger >= 1200)
+            {
+                foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+                {
+                    item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
+                }
+            }
+            if (stagger >= 1000)
+            {
+                foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+                {
+                    item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
+                }
+            }
+            if (stagger >= 800)
+            {
+                foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+                {
+                    item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
+                }
+            }
+            if (stagger >= 600)
+            {
+                foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+                {
+                    item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
+                }
+            }
+            if (stagger >= 400)
+            {
+                foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+                {
+                    item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
+                }
+            }
+            if (stagger >= 200)
+            {
+                foreach (BattleUnitModel item in BattleObjectManager.instance.GetAliveList_random((base.owner.faction == Faction.Enemy) ? Faction.Player : Faction.Enemy, 1))
+                {
+                    item.bufListDetail.AddKeywordBufThisRoundByEtc(MyKeywordBufs.SlickMod_DrownedOmegaCringe, 1, base.owner);
+                }
+            }
+
         }
         public override void AfterGiveDamage(int damage)
         {
@@ -2133,6 +2195,29 @@ namespace SlickRuinaMod
     public class PassiveAbility_SlickMod_DrownedShimmering : PassiveAbilityBase
     {
         private int Patterncounter;
+        public override void OnWaveStart()
+        {
+            base.OnWaveStart();
+            owner.allyCardDetail.SetMaxHand(25);
+            owner.allyCardDetail.SetMaxDrawHand(25);
+            StageWaveModel farquaad = StageController.Instance.GetCurrentWaveModel();
+            if (farquaad != null)
+            {
+                List<EmotionCardXmlInfo> list = EmotionCardXmlList.Instance._list.FindAll(x => x.Sephirah == SephirahType.None);
+                if (list.Count > 0)
+                {
+                    farquaad._selectedList.AddRange(list);
+                }
+            }
+        }
+        public override void OnRoundStart()
+        {
+            base.OnRoundStart();
+            if (this.owner.emotionDetail.EmotionLevel == 5)
+            {
+                this.CHANGETHEFUCKINGPHASEPLEASE = true;
+            }
+        }
 
         public override void OnRoundStartAfter()
         {
@@ -2275,6 +2360,7 @@ namespace SlickRuinaMod
         {
             this.owner.allyCardDetail.AddTempCard(new LorId(SlickModInitializer.packageId, id))?.SetCostToZero();
         }
+        public bool CHANGETHEFUCKINGPHASEPLEASE;
     }
     #endregion
 

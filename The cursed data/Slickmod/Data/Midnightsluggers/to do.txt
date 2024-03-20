@@ -1,5 +1,0 @@
-What must be done:
-- set Penta-hit cost to 3-5, pick
-- make it so all 4 itterations of Ethan run
-- make the brown suit midnight fixer next to ethan in wave 2 of midnight ALSO run, but die in rage ethan mode
-- give Backstreet slugger rage ethan economy
